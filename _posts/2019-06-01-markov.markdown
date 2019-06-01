@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "My Narkov CHain"
+date:   2019-06-01 12:33:16 -0700
+categories: jekyll update
+---
+
+Description of my markov thing.
+
