@@ -1,13 +1,22 @@
-<div class="nav-bar" id="nav">
-    <div class="nav-list">
-      <ul>
-        <li id="list-name">Gael Gil</li>
-       <ul id="list-content">
-          <a href="{{ site.baseurl }}/"><li id="home">Home</li></a>
-          <a href="{{ site.baseurl }}/aboutUs"><li id="about">About</li></a>
-        </ul>
-       </ul>
-    </div>
+<header class="site-header">
+
+  <div class="wrapper">
+
+    <nav class="site-nav">
+
+      <div class="trigger">
+        <!-- {{ site.title }} instead of blog -->
+        <a class="page-link" href="{{ site.baseurl }}/">blog</a>
+
+        {% for page in site.pages %}
+          {% if page.title %}
+          <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+          {% endif %}
+        {% endfor %}
+
+      </div>
+    </nav>
+
   </div>
-  <br>
-  <br>
+
+</header>

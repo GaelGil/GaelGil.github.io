@@ -1,32 +1,15 @@
 ---
-layout: page
+layout: default
 ---
-
 <div class="post">
-  <!-- Wrapper Start -->
-  <section id="intro" style="border: 1px dotted #ddd;">
-    <div class="container">
-      <div class="row">
-        <div>
-          <div class="block">
-            <h1>{{ page.title }}</h1>
-            <div class="post-info-wrapper">
-              <p class="italic">By <span class="bold">{{ page.author }}</span> on <span class="bold">{{ page.date | date: "%B %-d, %Y" }}</span></p>
-            </div>
-            <hr />
-            {% if page.image != null%}
-            <div style="width:100%">
-                <img src="{{ site.baseurl }}/img/blog/{{ page.image }}" style="display:block;width:60%;margin:auto" alt="{{ page.alt }}">
-            </div>
-            {% endif %}
-            <p>{{ content }}</p>
-          </div>
-        </div><!-- .col-md-7 close -->
-      </div>
-    </div>
-  </section>
+
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <p class="post-meta">{{ page.date | date: "%B %-d, %Y — %H:%M" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+  </header>
+
+  <article class="post-content">
+    {{ content }}
+  </article>
+
 </div>
-<p class="center-text" style="padding: 30px;">
-  <a href="{{ site.baseurl }}/" style="color:black;">
-<i class="fa fa-chevron-left" aria-hidden="true"></i>  Back to blog</a>
-</p>
