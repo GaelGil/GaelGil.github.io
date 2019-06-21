@@ -7,13 +7,14 @@
       <div class="trigger">
         <!-- {{ site.title }} instead of blog -->
         <a class="page-link" href="{{ site.baseurl }}/">blog</a>
-
+        
         {% for page in site.pages %}
           {% if page.title %}
           <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
           {% endif %}
         {% endfor %}
-
+        <a href="https://github.com/GaelGil" target="_blank"><i class="fa fa-github-square"></i></a>
+        <a href="https://www.linkedin.com" target="_blank"><i class="fa fa-linkedin-square"></i></a>
       </div>
     </nav>
 
