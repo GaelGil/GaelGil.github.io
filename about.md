@@ -18,7 +18,7 @@ This is a blog for my tech related projects
 <br/>
 <span class="contacticon center">
 	<a href="https://github.com/GaelGil" target="_blank"><i class="fa fa-github-square"></i></a>
-	<a href="https://www.linkedin.com" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+	<a href="https://www.linkedin.com/in/gael-gil-7a4baa172/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
 </span>
 
 
