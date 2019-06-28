@@ -6,12 +6,15 @@ date:   2019-06-01 12:33:16 -0700
 categories: jekyll update
 ---
 <small>link to my<a href="https://sentence-gen.herokuapp.com/"> project</a></small><br><br>
-In this project I made a setence generator
+In this project I made a setence generator in which you <br>
+can input your own pragraph and using the markov procces <br>
+it will generate a sentence. A markov chain 
+
+
 
 - Description of the thing I wanted to make.
 - How I made it,
 - What it does
-- *link to the project*
 - etc
 
 ~~~python
