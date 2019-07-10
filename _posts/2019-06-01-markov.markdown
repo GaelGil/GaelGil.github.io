@@ -8,17 +8,37 @@ categories: jekyll update
 <small>link to my<a href="https://sentence-gen.herokuapp.com/"> project</a></small><br><br>
 In this project I made a setence generator in which you can input your<br>
 own pragraph and using the markov procces it will generate a sentence. <br>
-A markov chain 
+A markov chain is a model in which you can predict future outcomes based on<br>
+the thing that came before it. 
+
+<img src="../img/blog/marovChain.png" alt="A markov chain">
+
+The image of above is a markov chain. As you can see 
 
 
 
 
-- Description of the thing I wanted to make.
-- How I made it,
+
+- Description of the thing I wanted to make. How it works (users input book snippets, or the select a book from the list)
+- How I made it, tests, functions, 
 - What it does
-- etc
+- Markov process: how you "chain" from one word to the next
+- Describe markov process generally: https://en.wikipedia.org/wiki/Markov_chain
+
+V("Harry Potter") = [the, man, dog, pizza, magic, dragon, dragons, wizards, ...]
+V("Lord of the Rings") = [the, man, dog, pizza, magic, dragon, dragons, wizards, ...]
+
+Harry Potter and LOTR both contain words like "magic" and "dragon", however, these words occur in different places in both texts. For instance, "magic" followed by "wand" is very common in Harry Potter (198 times), whereas "magic", "wand" never occurs in LOTR.
+
+right now, I jsut have word: [folloeing words], but I could convert this into probabilities
+
+V(HP) = V(LOTR)
 
 ~~~python
 print("hello world")
 ~~~
 
+HP -> p(eyeball | the)  !=    LOTR -> p(eyeball | the)
+magic:
+    (man, 5)
+    (wand, 200)
