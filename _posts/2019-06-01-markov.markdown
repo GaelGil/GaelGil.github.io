@@ -8,13 +8,14 @@ categories: jekyll update
 <small>link to my<a href="https://sentence-gen.herokuapp.com/"> project</a></small><br><br>
 In this project I made a setence generator in which you can input your<br>
 own pragraph and using the markov procces it will generate a sentence. <br>
-A markov chain is a model in which you can predict future outcomes based on<br>
-the thing that came before it. 
+A markov chain is a model in which you can predict future outcomes based <br>
+on the thing that came before it. 
 
-<img src="../img/blog/marovChain.png" alt="A markov chain">
+<img src="../img/blog/markovChain.png" alt="A markov chain">
 
-The image of above is a markov chain. As you can see 
-
+The image of above is a markov chain. As you can see point E is more<br>
+likely to go to Point A, but Point A is just slightly more likely to<br>
+go back to it's self. This is a markov chain in its simplest form<br>
 
 
 
