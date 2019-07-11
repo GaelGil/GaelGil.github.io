@@ -2,23 +2,45 @@
 layout: post
 title:  "My Markov Chain"
 permalink: /my_markov_chain/
-date:   2019-06-01 12:33:16 -0700
+date:   2019-06-01 12:33
 categories: jekyll update
 ---
 <small>link to my<a href="https://sentence-gen.herokuapp.com/"> project</a></small><br><br>
-In this project I made a setence generator in which you can input your<br>
-own pragraph and using the markov procces it will generate a sentence. <br>
-A markov chain is a model in which you can predict future outcomes based <br>
-on the thing that came before it.
+In this project I made a setence generator in which you can input your own <br>
+pragraph and using the markov procces it will generate a sentence. A markov<br>
+chain is a model in which you can predict future outcomes based on the <br>
+thing that came before it and is used for sequential data. 
 
-<div class="container">
-<img style="float:left;" src="../img/blog/markovChain.png" alt="A markov chain">
+<img style="text-align:center;" src="../img/blog/markovChain.png" alt="A markov chain">
 
 
-<p style="float: right;">The image of above is a markov chain. As you can see point E is more<br>
-likely to go to Point A, but Point A is just slightly more likely to<br>
-go back to it's self. This is a markov chain in its simplest form</p><br>
-</div>
+The image of above is a markov chain a visual of a very simple markov chain. As you can see point E is more likely
+to go to Point A, but Point A is just slightly more likely to go back to it's self. 
+<br>
+Now to how I created a markov chain in python to create a sentence, this is how i went about it. First we need our data
+so I first statrted with using a bible from the internet as our data. Once I had that I had to created a python file called sentence-gen.py in there is where I put all my functions. From there I opened the book cleaned the data with some regular expresions and put the book into the list which I wont explain because it's pretty straight forward. Now to create our actual markov chain in which we would generate our sentence from 
+
+
+~~~python
+
+def create_dict(tokens, tokens_index):
+    """
+    This function takes in a list of tokens
+    and creates a dictionary to with a word as its 
+    key and the words after it as its value.
+    """
+    words_with_nearby = {}
+    for token in tokens_index:
+        words_with_nearby[token] = []
+
+    for i in range(len(tokens) - 1):
+        current_word = tokens[i]
+        next_word = tokens[i + 1]
+
+        words_with_nearby[current_word].append(next_word)
+    return create_sentence(**words_with_nearby)
+
+~~~
 
 
 
