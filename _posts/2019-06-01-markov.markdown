@@ -11,14 +11,21 @@ pragraph and using the markov procces it will generate a sentence. A markov<br>
 chain is a model in which you can predict future outcomes based on the <br>
 thing that came before it and is used for sequential data. 
 
-<img style="text-align:center;" src="../img/blog/markovChain.png" alt="A markov chain">
+<img src="../img/blog/markovChain.png" alt="A markov chain">
 
 
-The image of above is a markov chain a visual of a very simple markov chain. As you can see point E is more likely
-to go to Point A, but Point A is just slightly more likely to go back to it's self. 
+The image of above is a markov chain a visual of a very simple markov chain.<br>
+As you can see point E is more likely to go to Point A, but Point A is just <br>
+slightly more likely to go back to it's self. 
 <br>
-Now to how I created a markov chain in python to create a sentence, this is how i went about it. First we need our data
-so I first statrted with using a bible from the internet as our data. Once I had that I had to created a python file called sentence-gen.py in there is where I put all my functions. From there I opened the book cleaned the data with some regular expresions and put the book into the list which I wont explain because it's pretty straight forward. Now to create our actual markov chain in which we would generate our sentence from 
+Now to how I created a markov chain in python to create a sentence, this is <br>
+how i went about it. First we need our data so I first statrted with using a<br>
+bible from the internet as our data. Once I had that I had to created a python<br> 
+file called sentence-gen.py in there is where I put all my functions. From there<br>
+I opened the book cleaned the data with some regular expresions and put the <br>
+book into the list which I wont explain because it's pretty straight forward.<br>
+Now to create our actual markov chain in which we would generate our sentence<br>
+from it looked like this. <br>
 
 
 ~~~python
@@ -42,9 +49,21 @@ def create_dict(tokens, tokens_index):
 
 ~~~
 
+First we have a tokens which is a list of all the words, and tokens_index<br>
+which is a list of all the words without duplicates. We then creat a<br>
+dictionary with the populating the keys with the our tokens, once thats over<br>
+we add the values and we do that by looping through our tokens then we get<br>
+words and the words after that. That will be our chain. Altough we dont<br>
+have probalities like an actual markov chain. This is a simple markov chain<br>
+that works and I know adding probabilites to the words would be much more<br>
+efficfient and help create more accurate sentences but that will be a<br>
+project for the future. 
 
 
-- Description of the thing I wanted to make. How it works (users input book snippets, or the select a book from the list)
+
+
+
+<!-- - Description of the thing I wanted to make. How it works (users input book snippets, or the select a book from the list)
 - How I made it, tests, functions, 
 - What it does
 - Markov process: how you "chain" from one word to the next
@@ -66,4 +85,4 @@ print("hello world")
 HP -> p(eyeball | the)  !=    LOTR -> p(eyeball | the)
 magic:
     (man, 5)
-    (wand, 200)
+    (wand, 200) -->
