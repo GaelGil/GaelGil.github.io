@@ -17,7 +17,7 @@ thing that came before it and is used for sequential data.
 The image of above is a markov chain a visual of a very simple markov chain.<br>
 As you can see point E is more likely to go to Point A, but Point A is just <br>
 slightly more likely to go back to it's self. 
-<br>
+<br><br>
 Now to how I created a markov chain in python to create a sentence, this is <br>
 how i went about it. First we need our data so I first statrted with using a<br>
 bible from the internet as our data. Once I had that I had to created a python<br> 
@@ -26,6 +26,7 @@ I opened the book cleaned the data with some regular expresions and put the <br>
 book into the list which I wont explain because it's pretty straight forward.<br>
 Now to create our actual markov chain in which we would generate our sentence<br>
 from it looked like this. <br>
+
 
 
 ~~~python
@@ -59,6 +60,7 @@ that works and I know adding probabilites to the words would be much more<br>
 efficfient and help create more accurate sentences but that will be a<br>
 project for the future. 
 
+<small>link to my full project on<a href="https://github.com/GaelGil/sentence-generator"> github</a></small><br><br>
 
 
 
