@@ -6,12 +6,15 @@ date:   2019-06-01 12:33
 categories: jekyll update
 ---
 <small>link to my<a href="https://sentence-gen.herokuapp.com/"> project</a></small><br><br>
+<small>link to my full project on<a href="https://github.com/GaelGil/sentence-generator"> github</a></small><br><br>
+
 In this project I made a setence generator in which you can input your own <br>
 pragraph and using the markov procces it will generate a sentence. A markov<br>
 chain is a model in which you can predict future outcomes based on the <br>
 thing that came before it and is used for sequential data. 
 
 <img src="../img/blog/markovChain.png" alt="A markov chain">
+
 
 
 The image of above is a markov chain a visual of a very simple markov chain.<br>
@@ -21,7 +24,7 @@ slightly more likely to go back to it's self.
 Now to how I created a markov chain in python to create a sentence, this is <br>
 how i went about it. First we need our data so I first statrted with using a<br>
 bible from the internet as our data. Once I had that I had to created a python<br> 
-file called sentence-gen.py in there is where I put all my functions. From there<br>
+file called `sentence-gen.py` in there is where I put all my functions. From there<br>
 I opened the book cleaned the data with some regular expresions and put the <br>
 book into the list which I wont explain because it's pretty straight forward.<br>
 Now to create our actual markov chain in which we would generate our sentence<br>
@@ -50,7 +53,7 @@ def create_dict(tokens, tokens_index):
 
 ~~~
 
-First we have a tokens which is a list of all the words, and tokens_index<br>
+First we have a tokens which is a list of all the words, and `tokens_index`<br>
 which is a list of all the words without duplicates. We then creat a<br>
 dictionary with the populating the keys with the our tokens, once thats over<br>
 we add the values and we do that by looping through our tokens then we get<br>
@@ -58,12 +61,26 @@ words and the words after that. That will be our chain. Altough we dont<br>
 have probalities like an actual markov chain. This is a simple markov chain<br>
 that works and I know adding probabilites to the words would be much more<br>
 efficfient and help create more accurate sentences but that will be a<br>
-project for the future. 
+project for the future. Another thing I wanted to metion was that this<br>
+markov chain uses unigrams which looks like this<br>
 
-<small>link to my full project on<a href="https://github.com/GaelGil/sentence-generator"> github</a></small><br><br>
+~~~python
+#this is a unigram which is used in the project
+unigram = [('Hi'), ('How'), ('are'), ('you'), ('?'), ('i'), ('am'), ('fine'), ('and')] 
+~~~
 
+Altough this works if we would want to create better sounding<br>
+sentences we would use bigrams which look like this.<br>
 
+~~~python
+#this is a bigram and could make better sounding setencees
+Bigram [('Hi', 'How'), ('How', 'are'), ('are', 'you'), ('you', '?'), ('?', 'i'), ('i', 'am'), ('am', 'fine'), ('fine', 'and'), ('and', 'you')] 
 
+~~~
+
+But now the problem with using birgrams or trigrams etc. is that our<br>
+setnece being generated would sound much more like the text we are sampling<br>
+from<br>
 
 <!-- - Description of the thing I wanted to make. How it works (users input book snippets, or the select a book from the list)
 - How I made it, tests, functions, 
@@ -80,11 +97,16 @@ right now, I jsut have word: [folloeing words], but I could convert this into pr
 
 V(HP) = V(LOTR)
 
-~~~python
-print("hello world")
-~~~
+
 
 HP -> p(eyeball | the)  !=    LOTR -> p(eyeball | the)
 magic:
     (man, 5)
-    (wand, 200) -->
+    (wand, 200)
+    
+
+This Markov chain uses unigrams, like "the" as opposed to bigrams like "the man" ... 
+    
+     -->
+
+
