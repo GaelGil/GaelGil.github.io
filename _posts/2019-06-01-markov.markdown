@@ -5,7 +5,7 @@ permalink: /my_markov_chain/
 date:   2019-06-01 12:33
 categories: jekyll update
 ---
-<small>link to my<a href="https://sentence-gen.herokuapp.com/"> project</a></small><br><br>
+<small>link to my<a href="https://sentence-gen.herokuapp.com/"> project</a></small>
 <small>link to my full project on<a href="https://github.com/GaelGil/sentence-generator"> github</a></small><br><br>
 
 In this project I made a setence generator in which you can input your own <br>
@@ -18,7 +18,7 @@ thing that came before it and is used for sequential data.
 
 
 The image of above is a markov chain a visual of a very simple markov chain.<br>
-As you can see point E is more likely to go to Point A, but Point A is just <br>
+As you can see *Point E* is more likely to go to *Point A*, but *Point A* is just <br>
 slightly more likely to go back to it's self. 
 <br><br>
 Now to how I created a markov chain in python to create a sentence, this is <br>
@@ -62,7 +62,7 @@ have probalities like an actual markov chain. This is a simple markov chain<br>
 that works and I know adding probabilites to the words would be much more<br>
 efficfient and help create more accurate sentences but that will be a<br>
 project for the future. Another thing I wanted to metion was that this<br>
-markov chain uses unigrams which looks like this<br>
+markov chain uses unigrams which look like this<br>
 
 ~~~python
 #this is a unigram which is used in the project
@@ -80,7 +80,27 @@ Bigram [('Hi', 'How'), ('How', 'are'), ('are', 'you'), ('you', '?'), ('?', 'i'),
 
 But now the problem with using birgrams or trigrams etc. is that our<br>
 setnece being generated would sound much more like the text we are sampling<br>
-from<br>
+from and it would some even more alike if the text is a small page or two.<br>
+Another thing I would like to mention is that no matter what text or<br>
+book is being used the output would always be different from each other.<br>
+Let's take Yoda from Star Wars as an example, if we were to input a<br>
+qoute like *"Named must your fear be before banish it you can"*, and<br>
+then input some like this as well *"You must name your fear before you<br>
+can banish it"*. As you can see these 1 quotes are very similar but in<br>
+the markov chain that does not matter. The markov chain will see that in<br>
+the first quote the probability of the word *"be"* is more likely to come<br>
+after the word *" fear"* as in the second qoute *"before"* is more likely<br> 
+to apear after the word fear, therefore creating different outputs.<br>
+
+In the end, I've learned a lot from creating this project and creating<br>
+reasearching what markov chains are and what they are used for. Doing<br>
+this project I learned about the many uses it can have and how it can<br>
+be used at higher levels to see future outcomes of certain data and<br>
+even though my markov chain is a bit basic right now I know I can<br>
+improve this in the future with bigrams and probabilities, maybe even<br>
+machine learning but that will be for the future. <br>
+
+
 
 <!-- - Description of the thing I wanted to make. How it works (users input book snippets, or the select a book from the list)
 - How I made it, tests, functions, 
