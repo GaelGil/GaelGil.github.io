@@ -114,7 +114,7 @@ this project I learned about the many uses it can have and how it can<br>
 be used at higher levels to see future outcomes of certain data. <br><br>
 
 
-##Possible Iprovements
+<h1>ossible Iprovements</h1>
 <hr>
 As of now my markov chain is not as complex as others, some possible<br>
 improvements could be, using brigrams to create better sounding altough<br>
