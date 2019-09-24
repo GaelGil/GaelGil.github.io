@@ -28,7 +28,7 @@ weather a simple visual would look like this.<br>
     C  S  S  S  S  S  S  S  C  C  R  R  C  S  S  S  S  C  S
 ~~~
 
-In the above daigram R represents rain, S represents sun and C represents <br>
+In the daigram above R represents rain, S represents sun and C represents <br>
 cloudy and every letter represents a day in which that was the weather. As<br>
 you can see this is sequential data so it works perfect for what we are <br>
 trying to do. Now For every sunny day it will almost always go back to <br>
@@ -114,8 +114,8 @@ this project I learned about the many uses it can have and how it can<br>
 be used at higher levels to see future outcomes of certain data. <br><br>
 
 
-<h1>ossible Iprovements</h1>
-<hr>
+<h1>Possible Improvements</h1>
+<hr><br>
 As of now my markov chain is not as complex as others, some possible<br>
 improvements could be, using brigrams to create better sounding altough<br>
 I went over some downsides of that earlier such as sampled text would<br>
