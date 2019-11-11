@@ -113,6 +113,11 @@ reasearching what markov chains are and what they are used for. Doing<br>
 this project I learned about the many uses it can have and how it can<br>
 be used at higher levels to see future outcomes of certain data. <br><br>
 
+<h1>Output/Genrated Sentence</h1>
+<hr><br>
+
+`the man should be laid waste it came and hasteth`
+
 
 <h1>Possible Improvements</h1>
 <hr><br>
