@@ -1,0 +1,21 @@
+---
+layout: post
+title:  "Sneaker_Scraper"
+permalink: /sneakers/
+date:   2019-12-05 12:33
+categories: jekyll update
+---
+<small>link to my<a href="https://github.com/GaelGil/Sneaker-Scraper/blob/master/analysis/main_data.ipynb"> notebook</a><small><br>
+<small>link to my full project on<a href="https://github.com/GaelGil/Sneaker-Scraper"> github</a></small><br><br>
+
+
+## talking points
+- > what is sbeaker culture/hype
+- > -collecting data
+- > issues with collectinc
+- > cleaning data
+- > analyzing data 
+- > discoveries
+- > what i learned
+- > challenges
+- > future improvements
