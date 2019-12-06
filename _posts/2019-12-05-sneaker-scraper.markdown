@@ -10,12 +10,12 @@ categories: jekyll update
 
 
 ## talking points
-- > what is sbeaker culture/hype
-- > -collecting data
-- > issues with collectinc
-- > cleaning data
-- > analyzing data 
-- > discoveries
-- > what i learned
-- > challenges
-- > future improvements
+<br>
+<!-- - > what is sbeaker culture/hype -->
+> - collecting data issues with collectinc
+> - cleaning data
+> - analyzing data 
+> - discoveries
+> - what i learned
+> - challenges
+> - future improvements
