@@ -21,7 +21,7 @@ $nav-height:                    56px;
 $img_spacing: 5px; 
 $img_height: 275px;
 $caption_font_size: 12px;
-$caption_color: #aaa;
+$caption_color: white;
 
 /* COLORS  */
 $red:  #ff69b4;
@@ -32,9 +32,9 @@ $lime_green: #B7D12A;
 $purple: #B509AC;
 
 
-$grey-color-dark: #333;   /* footer */
-$grey-color-light: #ddd;  /* navigation bar border */
-$text-color:     #666;
+$grey-color-dark: white;   /* footer */
+$grey-color-light: #333;  /* navigation bar border */
+$text-color:     white;
 
 /* Set theme color *************************/
 $theme-color:   $red;
