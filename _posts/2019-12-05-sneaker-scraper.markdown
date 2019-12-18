@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Sneaker_Scraper"
+title:  "Sneaker Scraper"
 permalink: /sneakers/
 date:   2019-12-05 12:33
 categories: jekyll update
