@@ -4,14 +4,18 @@
  */
 .site-header {
 border-bottom: 1px solid $grey-color-light;
-background-color: #fff;
-opacity: 0.75;
+background-color: #333;
+// opacity: 0.75;
 position:fixed;
 left:0px;
 top:0px;
 height:56px;
 width:100%;
 z-index: 50;
+}
+
+.site-header a {
+    color: rgb(247, 0, 255);
 }
 
 .site-title {
@@ -78,7 +82,7 @@ border-top: 1px solid $grey-color-dark;
 font-size: 10px;
 background-color: $grey-color-dark;
 padding: 2px;
-color: #aaa;
+color: rgb(247, 0, 255);
 position:fixed;
 left:0px;
 bottom:0px;
