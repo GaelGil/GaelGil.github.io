@@ -24,7 +24,7 @@ $caption_font_size: 12px;
 $caption_color: #aaa;
 
 /* COLORS  */
-$red:  #ff69b4;
+$red:  rgb(247, 0, 255);
 $orange: #F29105;
 $blue: #2698BA;
 $green: #11D68B;
@@ -33,10 +33,10 @@ $purple: #B509AC;
 
 
 $grey-color-dark: #333;   /* footer */
-$grey-color-light: #ddd;  /* navigation bar border */
-$text-color:     #666;
+$grey-color-light: #333;  /* navigation bar border */
+$text-color:  white;
 
-/* Set theme color *************************/
+/* Set theme color ******************************************/
 $theme-color:   $red;
 
 
