@@ -1,0 +1,123 @@
+I"B3<p><small>link to my<a href="https://sentence-gen.herokuapp.com/"> project</a></small><br />
+<small>link to my full project on<a href="https://github.com/GaelGil/sentence-generator"> github</a></small><br /></p>
+
+<p>In this project I made a setence generator in which you can input your own 
+pragraph and using the markov procces it will generate a sentence. A markov
+chain is a model in which you can predict future outcomes based on the 
+thing that came before it and is used for sequential data. <br /></p>
+
+<div class="post_img" style="width: 500px; background-color: white;">
+<img src="../assets/images/markovChain.png" alt="A markov chain" />
+</div>
+
+<p>The image of above is a markov chain a visual of a very simple markov chain.
+As you can see <em>Point E</em> is more likely to go to <em>Point A</em>, but <em>Point A</em> is just 
+slightly more likely to go back to it’s self. A real life example of this is
+the weather. Using a markov chain you can predict what the weather will be
+given the weather before. If we create a visual representation for the 
+weather a simple visual would look like this.<br /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="n">C</span>  <span class="n">S</span>  <span class="n">S</span>  <span class="n">S</span>  <span class="n">S</span>  <span class="n">S</span>  <span class="n">S</span>  <span class="n">S</span>  <span class="n">C</span>  <span class="n">C</span>  <span class="n">R</span>  <span class="n">R</span>  <span class="n">C</span>  <span class="n">S</span>  <span class="n">S</span>  <span class="n">S</span>  <span class="n">S</span>  <span class="n">C</span>  <span class="n">S</span>
+</code></pre></div></div>
+
+<p>In the daigram above R represents rain, S represents sun and C represents 
+cloudy and every letter represents a day in which that was the weather. As
+you can see this is sequential data so it works perfect for what we are 
+trying to do. Now For every sunny day it will almost always go back to 
+sunny but in the case that it doesnt it wiill go to cloudy that is becuase
+the probability is much higher for sunny to go back to sunn than sunny to 
+cloudy, altough still possible its just less likely. This is a simple markov
+chain and what it can be used for<br /></p>
+
+<p>Now to how I created a markov chain in python to create a sentence, this is
+how i went about it. First we need our data so I first statrted with using a
+bible from the internet to use as our data and called it <code class="highlighter-rouge">bible.txt</code>. Once I had a sample bool I created a python file called <code class="highlighter-rouge">sentence-gen.py</code>. In there is where I put all my functions. From there<br /></p>
+
+<p>I opened the book cleaned the data with some regular expresions and put the 
+book into the list which I wont explain because it’s pretty straight forward and can be found in the project repo. Now to create our actual markov chain in which we would generate our sentence from it looked like this. <br /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="k">def</span> <span class="nf">create_dict</span><span class="p">(</span><span class="n">tokens</span><span class="p">,</span> <span class="n">tokens_index</span><span class="p">):</span>
+    <span class="s">"""
+    This function takes in a list of tokens
+    and creates a dictionary to with a word as its 
+    key and the words after it as its value.
+    """</span>
+    <span class="n">words_with_nearby</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">tokens_index</span><span class="p">:</span>
+        <span class="n">words_with_nearby</span><span class="p">[</span><span class="n">token</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tokens</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">current_word</span> <span class="o">=</span> <span class="n">tokens</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">next_word</span> <span class="o">=</span> <span class="n">tokens</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span>
+
+        <span class="n">words_with_nearby</span><span class="p">[</span><span class="n">current_word</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">next_word</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">create_sentence</span><span class="p">(</span><span class="o">**</span><span class="n">words_with_nearby</span><span class="p">)</span>
+
+</code></pre></div></div>
+
+<p>First we have a tokens which is a list of all the words, and <code class="highlighter-rouge">tokens_index</code>
+which is a list of all the words without duplicates. We then creat a
+dictionary with the populating the keys with the our tokens, once thats over
+we add the values and we do that by looping through our tokens then we get
+words and the words after that. That will be our chain. Altough we dont
+have probalities like an actual markov chain. This is a simple markov chain
+that works. Another thing I wanted to metion was that this
+markov chain uses unigrams which look like this<br /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#this is a unigram which is used in the project
+#a unigram stores one value
+</span><span class="n">unigram</span> <span class="o">=</span> <span class="p">{</span><span class="s">'let'</span><span class="p">:</span> <span class="p">[</span><span class="s">'there'</span><span class="p">],</span> <span class="s">'the'</span><span class="p">:</span> <span class="p">[</span><span class="s">'earth'</span><span class="p">,</span> <span class="s">'face'</span><span class="p">,</span> <span class="s">'deep'</span><span class="p">,</span> <span class="s">'spirit'</span><span class="p">,</span> <span class="s">'face'</span><span class="p">,</span> <span class="s">'waters'</span><span class="p">],</span> <span class="s">'light'</span><span class="p">:</span> <span class="p">[</span><span class="s">'and'</span><span class="p">],</span> <span class="s">'moved'</span><span class="p">:</span> <span class="p">[</span><span class="s">'upon'</span><span class="p">],</span> <span class="s">'earth'</span><span class="p">:</span> <span class="p">[</span><span class="s">'was'</span><span class="p">],</span> <span class="s">'void'</span><span class="p">:</span> <span class="p">[</span><span class="s">'and'</span><span class="p">],</span> <span class="s">'darkness'</span><span class="p">:</span> <span class="p">[</span><span class="s">'was'</span><span class="p">],</span> <span class="s">'of'</span><span class="p">:</span> <span class="p">[</span><span class="s">'the'</span><span class="p">,</span> <span class="s">'god'</span><span class="p">,</span> <span class="s">'the'</span><span class="p">],</span> <span class="s">'was'</span><span class="p">:</span> <span class="p">[</span><span class="s">'without'</span><span class="p">,</span> <span class="s">'upon'</span><span class="p">,</span> <span class="s">'light'</span><span class="p">],</span> <span class="s">'god'</span><span class="p">:</span> <span class="p">[</span><span class="s">'moved'</span><span class="p">,</span> <span class="s">'said'</span><span class="p">],</span> <span class="s">'there'</span><span class="p">:</span> <span class="p">[</span><span class="s">'be'</span><span class="p">,</span> <span class="s">'was'</span><span class="p">],</span> <span class="s">'said'</span><span class="p">:</span> <span class="p">[</span><span class="s">'let'</span><span class="p">],</span> <span class="s">'deep'</span><span class="p">:</span> <span class="p">[</span><span class="s">'and'</span><span class="p">],</span> <span class="s">'and'</span><span class="p">:</span> <span class="p">[</span><span class="s">'the'</span><span class="p">,</span> <span class="s">'void'</span><span class="p">,</span> <span class="s">'darkness'</span><span class="p">,</span> <span class="s">'the'</span><span class="p">,</span> <span class="s">'god'</span><span class="p">,</span> <span class="s">'there'</span><span class="p">],</span> <span class="s">'face'</span><span class="p">:</span> <span class="p">[</span><span class="s">'of'</span><span class="p">,</span> <span class="s">'of'</span><span class="p">],</span> <span class="s">'spirit'</span><span class="p">:</span> <span class="p">[</span><span class="s">'of'</span><span class="p">],</span> <span class="s">'upon'</span><span class="p">:</span> <span class="p">[</span><span class="s">'the'</span><span class="p">,</span> <span class="s">'the'</span><span class="p">],</span> <span class="s">'waters'</span><span class="p">:</span> <span class="p">[</span><span class="s">'and'</span><span class="p">],</span> <span class="s">'without'</span><span class="p">:</span> <span class="p">[</span><span class="s">'form'</span><span class="p">],</span> <span class="s">'form'</span><span class="p">:</span> <span class="p">[</span><span class="s">'and'</span><span class="p">],</span> <span class="s">'be'</span><span class="p">:</span> <span class="p">[</span><span class="s">'light'</span><span class="p">]}</span>
+</code></pre></div></div>
+
+<p>Altough this works if we would want to create better sounding&lt;
+sentences we would use bigrams which look like this.<br /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#this is a bigram and could make better sounding setencees
+#bigram stores two values
+</span><span class="n">bigram</span> <span class="o">=</span> <span class="p">{</span><span class="s">'let there'</span><span class="p">:</span> <span class="p">[</span><span class="s">'be light'</span><span class="p">],</span> <span class="s">'the earth'</span><span class="p">:</span> <span class="p">[</span><span class="s">'was on'</span><span class="p">],</span> <span class="s">'be light'</span><span class="p">:</span> <span class="p">[</span><span class="s">'ther was'</span><span class="p">]:</span> 
+</code></pre></div></div>
+
+<p>But now the problem with using birgrams or trigrams etc. is that our
+setnece being generated would sound much more like the text we are 
+sampling from and it would some even more alike if the text is a small
+page or two. Another thing I would like to mention is that no matter
+what text or book is being used the output would always be different
+from each other. Let’s take Yoda from Star Wars as an example, if we
+were to input a qoute like <em>“Named must your fear be before banish it
+you can”</em>, and then input some like this as well <em>“You must name your
+fear before you can banish it”</em>. As you can see these quotes are very
+similar but in the markov chain that does not matter. The markov chain
+will see that in the first quote the probability of the word <em>“be”</em> is
+more likely to come after the word <em>” fear”</em> as in the second qoute 
+<em>“before”</em> is more likely to apear after the word fear, therefore
+creating different outputs.<br /></p>
+
+<p>In the end, I’ve learned a lot from creating this project and creating
+reasearching what markov chains are and what they are used for. Doing
+this project I learned about the many uses it can have and how it can
+be used at higher levels to see future outcomes of certain data. <br /></p>
+
+<h1>Output/Genrated Sentence</h1>
+<hr />
+
+<p><code class="highlighter-rouge">the man should be laid waste it came and hasteth</code></p>
+
+<h1>Possible Improvements</h1>
+<hr />
+
+<p>As of now my markov chain is not as complex as others, some possible
+improvements could be, using brigrams to create better sounding sentences altough
+I went over some downsides of that earlier such as sampled text would
+sound more like original text. Another possible improvement could be
+adding probabilites to each occuring word. This way we could select
+words on their probabilites instead of randomly selecting probabble
+words, which would also make better sounding sentences. Lastly I could
+turn this into a machine learning projects, which I dont know so much
+of yet but the idea would be that the computer would take in the text
+and as well look at the words an probabilities of them showing up and
+from learning patterns of the text provided it would create sentences.
+These are three possible ways this project could be improved to create
+a better markov chain that works more efficient and creates better 
+sounding sentenecs. <br /></p>
+:ET

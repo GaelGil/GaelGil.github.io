@@ -1,22 +1,13 @@
----
-layout: post
-title:  "My Markov Chain"
-permalink: /my_markov_chain/
-date:   2019-06-01 12:33
-image: ../assets/images/markovChain.png
-categories: jekyll update
----
-<small>link to my<a href="https://sentence-gen.herokuapp.com/"> project</a></small><br>
-<small>link to my full project on<a href="https://github.com/GaelGil/sentence-generator"> github</a></small><br>
+I"<p><small>link to my<a href="https://sentence-gen.herokuapp.com/"> project</a></small><br />
+<small>link to my full project on<a href="https://github.com/GaelGil/sentence-generator"> github</a></small><br /></p>
 
-In this project I made a setence generator in which you can input your own 
+<p>In this project I made a setence generator in which you can input your own 
 pragraph and using the markov procces it will generate a sentence. A markov
 chain is a model in which you can predict future outcomes based on the 
-thing that came before it and is used for sequential data. <br>
+thing that came before it and is used for sequential data. <br /></p>
 
-<div class="post_img" style="width: 300px; background-color: white;">
-<img src="../assets/images/markovChain.png" alt="A markov chain">
-</div>
+<div class="post_img">
+<img src="../assets/images/markovChain.png" alt="A markov chain" />
 
 
 
@@ -25,7 +16,7 @@ As you can see *Point E* is more likely to go to *Point A*, but *Point A* is jus
 slightly more likely to go back to it's self. A real life example of this is
 the weather. Using a markov chain you can predict what the weather will be
 given the weather before. If we create a visual representation for the 
-weather a simple visual would look like this.<br>
+weather a simple visual would look like this.<br />
  
 ~~~python
     C  S  S  S  S  S  S  S  C  C  R  R  C  S  S  S  S  C  S
@@ -38,14 +29,14 @@ trying to do. Now For every sunny day it will almost always go back to
 sunny but in the case that it doesnt it wiill go to cloudy that is becuase
 the probability is much higher for sunny to go back to sunn than sunny to 
 cloudy, altough still possible its just less likely. This is a simple markov
-chain and what it can be used for<br>
+chain and what it can be used for<br />
 
 Now to how I created a markov chain in python to create a sentence, this is
 how i went about it. First we need our data so I first statrted with using a
-bible from the internet to use as our data and called it `bible.txt`. Once I had a sample bool I created a python file called `sentence-gen.py`. In there is where I put all my functions. From there<br>
+bible from the internet to use as our data and called it `bible.txt`. Once I had a sample bool I created a python file called `sentence-gen.py`. In there is where I put all my functions. From there<br />
 
 I opened the book cleaned the data with some regular expresions and put the 
-book into the list which I wont explain because it's pretty straight forward and can be found in the project repo. Now to create our actual markov chain in which we would generate our sentence from it looked like this. <br>
+book into the list which I wont explain because it's pretty straight forward and can be found in the project repo. Now to create our actual markov chain in which we would generate our sentence from it looked like this. <br />
 
 
 
@@ -77,7 +68,7 @@ we add the values and we do that by looping through our tokens then we get
 words and the words after that. That will be our chain. Altough we dont
 have probalities like an actual markov chain. This is a simple markov chain
 that works. Another thing I wanted to metion was that this
-markov chain uses unigrams which look like this<br>
+markov chain uses unigrams which look like this<br />
 
 ~~~python
 #this is a unigram which is used in the project
@@ -85,8 +76,8 @@ markov chain uses unigrams which look like this<br>
 unigram = {'let': ['there'], 'the': ['earth', 'face', 'deep', 'spirit', 'face', 'waters'], 'light': ['and'], 'moved': ['upon'], 'earth': ['was'], 'void': ['and'], 'darkness': ['was'], 'of': ['the', 'god', 'the'], 'was': ['without', 'upon', 'light'], 'god': ['moved', 'said'], 'there': ['be', 'was'], 'said': ['let'], 'deep': ['and'], 'and': ['the', 'void', 'darkness', 'the', 'god', 'there'], 'face': ['of', 'of'], 'spirit': ['of'], 'upon': ['the', 'the'], 'waters': ['and'], 'without': ['form'], 'form': ['and'], 'be': ['light']}
 ~~~
 
-Altough this works if we would want to create better sounding<
-sentences we would use bigrams which look like this.<br>
+Altough this works if we would want to create better sounding&lt;
+sentences we would use bigrams which look like this.<br />
 
 ~~~python
 #this is a bigram and could make better sounding setencees
@@ -107,21 +98,21 @@ similar but in the markov chain that does not matter. The markov chain
 will see that in the first quote the probability of the word *"be"* is
 more likely to come after the word *" fear"* as in the second qoute 
 *"before"* is more likely to apear after the word fear, therefore
-creating different outputs.<br>
+creating different outputs.<br />
 
 In the end, I've learned a lot from creating this project and creating
 reasearching what markov chains are and what they are used for. Doing
 this project I learned about the many uses it can have and how it can
-be used at higher levels to see future outcomes of certain data. <br>
+be used at higher levels to see future outcomes of certain data. <br />
 
 <h1>Output/Genrated Sentence</h1>
-<hr>
+<hr />
 
 `the man should be laid waste it came and hasteth`
 
 
 <h1>Possible Improvements</h1>
-<hr>
+<hr />
 As of now my markov chain is not as complex as others, some possible
 improvements could be, using brigrams to create better sounding sentences altough
 I went over some downsides of that earlier such as sampled text would
@@ -135,4 +126,6 @@ and as well look at the words an probabilities of them showing up and
 from learning patterns of the text provided it would create sentences.
 These are three possible ways this project could be improved to create
 a better markov chain that works more efficient and creates better 
-sounding sentenecs. <br>
+sounding sentenecs. <br />
+</div>
+:ET
