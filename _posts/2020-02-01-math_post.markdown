@@ -13,16 +13,21 @@ categories: jekyll update
 
 
 
-Hi `$z = x + y$`.
-
-`$$a^2 + b^2 = c^2$$`
-
-`$$\begin{vmatrix}a & b\\
-c & d
-\end{vmatrix}=ad-bc$$`
-
-\\[ a^2 = b^2 + c^2 \\].
-
-\\overline{x} $$\sum_{n=1}^{\infty} 2^{-n} = 1$$
 
 
+
+\[ x = \frac{1}{n} \left( \sum_{i=1}^{n} x_i \right) = \frac{x_1+x_2+....+x_n}{x} 
+        \]
+
+
+
+\\ $$ x = \frac{1}{n} \left( \sum_{i=1}^{n} x_i \right) = \frac{x_1+x_2+....+x_n}{x} 
+        $$ \\
+
+
+\\ $$ x = \frac{1}{n} \left( \sum_{i=1}^{n} x_i \right) = \frac{x_1+x_2+....+x_n}{x} 
+        $$ 
+
+
+
+\[ x = \frac{1}{n} \left( \sum_{i=1}^{n} x_i \right) = \frac{x_1+x_2+....+x_n}{x} \] 
