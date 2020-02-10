@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Sneaker Scraper"
-permalink: /sneakers/
-date:   2019-12-05 12:33
+title:  "math"
+permalink: /math/
+date:   2019-02-01 12:33
 image: ../assets/images/sneakers.jpg
 categories: jekyll update
 ---
