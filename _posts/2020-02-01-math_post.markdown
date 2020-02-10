@@ -12,21 +12,36 @@ categories: jekyll update
 
 
 
+The average of an array, $$ x $$, is written as $$ \bar{x} $$ and it defined as:
+
+$$ \bar{x} = \frac{1}{n} \left( \sum_{i=1}^{n} x_i \right) $$ 
+
+It can be written more explicitly as:
+
+$$ \bar{x} = \frac{x_1+x_2+....+x_n}{x} $$
 
 
+<!--
 
+ math version, 
+ c++ version, 
+ python version,
+ python using modlues,
 
-\[ x = \frac{1}{n} \left( \sum_{i=1}^{n} x_i \right) = \frac{x_1+x_2+....+x_n}{x} 
-        \]
+ -->
+some text 
 
+ ~~~cpp
+ your cpp code here
+ ~~~
 
+text 
 
-\\ $$ x = \frac{1}{n} \left( \sum_{i=1}^{n} x_i \right) = \frac{x_1+x_2+....+x_n}{x} 
-        $$ \\
-
+ ~~~python
+ print("this is python")
+ ~~~
 
 $$ x = \frac{1}{n} \left( \sum_{i=1}^{n} x_i \right) = \frac{x_1+x_2+....+x_n}{x} $$ 
 
 
 
-\[ x = \frac{1}{n} \left( \sum_{i=1}^{n} x_i \right) = \frac{x_1+x_2+....+x_n}{x} \] 
