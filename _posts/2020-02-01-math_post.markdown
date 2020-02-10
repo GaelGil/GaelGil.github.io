@@ -25,8 +25,7 @@ categories: jekyll update
         $$ \\
 
 
-\ $$ x = \frac{1}{n} \left( \sum_{i=1}^{n} x_i \right) = \frac{x_1+x_2+....+x_n}{x} 
-        $$ 
+$$ x = \frac{1}{n} \left( \sum_{i=1}^{n} x_i \right) = \frac{x_1+x_2+....+x_n}{x} $$ 
 
 
 
