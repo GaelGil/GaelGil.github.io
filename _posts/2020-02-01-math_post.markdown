@@ -1,0 +1,22 @@
+---
+layout: post
+title:  "Sneaker Scraper"
+permalink: /sneakers/
+date:   2019-12-05 12:33
+image: ../assets/images/sneakers.jpg
+categories: jekyll update
+---
+<script>
+  src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+Hi `$z = x + y$`.
+
+`$$a^2 + b^2 = c^2$$`
+
+`$$\begin{vmatrix}a & b\\
+c & d
+\end{vmatrix}=ad-bc$$`
+
+
