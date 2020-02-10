@@ -6,9 +6,11 @@ date:   2019-02-01 12:33
 image: ../assets/images/sneakers.jpg
 categories: jekyll update
 ---
-<script>
-  src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
+
+
+
+
+
 
 
 Hi `$z = x + y$`.
@@ -19,4 +21,5 @@ Hi `$z = x + y$`.
 c & d
 \end{vmatrix}=ad-bc$$`
 
+\\[ a^2 = b^2 + c^2 \\].
 
