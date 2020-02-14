@@ -12,34 +12,106 @@ categories: jekyll update
 
 
 
-The average of an array, $$ x $$, is written as $$ \bar{x} $$ and it defined as:
+## The average of an array, $$ x $$, is written as $$ \bar{x} $$ and it defined as:
 
 $$ \bar{x} = \frac{1}{n} \left( \sum_{i=1}^{n} x_i \right) $$ 
 
-It can be written more explicitly as:
+## It can be written more explicitly as:
 
 $$ \bar{x} = \frac{x_1+x_2+....+x_n}{x} $$
 
 
-<!--
 
+
+$$ \bar{x} = \frac{1}{n} \left( \sum_{i=1}^{n} x_i \right) = \frac{x_1+x_2+....+x_n}{x} $$
+
+<!--
  math version, 
  c++ version, 
  python version,
  python using modlues,
-
  -->
-some text 
 
- ~~~cpp
- your cpp code here
- ~~~
 
-text 
+# C++ 
+
+## In order to get the mean in C++ we would have to do a lot more. First 
+## 
+
+
+~~~cpp
+#include <iostream>
+using namespace std;
+
+int main(){
+
+
+    int n[] = {10, 20, 30};
+    int sum = 0;
+    int mean;
+    for(int i = 0; i < 3; i++){
+        sum += n[i];
+    }
+
+    mean = (sum/3);
+
+    cout << mean << endl;
+
+}
+~~~
+
+
+# Python 
+
+## Writing everything out in python
 
  ~~~python
- print("this is python")
+n = [10, 20, 30]
+sum = 0
+
+for i in range(len(n)):
+    sum += n[i]
+
+mean =  (sum/len(n))
+
+
  ~~~
+
+
+
+# Python in one line
+
+## In python we can get the mean in a much simpler way. Here in python we can 
+## simply use `sum()` to add up the array `n` and then use `len()` to get the
+## length of the array. This can all be done in one line and can be seen below.
+
+ ~~~python
+
+
+mean = (sum(n)/len(n))
+
+
+ ~~~
+
+
+# The difference from looking tat something like this, 
+
+$$ \bar{x} = \frac{1}{n} \left( \sum_{i=1}^{n} x_i \right) $$ 
+
+# and looking at something like this 
+
+~~~python
+
+n = [10, 20, 30]
+sum = 0
+
+for i in range(len(n)):
+    sum += n[i]
+
+mean =  (sum/len(n))
+
+
+~~~
 
 $$ x = \frac{1}{n} \left( \sum_{i=1}^{n} x_i \right) = \frac{x_1+x_2+....+x_n}{x} $$ 
 
