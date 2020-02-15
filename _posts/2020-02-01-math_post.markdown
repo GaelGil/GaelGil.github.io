@@ -3,28 +3,31 @@ layout: post
 title:  "math"
 permalink: /math/
 date:   2019-02-01 12:33
-image: ../assets/images/sneakers.jpg
+image: ../assets/images/mean.png
 categories: jekyll update
 ---
-
-
-
-
 
 
 ## The average of an array, $$ x $$, is written as $$ \bar{x} $$ and is defined as:
 
 $$ \bar{x} = \frac{1}{n} \left( \sum_{i=1}^{n} x_i \right) $$ 
 
+The notation can be very confusing but $$ \sum_{i=1}^{n} x_i $$ simply just tells us to
+add up all the elements of `n` starting from 1. Once that is done multiply $$ \frac{1}{n} $$
+by the sum of `n`.  Which will leave us with the ** sum of ** `n` over `n`. This
+
 ## We can also write it in detail as:
 
-$$ \bar{x} = \frac{x_1+x_2+....+x_n}{x} $$
+$$ \bar{x} = \frac{x_1+x_2+....+x_n}{n} $$
 
+Here in more detail we are adding up every element of `n` which will give us the sum and
+then divinding it by `n`
 
 
 ## All together we have this
 
 $$ \bar{x} = \frac{1}{n} \left( \sum_{i=1}^{n} x_i \right) = \frac{x_1+x_2+....+x_n}{x} $$
+
 
 <!--
  math version, 
@@ -33,14 +36,15 @@ $$ \bar{x} = \frac{1}{n} \left( \sum_{i=1}^{n} x_i \right) = \frac{x_1+x_2+....+
  python using modlues,
  -->
 
+
 ## Basic things
+
 
 
 
 
 ## C++ 
 
-Getting the mean of 
 
 
 ~~~cpp
@@ -77,23 +81,16 @@ for i in range(len(n)):
     sum += n[i]
 
 mean =  (sum/len(n))
-
-
  ~~~
 
 
 
 ## Python in one line
 
-In python we can get the mean in a much simpler way. Here in python we can 
-simply use `sum()` to add up the array `n` and then use `len()` to get the
-length of the array. This can all be done in one line and can be seen below.
 
  ~~~python
 
-
 mean = (sum(n)/len(n))
-
 
  ~~~
 
@@ -106,6 +103,12 @@ $$ \bar{x} = \frac{1}{n} \left( \sum_{i=1}^{n} x_i \right) $$
 
 and looking at something like this 
 
+Here we can see that we have a array `n` with 3 numbers and after that we have 
+some instructions on what to do. 
+* First we loop through all the elements in the arary
+* After every loop we add the current element to the sum
+* Once the loop is over we will have our sum of the array
+* The final step is to simply divide the sum by the array size
 ~~~python
 
 n = [10, 20, 30]
@@ -115,7 +118,6 @@ for i in range(len(n)):
     sum += n[i]
 
 mean =  (sum/len(n))
-
 
 ~~~
 
