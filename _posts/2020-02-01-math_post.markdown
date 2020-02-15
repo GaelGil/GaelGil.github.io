@@ -12,8 +12,8 @@ categories: jekyll update
 
 $$ \bar{x} = \frac{1}{n} \left( \sum_{i=1}^{n} x_i \right) $$ 
 
-The notation can be very confusing but $$ \sum_{i=1}^{n} x_i $$ simply just tells us to
-add up all the elements of `n` starting from 1. Once that is done multiply $$ \frac{1}{n} $$
+The notation of this can be very confusing but $$  \left( \sum_{i=1}^{n} x_i \right)  $$ simply just tells us to
+add up all the elements of `n` starting from 1. Once that we have the sum, we multiply $$ \frac{1}{n} $$
 by the sum of `n`.  Which will leave us with the ** sum of ** `n` over `n`. This
 
 ## We can also write it in detail as:
@@ -28,6 +28,10 @@ then divinding it by `n`
 
 $$ \bar{x} = \frac{1}{n} \left( \sum_{i=1}^{n} x_i \right) = \frac{x_1+x_2+....+x_n}{x} $$
 
+Altogether we have this which as well can be very confusing but this just shows us the levels of 
+abstraction starting from left to right where it gets simpler and simpler.
+
+
 
 <!--
  math version, 
@@ -40,12 +44,7 @@ $$ \bar{x} = \frac{1}{n} \left( \sum_{i=1}^{n} x_i \right) = \frac{x_1+x_2+....+
 ## Basic things
 
 
-
-
-
 ## C++ 
-
-
 
 ~~~cpp
 #include <iostream>
@@ -103,8 +102,8 @@ $$ \bar{x} = \frac{1}{n} \left( \sum_{i=1}^{n} x_i \right) $$
 
 and looking at something like this 
 
-Here we can see that we have a array `n` with 3 numbers and after that we have 
-some instructions on what to do. 
+<!-- Here we can see that we have a array `n` with 3 numbers and after that we have 
+some instructions on what to do.  -->
 * First we loop through all the elements in the arary
 * After every loop we add the current element to the sum
 * Once the loop is over we will have our sum of the array
