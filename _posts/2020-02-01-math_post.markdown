@@ -34,8 +34,6 @@ $$ \bar{x} = \frac{1}{n} \left( \sum_{i=1}^{n} x_i \right) = \frac{x_1+x_2+....+
 This confusing but this just shows us the levels of abstraction. From being supper deatiled on the right and getting simpler 
 the more. As explained this notation can be very hard to understand if you have never encounterd it but maybe seeing it in code may help. 
 
-<!-- using python -->
-
 
 ## Things to remeber
 In programing we start counting from 0. 
@@ -82,7 +80,8 @@ mean =  (sum/len(n))
 
 
 ## Python in one line
-
+In python the `sum()` methond gives us the sum of a array and `len()` gives of the length of a array(how many elements are in the array)
+We can then divied those and this will give us the mean
 
  ~~~python
 n = [10, 20, 30]
@@ -93,8 +92,8 @@ mean = (sum(n)/len(n))
 
 
 ## Python using statistics library
-
-Python in one line.
+We can also use of Pythons built in libraries to make things easier. Here I imported the the statistics library and imported the `mean()`
+function. 
 
  ~~~python
 from statistics import mean 
@@ -107,7 +106,7 @@ mean_of_n = mean(n)
 
 ## Differences / idk
 
-This here doesn't really.  
+This here doesn't really how to get the men
 
 $$ \bar{x} = \frac{1}{n} \left( \sum_{i=1}^{n} x_i \right) $$ 
 
@@ -119,8 +118,8 @@ some instructions on what to do.  -->
 * After every loop we add the current element to the sum
 * Once the loop is over we will have our sum of the array
 * The final step is to simply divide the sum by the array size
-~~~python
 
+~~~python
 n = [10, 20, 30]
 sum = 0
 
@@ -128,7 +127,6 @@ for i in range(len(n)):
     sum += n[i]
 
 mean =  (sum/len(n))
-
 ~~~
 
 $$ x = \frac{1}{n} \left( \sum_{i=1}^{n} x_i \right) = \frac{x_1+x_2+....+x_n}{x} $$ 
