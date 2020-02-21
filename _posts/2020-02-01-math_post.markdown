@@ -8,50 +8,47 @@ categories: jekyll update
 ---
 
 
-## The average of an array, $$ x $$, is written as $$ \bar{x} $$ and is defined as:
+#### This blog posts refers to the arithmetic mean i'll be refering to it as just mean for shorts
+
+## The average of an array, $$ x $$ can be written as $$ \bar{x} $$ and is defined as: 
 
 $$ \bar{x} = \frac{1}{n} \left( \sum_{i=1}^{n} x_i \right) $$ 
 
-The notation of this can be very confusing but $$  \left( \sum_{i=1}^{n} x_i \right)  $$ simply just tells us to
-add up all the elements of `n` starting from 1. Once that we have the sum, we multiply $$ \frac{1}{n} $$
-by the sum of `n`.  Which will leave us with the ** sum of ** `n` over `n`. This
+The notation of here can be very confusing but $$  \left( \sum_{i=1}^{n} x_i \right)  $$ simply just tells us to
+add up all the elements of `n` starting from 1 (the sum of the array x). Once we have the sum we multiply
+$$ \frac{1}{n} $$ to it.  Which will leave us with the **sum of** `n` over `n`. 
 
 ## We can also write it in detail as:
 
 $$ \bar{x} = \frac{x_1+x_2+....+x_n}{n} $$
 
-Here in more detail we are adding up every element of `n` which will give us the sum and
-then divinding it by `n`
+Written out in detail here, we are adding up every element of the array in the top which will get us the sum og the array,
+we have the sum over `n` which represents the ammount of elements/numbers. 
 
 
 ## All together we have this
+The prevoius examples showed different ways we can represent the mean and all of put together we have this
 
 $$ \bar{x} = \frac{1}{n} \left( \sum_{i=1}^{n} x_i \right) = \frac{x_1+x_2+....+x_n}{x} $$
 
-Altogether we have this which as well can be very confusing but this just shows us the levels of 
-abstraction starting from left to right where it gets simpler and simpler.
+This confusing but this just shows us the levels of abstraction. From being supper deatiled on the right and getting simpler 
+the more. As explained this notation can be very hard to understand if you have never encounterd it but maybe seeing it in code may help. 
+
+<!-- using python -->
 
 
-
-<!--
- math version, 
- c++ version, 
- python version,
- python using modlues,
- -->
-
-
-## Basic things
+## Things to remeber
+In programing we start counting from 0. 
 
 
 ## C++ 
+In C++ we can 
 
 ~~~cpp
 #include <iostream>
 using namespace std;
 
 int main(){
-
 
     int n[] = {10, 20, 30};
     int sum = 0;
@@ -64,13 +61,13 @@ int main(){
 
     cout << mean << endl;
 
+    return 0;
 }
 ~~~
 
 
-## Python 
-
-Writing everything out in python
+## Writing everything out in python.
+Similar to C++ in Python we can use a loop to get a mean as well but we could also do it in one line as well. 
 
  ~~~python
 n = [10, 20, 30]
@@ -88,15 +85,29 @@ mean =  (sum/len(n))
 
 
  ~~~python
+n = [10, 20, 30]
 
 mean = (sum(n)/len(n))
 
  ~~~
 
 
+## Python using statistics library
+
+Python in one line.
+
+ ~~~python
+from statistics import mean 
+
+n = (11, 3, 4, 5, 7, 9, 2) 
+
+mean_of_n = mean(n)
+ ~~~
+
+
 ## Differences / idk
 
-The difference from looking at something like this, 
+This here doesn't really.  
 
 $$ \bar{x} = \frac{1}{n} \left( \sum_{i=1}^{n} x_i \right) $$ 
 
