@@ -1,0 +1,111 @@
+---
+layout: post
+title:  "math"
+permalink: /math/
+date:   2019-02-01 12:33
+image: ../assets/images/spam.png
+categories: jekyll update
+---
+
+<a href=""> Link to the Jupyter Notebook</a>
+
+
+In this blog post I will be talking about 
+
+
+I got the data from the UC Irvine Machine Learning Repository
+
+
+###### What I'll be talking about
+Figuiring out how to classify a message as spam or ham
+
+
+###### What the issue is
+
+
+###### How I tried to solve it
+My first algorithm was very simple. The idea was that my algorithm would take a in a message as its argument then create a way we could keep track of weather a word is spam or ham. With this we could cound up all the spam or ham words and see what level is higher.
+
+So first the algorithm takes in a message as it's argument. Then I created a nested dictionary with each word as a key and it's values 2 other keys (one of them being spam and the other ham) that had their values set to 0 at the beggining. 
+If that was a bit confusing here is a visual of what it looked like. 
+
+~~~python
+
+words_dict = {
+    'the': ['spam']: 0, ['ham'] : 0,
+    'sky': ['spam']: 0, ['ham'] : 0,
+    'is': ['spam']: 0, ['ham'] : 0,
+    'blue': ['spam']: 0, ['ham'] : 0,
+}
+
+~~~
+
+This would help me give a value to a words spam or ham. Now that we had a empty dictionary we passed it into another function which would go through every word in our dictionary and look up that word in another dictionay with prefilled values. 
+
+
+~~~python
+
+# Our dict
+words_dict = {
+    'the': ['spam']: 0, ['ham'] : 0,
+    'sky': ['spam']: 0, ['ham'] : 0,
+    'is': ['spam']: 0, ['ham'] : 0,
+    'blue': ['spam']: 0, ['ham'] : 0,
+}
+
+# The dictionary we look up our words in
+prefilled_dict = {
+    'the': ['spam']: 7, ['ham'] : 10,
+    'sky': ['spam']: 0, ['ham'] : 12,
+    'is': ['spam']: 6, ['ham'] : 10,
+    'blue': ['spam']: 0, ['ham'] : 15,
+    'free': ['spam']: 15, ['ham']: 4,
+    'cat': ['spam']: 0, ['ham']: 12,
+    'exclusive': ['spam']: 16, ['ham']: 3,
+}
+
+~~~
+
+
+Once we have compared it we should have something like this
+
+~~~python
+
+words_dict = {
+    'the': ['spam']: 7, ['ham'] : 10,
+    'sky': ['spam']: 0, ['ham'] : 12,
+    'is': ['spam']: 6, ['ham'] : 10,
+    'blue': ['spam']: 0, ['ham'] : 15,
+
+~~~
+
+Lastly we checked what value is higher. If the spam value was higher than the ham value we add 1 to the list and if not we add 0.
+So we have list with ones and zeroes. If the list had more 1s than zeroes it was spam. 
+
+~~~python
+
+words_nums = [0, 0, 0, 0]
+
+~~~
+
+This algorithm did really bad. I don't really remeber the scores it got but I know it was really low. One of the main issues I had was not
+
+
+
+###### steps
+
+
+###### analyzing data 
+
+
+###### discoveries
+
+
+###### challenges
+
+
+###### what i learned
+
+
+
+###### future improvements

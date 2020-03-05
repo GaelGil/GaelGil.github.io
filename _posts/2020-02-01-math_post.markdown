@@ -8,7 +8,11 @@ categories: jekyll update
 ---
 
 
-##### This blog posts refers to the arithmetic mean i'll be refering to it as just mean for shorts
+
+<!-- In this blogpost I will be talking about about  -->
+
+
+In this blog post I will also be referung to arithmetic mean i'll be refering to it as just mean for shorts
 
 ## The average of an array, $$ x $$ can be written as $$ \bar{x} $$ and is defined as: 
 
@@ -82,6 +86,18 @@ mean =  (sum/len(n))
  ~~~
 
 
+
+
+~~~
+arr = [1,2,3,5]
+
+assert len(arr) == 4
+
+n = 4
+
+assert sum(arr) == 11
+print(sum(arr)) # 11
+~~~
 
 ## Python in one line
 In python the `sum()` methond gives us the sum of a array and `len()` gives of the length of a array(how many elements are in the array)
