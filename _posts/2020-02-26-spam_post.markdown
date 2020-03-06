@@ -1,29 +1,35 @@
 ---
 layout: post
-title:  "math"
-permalink: /math/
+title:  "Spam Detector"
+permalink: /spam_ham/
 date:   2019-02-01 12:33
 image: ../assets/images/spam.png
 categories: jekyll update
 ---
 
-<a href=""> Link to the Jupyter Notebook</a>
+<a href="https://github.com/GaelGil/algorithms/blob/master/data_stuff/spam_analysis/data_eval.ipynb"> Link to the Jupyter Notebook</a>
 
 
-In this blog post I will be talking about 
+In this blog post I will be talking about creating a spam detector. I did not use any libraries but I know they exist and make things easier and I will be talking about in the blog post as well. 
 
 
 I got the data from the UC Irvine Machine Learning Repository
 
 
-###### What I'll be talking about
-Figuiring out how to classify a message as spam or ham
+##### What I'll be talking about
+Figuiring out how to classify a message as spam or ham. 
 
 
-###### What the issue is
+
+##### What the issue is
+
+#### Things to know
+Supervised Machine Learning
+Classification 
 
 
-###### How I tried to solve it
+
+##### Attempt 1 to solving the issue
 My first algorithm was very simple. The idea was that my algorithm would take a in a message as its argument then create a way we could keep track of weather a word is spam or ham. With this we could cound up all the spam or ham words and see what level is higher.
 
 So first the algorithm takes in a message as it's argument. Then I created a nested dictionary with each word as a key and it's values 2 other keys (one of them being spam and the other ham) that had their values set to 0 at the beggining. 
@@ -67,7 +73,7 @@ prefilled_dict = {
 ~~~
 
 
-Once we have compared it we should have something like this
+Once we have compared our words our dictionary would have the values for each word and would look like this.
 
 ~~~python
 
@@ -79,8 +85,7 @@ words_dict = {
 
 ~~~
 
-Lastly we checked what value is higher. If the spam value was higher than the ham value we add 1 to the list and if not we add 0.
-So we have list with ones and zeroes. If the list had more 1s than zeroes it was spam. 
+Now that we have the values for the words we can check which value is higher. In another function I passed in our dictionary where we would do this. The function would check if the spam value was higher than the ham value, if it was we would add 1 to the list and if not we add 0.So we have list with ones and zeroes. If the list had more 1s than zeroes it was spam. Our current example would look like this
 
 ~~~python
 
@@ -88,24 +93,38 @@ words_nums = [0, 0, 0, 0]
 
 ~~~
 
-This algorithm did really bad. I don't really remeber the scores it got but I know it was really low. One of the main issues I had was not
+
+This algorithm did really bad on the training data I don't really remeber the scores it got but I know it was really low that I didn't bother using the test data. One of the main issues I had was not having words to compare it to which meant almost everything was set to ham. As I said earlier this algorithm looked at everyword in the message and looked it up in a dictionary with prefilled words and values but that algorithm only had only maybe 10 or so words already manually set by me. This wouldn't have been such a bad idea if I had lots and lots of words but the issue with this is I would not know what to set their spam and ham values to. So with this came the idea for my next algorithm. 
+
+##### Attempt 2 
+After looking into possibilites of solving my issue with my first algorithm I had my new idea. The idea was that first we would set all the into dictionary form where every word in the dataset would have its spam and ham value.  This new algorithm would go through every messsage and clean the message (which I had not done previosly) by removing punctuationa and making every word lowercase. Doing this is good for many reasons one of them being . Once we have our clean message in a list form we can now input the words it into the dictonary with their values.
+They way in which I assigned the values to a word was by its label (). The algorithm had a function which would take its label as its argument and depending on the label it would be added to its value. If that is confusing here is an a code bit. 
+
+~~~python
+
+~~~
+
+What the function is doing is 
+After the first iteration if a word was already in the dictionary we would just add to its spam or ham value depending on its label.
+
+Now that we have a dictionary of probabilities we can now 
+
+
+#### changes to algorithms
+Very similar to first algorithm.
+Used naive byes after worked better but overfitted
+Removed stop words had the same results
+Graphed the word probabilites to see if it could show something (final algorithm)
+Using sklearn
 
 
 
-###### steps
 
 
-###### analyzing data 
-
-
-###### discoveries
-
-
-###### challenges
-
-
-###### what i learned
-
-
-
-###### future improvements
+##### steps
+##### analyzing data 
+##### discoveries
+##### challenges
+##### what i learned
+##### future improvements
+Not a improvement but while doing research I found out that this same algorithm could possibly work with classifing wether a sentence is positive or negative like if what someone is saying is good or bad.
