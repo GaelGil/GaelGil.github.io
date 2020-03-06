@@ -37,13 +37,26 @@ The formant I had it was
 
 The most important part in terms of cleaning was just getting the date from `03/6/2020` to `2020`.
 
-Once I had that I could now group every shoe by its release year.  
+Once I had that I could now group every shoe by its release year.
+
+
+##### Graphing the data
+So one of the things I first graphed was the resell prices for shoes by year and here is the graph for that.
+
+<img src="resell_prices_by_year.png">
+
+As you can see the resell prices for older shoes are a lot higher then the new ones. 
+
+
+
+##### What I learned
+From doing this project I learned a lot about sraping data/collecting and how comapines wouldn't necessarily do that they would just buy the data. One of the other important things was learning how to use jupyter notebooks, I had heard about them before and used them slightly but this was a good chance to actually use it for a project. With that I also learned about how to graph data using matplotlib. 
 
 
 <!-- > - issues with collecting data -->
 <!-- > - cleaning data -->
 <!-- > - analyzing data  -->
-> - discoveries
+<!-- > - discoveries
 > - what i learned
 > - challenges
-> - future improvements
+> - future improvements -->
