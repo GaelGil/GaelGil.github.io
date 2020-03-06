@@ -16,20 +16,20 @@ In this blog post I will be talking about creating a spam detector. I did not us
 I got the data from the UC Irvine Machine Learning Repository
 
 
-##### What I'll be talking about
+### What I'll be talking about
 Figuiring out how to classify a message as spam or ham. 
 
 
+### What the issue is
 
-##### What the issue is
 
-#### Things to know
+### Things to know
 Supervised Machine Learning
 Classification 
+Jupyter NoteBooks
 
 
-
-##### Attempt 1 to solving the issue
+### Attempt 1 
 My first algorithm was very simple. The idea was that my algorithm would take a in a message as its argument then create a way we could keep track of weather a word is spam or ham. With this we could cound up all the spam or ham words and see what level is higher.
 
 So first the algorithm takes in a message as it's argument. Then I created a nested dictionary with each word as a key and it's values 2 other keys (one of them being spam and the other ham) that had their values set to 0 at the beggining. 
@@ -96,22 +96,87 @@ words_nums = [0, 0, 0, 0]
 
 This algorithm did really bad on the training data I don't really remeber the scores it got but I know it was really low that I didn't bother using the test data. One of the main issues I had was not having words to compare it to which meant almost everything was set to ham. As I said earlier this algorithm looked at everyword in the message and looked it up in a dictionary with prefilled words and values but that algorithm only had only maybe 10 or so words already manually set by me. This wouldn't have been such a bad idea if I had lots and lots of words but the issue with this is I would not know what to set their spam and ham values to. So with this came the idea for my next algorithm. 
 
-##### Attempt 2 
-After looking into possibilites of solving my issue with my first algorithm I had my new idea. The idea was that first we would set all the into dictionary form where every word in the dataset would have its spam and ham value.  This new algorithm would go through every messsage and clean the message (which I had not done previosly) by removing punctuationa and making every word lowercase. Doing this is good for many reasons one of them being . Once we have our clean message in a list form we can now input the words it into the dictonary with their values.
-They way in which I assigned the values to a word was by its label (). The algorithm had a function which would take its label as its argument and depending on the label it would be added to its value. If that is confusing here is an a code bit. 
+### Attempt 2 
+After looking into possibilites of solving my issue with my first algorithm I had my new idea. The idea was that first we would set all the data (words) into dictionary form, where every word in the dataset would have its spam and ham value. This new algorithm would go through every messsage and clean the message (which I had not done previosly) by removing punctuationa and making every word lowercase. Doing this is good for many reasons one of them being. Once we have our clean message in a list form we can now input the words it into the dictonary with their values but first I put them all into the dictionary. 
 
 ~~~python
 
+#####This function is for setting the words into the probability dictionary   
+def add_words_to_dict(sms_list:list):
+    """
+    This function takes in a list as its argument and with
+    the items of those list we create a dictonary with the
+    words as keys. 
+    """
+    for i in range(len(sms_list)):
+        # select current word
+        word = sms_list[i]
+
+        # if word is already there ignore it for now
+        if word in PROBS:
+            pass
+
+        elif word not in PROBS:
+            # if word is not in there set their ham and spam values to 1
+            PROBS[word] = {'spam' : int(1), 'ham' : int(1)}
+
 ~~~
+
+
+They way in which I assigned the values to a word was by its label (this is supervised machine learning so we have the labels for each message). The algorithm had a function which would take its label as its argument and the message its self. Depending on the label it would I would add a point to its label. If that is confusing here is the function.
+
+
+~~~python
+
+##### This function is for assigning spam and ham values to words  
+def assign_vals_to_words(label:str, sms_list:list):
+    """
+    This function takes in a string (label of sms) and the sms 
+    as a list. Depending on the label we will add 1 to every 
+    word on that list label value.
+    """
+    spam = 'spam'
+    ham = 'ham'
+    if label == spam:
+        # for all spam sms in our train data sets
+        for i in range(len(sms_list)):
+            # select word
+            word = sms_list[i]
+            # add 1 to their spam values
+            PROBS[word][spam] += 1
+    elif label == ham:
+        # for all ham sms in our train data sets
+        for i in range(len(sms_list)):
+            # select word
+            word = sms_list[i]
+            # add 1 to their ham values
+            PROBS[word][ham] += 1       
+    else:
+        pass
+
+
+~~~
+
 
 What the function is doing is 
 After the first iteration if a word was already in the dictionary we would just add to its spam or ham value depending on its label.
 
-Now that we have a dictionary of probabilities we can now 
+Heres a sample of what the dictionary looked like
+
+~~~python
 
 
-#### changes to algorithms
+
+~~~
+
+
+ Now that we have a dictionary of probabilities we can now try everything again
+
+
+### changes to algorithms
 Very similar to first algorithm.
+
+
 Used naive byes after worked better but overfitted
 Removed stop words had the same results
 Graphed the word probabilites to see if it could show something (final algorithm)
@@ -120,11 +185,57 @@ Using sklearn
 
 
 
+### Testing Accuracy
+I created a function called `test_accuracy` this would take in another function (the algorithm) as its arugment and some data (training data)
+Every algorithm version I tested I imported into the the jupyter notebook and passed in through the `test_accuracy` along with the trainng data. What test acurracy did
 
-##### steps
-##### analyzing data 
-##### discoveries
-##### challenges
-##### what i learned
-##### future improvements
+~~~python
+
+
+def get_accuracy(algorithm, data):
+    # ammount correct for each label
+    correct_ham = 0
+    correct_spam = 0
+    correct = 0
+    
+    # the occurances of each label in the data set
+    spam = len(data.groupby(['true_category']).get_group('spam'))
+    ham = len(data.groupby(['true_category']).get_group('ham'))
+    
+    # lenght of the dataset
+    len_of_data = len(data)
+
+    for i in range(len(data)):
+        # get the message and label 
+        sms = data['message'][i]
+        label = data['true_category'][i]
+        
+        # call function
+        prediction = algorithm(sms) # this returns "spam" or "ham"
+        
+        if prediction == label:
+            # If prediction is correct we add 1 overall correct
+            correct += 1
+            if prediction == 'spam':
+                # If the predicted label is spam and acutal label
+                # is spam then we add to amount correct for spam
+                correct_spam +=1
+            elif prediction =='ham':
+                # If the predicted label is ham and acutal label
+                # is spam then we add to amount correct for ham
+                correct_ham +=1
+    
+    print((correct_ham+correct_spam)/2)
+    print('Correct Ham: ', + correct_ham/ham)
+    print('Correct Spam: ', + correct_spam/spam)
+    print('Correct: ', + correct/len_of_data)
+
+~~~
+
+### steps
+### analyzing data 
+### discoveries
+### challenges
+### what i learned
+### future improvements
 Not a improvement but while doing research I found out that this same algorithm could possibly work with classifing wether a sentence is positive or negative like if what someone is saying is good or bad.
