@@ -161,7 +161,7 @@ def assign_vals_to_words(label:str, sms_list:list):
 What the function is doing is 
 After the first iteration if a word was already in the dictionary we would just add to its spam or ham value depending on its label.
 
-Heres a sample of what the dictionary looked like
+Heres a sample of what the dictionary looked like 
 
 ~~~python
 
