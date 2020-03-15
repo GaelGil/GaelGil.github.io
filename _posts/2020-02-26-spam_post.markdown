@@ -32,24 +32,35 @@ How do we classfiy a message as spam or ham(not spam)
 
 
 ### Things to know
-Supervised Machine Learning<br>
-Classification <br>
-Jupyter NoteBooks<br>
-What is ham<br>
-How dictionaries work
+Supervised Machine Learning:<br>
+So because we have the labels this is a machine learning project.
+
+Classification:<br>
+In machine learning there are different types of tasks that can be done. Some of them are claissfication tasks such as KNN and naive byes. Both these algorithms aim to classify something into a certain class. An example of this is this project. We are predicting wether a message is spam or ham so we are predicting the class of some data. Another big task in machine learning is predicting a numerical value.   An example fot this is linear regression, 
+
+Jupyter NoteBooks:<br>
+Jupyter NoteBooks are a really cool tool that is commomly used in machine learning. They are great for visualazing data, etc. 
+
+What is ham?:<br>
+Ham is not spam. Here is an example from the data set of what spam is  . And here is an example of what ham is . 
+
+How dictionaries work: <br>
+
+
 
 
 ### Attempt 1 
-My first algorithm was a very simple. The idea was that my algorithm would take a in a message which would then be made into a dictionary containing the words of the message as it's keys. Once we had the dictionary we needed to store the spam and ham values of that word so we put a dictionary of values for the words set to 0. This would allow us to track the spam and ham values of each word and check if a message has a lot of spam words or not. For example if the word `free` appeared in the message it would have a larger spam value than a ham value so it would get marked as `spam: 1` and `ham: 0`. Here is a sample run of what it would look like using the sentence `the sky is blue`.
+My first algorithm was a very simple. The idea was that my algorithm would take a in a message which would then be made into a dictionary containing the words of the message as it's keys. Once we had the dictionary we needed to store the spam and ham values of that word so we put a dictionary of values for the words set to 0. This would allow us to track the spam and ham values of each word and check if a message has a lot of spam words or not. For example if the word `free` appeared in the message it would have a larger spam value than a ham value so it would get marked as `spam: 1` and `ham: 0`. Here is a sample run of what it would look like using the sentence `hey are u free tonight`.
 Here is our dictionary with our words and keys. 
 
 ~~~python
 
 words_dict = {
-    'the': ['spam']: 0, ['ham'] : 0,
-    'sky': ['spam']: 0, ['ham'] : 0,
-    'is': ['spam']: 0, ['ham'] : 0,
-    'blue': ['spam']: 0, ['ham'] : 0,
+    'hey': ['spam']: 0, ['ham'] : 0,
+    'are': ['spam']: 0, ['ham'] : 0,
+    'u': ['spam']: 0, ['ham'] : 0,
+    'free': ['spam']: 0, ['ham'] : 0,
+    'tonight': ['spam']: 0, ['ham'] : 0,
 }
 
 ~~~
@@ -61,21 +72,26 @@ Since we now have our dictionary the next step is to look up our words in anothe
 
 # Our dict
 words_dict = {
-    'the': ['spam']: 0, ['ham'] : 0,
-    'sky': ['spam']: 0, ['ham'] : 0,
-    'is': ['spam']: 0, ['ham'] : 0,
-    'blue': ['spam']: 0, ['ham'] : 0,
+    'hey': ['spam']: 0, ['ham'] : 0,
+    'are': ['spam']: 0, ['ham'] : 0,
+    'u': ['spam']: 0, ['ham'] : 0,
+    'free': ['spam']: 0, ['ham'] : 0,
+    'tonight': ['spam']: 0, ['ham'] : 0,
 }
 
 # The dictionary we look up our words in
 prefilled_dict = {
+    'hey': ['spam']: 10, ['ham']: 20,
     'the': ['spam']: 7, ['ham'] : 10,
+    'u': ['spam']: 2, ['ham'] : 14,
     'sky': ['spam']: 0, ['ham'] : 12,
     'is': ['spam']: 6, ['ham'] : 10,
     'blue': ['spam']: 0, ['ham'] : 15,
     'free': ['spam']: 15, ['ham']: 4,
     'cat': ['spam']: 0, ['ham']: 12,
+    'are': ['spam']: 14, ['ham']: 34,
     'exclusive': ['spam']: 16, ['ham']: 3,
+    'tonight' : ['spam']: 9, ['ham']: 30,
 }
 
 ~~~
@@ -85,23 +101,23 @@ Once we have compared our words our dictionary would have the values for each wo
 ~~~python
 
 words_dict = {
-    'the': ['spam']: 7, ['ham'] : 10,
-    'sky': ['spam']: 0, ['ham'] : 12,
-    'is': ['spam']: 6, ['ham'] : 10,
-    'blue': ['spam']: 0, ['ham'] : 15,
-
+    'hey': ['spam']: 10, ['ham']: 20,
+    'are': ['spam']: 14, ['ham']: 34,
+    'u': ['spam']: 2, ['ham'] : 14,
+    'free': ['spam']: 25, ['ham']: 7,
+    'tonight' : ['spam']: 9, ['ham']: 30,
+}
 ~~~
 
-Now that we have the values for the words we can check which value is higher. In another function I passed in our dictionary where we would do this. The function would check if the spam value was higher than the ham value, if it was we would add 1 to the list and if not we add 0.So we have list with ones and zeroes. If the list had more 1s than zeroes it was spam. Our current example would look like this
+Now that we have the values for the words we can check which value is higher. In another function I passed in our dictionary where we would do this. The function would check if the spam value was higher than the ham value, if it was we would add 1 to the list and if not we add 0.So we have list with ones and zeroes. If the list had more 1s than zeroes it was spam. Our current example of `hey are u free tonight` would look like this
 
 ~~~python
 
-words_nums = [0, 0, 0, 0]
+words_nums = [0, 0, 0, 1, 0]
 
 ~~~
 
-
-This algorithm did really bad on the training data I don't really remeber the scores it got but I know it was really low that I didn't bother using the test data. One of the main issues I had was not having words to compare it to which meant almost everything was set to ham. As I said earlier this algorithm looked at everyword in the message and looked it up in a dictionary with prefilled words and values but that algorithm only had only maybe 10 or so words already manually set by me. This wouldn't have been such a bad idea if I had lots and lots of words but the issue with this is I would not know what to set their spam and ham values to. So with this came the idea for my next algorithm. 
+Because there are more zeeroes than there are ones this would be marked as spam. This algorithm did really bad on the training data I don't really remeber the scores it got but I know it was really low that I didn't bother using the test data. One of the main issues I had was not having words to compare it to which meant almost everything was set to ham. As I said earlier this algorithm looked at everyword in the message and looked it up in a dictionary with prefilled words and values but that algorithm only had only maybe 10 or so words already manually set by me. This wouldn't have been such a bad idea if I had lots and lots of words but the issue with this is I would not know what to set their spam and ham values to. So with this came the idea for my next algorithm. 
 
 ### Attempt 2 
 After looking into possibilites of solving my issue with my first algorithm I had my new idea. The idea was that first we would set all the data (words) into dictionary form, where every word in the dataset would have its spam and ham value. This new algorithm would go through every messsage and clean the message (which I had not done previosly) by removing punctuationa and making every word lowercase. Doing this is good for many reasons one of them being. Once we have our clean message in a list form we can now input the words it into the dictonary with their values (default to 1). 
@@ -113,7 +129,10 @@ def add_words_to_dict(sms_list:list):
     """
     This function takes in a list as its argument and with
     the items of those list we create a dictonary with the
-    words as keys. 
+    words as keys. The value of the key are a dictionary 
+    with 2 keys one of them being spam and the other ham. 
+    The values to those are the words probability of it
+    being spam or ham 
     """
     for i in range(len(sms_list)):
         # select current word
@@ -130,7 +149,7 @@ def add_words_to_dict(sms_list:list):
 ~~~
 
 
-They way in which I assigned the values to a word was by its label (this is supervised machine learning so we have the labels for each message). The algorithm had a function which would take its label as its argument and the message its self. Depending on the label it would I would add a point to its label. If that is confusing here is the function.
+They way in which I assigned the values to a word was by its label (this is supervised machine learning so we have the labels for each message). The algorithm had a function which would take its label as its argument and the message its self. Depending on the label it would add a point to its label value in the ditcionary. If that is confusing here is the function.
 
 
 ~~~python
@@ -164,11 +183,8 @@ def assign_vals_to_words(label:str, sms_list:list):
 
 ~~~
 
+Once we ran that function our dictionay was filled with its values and looked like this. 
 
-What the function is doing is 
-After the first iteration if a word was already in the dictionary we would just add to its spam or ham value depending on its label.
-
-Heres a sample of what the dictionary looked like 
 
 ~~~python
 
@@ -177,34 +193,11 @@ Heres a sample of what the dictionary looked like
 ~~~
 
 
- Now that we have a dictionary of probabilities we can now try everything again
-
-
-### changes to algorithms
-Every algorithm follewd the same proccess as the first one. We sould set the data into dictionary form, count up words and their probabilities and see what we could do with that after.
-
-Used naive byes after worked better but overfitted
-A very common way to solve this was by using naive byes. 
-
-
-
-I went online and did some more resaerch to see what other things people did. One of the things that I noticed was people removed stop words. I dont neccisarily know by definitiin what stop words are but from my understanding they are very common word such as `the`, `is`, `they`, etc. So for my next idea to try and improve my algorithms accuracy I removed the stop words. The proccess of the remvoing the stop words was done a long with cleaning the message. Here is the function that removed the stop words.
-
-~~~python
-~~~
-
-In the end this really had no effect and gave me the same results my previous algorithm
-
-
-Graphed the word probabilites to see if it could show something (final algorithm)
-Using sklearn
-
-
+ Now that we have a dictionary of probabilities we can now try everything again. 
 
 
 ### Testing Accuracy
-I created a function called `test_accuracy` this would take in another function (the algorithm) as its arugment and some data (training data)
-Every algorithm version I tested I imported into the the jupyter notebook and passed in through the `test_accuracy` along with the trainng data. What test acurracy did
+Before I talk about my other algorithms here is a look at how I tested their acurracy. I created a function called `test_accuracy` this would take in another function (the algorithm) as its arugment and some data (training data). Every algorithm version I tested I imported into the the jupyter notebook and passed in through the `test_accuracy` along with the trainng data. What test acurracy did
 
 ~~~python
 
@@ -249,10 +242,36 @@ def get_accuracy(algorithm, data):
 
 ~~~
 
-<!-- ### steps -->
-<!-- ### analyzing data  -->
-<!-- ### discoveries -->
-### challenges
+### All other attempts with different algorithms
+Every algorithm follewd the same proccess as the first one. We sould set the data into dictionary form, count up words and their probabilities and see what we could do with that after.
+
+<!-- naive byes -->
+One of my attempts was using naive byes. Naye baies is a 
+
+The equation is given by 
+
+
+<!-- removing stop words -->
+I went online and did some more resaerch to see what other things people did. One of the things that I noticed was people removed stop words. I dont neccisarily know by definitiin what stop words are but from my understanding they are very common word such as `the`, `is`, `they`, etc. So for my next idea to try and improve my algorithms accuracy I removed the stop words. The proccess of the remvoing the stop words was done a long with cleaning the message. In the end this really had no effect and gave me the same results my previous algorithm.
+Herer are the results
+
+
+<!-- graphing -->
+Graphed the word probabilites to see if it could show something (final algorithm)
+
+Instead of using some constant like I previously did such as 5 or 10 or 15 to label something as spam, I could get the average ammount of spam words in a spam message in the data and use that. Using a constant could probably hurt the results and possibly underfit. 
+
+<!-- using a library -->
+Using sklearn
+
+
+
+
+
+
+### Challenges
+One of the challanges I faced were not knowing anything about machine learning. This was my first machine learning project and
+
 ### what i learned
 ### future improvements
 Not a improvement but while doing research I found out that this same algorithm could possibly work with classifing wether a sentence is positive or negative like if what someone is saying is good or bad.
