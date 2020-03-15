@@ -10,13 +10,17 @@ categories: jekyll update
 <a href="https://github.com/GaelGil/algorithms/blob/master/data_stuff/spam_analysis/data_eval.ipynb"> Link to the Jupyter Notebook where I show my work</a>
 
 
-In this blog post I will be talking about creating a spam detector. I did not use any libraries but I know they exist and make things easier and I will be talking about in the blog post as well. 
+In this blog post I will be talking about how I created a spam detector. This was my first machine learning project so I was very lost at first but as I learned more it was really cool learning how machine learning is used, ways in which people solve problems, and learning how I could solve my problem.  
+
+ I did not use any libraries but I know they exist and make things easier and I will be talking about in the blog post as well. 
 
 
 I got the data from the UC Irvine Machine Learning Repository
 
 
 ### What I'll be talking about
+In this blog post I will be talking about 
+
 My thought proccess<br>
 Thinking about the problem<br>
 Trying my first algorithm<br>
@@ -28,12 +32,12 @@ Solving this issue using sklearn<br>
 
 
 ### What the issue is
-How do we classfiy a message as spam or ham(not spam)
+So the problem here is if we have incoming text or emails to a user how can we classify messages as spam or ham (not spam) so that we can prevent the user from getting a spam message. 
 
 
 ### Things to know
 Supervised Machine Learning:<br>
-So because we have the labels this is a machine learning project.
+So because we have the labels this is a machine learning project. This is something I had no idea about. 
 
 Classification:<br>
 In machine learning there are different types of tasks that can be done. Some of them are claissfication tasks such as KNN and naive byes. Both these algorithms aim to classify something into a certain class. An example of this is this project. We are predicting wether a message is spam or ham so we are predicting the class of some data. Another big task in machine learning is predicting a numerical value.   An example fot this is linear regression, 
@@ -45,8 +49,7 @@ What is ham?:<br>
 Ham is not spam. Here is an example from the data set of what spam is  . And here is an example of what ham is . 
 
 How dictionaries work: <br>
-
-
+Dictionaries or hashmaps in programming is a data structure. It's a way in which we can structure data by storing a key (some variable) and it's value (some other variable). Let's say for example 
 
 
 ### Attempt 1 
@@ -117,7 +120,7 @@ words_nums = [0, 0, 0, 1, 0]
 
 ~~~
 
-Because there are more zeeroes than there are ones this would be marked as spam. This algorithm did really bad on the training data I don't really remeber the scores it got but I know it was really low that I didn't bother using the test data. One of the main issues I had was not having words to compare it to which meant almost everything was set to ham. As I said earlier this algorithm looked at everyword in the message and looked it up in a dictionary with prefilled words and values but that algorithm only had only maybe 10 or so words already manually set by me. This wouldn't have been such a bad idea if I had lots and lots of words but the issue with this is I would not know what to set their spam and ham values to. So with this came the idea for my next algorithm. 
+Because there are more zeeroes than there are ones this would be marked as spam. This algorithm did really bad on the training data I don't really remeber the scores it got but I know it was really low that I didn't bother using the test data. One of the main issues I had was not having words to compare it to which meant almost everything was set to ham. As I said earlier this algorithm looked at everyword in the message and searched it up in a dictionary with prefilled words and values but that dictionary only had maybe 10 or so words already manually set by me. This wouldn't have been such a bad idea if I had lots and lots of words but the issue with this is I would not know what to set their spam and ham values to. So with this came the idea for my next algorithm. 
 
 ### Attempt 2 
 After looking into possibilites of solving my issue with my first algorithm I had my new idea. The idea was that first we would set all the data (words) into dictionary form, where every word in the dataset would have its spam and ham value. This new algorithm would go through every messsage and clean the message (which I had not done previosly) by removing punctuationa and making every word lowercase. Doing this is good for many reasons one of them being. Once we have our clean message in a list form we can now input the words it into the dictonary with their values (default to 1). 
@@ -183,12 +186,14 @@ def assign_vals_to_words(label:str, sms_list:list):
 
 ~~~
 
-Once we ran that function our dictionay was filled with its values and looked like this. 
+Once we ran that function our dictionay was filled with its values and looked like this. This is also only a sample because the actual dictioanry is much larger. 
 
 
 ~~~python
 
-
+probabilities = {
+{'go': {'spam': 27, 'ham': 205}, 'until': {'spam': 6, 'ham': 20}, 'jurong': {'spam': 1, 'ham': 2}, 'point': {'spam': 1, 'ham': 12}, 'crazy': {'spam': 4, 'ham': 9}, 'available': {'spam': 4, 'ham': 14}, 'only': {'spam': 68, 'ham': 109}, 'in': {'spam': 66, 'ham': 673}, 'bugis': {'spam': 1, 'ham': 7}, 'n': {'spam': 25, 'ham': 126}, 'great': {'spam': 7, 'ham': 88}, 'world': {'spam': 2, 'ham': 33}, 'la': {'spam': 4, 'ham': 6}, 'e': {'spam': 14, 'ham': 71}, 'buffet': {'spam': 1, 'ham': 3}, 'cine': {'spam': 1, 'ham': 8}, 'there': {'spam': 13, 'ham': 156}, 'got': {'spam': 5, 'ham': 199}, 'amore': {'spam': 1, 'ham': 2}, 'wat': {'spam': 1, 'ham': 77}, 'ok': {'spam': 6, 'ham': 225}, 'lar': {'spam': 1, 'ham': 34}, 'joking': {'spam': 1, 'ham': 4}, 'wif': {'spam': 1, 'ham': 23}, 'u': {'spam': 149, 'ham': 820}, 'oni': {'spam': 1, 'ham': 4}, 'free': {'spam': 186, 'ham': 48}, 'entry': {'spam': 22, 'ham': 1}, 'a': {'spam': 316, 'ham': 886}, 'wkly': {'spam': 10, 'ham': 1}, 'comp': {'spam': 8, 'ham': 3}, 'to': {'spam': 567, 'ham': 1286}, 'win': {'spam': 62, 'ham': 10}, 'fa': {'spam': 5, 'ham': 1}, 'cup': {'spam': 6, 'ham': 5}, 'final': {'spam': 15, 'ham': 3}, 'tkts': {'spam': 5, 'ham': 1}, 'st': {'spam': 27, 'ham': 18}, 'may': {'spam': 8, 'ham': 38}, 'text': {'spam': 100, 'ham': 61}, 'receive': {'spam': 25, 'ham': 6}, 'question': {'spam': 6, 'ham': 15}, 'std': {'spam': 10, 'ham': 1}, 'txt': {'spam': 139, 'ham': 10}, 'rate': {'spam': 25, 'ham': 3}, "t&c's": {'spam': 9, 'ham': 1}, 'apply': {'spam': 26, 'ham': 3}, 'over': {'spam': 15, 'ham': 43}, "'s": {'spam': 7, 'ham': 3}, 'dun': {'spam': 1, 'ham': 45}, 'say': {'spam': 2, 'ham': 82}, 'so': {'spam': 23, 'ham': 352}, 'early': {'spam': 1, 'ham': 31}, 'hor': {'spam': 1, 'ham': 3}, 'c': {'spam': 26, 'ham': 58}, 'already': {'spam': 2, 'ham': 64}, 'then': {'spam': 10, 'ham': 195}, 'nah': {'spam': 1, 'ham': 11}, 'i': {'spam': 47, 'ham': 1904}, "don't": {'spam': 11, 'ham': 113}, 'think': {'spam': 3, 'ham': 107}, 'he': {'spam': 1, 'ham': 164}, 'goes': {'spam': 1, 'ham': 25}, 'usf': {'spam': 1, 'ham': 9}, 'lives': {'spam': 1, 'ham': 5}, 'around': {'spam': 3, 'ham': 48}, 'here': {'spam': 7, 'ham': 94}, 'though': {'spam': 2, 'ham': 22}, 'freemsg': {'spam': 13, 'ham': 1}, 'hey': {'spam': 6, 'ham': 85}, 'darling': {'spam': 3, 'ham': 3}, "it's": {'spam': 4, 'ham': 74}, 'been': {'spam': 38, 'ham': 74}, "week's": {'spam': 5, 'ham': 1}, 'now': {'spam': 176, 'ham': 217}, 'and': {'spam': 114, 'ham': 721}, 'no': {'spam': 58, 'ham': 250}, 'word': {'spam': 24, 'ham': 13}, 'back': {'spam': 22, 'ham': 94}, "i'd": {'spam': 2, 'ham': 9}, 'like': {'spam': 10, 'ham': 194}, 'some': {'spam': 7, 'ham': 93}, 'fun': {'spam': 8, 'ham': 17}, 'you': {'spam': 241, 'ham': 1554}, 'up': {'spam': 20, 'ham': 238}, 'for': {'spam': 161, 'ham': 419}, 'it': {'spam': 24, 'ham': 475}, 'still?': {'spam': 2, 'ham': 2}, 'tb': {'spam': 2, 'ham': 3}, 'xxx': {'spam': 12, 'ham': 20}, 'chgs': {'spam': 2, 'ham': 1}, 'send': {'spam': 62, 'ham': 112}, '£': {'spam': 241, 'ham': 5}, 'rcv': {'spam': 5, 'ham': 1}, 'even': {'spam': 6, 'ham': 50}, 'my': {'spam': 12, 'ham': 625}, 'brother': {'spam': 2, 'ham': 14}, 'is': {'spam': 129, 'ham': 614}, 'not': {'spam': 25, 'ham': 349}, 'speak': {'spam': 9, 'ham': 22}, 'with': {'spam': 90, 'ham': 220}, 'me': {'spam': 27, 'ham': 625}, 'they': {'spam': 16, 'ham': 99}, 'treat': {'spam': 1, 'ham': 14}, 'aids': {'spam': 1, 'ham': 2}, 'patent': {'spam': 1, 'ham': 2}, 'as': {'spam': 31, 'ham': 127}, 'per': {'spam': 40, 'ham': 14}, 'your': {'spam': 206, 'ham': 340}, 'request': {'spam': 2, 'ham': 7}, "'melle": {'spam': 1, 'ham': 4}, 'melle': {'spam': 1, 'ham': 4}, 'oru': {'spam': 1, 'ham': 5}, 'minnaminunginte': {'spam': 1, 'ham': 4}, 'nurungu': {'spam': 1, 'ham': 4}, 'vettam': {'spam': 1, 'ham': 4}, "'": {'spam': 1, 'ham': 11}, 'has': {'spam': 26, 'ham': 68}, 'set': {'spam': 2, 'ham': 17}, 'callertune': {'spam': 1, 'ham': 11}, 'all': {'spam': 27, 'ham': 204}, 'callers': {'spam': 1, 'ham': 6}, 'press': {'spam': 2, 'ham': 11}, 'copy': {'spam': 1, 'ham': 9}, 'friends': {'spam': 5, 'ham': 44}, 'winner': {'spam': 15, 'ham': 1}, 'valued': {'spam': 10, 'ham': 3}, 'network': {'spam': 22, 'ham': 5}, 'customer': {'spam': 41, 'ham': 8}, 'have': {'spam': 111, 'ham': 369}, 'selected': {'spam': 21, 'ham': 3}, 'receivea': {'spam': 3, 'ham': 1}, 'prize': {'spam': 77, 'ham': 1}, 'reward': {'spam': 5, 'ham': 1}, 'claim': {'spam': 91, 'ham': 1}, 'call': {'spam': 296, 'ham': 195}, 'code': {'spam': 21, 'ham': 2}, 'kl': {'spam': 3, 'ham': 1}, 'valid': {'spam': 22, 'ham': 1}, 'hours': {'spam': 5, 'ham': 15}, 'had': {'spam': 11, 'ham': 71}, 'mobile': {'spam': 98, 'ham': 13}, 'months': {'spam': 5, 'ham': 7}, 'or': {'spam': 154, 'ham': 195}, 'more?': {'spam': 3, 'ham': 2}, 'r': {'spam': 27, 'ham': 116}, 'entitled': {'spam': 6, 'ham': 1}, 'update': {'spam': 14, 'ham': 5}, 'the': {'spam': 168, 'ham': 938}, 'latest': {'spam': 25, 'ham': 4}, 'colour': {'spam': 12, 'ham': 5}, 'mobiles': {'spam': 11, 'ham': 1}, 'camera': {'spam': 26, 'ham': 3}, 'co': {'spam': 44, 'ham': 3}, 'on': {'spam': 126, 'ham': 329}, "i'm": {'spam': 9, 'ham': 307}, 'gonna': {'spam': 1, 'ham': 49}, 'be': {'spam': 43, 'ham': 281}, 'home': {'spam': 3, 'ham': 135}, 'soon': {'spam': 2, 'ham': 42}, 'want': {'spam': 26, 'ham': 135}, 'talk': {'spam': 3, 'ham': 33}, 'about': {'spam': 8, 'ham': 133}, 'this': {'spam': 68, 'ham': 211}, 'stuff': {'spam': 2, 'ham': 32}, 'anymore': {'spam': 1, 'ham': 8}, 'tonight': {'spam': 1, 'ham': 30}, 'k?': {'spam': 1, 'ham': 3}, "i've": {'spam': 2, 'ham': 57}, 'cried': {'spam': 1, 'ham': 2}, 'enough': {'spam': 2, 'ham': 20}, 'today': {'spam': 16, 'ham': 101}, 'six': {'spam': 3, 'ham': 2}, 'chances': {'spam': 3, 'ham': 1}, 'cash': {'spam': 60, 'ham': 9}, 'from': {'spam': 101, 'ham': 125}, 'pounds': {'spam': 15, 'ham': 2}, 'txt>': {'spam': 3, 'ham': 1}, 'csh': {'spam': 3, 'ham': 1}, 'cost': {'spam': 24, 'ham': 10}, 'p': {'spam': 151, 'ham': 9}, 'day': {'spam': 27, 'ham': 164}, 'days': {'spam': 12, 'ham': 30}, 'tsandcs': {'spam': 3, 'ham': 1}, 'reply': {'spam': 90, 'ham': 38}, 'hl': {'spam': 16, 'ham': 1}, 'info': {'spam': 16, 'ham': 2}, 'urgent': {'spam': 51, 'ham': 7}, 'won': {'spam': 59, 'ham': 1}, 'week': {'spam': 47, 'ham': 44}, 'membership': {'spam': 2, 'ham': 2}, 'our': {'spam': 67, 'ham': 56}, 'jackpot': {'spam': 2, 'ham': 1}, 't&c': {'spam': 10, 'ham': 1}, 'www': {'spam': 77, 'ham': 2}, 'dbuk': {'spam': 2, 'ham': 1}, 'net': {'spam': 14, 'ham': 9}, 'lccltd': {'spam': 2, 'ham': 1}, 'pobox': {'spam': 37, 'ham': 1}, 'ldnw': {'spam': 4, 'ham': 1}, 'rw': {'spam': 2, 'ham': 1}, 'searching': {'spam': 1, 'ham': 6}, 'right': {'spam': 3, 'ham': 62}, 'words': {'spam': 1, 'ham': 22}, 'thank': {'spam': 2, 'ham': 25}, 'breather': {'spam': 1, 'ham': 2}, 'promise': {'spam': 1, 'ham': 9}, 'wont': {'spam': 1, 'ham': 30}, 'take': {'spam': 13, 'ham': 97}, 'help': {'spam': 17, 'ham': 29}, 'granted': {'spam': 1, 'ham': 2}, 'will': {'spam': 39, 'ham': 277}, 'fulfil': {'spam': 1, 'ham': 2}, 'wonderful': {'spam': 1, 'ham': 13}, 'blessing': {'spam': 1, 'ham': 3}, 'at': {'spam': 26, 'ham': 314}, 'times': {'spam': 1, 'ham': 21}, 'date': {'spam': 10, 'ham': 8}, 'sunday': {'spam': 1, 'ham': 11}, 'xxxmobilemovieclub': {'spam': 3, 'ham': 1}, 'use': {'spam': 7, 'ham': 34}, 'credit': {'spam': 8, 'ham': 5}, 'click': {'spam': 6, 'ham': 2}, 'wap': {'spam': 11, 'ham': 1}, 'link': {'spam': 5, 'ham': 3}, 'next': {'spam': 15, 'ham': 33}, 'message': {'spam': 30, 'ham': 55}, 'here>>': {'spam': 2, 'ham': 1}, 'http': {'spam': 20, 'ham': 1}, 
+}
 
 ~~~
 
@@ -259,19 +264,14 @@ Herer are the results
 <!-- graphing -->
 Graphed the word probabilites to see if it could show something (final algorithm)
 
-Instead of using some constant like I previously did such as 5 or 10 or 15 to label something as spam, I could get the average ammount of spam words in a spam message in the data and use that. Using a constant could probably hurt the results and possibly underfit. 
+Instead of using some constant like I previously did such as 5 or 10 or 15 to label a message as spam, I could get the average ammount of spam words in a spam message in the data and use that. For example I could have a function that takes in all the spam messages and check how many spam words are in a spam message. I could then take the average and set that as my number. Using a constant could hurt the results by possibly underfiting. 
 
 <!-- using a library -->
 Using sklearn
 
 
+### Challenges/What I learned
+One of the challanges I faced were not knowing anything about machine learning. This was my first machine learning project and I had only heard about it but never understood how it wokrs, <!-- how people go about staring sloving their problem -->, I didn't know what supervised and unsupervised ml was, I was just very lost. As I read and did more research I learned a lot tho. This project has thaught me a lot
 
-
-
-
-### Challenges
-One of the challanges I faced were not knowing anything about machine learning. This was my first machine learning project and
-
-### what i learned
 ### future improvements
-Not a improvement but while doing research I found out that this same algorithm could possibly work with classifing wether a sentence is positive or negative like if what someone is saying is good or bad.
+Not a improvement but while doing research I found out that this same algorithm could possibly work with classifing wether a sentence is positive or negative like if what someone is saying is good or bad. One thing I'd also like to do is make a visual or see what are the most common words in spam message and what are the most common in ham. 
