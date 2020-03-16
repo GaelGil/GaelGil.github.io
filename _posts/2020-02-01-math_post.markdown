@@ -9,7 +9,9 @@ categories: jekyll update
 
 
 
-<!-- In this blogpost I will be talking about about  -->
+<!-- In this blogpost I will be talking about the how we can represent math in code.
+and their differences and smilarities
+  -->
 
 
 In this blog post I will also be referung to arithmetic mean i'll be refering to it as just mean for shorts
