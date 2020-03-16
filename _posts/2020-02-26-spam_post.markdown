@@ -12,7 +12,7 @@ categories: jekyll update
 
 ### What I'll be talking about
 ---------
-In this blog post I will be talking about how I created a spam detector. This was my first machine learning project so I was very lost at first but as I learned more it was really cool learning how machine learning is used, ways in which people solve problems, and learning how I could solve my problem. I did not use any libraries but I know they exist and make things easier and I will be talking about in the blog post as well. One of the biggest essentials in machine learning is data. We need a lot of data to train .I got the data from the UC Irvine Machine Learning Repository which you can also get as well <a href="">here.</a>
+In this blog post I will be talking about how I created a spam detector. This was my first machine learning project so I was very lost at first but as I learned more it was really cool learning how machine learning is used, ways in which people solve problems, and learning how I could solve my problem. I did not use any libraries but I know they exist and make things easier and I will be talking about in the blog post as well. One of the biggest essentials in machine learning is data. We need a lot of data to train .I got the data from the UC Irvine Machine Learning Repository which you can also get as well <a href="https://archive.ics.uci.edu/ml/datasets/SMS+Spam+Collection">here.</a>
 
 
 <!-- My thought proccess<br> -->
@@ -26,7 +26,7 @@ In this blog post I will be talking about how I created a spam detector. This wa
 
 ### What the issue is
 ---------
-So the problem here is if we have incoming text or emails to a user how can we classify messages as spam or ham (not spam) so that we can prevent the user from getting a spam message. 
+So the problem here is if we have incoming text or emails to a user how can we classify messages as spam or ham (not spam) so that we can prevent the user from getting a spam message therefore we have to create a spam detector using machine learning. First here are some things to know that I will be metioning in this post.
 
 
 ### Things to know
@@ -41,12 +41,10 @@ In machine learning there are different types of tasks that can be done. Some of
 Jupyter NoteBooks are a really cool tool that is commomly used in machine learning. They are great for visualazing data, etc. 
 
 <strong>What is ham?:</strong><br>
-Ham is not spam. Here is an example from the data set of what spam is  . And here is an example of what ham is . 
+Ham is not spam. Here is an example from the data set of what spam is. `Free entry in 2 a wkly comp to win FA Cup final tkts 21st May 2005. Text FA to 87121 to receive entry question(std txt rate)T&C's apply 08452810075over18's`. And here is an example of what ham is. `Go until jurong point, crazy.. Available only in bugis n great world la e buffet... Cine there got amore wat...`
 
 <strong>How dictionaries work:</strong><br>
 Dictionaries or hashmaps in programming is a data structure. It's a way in which we can structure data by storing a key (some variable) and it's value (some other variable). Let's say for example 
-
-All these things I might mention in the post so its good to have some context.
 
 
 ### Attempt 1 
