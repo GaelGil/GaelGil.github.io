@@ -247,16 +247,15 @@ def get_accuracy(algorithm, data):
 Every algorithm follewd the same proccess as the first one. We sould set the data into dictionary form, count up words and their probabilities and see what we could do with that after.
 
 <!-- naive byes -->
+<strong>Naive Bayes </strong>
 One of my attempts was using naive bayes. Naye bayes is a 
 The equation is given by <br>
 
 $$ p(c|x) = \frac{p(x|c)p(c)}{p(x)} $$ 
 
-<br>
-
-
 
 <!-- removing stop words -->
+<strong>Removing Stop Words </strong>
 I went online and did some more research to see what other things people did. One of the things that I noticed was people removed stop words. I don't necessarily know by definition what stop words are but from my understanding they are very common words such as `the`, `is`, `they`, etc. So for my next idea to try and improve my algorithms accuracy I removed the stop words. The process of removing the stop words was done along with cleaning the message. In the end this really had no effect and gave me the same results my previous algorithm.
 Here are the results
 
@@ -265,6 +264,7 @@ Here are the results
 
 
 <!-- graphing -->
+<strong>Graphing the data </strong>
 Graphed the word probabilites to see if it could show something (final algorithm)
 
 Lastly I tried graphing the data to see if it would show me anything that I could use to help me. What I did was I got the values of a message both their spam and ham value. I graphed each message with x being their ham value and y being their spam value. <br>
@@ -280,6 +280,7 @@ Instead of using some constant like I previously did such as 5 or 10 or 15 to la
  
 
 <!-- using a library -->
+<strong>Using Scikitlearn Naive Bayees</strong>
 Once I finally got really good results on an algorithm I decided to use a scikit learn. Scikit learn is a machine learning library that makes thing a lot easier. This was my first time using this library seeing how it's my first machine learning project so I went online to see how I can use it. 
 
 
@@ -289,4 +290,4 @@ One of the challenges I faced was not knowing anything about machine learning. T
 
 ### Future improvements
 ---------
-Not an improvement but while doing research I found out that this same algorithm could possibly work with classifying whether a sentence is positive or negative like if what someone is saying is good or bad. One thing I'd also like to do is make a visual or see what are the most common words in spam messages and what are the most common in ham. 
+Not an improvement but while doing research I found out that this same algorithm could possibly work with classifying whether a sentence is positive or negative like if what someone is saying is good or bad. One thing I'd also like to do is make a visual or see what are the most common words in spam messages and what are the most common in ham. I also mentioned the improvement earlier about finding the average value of a spam message and using that as a cut of level instead of looking at the data and manually putting a number in
