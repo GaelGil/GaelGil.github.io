@@ -57,34 +57,31 @@ class SneakerSpiderSpider(scrapy.Spider):
 
 The code above also allowed me to go to everypage on the website. Some limitations were getting the size and year. I could visit everypage and get the data but I couldn't go to every page for every year for every size. 
 
-### Pipeline
-Now that we had accesed to the website and the data we wanted it we had to proccess it. First I had to check what brand the shoe was because I couldn't scrape that but the brand of the shoe was always in the name of the shoe so all I had to do was look for the brand in the name. Then I had to set the price to only be a integer and ignore the `$`. 
-
-
 ### Storing the data
-
-
+Now that we had accesed to the website and the data we wanted it we had to proccess it. First I had to check what brand the shoe was because I couldn't scrape that but the brand of the shoe was always in the name of the shoe so all I had to do was look for the brand in the name. Then I had to set the price to only be a integer and ignore the `$`. I stored the data in a sqlite database with each row being a sneaker. The columns were name, price, relase data, and brand. Once I had all my data I then accessed them in my jupyter notebook. I also stored it in csv format. 
 
 ### Cleaning the data
 Once I had my data it was now time to clean it or get it in a format I wanted it. 
 The formant I had it was 
-
-
-
 The most important part in terms of cleaning was just getting the date from `03/6/2020` to `2020`.
-
 Once I had that I could now group every shoe by its release year.
 
 
-### Graphing the data
+### Visualizing the data and findings
 So one of the things I first graphed was the resell prices for shoes by year and here is the graph for that.
 
 <img src="resell_prices_by_year.png">
 
 As you can see the resell prices for older shoes are a lot higher then the new ones. The downside to this graph is that for the the blue line (nike) on the year 2000 it scraped no data for some reason so its just zero. For the green line(adidas) it is zero up until 2007 because their isn't much data for them. Their shoes became more popular just more recently as opposed to nike and jordan whos shoes have constantnly been in demand.
 
+<strong>Top Ten Most Expensive Shoes</strong>
 
-##### What I learned
+
+
+### Issues with my data
+Some issues that I realized that I had with my data is that its very inconsistent. For example I have all this sneaker data of a bunch of sneakeres and their prices. The issue with this is that I don't know the sizes of the sneakers and this can drastically change the price of sneaker. Ussaully sizes 6-9 are much more expensive than size 10 and up.
+
+### What I learned
 From doing this project I learned a lot about sraping data/collecting and how comapines wouldn't necessarily do that they would just buy the data. One of the other important things was learning how to use jupyter notebooks, I had heard about them before and used them slightly but this was a good chance to actually use it for a project. With that I also learned about how to graph data using matplotlib. 
 
 
