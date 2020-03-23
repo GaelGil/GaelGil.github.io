@@ -12,30 +12,21 @@ categories: jekyll update
 
 ### What I'll be talking about
 ---------
-In this blog post I will be talking about how I created a spam detector. This was my first machine learning project so I was very lost at first but as I learned more it was really cool learning how machine learning is used, ways in which people solve problems, and learning how I could solve my problem. I did not use any libraries but I know they exist and make things easier and I will be talking about in the blog post as well. One of the biggest essentials in machine learning is data. We need a lot of data to train .I got the data from the UC Irvine Machine Learning Repository which you can also get as well <a href="https://archive.ics.uci.edu/ml/datasets/SMS+Spam+Collection">here.</a>
-
-
-<!-- My thought proccess<br> -->
-<!-- Thinking about the problem<br> -->
-<!-- Trying my first algorithm<br> -->
-<!-- Analsying the issue<br> -->
-<!-- Solution to the previous issue<br> -->
-<!-- Results<br> -->
-<!-- Solving this issue using sklearn<br> -->
+In this blog post I will be talking about how I created a spam detector. This was my first machine learning project so I was very lost at first but as I learned more it was really cool learning how machine learning is used, ways in which people solve problems, and learning how I could solve my problem. I did not use any libraries but I know they exist and make things easier and I will be talking about in the blog post as well. One of the biggest essentials in machine learning is data. We need a lot of data to train o. I got the data from the UC Irvine Machine Learning Repository which you can also get as well <a href="https://archive.ics.uci.edu/ml/datasets/SMS+Spam+Collection">here.</a>.
 
 
 ### What the issue is
 ---------
-So the problem here is if we have incoming text or emails to a user how can we classify messages as spam or ham (not spam) so that we can prevent the user from getting a spam message therefore we have to create a spam detector using machine learning. First here are some things to know that I will be metioning in this post.
+So the problem here is if we have incoming text or emails to a user how can we classify messages as spam or ham (not spam) so that we can prevent the user from getting a spam message therefore we have to create a spam detector using machine learning. First here are some things to know that I will be mentioning in this post.
 
 
 ### Things to know
 ---------
 <strong>Supervised Machine Learning:</strong><br>
-So because we have the labels this is a machine learning project. This is something I had no idea about. 
+So because we have the labels this is a machine learning project. This is something I had no idea about. There are other forms of machine learning such as unsupervised learning, semisupervised learning, and clustering. 
 
 <strong>Classification:</strong><br>
-In machine learning there are different types of tasks that can be done. Some of them are claissfication tasks such as KNN and naive byes. Both these algorithms aim to classify something into a certain class. An example of this is this project. We are predicting wether a message is spam or ham so we are predicting the class of some data. Another big task in machine learning is predicting a numerical value.   An example fot this is linear regression, 
+In machine learning there are different types of tasks that can be done. Some of them are classification tasks such as KNN and naive bayes. Both these algorithms aim to classify something into a certain class. An example of this is this project. We are predicting whether a message is spam or ham so we are predicting the class of some data. Another big task in machine learning is predicting a numerical value.   An example for this is linear regression, 
 
 <strong>Jupyter NoteBooks:</strong><br>
 Jupyter NoteBooks are a really cool tool that is commomly used in machine learning. They are great for visualazing data, etc. 
@@ -43,13 +34,18 @@ Jupyter NoteBooks are a really cool tool that is commomly used in machine learni
 <strong>What is ham?:</strong><br>
 Ham is not spam. Here is an example from the data set of what spam is. `Free entry in 2 a wkly comp to win FA Cup final tkts 21st May 2005. Text FA to 87121 to receive entry question(std txt rate)T&C's apply 08452810075over18's`. And here is an example of what ham is. `Go until jurong point, crazy.. Available only in bugis n great world la e buffet... Cine there got amore wat...`
 
+
+<strong>Splitting Data:</strong><br>
+In machine learning one of the most important things besides the data its self is splitting the data. Data is ussually split as 80% train  data and 20% test data. Our train data is used to train our model and test our algorithms. The way in whic I split my data can be seen in my notebook but what I did was I used some code I got from a book to split the data whcih randomises the data then splits in. Because we would get new train and test data everytime I only ran it once and turn the data inso csv. Another thing that is important in splitting the data is that you have a even ammount of both types. Let's say for example if for some reason once we split our data that our majority of data samples were only ham. Our model would not know what spam is therefore it would fail. 
+
+
 <strong>How dictionaries work:</strong><br>
 Dictionaries or hashmaps in programming is a data structure. It's a way in which we can structure data by storing a key (some variable) and it's value (some other variable). Let's say for example 
 
 
 ### Attempt 1 
 ---------
-My first algorithm was a very simple. The idea was that my algorithm would take a in a message which would then be made into a dictionary containing the words of the message as it's keys. Once we had the dictionary we needed to store the spam and ham values of that word so we put a dictionary of values for the words set to 0. This would allow us to track the spam and ham values of each word and check if a message has a lot of spam words or not. For example if the word `free` appeared in the message it would have a larger spam value than a ham value so it would get marked as `spam: 1` and `ham: 0`. Here is a sample run of what it would look like using the sentence `hey are u free tonight`.
+My first algorithm was very simple. The idea was that my algorithm would take in a message which would then be made into a dictionary containing the words of the message as it's keys. Once we had the dictionary we needed to store the spam and ham values of that word so we put a dictionary of values for the words set to 0. This would allow us to track the spam and ham values of each word and check if a message has a lot of spam words or not. For example if the word `free` appeared in the message it would have a larger spam value than a ham value so it would get marked as `spam: 1` and `ham: 0`. Here is a sample run of what it would look like using the sentence `hey are u free tonight`.
 Here is our dictionary with our words and keys. 
 
 ~~~python
@@ -108,7 +104,7 @@ words_dict = {
 }
 ~~~
 
-Now that we have the values for the words we can check which value is higher. In another function I passed in our dictionary where we would do this. The function would check if the spam value was higher than the ham value, if it was we would add 1 to the list and if not we add 0.So we have list with ones and zeroes. If the list had more 1s than zeroes it was spam. Our current example of `hey are u free tonight` would look like this
+Now that we have the values for the words we can check which value is higher. In another function I passed in our dictionary where we would do this. The function would check if the spam value was higher than the ham value, if it was we would add 1 to the list and if not we add 0.So we have a list with ones and zeroes. If the list had more 1s than zeroes it was spam. Our current example of `hey are u free tonight` would look like this
 
 ~~~python
 
@@ -116,11 +112,12 @@ words_nums = [0, 0, 0, 1, 0]
 
 ~~~
 
-Because there are more zeeroes than there are ones this would be marked as spam. This algorithm did really bad on the training data I don't really remeber the scores it got but I know it was really low that I didn't bother using the test data. One of the main issues I had was not having words to compare it to which meant almost everything was set to ham. As I said earlier this algorithm looked at everyword in the message and searched it up in a dictionary with prefilled words and values but that dictionary only had maybe 10 or so words already manually set by me. This wouldn't have been such a bad idea if I had lots and lots of words but the issue with this is I would not know what to set their spam and ham values to. So with this came the idea for my next algorithm. 
+Because there are more zeeroes than there are ones this would be marked as spam. This algorithm did really bad on the training data. I don't really remember the scores it got but I know it was really low that I didn't bother using the test data. One of the main issues I had was not having words to compare it to which meant almost everything was set to ham. As I said earlier this algorithm looked at every word in the message and searched it up in a dictionary with prefilled words and values but that dictionary only had maybe 10 or so words already manually set by me. This wouldn't have been such a bad idea if I had lots and lots of words but the issue with this is I would not know what to set their spam and ham values to. So with this came the idea for my next algorithm.
 
 ### Attempt 2 
 ---------
-After looking into possibilites of solving my issue with my first algorithm I had my new idea. The idea was that first we would set all the data (words) into dictionary form, where every word in the dataset would have its spam and ham value. This new algorithm would go through every messsage and clean the message (which I had not done previosly) by removing punctuationa and making every word lowercase. Doing this is good for many reasons one of them being. Once we have our clean message in a list form we can now input the words it into the dictonary with their values (default to 1). 
+After looking into possibilities of solving my issue with my first algorithm I had my new idea. The idea was that first we would set all the data (words) into dictionary form, where every word in the dataset would have its spam and ham value. This new algorithm would go through every message and clean the message (which I had not done previously) by removing punctuation and making every word lowercase. Doing this is good for many reasons one of them being. Once we have our clean message in a list form we can now input the words into the dictionary with their values (default to 1).
+
 
 ~~~python
 
@@ -149,7 +146,7 @@ def add_words_to_dict(sms_list:list):
 ~~~
 
 
-They way in which I assigned the values to a word was by its label (this is supervised machine learning so we have the labels for each message). The algorithm had a function which would take its label as its argument and the message its self. Depending on the label it would add a point to its label value in the ditcionary. If that is confusing here is the function.
+The way in which I assigned the values to a word was by its label (this is supervised machine learning so we have the labels for each message). The algorithm had a function which would take its label as its argument and the message itself. Depending on the label it would add a point to its label value in the dictionary. If that is confusing here is the function.
 
 
 ~~~python
@@ -200,7 +197,7 @@ probabilities = {
 
 ### Testing Accuracy
 ---------
-Before I talk about my other algorithms here is a look at how I tested their acurracy. I created a function called `test_accuracy` this would take in another function (the algorithm) as its arugment and some data (training data). Every algorithm version I tested I imported into the the jupyter notebook and passed in through the `test_accuracy` along with the trainng data. What test acurracy did
+Before I talk about my other algorithms here is a look at how I tested their accuracy. I created a function called `test_accuracy` that would take in another function (the algorithm) as its argument and some data (training data). Every algorithm version I tested I imported into the jupyter notebook and passed in through the `test_accuracy` along with the training data. What test accuracy did
 
 ~~~python
 
@@ -251,14 +248,18 @@ Every algorithm follewd the same proccess as the first one. We sould set the dat
 
 <!-- naive byes -->
 One of my attempts was using naive bayes. Naye bayes is a 
+The equation is given by <br>
 
-The equation is given by 
+$$ p(c|x) = \frac{p(x|c)p(c)}{p(x)} $$ 
+
+<br>
 
 
 
 <!-- removing stop words -->
-I went online and did some more resaerch to see what other things people did. One of the things that I noticed was people removed stop words. I dont neccisarily know by definitiin what stop words are but from my understanding they are very common word such as `the`, `is`, `they`, etc. So for my next idea to try and improve my algorithms accuracy I removed the stop words. The proccess of the remvoing the stop words was done a long with cleaning the message. In the end this really had no effect and gave me the same results my previous algorithm.
+I went online and did some more research to see what other things people did. One of the things that I noticed was people removed stop words. I don't necessarily know by definition what stop words are but from my understanding they are very common words such as `the`, `is`, `they`, etc. So for my next idea to try and improve my algorithms accuracy I removed the stop words. The process of removing the stop words was done along with cleaning the message. In the end this really had no effect and gave me the same results my previous algorithm.
 Here are the results
+
 
 <img src= "../assets/images/version_three.png">
 
@@ -266,19 +267,26 @@ Here are the results
 <!-- graphing -->
 Graphed the word probabilites to see if it could show something (final algorithm)
 
-Lastly I tried graphing the data to see if it would show me anything that I could use to help me. What I did was I used the words spam and ham value from the dictionary to graph each word.
+Lastly I tried graphing the data to see if it would show me anything that I could use to help me. What I did was I got the values of a message both their spam and ham value. I graphed each message with x being their ham value and y being their spam value. <br>
 <img src="../assets/images/spam_data_graphed.png">
 
-Instead of using some constant like I previously did such as 5 or 10 or 15 to label a message as spam, I could get the average ammount of spam words in a spam message in the data and use that. For example I could have a function that takes in all the spam messages and check how many spam words are in a spam message. I could then take the average and set that as my number. Using a constant could hurt the results by possibly underfiting. 
+
+As you can see most messages that are spam have a spam value of 5 and up so I made it that every message with 5 or more spam value is spam and here are the results. 
+<img src="../assets/images/version_four.png">
+
+
+Instead of using some constant like I previously did such as 5 or 10 or 15 to label a message as spam, I could get the average amount of spam words in a spam message in the data and use that. For example I could have a function that takes in all the spam messages and check how many spam words are in a spam message. I could then take the average and set that as my number. Using a constant could hurt the results by possibly underfitting.
+ 
+ 
 
 <!-- using a library -->
-Once I finally got really good results on an algorithm I decided to use a scikit learn. Scikit learn is a machine learning that 
+Once I finally got really good results on an algorithm I decided to use a scikit learn. Scikit learn is a machine learning library that makes thing a lot easier. This was my first time using this library seeing how it's my first machine learning project so I went online to see how I can use it. 
 
 
 ### Challenges/What I learned
 ---------
-One of the challanges I faced were not knowing anything about machine learning. This was my first machine learning project and I had only heard about it but never understood how it wokrs, how people go about staring sloving their problem, I didn't know what supervised and unsupervised ml was, I was just very lost. As I read and did more research I learned a lot tho. This first machine learning project has thaught me a lot and has been very beneficial to learn about basic machine learning concepts and practices.
+One of the challenges I faced was not knowing anything about machine learning. This was my first machine learning project and I had only heard about it but never understood how it works, how people go about starting solving their problem, I didn't know what supervised and unsupervised ML was, I was just very lost. As I read and did more research I learned a lot tho. This first machine learning project has taught me a lot and has been very beneficial to learn about basic machine learning concepts and practices.
 
 ### Future improvements
 ---------
-Not a improvement but while doing research I found out that this same algorithm could possibly work with classifing wether a sentence is positive or negative like if what someone is saying is good or bad. One thing I'd also like to do is make a visual or see what are the most common words in spam message and what are the most common in ham. 
+Not an improvement but while doing research I found out that this same algorithm could possibly work with classifying whether a sentence is positive or negative like if what someone is saying is good or bad. One thing I'd also like to do is make a visual or see what are the most common words in spam messages and what are the most common in ham. 
