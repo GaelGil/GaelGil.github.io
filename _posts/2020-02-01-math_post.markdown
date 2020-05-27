@@ -14,7 +14,7 @@ and their differences and smilarities
   -->
 
 
-In this blog post I will also be referung to arithmetic mean i'll be refering to it as just mean for shorts
+In this blog post I will also be refering to arithmetic mean i'll be refering to it as just mean for shorts
 
 ## The average of an array, $$ x $$ can be written as $$ \bar{x} $$ and is defined as: 
 

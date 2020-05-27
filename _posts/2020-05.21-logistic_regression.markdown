@@ -1,0 +1,29 @@
+---
+layout: post
+title:  "Logistic Regression"
+permalink: /logistic_regression/
+date:   2020-05-21 12:33
+image: ../assets/images/spam.png
+categories: jekyll update
+---
+
+In this post I'll be talkiing about logistic regression. I won't be getting into the math too much, I will just do a small overview of what I learned while using logistic reggression in a project.
+
+
+Logistic regression is used for classification as opposed to linear regression which is used to predict a value. For example lets say we wanted predict weather a mice is obese or not obese given some features we would use logistic regression. In my project I used height and weight as features but you can try other features as well such as `eye color` or `tail length`. But as you can assume some features don't really matter and won't help when predicting in this case `eye color` might not help as much. 
+
+
+
+Here is the photo of our function graphed with our dataset. 
+
+<img src="../assets/images/logistic_function.png" alt="graph">
+
+
+
+
+A common way in which we evalute a classificaton algorithm is using a confusion matrix and a f1 score. I did both but because you can visualize a confusion matrix here is a photo of my confusion matrix. 
+<img src="../assets/images/confusion_matrix.png" alt="confusion matrix">
+
+
+
+

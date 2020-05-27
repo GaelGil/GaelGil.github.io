@@ -1,0 +1,11 @@
+---
+layout: post
+title:  "Page Rank Visual"
+permalink: /logistic_regression/
+date:   2020-05-21 12:33
+image: ../assets/images/spam.png
+categories: jekyll update
+---
+
+
+In this project I will show
