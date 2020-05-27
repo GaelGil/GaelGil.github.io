@@ -9,3 +9,10 @@ categories: jekyll update
 
 
 In this project I will show
+
+<p id="p1">First paragraph</p>
+<p id="p2">Second paragraph</p>
+
+<script>
+    d3.select("#p2").style("color", "green");
+</script>
