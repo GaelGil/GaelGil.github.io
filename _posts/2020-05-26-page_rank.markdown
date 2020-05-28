@@ -53,9 +53,15 @@ This is a data visualization project
 
 
     d3.csv("../assets/data/stock_x.csv").then(function(data) {
-  console.log(data.filter(function(d, i) {
-    return i < 2;
-  }));
+      d3.select("body").append("p").text(data)
+
+        // for (var i = 0; i < data.length; i++) {
+        //     console.log(data[i].Brand);
+        //     console.log(data[i].Buyer_Region);
+        // }
+  // console.log(data.filter(function(d, i) {
+  //   return i < 2;
+  // }));
 })
 
 </script>
