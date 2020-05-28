@@ -53,7 +53,7 @@ This is a data visualization project
 
 
     d3.csv("../assets/data/stock_x.csv").then(function(data) {
-      d3.select("body").append("p").text(data)
+      d3.select(".inner").append("p").text(data[i].Brand)
 
         // for (var i = 0; i < data.length; i++) {
         //     console.log(data[i].Brand);
