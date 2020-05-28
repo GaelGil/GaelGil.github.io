@@ -10,6 +10,8 @@ categories: jekyll update
 
 In this project I will show
 
+This is a data visualization project
+
 <p id="p1">First paragraph</p>
 <p id="p2">Second paragraph</p>
 
@@ -34,11 +36,11 @@ In this project I will show
     //     }
     // });
 
-    d3.csv("../assets/data/stock_x.csv", function(data) {
-    console.log(data);
-    });
+    // d3.csv("../assets/data/stock_x.csv", function(data) {
+    // console.log(data);
+    // });
 
-    d3.csv("/data/employees.csv")
+    d3.csv("../assets/data/stock_x.csv")
     .row(function(d) {
             return {
                 age: d.brand,
