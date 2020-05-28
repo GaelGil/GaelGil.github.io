@@ -36,6 +36,17 @@ In this project I will show
 
     d3.csv("../assets/data/stock_x.csv", function(data) {
     console.log(data);
-});
+    });
+
+    d3.csv("/data/employees.csv")
+    .row(function(d) {
+            return {
+                age: d.brand,
+                name: d.buyerRegion.toUpperCase() // converting name to upper case 
+            }; 
+    })
+    .get(function(data) {
+        console.log(data);
+    });
 
 </script>
