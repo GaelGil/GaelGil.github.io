@@ -16,10 +16,15 @@ In this project I will show
 <script>
     d3.select("#p2").style("color", "green");
 
+
+
+
     d3.csv("../assets/data/stock_x.csv")
-    .row(function(d){ return {Brand}; })
+    .row(function(d){ return {d.Brand, d.Buyer_Region};})
     
     .get(function(error, data){
+    
+    d3.select("body").append("p").text(data)
 
     });
 
