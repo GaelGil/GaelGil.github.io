@@ -34,7 +34,7 @@ In this project I will show
     //     }
     // });
 
-    d3.csv("../assets/images/stock_x.csv", function(data) {
+    d3.csv("../assets/data/stock_x.csv", function(data) {
     console.log(data);
 });
 
