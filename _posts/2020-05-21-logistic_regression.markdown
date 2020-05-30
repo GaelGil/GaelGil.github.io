@@ -3,7 +3,7 @@ layout: post
 title:  "Logistic Regression"
 permalink: /logistic_regression/
 date:   2020-05-21 12:33
-image: ../assets/images/spam.png
+image: ../assets/images/logistic_function.png
 categories: jekyll update
 ---
 
