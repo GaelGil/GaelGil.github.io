@@ -57,9 +57,9 @@ This is a data visualization project
 
     d3.csv("../assets/data/stock_x.csv").then(function(data) {
 
-        for (var i = 0; i < data.length; i++) {
-          d3.select(".inner").append("p").text(data[i].brand)
-        }
+        // for (var i = 0; i < data.length; i++) {
+        //   d3.select(".inner").append("p").text(data[i].brand)
+        // }
 
 
         var california = "California";
@@ -68,7 +68,7 @@ This is a data visualization project
         var ny_count = 0;
 
         for (var i = 0; i < data.lentgh; i++){
-            if (data[i].brand = "Off-White"){
+            if (data[i].brand == "Off-White"){
                 if(data[i].buyerRegion = california){
                     cali_count +=1;
                 }
