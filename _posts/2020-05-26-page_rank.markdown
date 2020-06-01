@@ -69,8 +69,11 @@ This is a data visualization project
 
         for (var i = 0; i < data.lentgh; i++){
             if (data[i].brand == "Off-White"){
+                d3.select(".inner").append("p").text(data[i].brand)
                 if(data[i].buyerRegion = california){
                     cali_count +=1;
+                } else{
+                    ny_count +=1;
                 }
             }
         }
