@@ -11,8 +11,10 @@ categories: jekyll update
 <img src="../assets/images/appd.jpg" atl="appdynamics">
 
 ## Initial Thoughts
+<p style="text-align: center;"> 
 This past summer, I was lucky enough to be able to intern at AppDynamics (remotely of course).
 This was my first ever internship and it was really cool. Before the internship I was very nervous because I was not so sure what I was going to be doing. Luckily I was joining with other people I have met before. Before our first day of internship I met everyone at AppDynamics in a webex call. My initial thoughts before beginning this internship was lots of joy and excitement because these opportunities are rare and even more so in a time like this where people are losing their jobs, so I am very lucky and happy I was able to be a part of this. I also had to keep in mind that I would have to find a work life balance to handle the work not only because I was also taking online classes but also because of the many anxieties  that this year has brought. In the end I think I was able to balance school, work and my personal life well and I'm glad I wasn't discouraged to take this internship.
+</p>
 
 ## First Week 
 The first week was very interesting and not at all what I expected. We started out by setting up our accounts and security things, getting to know more about the company and going over what we were going to be doing as interns. We were a group of seven interns, all with different backgrounds and skills. I was very nervous in the beginning because as with any first work experience you feel a pressure to know how to do everything. Of course this is not true at all, but this was made very clear as I went on in the internship. 
