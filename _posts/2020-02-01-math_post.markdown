@@ -9,12 +9,7 @@ categories: jekyll update
 
 
 
-<!-- In this blogpost I will be talking about the how we can represent math in code.
-and their differences and smilarities
-  -->
-
-
-In this blog post I will also be refering to arithmetic mean i'll be refering to it as just mean for shorts
+In this blogpost I will be talking about the how we can represent math in code. The similarities and differences and how code can make summnation easier to understand Also in this blog post I will also be refering to arithmetic mean i'll be refering to it as just mean for shorts. 
 
 ## The average of an array, $$ x $$ can be written as $$ \bar{x} $$ and is defined as: 
 
@@ -42,14 +37,12 @@ the more. We can represent summation notation in programing with a for loop that
 some examples of getting the mean using c++, python, and python libraries. 
 
 
-## Things to remeber
-In programing we start counting from 0. 
-For loops, start from index 0 and go through all elements of the array until the end of the array.
 
+## Summation in Code
+Now I will be talking about how we can represent summnation in code and how it looks like across some languages but first I will go over a small code rule. In coding we always start counting from zero unless specified otherwise. 
 
 ## C++ 
-We start a for loop and set `int i = 0`. This will help us access all the elements of the array. We select an element of the
-array by doing `n[i]` and we add that to the sum (`sum += n[i];`). We go until the end of the array and once the loop is done
+We start a for loop and set `int i = 0`. This will help us access all the elements of the array. We select an element of the array by doing `n[i]` and we add that to the sum (`sum += n[i];`). We go until the end of the array and once the loop is done
 we set the mean equal to the sum over the number of elements in the array. `mean = (sum/3)`
 
 ~~~cpp
@@ -75,7 +68,7 @@ int main(){
 
 
 ## Writing everything out in python.
-Similar to C++ in Python we can use a loop to get a mean as well but we could also do it in one line as well. 
+Similar to C++ in Python we can use a loop to get a mean as well but we could also do it in one line as well. Here is an example of a loop similar to c++ in python. As you can see it is very similar but much more simpler.  
 
  ~~~python
 n = [10, 20, 30]
@@ -89,21 +82,9 @@ mean =  (sum/len(n))
 
 
 
-
-~~~
-arr = [1,2,3,5]
-
-assert len(arr) == 4
-
-n = 4
-
-assert sum(arr) == 11
-print(sum(arr)) # 11
-~~~
-
 ## Python in one line
-In python the `sum()` methond gives us the sum of a array and `len()` gives of the length of a array(how many elements are in the array)
-We can then divied those and this will give us the mean
+In python we have many built in functions such as `min()` (this will give us the minum value of something). The `sum()` methond gives us the sum of a array and `len()` gives of the length of a array(how many elements are in the array)
+We can use these two methods then divied those and this will give us the mean. 
 
  ~~~python
 n = [10, 20, 30]
@@ -126,16 +107,13 @@ mean_of_n = mean(n)
  ~~~
 
 
-## Differences / idk
+## Differences 
 
-If you didn't know the notation of this or what it all means looking at this could be very confusing and may know know 
-what it means. 
+If you didn't know the notation of this or what it all means looking at this could be very confusing and may know know what it means. Especially seeing how summnation is taught at higher levels (at least in my expirence). But because I had a code background when I first leanred summation it was pretty straight forward. 
 
 $$ \bar{x} = \frac{1}{n} \left( \sum_{i=1}^{n} x_i \right) $$ 
 
-But as explained before this just means the sum of something times $$ \frac{1}{n} $$ but without knowing the notation. 
-We can easily represent sumation notation in code with a loop that not ony makes it easier to understand but gives us
-directions as to what to do. 
+We can easily represent sumation notation in code with a loop that not ony makes it easier to understand but gives us directions as to what to do. 
 
 ## What the loop tells us to do
 
@@ -149,11 +127,14 @@ for i in range(len(n)):
 mean =  (sum/len(n))
 ~~~
 
-* First we loop through all the elements in the arary (default start is 0)
+These instructions here tell us to:
+* First we loop through all the elements (this is given by len(n))
 * After every loop we add the current element to the sum
 * Once the loop is over we will have our sum of the array
 * The final step is to simply divide the sum by the array size
 
+
+In this blogpost I have talked about summation notation, how it represented in code, and how it can be benficial. I used a simple summation problem and demonstrated it in code to see how we can easily represent a summation formula in code. Summnation can often look intimidating at first glance but if we use code to break it down it can be much easier to learn. 
 
 
 
