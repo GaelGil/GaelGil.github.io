@@ -14,7 +14,7 @@ In this project I craeted a python module that creates spotify playlists from th
 Here is an example
 
 # How I created it
-My initial idea was to create a python module to turn youtube playlists into spotify playlists after I saw it in a video. One of the library that was used in the video wasn't available anymore so I created something else. 
+My initial idea was to create a python module to turn youtube playlists into spotify playlists after I saw it in a youtube video [here](#). One of the libraries that was used in the video wasn't available anymore so I created something else. 
 
 # The project
-This can be used with and without twitter.
+This project can be used to on it's own. If you want to create playlists for yourself you can clone the project and use your own api keys. You can also combine it with twitter to have a twitter bot taking requests and then returning a link to the playlist once done. 
