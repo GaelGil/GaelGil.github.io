@@ -1,2 +1,7 @@
 source "https://rubygems.org"
-gemspec
+gem "jekyll"
+gem 'jekyll-sitemap'
+gem 'jekyll-paginate' 
+gem 'jekyll-feed'
+gem 'jekyll-seo-tag'
+gem 'webrick'
