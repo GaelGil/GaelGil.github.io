@@ -4,15 +4,15 @@ title:  "Spam Detector"
 permalink: /spam_ham/
 date:   2019-02-01 12:33
 image: ../assets/images/spam.png
-categories: jekyll update
+categories: data-science, math
 ---
 
-<a href="https://github.com/GaelGil/algorithms/blob/master/data_stuff/spam_analysis/data_eval.ipynb"> Link to the Jupyter Notebook where I show my work</a>
+link to the github [repo](https://github.com/GaelGil/notebooks/tree/master/spam_analysis)
 
 
 ### What I'll be talking about
 ---------
-In this blog post I will be talking about how I created a spam detector. This was my first machine learning project so I was very lost at first but as I learned more it was really cool learning how machine learning is used, ways in which people solve problems, and learning how I could solve my problem. I did not use any libraries but I know they exist and make things easier and I will be talking about in the blog post as well. One of the biggest essentials in machine learning is data. We need a lot of data to train o. I got the data from the UC Irvine Machine Learning Repository which you can also get as well <a href="https://archive.ics.uci.edu/ml/datasets/SMS+Spam+Collection">here.</a>.
+In this blog post I will be talking about how I created a spam detector. This was my first machine learning project so I was very lost at first but as I learned more it was really cool learning how machine learning is used, ways in which people solve problems, and learning how I could solve my problem. I did not use any libraries but I know they exist and make things easier and I will be talking about in the blog post as well. One of the biggest essentials in machine learning is data. We need a lot of data to train o. I got the data from the UC Irvine Machine Learning Repository which you can also get as well. [data](https://archive.ics.uci.edu/ml/datasets/SMS+Spam+Collection)
 
 
 ### What the issue is
@@ -22,24 +22,24 @@ So the problem here is if we have incoming text or emails to a user how can we c
 
 ### Things to know
 ---------
-<strong>Supervised Machine Learning:</strong><br>
+**Supervised Machine Learning:**
 So because we have the labels this is a machine learning project. This is something I had no idea about. There are other forms of machine learning such as unsupervised learning, semisupervised learning, and clustering. 
 
-<strong>Classification:</strong><br>
+**Classification:**
 In machine learning there are different types of tasks that can be done. Some of them are classification tasks such as KNN and naive bayes. Both these algorithms aim to classify something into a certain class. An example of this is this project. We are predicting whether a message is spam or ham so we are predicting the class of some data. Another big task in machine learning is predicting a numerical value.   An example for this is linear regression, 
 
-<strong>Jupyter NoteBooks:</strong><br>
-Jupyter NoteBooks are a really cool tool that is commomly used in machine learning. They are great for visualazing data, etc. 
+**Jupyter NoteBooks:**
+Jupyter NoteBooks are a really cool tool that is commonly used in machine learning. They are great for visualazing data, etc. 
 
-<strong>What is ham?:</strong><br>
+**What is ham?:**
 Ham is not spam. Here is an example from the data set of what spam is. `Free entry in 2 a wkly comp to win FA Cup final tkts 21st May 2005. Text FA to 87121 to receive entry question(std txt rate)T&C's apply 08452810075over18's`. And here is an example of what ham is. `Go until jurong point, crazy.. Available only in bugis n great world la e buffet... Cine there got amore wat...`
 
 
-<strong>Splitting Data:</strong><br>
+**Splitting Data:**
 In machine learning one of the most important things besides the data its self is splitting the data. Data is ussually split as 80% train  data and 20% test data. Our train data is used to train our model and test our algorithms. The way in whic I split my data can be seen in my notebook but what I did was I used some code I got from a book to split the data whcih randomises the data then splits in. Because we would get new train and test data everytime I only ran it once and turn the data inso csv. Another thing that is important in splitting the data is that you have a even ammount of both types. Let's say for example if for some reason once we split our data that our majority of data samples were only ham. Our model would not know what spam is therefore it would fail. 
 
 
-<strong>How dictionaries work:</strong><br>
+**How dictionaries work:**
 Dictionaries or hashmaps in programming is a data structure. It's a way in which we can structure data by storing a key (some variable) and it's value (some other variable). Let's say for example 
 
 
@@ -247,32 +247,32 @@ def get_accuracy(algorithm, data):
 Every algorithm follewd the same proccess as the first one. We sould set the data into dictionary form, count up words and their probabilities and see what we could do with that after.
 
 <!-- naive byes -->
-<strong>Naive Bayes </strong>
+**Naive Bayes **
 One of my attempts was using naive bayes. Naye bayes is a 
-The equation is given by <br>
+The equation is given by 
 
 $$ p(c|x) = \frac{p(x|c)p(c)}{p(x)} $$ 
 
 
 <!-- removing stop words -->
-<strong>Removing Stop Words </strong>
+**Removing Stop Words **
 I went online and did some more research to see what other things people did. One of the things that I noticed was people removed stop words. I don't necessarily know by definition what stop words are but from my understanding they are very common words such as `the`, `is`, `they`, etc. So for my next idea to try and improve my algorithms accuracy I removed the stop words. The process of removing the stop words was done along with cleaning the message. In the end this really had no effect and gave me the same results my previous algorithm.
 Here are the results
 
 
-<img src= "../assets/images/version_three.png">
+<img src= "../images/version_three.png">
 
 
 <!-- graphing -->
-<strong>Graphing the data </strong>
+**Graphing the data **
 Graphed the word probabilites to see if it could show something (final algorithm)
 
-Lastly I tried graphing the data to see if it would show me anything that I could use to help me. What I did was I got the values of a message both their spam and ham value. I graphed each message with x being their ham value and y being their spam value. <br>
-<img src="../assets/images/spam_data_graphed.png">
+Lastly I tried graphing the data to see if it would show me anything that I could use to help me. What I did was I got the values of a message both their spam and ham value. I graphed each message with x being their ham value and y being their spam value.
+<img src="../images/spam_data_graphed.png">
 
 
 As you can see most messages that are spam have a spam value of 5 and up so I made it that every message with 5 or more spam value is spam and here are the results. 
-<img src="../assets/images/version_four.png">
+<img src="../images/version_four.png">
 
 
 Instead of using some constant like I previously did such as 5 or 10 or 15 to label a message as spam, I could get the average amount of spam words in a spam message in the data and use that. For example I could have a function that takes in all the spam messages and check how many spam words are in a spam message. I could then take the average and set that as my number. Using a constant could hurt the results by possibly underfitting.
@@ -280,8 +280,8 @@ Instead of using some constant like I previously did such as 5 or 10 or 15 to la
  
 
 <!-- using a library -->
-<strong>Using Scikitlearn Naive Bayees</strong>
-Once I finally got really good results on an algorithm I decided to use a scikit learn. Scikit learn is a machine learning library that makes thing a lot easier. This was my first time using this library seeing how it's my first machine learning project so I went online to see how I can use it. 
+**Using Scikitlearn Naive Bayees**
+Once I finally got really good results on an algorithm I decided to use a scikit learn. Scikit learn is a machine learning library that makes modeling a lot easier. This was my first time using this library seeing how it's my first machine learning project so I went online to see how I can use it. 
 
 
 ### Challenges/What I learned

@@ -4,6 +4,6 @@ title: About
 permalink: /about/
 ---
 
-[Reverie](https://github.com/amitmerchant1990/reverie) is a Jekyll theme which is simple and opinionated. It's actually a fork of [jekyll-now](https://github.com/barryclark/jekyll-now) with some additional features and personal touches which I've implemented to suit my needs for [my blog](https://www.amitmerchant.com).
+My name is Gael Gil this website here is for me to talk about some of my projects. I am really interested in data science so a lot of my blog posts here will be focused data science topics. To see all my projects you can check my github [here](https://github.com/GaelGil)
 
-This is a plug-and-play Jekyll theme which you can use on GitHub Pages without even setting up a local environment.
+I have worked at several institutions, from interning at AppDynamics, to volunteer at local Bay Area nonprofits. Currently, I am attending San Jose State University majoring in Applied Math. Some of my areas of interests in the subject include calculus, linear algebra, and probability. Because of these passions, I have aspirations to become a data scientist. In order further strengthen my knowledge of these topics, I work on several personal projects, most recently to learn more about neural networks.

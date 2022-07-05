@@ -1,12 +1,11 @@
 ---
 layout: post
-title:  "math"
+title:  "Math"
 permalink: /math/
 date:   2019-02-01 12:33
 image: ../assets/images/mean.png
-categories: jekyll update
+categories: math python code
 ---
-
 
 
 In this blogpost I will be talking about the how we can represent math in code. The similarities and differences and how code can make summnation easier to understand Also in this blog post I will also be refering to arithmetic mean i'll be refering to it as just mean for shorts. 
@@ -30,7 +29,7 @@ we have the sum over `n` which represents the ammount of elements/numbers.
 ## All together we have this
 The prevoius examples showed different ways we can represent the mean and all of put together we have this
 
-$$ \bar{x} = \frac{1}{n} \left( \sum_{i=1}^{n} x_i \right) = \frac{x_1+x_2+....+x_n}{x} $$
+$\bar{x} = \frac{1}{n} \left( \sum_{i=1}^{n} x_i \right) = \frac{x_1+x_2+....+x_n}{x} $
 
 This confusing but this just shows us the levels of abstraction. From being supper deatiled on the right and getting simpler 
 the more. We can represent summation notation in programing with a for loop that can make understanding it easier. Here are 

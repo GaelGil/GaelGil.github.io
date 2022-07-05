@@ -4,11 +4,14 @@ title:  "Sneaker Prices"
 permalink: /sneakers/
 date:   2019-12-05 12:33
 image: ../assets/images/sneakers.jpg
-categories: jekyll update
+categories: data
 ---
 
-link to the github [repo](https://github.com/GaelGil/sneaker-database)
+
+link to the github [repo](https://github.com/GaelGil/sneaker-prices-checker)
+
 link to the live [project](https://sneaker-prices.herokuapp.com/)
+
 link to the [sneaks-api]()
 
 # The project
