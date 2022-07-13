@@ -9,3 +9,16 @@ categories: data-science neural-networks
 link to fully connected feed forward neural network [notebook]()
 
 link to convolutional neural networks [notebook]()
+
+
+
+### Project Description
+
+
+### Notebooks
+
+
+### What I Learned
+
+
+### What Helped Me

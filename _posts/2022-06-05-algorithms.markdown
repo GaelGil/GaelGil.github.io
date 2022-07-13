@@ -6,8 +6,15 @@ date:   2022-06-05 12:33
 categories: data-sctructures algorithms
 ---
 
-link to vizualiser [repo]()
+link to vizualiser [repo](https://github.com/GaelGil/algorithm-visualizer)
 
-link to algorithm [vizualiser]()
+link to algorithm [vizualiser](https://algorithm-visualizer-gg.herokuapp.com/)
 
-link to algorithm repo
+### The Idea
+
+
+### Tools
+
+
+### Deployment
+
