@@ -1,31 +1,12 @@
-## This can be your internal website page / project page
+## Spotify Playlists
 
-**Project description:** Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+**Project description:** In this project I craeted a python module that creates spotify playlists from the most popular songs in spotify playlists. It uses a some words to search the spotify api for playlists with same words in them. From those spotify playlists that we searched we go through each and find its most popular songs. Those most popular songs get added to the playlist we are trying to craete. 
+Here is an example
 
-### 1. Suggest hypotheses about the causes of observed phenomena
+My initial idea was to create a python module to turn youtube playlists into spotify playlists after I saw it in a youtube video [here](#). One of the libraries that was used in the video wasn't available anymore so I created something else. I wanted to get expereicen working with apis so I decided I would just focus on learning the spotify api and getting something working. 
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+For the project the tools I used python, the spotify. Once I felt like I understood enough for what I needed I then moved to understanding the spotify api. Originally I was going to have something similar where I would search spotify playlists and get random songs from each playlist. However as I read the documentation for the spotify api I leanred that each song has a popularity value which I found interesting. I deicded that would be a better way to determine which songs get added to a new playlist.
 
-```javascript
-if (isAwesome){
-  return true
-}
-```
+If you want to create playlists for yourself you can clone the project and use your own api keys and run it. There are intructions in the Readme.md on how to get the project started locally.  
 
-### 2. Assess assumptions on which statistical inference will be based
-
-```javascript
-if (isAwesome){
-  return true
-}
-```
-
-### 3. Support the selection of appropriate statistical tools and techniques
-
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
-
-### 4. Provide a basis for further data collection through surveys or experiments
-
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+link to the github [repo](https://github.com/GaelGil/spotify-playlist-maker)

@@ -1,31 +1,12 @@
-## This can be your internal website page / project page
+## Algorithm Visualiser
 
-**Project description:** Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+**Project description:** I came across a video on youtube that visualized all kinds of sorting algorithms. Here is the [video](https://www.youtube.com/watch?v=kPRA0W1kECg). I thought it was really cool so I wanted to make my own. 
 
-### 1. Suggest hypotheses about the causes of observed phenomena
+I followed this [tutorial](https://www.youtube.com/watch?v=pFXYym4Wbkc). linked here to create a react app that would allow me to visualize the sorting algorithms. I really don't like frontend so I did not like creating the animations but having the tutorial was really helpful to understand react. Once I had react set up is was now time to implement the algorithms. I had implemented sorting algorithms from scratch in python before so this was pretty straight forward. 
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
 
-```javascript
-if (isAwesome){
-  return true
-}
-```
 
-### 2. Assess assumptions on which statistical inference will be based
+I previously deployed the project using Heroku, making it easily accessible to everyone but they removed their free tier so its no longer up. I have included the link to the github project where you can get the code and implement algorithms on your own :) . Additionally I also have a github project where I implement all sorts of algorithms as well as data structures from scratch. 
 
-```javascript
-if (isAwesome){
-  return true
-}
-```
-
-### 3. Support the selection of appropriate statistical tools and techniques
-
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
-
-### 4. Provide a basis for further data collection through surveys or experiments
-
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+link to algorithm [vizualiser](https://algorithm-visualizer-gg.herokuapp.com/)
+link to data structures and algorithms [repo](https://github.com/GaelGil/algorithms)

@@ -1,31 +1,5 @@
-## This can be your internal website page / project page
+## Probability Theory
 
-**Project description:** Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+**Project description:** I recently took a probability course in school, and the experience left me thoroughly engaged and eager to reinforce my understanding of the material. As a result of this I have created a Jupyter notebook, which I have shared on GitHub. Within this notebook, I reviewed various concepts, including counting, axioms of probability, distributions of functions of random variables,  moment generating functions, and more. Additionally, I provided illustrative examples and implemented some functions using Python.
 
-### 1. Suggest hypotheses about the causes of observed phenomena
-
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
-
-```javascript
-if (isAwesome){
-  return true
-}
-```
-
-### 2. Assess assumptions on which statistical inference will be based
-
-```javascript
-if (isAwesome){
-  return true
-}
-```
-
-### 3. Support the selection of appropriate statistical tools and techniques
-
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
-
-### 4. Provide a basis for further data collection through surveys or experiments
-
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+If you're interested in learning about the subject and exploring the insights I gained from this course, I invite you to peruse the notebook. It offers a comprehensive overview of the topics covered and serves as a valuable resource for anyone seeking to reinforce their knowledge of probability. [here](https://github.com/GaelGil/notebooks/blob/master/probability_theory/probability_theory.ipynb)
