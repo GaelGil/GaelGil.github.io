@@ -8,13 +8,13 @@
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 [Neural Networks](./projects/ann)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+<img src="images/neural_network.png?raw=true"/>
 
 [Probability Theory](./projects/probability_theory)
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 [Sentence Generator](./projects/sentence_generator)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+<img src="images/markov_chain.png?raw=true"/>
 
 
 ---
