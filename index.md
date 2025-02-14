@@ -16,6 +16,8 @@
 [Sentence Generator](./projects/sentence_generator)
 <img src="images/markov_chain.png?raw=true"/>
 
+[Spotify Playlists](./projects/spotify_playlists)
+<img src="images/spotify.png?raw=true"/>
 
 ---
 <!-- [Project 2 Title](/pdf/sample_presentation.pdf)
