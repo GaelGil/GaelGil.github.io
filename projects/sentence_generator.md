@@ -1,4 +1,3 @@
-## This can be your internal website page / project page
 
 **Project description:** In this project I made a setence generator in which you can input your own pragraph and using the markov procces it will generate a sentence. A markov chain is a model in which you can predict future outcomes based on the thing that came before it and is used for sequential data. 
 
