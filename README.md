@@ -508,3 +508,8 @@ export const educationData = [
         </tr>
     </table>
 </div>
+
+
+make changes on main branch
+always commit and push
+npm run deploy
