@@ -1,7 +1,7 @@
 {
   "name": "developer-portfolio",
   "version": "0.1.0",
-  "homepage": "https://gaelgil.github.io/GaelGil.github.io",
+  "homepage": "https://gaelgil.github.io/",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.12.2",
@@ -32,7 +32,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "master -d build"
+    "deploy": "gh-pages -b main -d build"
   },
   "eslintConfig": {
     "extends": [
