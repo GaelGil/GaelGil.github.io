@@ -3,7 +3,6 @@ import { NavHashLink as NavLink } from 'react-router-hash-link';
 import Fade from 'react-reveal/Fade';
 import { IoMenuSharp, IoHomeSharp } from 'react-icons/io5';
 import { HiDocumentText } from 'react-icons/hi';
-import { MdPhone } from 'react-icons/md';
 import { FaUser, FaFolderOpen } from 'react-icons/fa';
 import { makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
@@ -250,19 +249,7 @@ function Navbar() {
                         </Fade>
 
                         <Fade left>
-                            <NavLink
-                                to='/#contacts'
-                                smooth={true}
-                                spy='true'
-                                duration={2000}
-                            >
-                                <div className={classes.drawerItem}>
-                                    <MdPhone className={classes.drawerIcon} />
-                                    <span className={classes.drawerLinks}>
-                                        Contact
-                                    </span>
-                                </div>
-                            </NavLink>
+
                         </Fade>
                     </div>
                 </div>

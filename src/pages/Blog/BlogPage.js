@@ -13,7 +13,7 @@ import { headerData } from '../../data/headerData'
 
 function BlogPage() {
 
-    const [search, setSearch] = useState('')
+    const [search] = useState('')
     const { theme } = useContext(ThemeContext);
 
     const filteredArticles = blogData.filter((blog) => {
@@ -80,9 +80,6 @@ function BlogPage() {
                 <h1 style={{color: theme.secondary}}>Blogs</h1>
             </div>
             <div className="blogPage--container">
-                <div className="blog--search">
-                    <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Seach blog..." className={classes.search}/>
-                </div>
                 <div className="blogs--container">
                     <Grid className="blog-grid" container direction="row" alignItems="center" justifyContent="center">
                         {filteredArticles.reverse().map(blog => (

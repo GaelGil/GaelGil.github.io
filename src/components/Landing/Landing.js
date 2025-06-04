@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { Button } from '@material-ui/core';
-import { NavHashLink as NavLink } from 'react-router-hash-link';
 import { makeStyles } from '@material-ui/core/styles';
 
 import './Landing.css';
@@ -135,16 +134,7 @@ function Landing() {
                                     </Button>
                                 </a>
                             )}
-                            <NavLink
-                                to='/#contacts'
-                                smooth={true}
-                                spy='true'
-                                duration={2000}
-                            >
-                                <Button className={classes.contactBtn}>
-                                    Contact
-                                </Button>
-                            </NavLink>
+
                         </div>
                     </div>
                 </div>
