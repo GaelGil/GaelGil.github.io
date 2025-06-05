@@ -247,10 +247,6 @@ function Navbar() {
                                 </div>
                             </NavLink>
                         </Fade>
-
-                        <Fade left>
-
-                        </Fade>
                     </div>
                 </div>
             </Drawer>

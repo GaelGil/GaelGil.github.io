@@ -11,29 +11,29 @@ import eight from '../assets/svg/projects/eight.svg'
 export const projectsData = [
     {
         id: 1,
-        projectName: 'Employee Management',
-        projectDesc: 'This project aims to build an employee management system that consolidates all information of a company',
-        tags: ['React', 'CSS', 'Material Ui'],
-        code: 'https://github.com/hhhrrrttt222111/developer-portfolio',
-        demo: 'https://github.com/hhhrrrttt222111/developer-portfolio',
+        projectName: 'Algorithm Visualiser',
+        projectDesc: 'A project I created using react to visualize sorting algorithms and pathfinding algorithms. ',
+        tags: ['Algorithms', 'Sorting', 'Graphs'],
+        code: 'https://github.com/GaelGil/algorithm-visualizer',
+        demo: 'https://gaelgil.github.io/algorithm-visualizer/',
         image: one
     },
     {
         id: 2,
-        projectName: 'Railway Tracking',
+        projectName: 'Web Scraper',
         projectDesc: 'This project is a railway tracking system that allows users to obtain relevant information about train timing.',
-        tags: ['Django', 'Tailwind CSS'],
-        code: 'https://github.com/hhhrrrttt222111/developer-portfolio',
-        demo: 'https://github.com/hhhrrrttt222111/developer-portfolio',
+        tags: ['Selenium', 'Python'],
+        code: 'https://github.com/GaelGil/web-scraper',
+        demo: '',
         image: two
     },
     {
         id: 3,
-        projectName: 'Weather App',
+        projectName: 'Spotify Playlist Maker',
         projectDesc: 'Weather forecast systems and applications predict weather conditions based on multiple parameters.',
-        tags: ['Django', 'CSS', 'Material Ui'],
-        code: 'https://github.com/hhhrrrttt222111/developer-portfolio',
-        demo: 'https://github.com/hhhrrrttt222111/developer-portfolio',
+        tags: ['Python', 'Spotify', 'API'],
+        code: 'https://github.com/GaelGil/spotify-playlist-maker',
+        demo: '',
         image: three
     },
     {

@@ -1,23 +1,23 @@
 export const experienceData = [
     {
         id: 1,
-        company: 'Globex Corporation',
-        jobtitle: 'Frontend Developer',
-        startYear: '2018',
-        endYear: '2019'
+        company: 'San Jose State University',
+        jobtitle: 'Research Assistant',
+        startYear: 'Jan 2024',
+        endYear: 'Dec 2024'
     },
     {
         id: 2,
-        company: 'Vehement Capital Partners',
-        jobtitle: 'Backend Developer',
-        startYear: '2019',
-        endYear: '2020'
+        company: 'Cisco AppDynamics',
+        jobtitle: 'Software Engineer Intern',
+        startYear: 'Jun 2020',
+        endYear: 'Aug 2020'
     },
     {
         id: 3,
-        company: 'Wonka Industries',
-        jobtitle: 'Marketing',
-        startYear: '2020',
-        endYear: 'Present'
+        company: 'Uber',
+        jobtitle: 'Software Engineer Intern',
+        startYear: 'Nov 2019',
+        endYear: 'Apr 2020'
     },
 ]
