@@ -2,8 +2,8 @@ import resume from '../assets/pdf/resume.pdf'
 
 export const headerData = {
     name: 'Gael Gil',
-    title: "Web Developer",
-    desciption: "There wasn't a bird in the sky, but that was not what caught her attention. It was the clouds. The deep green that isn't the color of clouds, but came with these. She knew what was coming and she hoped she was prepared.",
+    title: "Aspiring Data Scientist",
+    desciption: "Thank you for coming to my website. Here you can learn about me, my projects, experince and what I do. My projects mainly revolved around engineering and data science.",
     image: 'https://raw.githubusercontent.com/GaelGil/GaelGil.github.io/refs/heads/master/src/assets/me%20Medium.png',
     resumePdf: resume
 }
