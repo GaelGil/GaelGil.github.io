@@ -38,20 +38,20 @@ export const projectsData = [
     },
     {
         id: 4,
-        projectName: 'Probability Theory',
-        projectDesc: 'This is a notebook that goes over probability theory basiscs',
-        tags: ['Math', 'Probability Theory'],
-        code: 'https://github.com/GaelGil/notebooks/blob/master/probability_theory/probability_theory.ipynb',
+        projectName: 'Neural Network From Scratch',
+        projectDesc: 'This is a notebook implements a neural network from scratch using numpy',
+        tags: ['Math', 'Deep Learning', 'MNIST'],
+        code: 'https://github.com/GaelGil/notebooks/blob/master/back-propagation/back_propagation.ipynb',
         demo: '',
         image: four
     },
     {
         id: 5,
-        projectName: 'E-Commerce App',
-        projectDesc: 'A Simple E-commerce application',
-        tags: ['React Native', 'Firebase'],
-        code: 'https://github.com/hhhrrrttt222111/developer-portfolio',
-        demo: 'https://github.com/hhhrrrttt222111/developer-portfolio',
+        projectName: 'Probability Theory',
+        projectDesc: 'This is a notebook that goes over probability theory basiscs',
+        tags: ['Math', 'Probability Theory'],
+        code: 'https://github.com/GaelGil/notebooks/blob/master/probability_theory/probability_theory.ipynb',
+        demo: '',
         image: five
     },
     {
