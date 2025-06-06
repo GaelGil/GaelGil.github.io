@@ -38,11 +38,11 @@ export const projectsData = [
     },
     {
         id: 4,
-        projectName: 'Android Patient Tracker',
-        projectDesc: 'This project involves the development of an Android application for viewing and managing patient data.',
-        tags: ['Flutter', 'Firebase'],
-        code: 'https://github.com/hhhrrrttt222111/developer-portfolio',
-        demo: 'https://github.com/hhhrrrttt222111/developer-portfolio',
+        projectName: 'Probability Theory',
+        projectDesc: 'This is a notebook that goes over probability theory basiscs',
+        tags: ['Math', 'Probability Theory'],
+        code: 'https://github.com/GaelGil/notebooks/blob/master/probability_theory/probability_theory.ipynb',
+        demo: '',
         image: four
     },
     {
