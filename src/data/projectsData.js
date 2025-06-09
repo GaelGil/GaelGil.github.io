@@ -56,20 +56,20 @@ export const projectsData = [
     },
     {
         id: 6,
-        projectName: 'Uber Lite',
-        projectDesc: 'Uber clone',
-        tags: ['Flutter'],
-        code: 'https://github.com/hhhrrrttt222111/developer-portfolio',
-        demo: 'https://github.com/hhhrrrttt222111/developer-portfolio',
+        projectName: 'Convolutional Neural Networks',
+        projectDesc: 'A basics on convolutional networks',
+        tags: ['Python', 'Deep Learning', 'PyTorch'],
+        code: 'https://github.com/GaelGil/notebooks/blob/master/convolutional_nueral_networks/cnns.ipynb',
+        demo: '',
         image: six
     },
     {
         id: 7,
-        projectName: 'Stock Market App',
-        projectDesc: 'A simple stock market API app',
-        tags: ['React', 'Redux', 'Bootstrap'],
-        code: 'https://github.com/hhhrrrttt222111/developer-portfolio',
-        demo: 'https://github.com/hhhrrrttt222111/developer-portfolio',
+        projectName: 'Sentence Generator',
+        projectDesc: 'A simple sentence generator using markov chains',
+        tags: ['Python', 'Math', 'Markov Chains'],
+        code: 'https://github.com/GaelGil/sentence-generator',
+        demo: '',
         image: seven
     },
     {
