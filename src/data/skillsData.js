@@ -1,31 +1,31 @@
- export const skillsData = [
-    'C',
-    'C++',
-    'C#',
-    'Python',
-    'Git',
-    'Pytorch',
-    'Javascript',
-    'Java',
-    'Markdown',
-    'Tensorflow',
-    'Numpy',
-    'OpenCV',
-    'HTML',
-    'CSS',
-    'GCP',
-    'Bootstrap',
-    'React',
-    'Figma',
-    'MySQL',
-    'PostgreSQL',
-    'Django',
-    'Selenium',
-]
+export const skillsData = [
+  "C",
+  "C++",
+  "C#",
+  "Python",
+  "Git",
+  "Pytorch",
+  "Javascript",
+  "Typescript",
+  "Java",
+  "Markdown",
+  "Tensorflow",
+  "Numpy",
+  "OpenCV",
+  "HTML",
+  "CSS",
+  "GCP",
+  "Bootstrap",
+  "React",
+  "Figma",
+  "MySQL",
+  "PostgreSQL",
+  "Django",
+  "Selenium",
+];
 
 // Choose your skills from below. Make sure it's in the same format and spelled correctly.
 // Couldn't find the required skills? Raise an issue on github at https://github.com/hhhrrrttt222111/developer-portfolio/issues/new
-
 
 // AVAILABLE SKILLS
 
