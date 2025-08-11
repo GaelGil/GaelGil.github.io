@@ -30,6 +30,14 @@ export default function Projects() {
               </a>
             ))}
         </div>
+        <div className="mt-8 flex gap-4">
+          <a
+            href="/projects"
+            className="px-5 py-3 border rounded border-accent hover:bg-accent/10"
+          >
+            View All
+          </a>
+        </div>
       </div>
     </section>
   );
