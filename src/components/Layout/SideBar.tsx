@@ -1,18 +1,15 @@
 import { LINKEDIN_URL, GITHUB_URL } from "../../data/const";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { NAME } from "../../data/const";
+import Photo from "../Home/PhotoSection";
 
 export default function Sidebar() {
   return (
     <aside className="fixed top-0 left-0 w-1/2 h-screen flex items-center justify-center p-8">
       <div className="max-w-sm">
+        <Photo />
         <h1 className="text-3xl font-bold text-black">{NAME}</h1>
         <p className="mt-2 text-slate">...</p>
-        <p className="text-lg text-gray-700  leading-relaxed mb-6">
-          Thank you for coming to my website. Here you can learn about me, my
-          projects, experince and what I do. My projects mainly revolved around
-          engineering and data science.
-        </p>
 
         <nav className="mt-8 space-y-2">
           <a href="#about" className="block hover:text-accent">

@@ -5,7 +5,7 @@ export default function Projects() {
     <section id="projects" className="md:ml-64 px-8 py-20">
       <div className="max-w-4xl mx-auto">
         <h4 className="text-accent font-mono mb-6">Projects</h4>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 gap-6">
           {projects.map((p) => (
             <a
               key={p.id}
