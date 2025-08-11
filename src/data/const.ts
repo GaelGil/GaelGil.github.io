@@ -25,6 +25,7 @@ export const SKILLS: string[] = [
   "PyTorch",
   "MCP",
   "Java",
+  "Tesnorflow",
   "C++",
   "Git",
   "GCP",
