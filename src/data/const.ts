@@ -30,3 +30,12 @@ export const SKILLS: string[] = [
   "Git",
   "GCP",
 ];
+
+export const projects = [
+  {
+    title: "Portfolio",
+    description:
+      "My personal portfolio built with React and TailwindCSS. Hosted on Vercel.",
+    link: "https://github.com/GaelGil/gaelgil-github-io",
+  },
+];
