@@ -1,5 +1,6 @@
 import type { EducationItem } from "../types/EducationItem";
-import img from "../assets/me_medium.png";
+import type { ExperinceItem } from "../types/ExperienceItem";
+import img from "../assets/me.jpg";
 
 export const LINKEDIN_URL = "https://www.linkedin.com/in/gael-gil-7a4baa172";
 export const GITHUB_URL = "https://github.com/GaelGil";
@@ -111,5 +112,26 @@ export const projects = [
     content: "Portfolio",
     url: "https://github.com/GaelGil/essay_writing_ai_agent",
     tags: ["AI", "Python", "MCP", "Google API", "React", "Fullstack"],
+  },
+];
+
+export const EXPERIENCE: ExperinceItem[] = [
+  {
+    company: "San Jose State University",
+    position: "Research Assistant",
+    startDate: "Jan 2024",
+    endDate: "Dec 2024",
+  },
+  {
+    company: "Cisco App Dynamics",
+    position: "Software Engineer",
+    startDate: "June 2020",
+    endDate: "Aug 2020",
+  },
+  {
+    company: "Uber",
+    position: "Software Engineer",
+    startDate: "Nov 2019",
+    endDate: "Apr 2020",
   },
 ];
