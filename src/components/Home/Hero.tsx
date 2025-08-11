@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section id="hero" className="md:ml-64 min-h-screen flex items-center">
+    <section id="hero" className="md:ml-64  flex items-center">
       <div className="max-w-3xl mx-auto px-8 py-24">
         <h3 className="mt-2 text-2xl text-slate">
           Thank you for coming to my website. Here you can learn about me, my

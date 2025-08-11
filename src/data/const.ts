@@ -38,7 +38,78 @@ export const projects = [
     description:
       "My personal portfolio built with React and TailwindCSS. Hosted on Vercel.",
     link: "https://github.com/GaelGil/gaelgil-github-io",
+    content: "Portfolio",
     url: "https://gaelgil.vercel.app/",
     tags: ["React", "TailwindCSS"],
+  },
+  {
+    id: 2,
+    title: "Portfolio",
+    description:
+      "My personal portfolio built with React and TailwindCSS. Hosted on Vercel.",
+    link: "https://github.com/GaelGil/gaelgil-github-io",
+    content: "Portfolio",
+    url: "https://gaelgil.vercel.app/",
+    tags: ["React", "TailwindCSS"],
+  },
+  {
+    id: 3,
+    title: "Portfolio",
+    description:
+      "My personal portfolio built with React and TailwindCSS. Hosted on Vercel.",
+    link: "https://github.com/GaelGil/gaelgil-github-io",
+    content: "Portfolio",
+    url: "https://gaelgil.vercel.app/",
+    tags: ["React", "TailwindCSS"],
+  },
+  {
+    id: 4,
+    title: "Portfolio",
+    description:
+      "My personal portfolio built with React and TailwindCSS. Hosted on Vercel.",
+    link: "https://github.com/GaelGil/gaelgil-github-io",
+    content: "Portfolio",
+    url: "https://gaelgil.vercel.app/",
+    tags: ["React", "TailwindCSS"],
+  },
+  {
+    id: 5,
+    title: "Order Mail Agent",
+    description:
+      "My personal portfolio built with React and TailwindCSS. Hosted on Vercel.",
+    link: "https://github.com/kevingil/rocket-agent",
+    content: "Portfolio",
+    url: "https://github.com/kevingil/rocket-agent",
+    tags: ["AI", "Python", "MCP", "Fullstack"],
+  },
+  {
+    id: 6,
+    title: "Rocket Agent",
+    description:
+      "My personal portfolio built with React and TailwindCSS. Hosted on Vercel.",
+    link: "https://github.com/kevingil/rocket-agent",
+    content: "Portfolio",
+    url: "https://github.com/kevingil/rocket-agent",
+    tags: ["Fullstack", "AI Agent", "Python"],
+  },
+  {
+    id: 7,
+    title: "Essay Writing Agent",
+    description:
+      "A AI agent that writes essays based on user input. No frameworks.",
+    link: "https://github.com/GaelGil/essay_writing_ai_agent",
+    content: "Portfolio",
+    url: "https://github.com/GaelGil/essay_writing_ai_agent",
+    tags: ["AI", "Python", "MCP", "Fullstack"],
+  },
+  {
+    id: 8,
+    title: "Balanced Calendar Agent",
+    description:
+      "My personal portfolio built with React and TailwindCSS. Hosted on Vercel.",
+    link: "https://github.com/GaelGil/essay_writing_ai_agent",
+    content: "Portfolio",
+    url: "https://github.com/GaelGil/essay_writing_ai_agent",
+    tags: ["AI", "Python", "MCP", "Google API", "React", "Fullstack"],
   },
 ];
