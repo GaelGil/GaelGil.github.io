@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function Hero() {
   return (
     <section id="hero" className="md:ml-64 min-h-screen flex items-center">

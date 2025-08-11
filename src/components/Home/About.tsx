@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function About() {
   return (
     <section id="about" className="md:ml-64 px-8 py-20 bg-navyLight">
