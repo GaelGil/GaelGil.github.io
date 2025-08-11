@@ -7,7 +7,7 @@ export default function Education() {
         <h4 className="text-accent font-mono mb-2">Education</h4>
         <ul className="space-y-4">
           {EDUCATION.map((edu, idx) => (
-            <li key={idx} className="bg-white shadow-md rounded-lg p-6">
+            <li key={idx} className="bg-white  rounded-lg p-6">
               <h3 className="text-xl font-semibold">{edu.degree}</h3>
               <p className="text-gray-700">{edu.institution}</p>
             </li>

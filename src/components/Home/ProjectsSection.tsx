@@ -13,7 +13,7 @@ export default function Projects() {
               <a
                 key={p.id}
                 href={p.url}
-                className="block p-6 border rounded-lg border-slate hover:border-accent transition"
+                className="block p-6 rounded-lg border-slate"
               >
                 <h5 className="text-lg font-semibold text-black">{p.title}</h5>
                 <p className="text-slate mt-2">{p.description}</p>
