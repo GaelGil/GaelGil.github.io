@@ -1,5 +1,5 @@
 import { FaLinkedin, FaGithub } from "react-icons/fa";
-import { LINKEDIN_URL, GITHUB_URL } from "../data/ursl";
+import { LINKEDIN_URL, GITHUB_URL } from "../data/const";
 
 export default function About() {
   return (
