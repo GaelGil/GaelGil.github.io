@@ -1,23 +1,20 @@
 import { FaLinkedin, FaGithub } from "react-icons/fa";
-import { LINKEDIN_URL, GITHUB_URL } from "../data/const";
+import { LINKEDIN_URL, GITHUB_URL, NAME } from "../../data/const";
 
 export default function About() {
   return (
     <div className="bg-white  shadow-lg rounded-xl p-8 transition">
       {/* Name */}
-      <h1 className="text-4xl font-extrabold mb-2 ">Your Name</h1>
+      <h1 className="text-4xl font-extrabold mb-2 ">{NAME}</h1>
 
       {/* Current Position */}
-      <h2 className="text-lg font-medium text-gray-600  mb-6">
-        Professional Engineer | Structural Design Specialist
-      </h2>
+      <h2 className="text-lg font-medium text-gray-600  mb-6">...</h2>
 
       {/* About Me Text */}
       <p className="text-lg text-gray-700  leading-relaxed mb-6">
-        I am a professional engineer with a passion for designing innovative
-        solutions to complex problems. My work blends creativity and precision,
-        leveraging modern tools and methodologies to deliver results that are
-        both effective and sustainable.
+        Thank you for coming to my website. Here you can learn about me, my
+        projects, experince and what I do. My projects mainly revolved around
+        engineering and data science.
       </p>
 
       {/* Social Links */}

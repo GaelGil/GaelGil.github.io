@@ -1,4 +1,4 @@
-import { ME_IMAGE } from "../data/const";
+import { ME_IMAGE } from "../../data/const";
 
 export default function Photo() {
   return (
