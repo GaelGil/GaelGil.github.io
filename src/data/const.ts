@@ -6,7 +6,7 @@ export const GITHUB_URL = "https://github.com/GaelGil";
 export const NAME = "Gael Gil";
 export const ME_IMAGE = img;
 
-export const educationList: EducationItem[] = [
+export const EDUCATION: EducationItem[] = [
   {
     degree: "Bachelors of Science in Applied Math & CS Minor",
     institution: "San Jose State University",
@@ -15,4 +15,17 @@ export const educationList: EducationItem[] = [
     degree: "Associate of Science in Computer Science",
     institution: "San Francisco Community College",
   },
+];
+
+export const SKILLS: string[] = [
+  "Python",
+  "Typescript",
+  "React",
+  "PostgreSQL",
+  "PyTorch",
+  "MCP",
+  "Java",
+  "C++",
+  "Git",
+  "GCP",
 ];
