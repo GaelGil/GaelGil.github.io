@@ -7,7 +7,7 @@ import Education from "../Home/EducationSection";
 
 export default function Home() {
   return (
-    <main className="ml-[25%] h-screen overflow-y-scroll scrollbar-hide px-8">
+    <main className="ml-[25%] h-screen px-8">
       <Hero />
       <About />
       <Projects />
