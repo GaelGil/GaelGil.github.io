@@ -30,6 +30,7 @@ export const SKILLS: string[] = [
   "C++",
   "Git",
   "GCP",
+  "TailwindCSS",
 ];
 
 export const projects = [
@@ -45,13 +46,13 @@ export const projects = [
   },
   {
     id: 2,
-    title: "Portfolio",
+    title: "Neural Network From Scratch",
     description:
       "My personal portfolio built with React and TailwindCSS. Hosted on Vercel.",
     link: "https://github.com/GaelGil/gaelgil-github-io",
     content: "Portfolio",
     url: "https://gaelgil.vercel.app/",
-    tags: ["React", "TailwindCSS"],
+    tags: ["Python", "Numpy", "Deep Learning"],
   },
   {
     id: 3,
