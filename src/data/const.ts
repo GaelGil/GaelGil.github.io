@@ -78,9 +78,9 @@ export const projects = [
     title: "Order Mail Agent",
     description:
       "My personal portfolio built with React and TailwindCSS. Hosted on Vercel.",
-    link: "https://github.com/kevingil/rocket-agent",
+    link: "https://github.com/kevingil/ordermail-agent",
     content: "Portfolio",
-    url: "https://github.com/kevingil/rocket-agent",
+    url: "https://github.com/kevingil/ordermail-agent",
     tags: ["AI", "Python", "MCP", "Fullstack"],
   },
   {
@@ -105,6 +105,15 @@ export const projects = [
   },
   {
     id: 8,
+    title: "Retrival Augmented Generation (RAG) Chatbot",
+    description: "A chatbot that uses RAG to answer questions. No frameworks.",
+    link: "https://github.com/GaelGil/essay_writing_ai_agent",
+    content: "Portfolio",
+    url: "https://github.com/GaelGil/essay_writing_ai_agent",
+    tags: ["AI", "Python", "RAG", "Fullstack"],
+  },
+  {
+    id: 9,
     title: "Balanced Calendar Agent",
     description:
       "An AI agent that creates a balanced calendar based on your calendar. No frameworks.",
