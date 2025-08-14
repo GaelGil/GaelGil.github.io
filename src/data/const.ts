@@ -65,13 +65,13 @@ export const projects = [
   },
   {
     id: 4,
-    title: "Portfolio",
+    title: "Neural Network From Scratch",
     description:
       "My personal portfolio built with React and TailwindCSS. Hosted on Vercel.",
     link: "https://github.com/GaelGil/gaelgil-github-io",
     content: "Portfolio",
     url: "https://gaelgil.vercel.app/",
-    tags: ["React", "TailwindCSS"],
+    tags: ["Python", "Numpy", "Deep Learning"],
   },
   {
     id: 5,
@@ -107,10 +107,10 @@ export const projects = [
     id: 8,
     title: "Balanced Calendar Agent",
     description:
-      "My personal portfolio built with React and TailwindCSS. Hosted on Vercel.",
-    link: "https://github.com/GaelGil/essay_writing_ai_agent",
+      "An AI agent that creates a balanced calendar based on your calendar. No frameworks.",
+    link: "https://github.com/GaelGil/balanced_calender_agent",
     content: "Portfolio",
-    url: "https://github.com/GaelGil/essay_writing_ai_agent",
+    url: "https://github.com/GaelGil/balanced_calender_agent",
     tags: ["AI", "Python", "MCP", "Google API", "React", "Fullstack"],
   },
 ];
