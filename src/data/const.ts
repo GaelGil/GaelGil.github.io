@@ -36,19 +36,19 @@ export const SKILLS: string[] = [
 export const projects = [
   {
     id: 1,
-    title: "Portfolio",
+    title: "Sentence Generator",
     description:
-      "My personal portfolio built with React and TailwindCSS. Hosted on Vercel.",
-    link: "https://github.com/GaelGil/gaelgil-github-io",
+      "A simple sentence generator built with flask and markov chains.",
+    link: "https://github.com/GaelGil/sentence-generator",
     content: "Portfolio",
-    url: "https://gaelgil.vercel.app/",
-    tags: ["React", "TailwindCSS"],
+    url: "https://github.com/GaelGil/sentence-generator",
+    tags: ["Flask", "Python", "Markov Chain"],
   },
   {
     id: 2,
     title: "Neural Network From Scratch",
     description:
-      "My personal portfolio built with React and TailwindCSS. Hosted on Vercel.",
+      "A simple feed forward neural network I implemented from scratch in python using numpy.",
     link: "https://github.com/GaelGil/gaelgil-github-io",
     content: "Portfolio",
     url: "https://gaelgil.vercel.app/",
@@ -56,23 +56,23 @@ export const projects = [
   },
   {
     id: 3,
-    title: "Portfolio",
+    title: "Notebooks",
     description:
-      "My personal portfolio built with React and TailwindCSS. Hosted on Vercel.",
-    link: "https://github.com/GaelGil/gaelgil-github-io",
+      "A place for all my notebook projects. In these notebooks you can find projects on machine learning, neural networks, computer vision and statistics",
+    link: "https://github.com/GaelGil/notebooks",
     content: "Portfolio",
-    url: "https://gaelgil.vercel.app/",
-    tags: ["React", "TailwindCSS"],
+    url: "https://github.com/GaelGil/notebooks/",
+    tags: ["ML", "Python", "Deep Learning", "Pytorch"],
   },
   {
     id: 4,
-    title: "Neural Network From Scratch",
+    title: "Algorithms Visualizer",
     description:
       "My personal portfolio built with React and TailwindCSS. Hosted on Vercel.",
-    link: "https://github.com/GaelGil/gaelgil-github-io",
+    link: "https://github.com/GaelGil/algorithm-visualizer",
     content: "Portfolio",
-    url: "https://gaelgil.vercel.app/",
-    tags: ["Python", "Numpy", "Deep Learning"],
+    url: "https://gaelgil.github.io/algorithm-visualizer/",
+    tags: ["React", "Typescript", "Algorithms"],
   },
   {
     id: 5,
@@ -88,7 +88,7 @@ export const projects = [
     id: 6,
     title: "Rocket Agent",
     description:
-      "My personal portfolio built with React and TailwindCSS. Hosted on Vercel.",
+      "A personal finance agent that helps users manage their finances.",
     link: "https://github.com/kevingil/rocket-agent",
     content: "Portfolio",
     url: "https://github.com/kevingil/rocket-agent",
