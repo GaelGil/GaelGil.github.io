@@ -3,7 +3,7 @@ export default function About() {
     <section id="about" className="md:ml-64 px-8 py-20 bg-navyLight">
       <div className="max-w-3xl mx-auto">
         {/* <h4 className="text-accent font-mono mb-2">About</h4> */}
-        <p className="text-slate leading-relaxed">
+        <p className="text-slate leading-relaxed text-white">
           I am Gael Gil, an aspiring data scientist. Thank you for coming to my
           website. Here you can learn about me, my projects, experince and what
           I do.

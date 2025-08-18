@@ -8,17 +8,18 @@ export default function Sidebar() {
     <aside className="fixed top-0 left-0 w-1/2 h-screen flex items-center justify-center p-8">
       <div className="max-w-sm">
         <Photo />
-        <h1 className="text-3xl font-bold text-black">{NAME}</h1>
-        <p className="mt-2 text-slate">...</p>
+        <br />
+        <h1 className="text-3xl font-bold text-white">{NAME}</h1>
+        <p className="mt-2 text-slate text-white">...</p>
 
         <nav className="mt-8 space-y-2">
-          <a href="#about" className="block hover:text-accent">
+          <a href="#about" className="block text-white hover:text-accent">
             About
           </a>
-          <a href="#projects" className="block hover:text-accent">
+          <a href="#projects" className="block text-white hover:text-accent">
             Projects
           </a>
-          <a href="#experience" className="block hover:text-accent">
+          <a href="#experience" className="block text-white hover:text-accent">
             Experience
           </a>
         </nav>
@@ -28,7 +29,7 @@ export default function Sidebar() {
             href={GITHUB_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center space-x-2 text-gray-800  hover:underline"
+            className="flex items-center space-x-2 text-white  hover:underline"
           >
             <FaGithub size={24} />
             <span className="text-sm font-medium">GitHub</span>

@@ -12,13 +12,13 @@ export default function Projects() {
               href={p.url}
               className="block p-6 border rounded-lg border-slate hover:border-accent transition"
             >
-              <h5 className="text-lg font-semibold text-black">{p.title}</h5>
-              <p className="text-slate mt-2">{p.description}</p>
+              <h5 className="text-lg font-semibold text-white">{p.title}</h5>
+              <p className="text-slate text-white mt-2">{p.description}</p>
               <div className="mt-3 text-xs text-slate flex gap-2">
                 {p.tags?.map((t) => (
                   <span
                     key={t}
-                    className="px-2 py-1 border rounded border-slate"
+                    className="px-2  text-white py-1 border rounded border-slate"
                   >
                     {t}
                   </span>
