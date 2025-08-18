@@ -27,14 +27,15 @@ export const SKILLS: string[] = [
   "AI Agents",
   "MCP",
   "Java",
-  "Tesnorflow",
-  "C++",
+  "Tensorflow",
+  "CPP",
   "Git",
   "GCP",
   "TailwindCSS",
   "Flask",
   "Numpy",
   "Pandas",
+  "Docker",
 ];
 
 export const projects = [

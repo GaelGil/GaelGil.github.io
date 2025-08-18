@@ -1,5 +1,6 @@
 import { SKILLS } from "../../data/const";
 
+// https://skillicons.dev/icons?i=
 export default function Skills() {
   return (
     <section id="about" className="md:ml-64 px-8 py-20 bg-navyLight">
@@ -11,6 +12,10 @@ export default function Skills() {
               key={idx}
               className="bg-gray-100 text-gray-800 px-4 py-2 rounded-full text-sm font-medium"
             >
+              <img
+                className="w-6 h-6 mr-2 inline"
+                src={`https://skillicons.dev/icons?i=${skill.toLowerCase()}&theme=light`}
+              />
               {skill}
             </span>
           ))}
