@@ -7,13 +7,13 @@ export default function Projects() {
         <h4 className="text-accent font-mono mb-6">Projects</h4>
         <div className="grid grid-cols-1 gap-6">
           {[...projects]
-            .reverse()
-            .slice(0, 4)
+            .reverse() // Reverse the array
+            .slice(0, 4) // Take the first 4
             .map((p) => (
               <a
                 key={p.id}
                 href={p.url}
-                className="block p-6 rounded-lg border-slate"
+                className="block rounded-lg border-slate "
               >
                 <h5 className="text-lg font-semibold text-black">{p.title}</h5>
                 <p className="text-slate mt-2">{p.description}</p>
@@ -27,6 +27,7 @@ export default function Projects() {
                     </span>
                   ))}
                 </div>
+                <br />
               </a>
             ))}
         </div>

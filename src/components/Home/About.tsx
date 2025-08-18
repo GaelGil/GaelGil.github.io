@@ -8,11 +8,11 @@ export default function About() {
           website. Here you can learn about me, my projects, experince and what
           I do.
           <br />
-          <br />I have a BS in Applied Math and Computer Science Minor from San
-          Jose State University. My technical interests include math, deep
-          learning, computer vision and overall software development
-          engineering. My projects mainly revolve around engineering and data
-          science.
+          <br />
+          I have a BS in Applied Math and Computer Science Minor from San Jose
+          State University. My technical interests include math, deep learning,
+          computer vision and overall software development engineering. My
+          projects mainly revolve around engineering and data science.
           <br />
           <br />
           I’ve had the opportunity to gain hands on experience through

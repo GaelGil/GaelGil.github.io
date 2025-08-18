@@ -24,6 +24,7 @@ export const SKILLS: string[] = [
   "React",
   "PostgreSQL",
   "PyTorch",
+  "AI Agents",
   "MCP",
   "Java",
   "Tesnorflow",
@@ -31,6 +32,9 @@ export const SKILLS: string[] = [
   "Git",
   "GCP",
   "TailwindCSS",
+  "Flask",
+  "Numpy",
+  "Pandas",
 ];
 
 export const projects = [
