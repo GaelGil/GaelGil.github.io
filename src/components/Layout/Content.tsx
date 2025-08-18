@@ -8,7 +8,7 @@ import Experince from "../Home/Experience";
 export default function Home() {
   return (
     <main className="ml-[25%] h-screen px-8">
-      <Hero />
+      {/* <Hero /> */}
       <About />
       <Projects />
       <Education />

@@ -15,11 +15,11 @@ export default function Sidebar() {
           <a href="#about" className="block hover:text-accent">
             About
           </a>
-          <a href="#experience" className="block hover:text-accent">
-            Experience
-          </a>
           <a href="#projects" className="block hover:text-accent">
             Projects
+          </a>
+          <a href="#experience" className="block hover:text-accent">
+            Experience
           </a>
         </nav>
 
