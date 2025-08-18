@@ -36,6 +36,7 @@ export const SKILLS: string[] = [
   "Numpy",
   "Pandas",
   "Docker",
+  "Javascript",
 ];
 
 export const projects = [
