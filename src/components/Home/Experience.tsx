@@ -8,9 +8,7 @@ export default function Experience() {
         <div className="grid grid-cols-1 gap-6">
           {EXPERIENCE.map((exp, idx) => (
             <div key={idx} className="rounded-lg">
-              <h3 className="text-xl text-white font-semibold">
-                {exp.company}
-              </h3>
+              <h3 className="text-xl font-semibold">{exp.company}</h3>
               <p className="text-gray-700">{exp.position}</p>
             </div>
           ))}

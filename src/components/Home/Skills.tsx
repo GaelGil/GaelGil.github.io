@@ -1,6 +1,5 @@
 import { SKILLS } from "../../data/const";
 
-// https://skillicons.dev/icons?i=
 export default function Skills() {
   return (
     <section id="about" className="md:ml-64 px-8 py-20 bg-navyLight">
