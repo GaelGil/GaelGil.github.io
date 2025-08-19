@@ -13,17 +13,17 @@ export default function About() {
           <br />
           I have a BS in Applied Math and Computer Science Minor from San Jose
           State University. My technical interests include math, deep learning,
-          computer vision and overall software development engineering. My
-          projects mainly revolve around engineering and data science.
+          computer vision and overall software engineering. Because of this many
+          of my projects focus on software engineering and data science.
           <br />
           <br />
-          I’ve had the opportunity to gain hands on experience through
-          leadership roles like serving as the technical workshop lead at the
-          Responsible Computing Club at San Jose State, creating workshops on
-          technical topics such as large language models, diffusion models,
-          Python, and software engineering internships at large companies.
-          Outside of technical things some of my interests are soccer, sneakers,
-          horror movies!
+          In the past, I've had the opportunity I’ve had the opportunity to gain
+          hands on experience through leadership roles like serving as the
+          technical workshop lead at the Responsible Computing Club at San Jose
+          State, creating workshops on technical topics such as large language
+          models, diffusion models, Python, and software engineering internships
+          at large companies. Outside of technical things some of my interests
+          are soccer, sneakers, horror movies!
         </p>
       </div>
     </section>

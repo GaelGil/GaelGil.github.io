@@ -38,7 +38,7 @@ export default function Sidebar() {
             href={GITHUB_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center space-x-2 text-white  hover:underline"
+            className="flex space-x-2 text-red-300 hover:text-red-500 "
           >
             <FaGithub size={24} />
             <span className="text-sm font-medium">GitHub</span>
@@ -47,7 +47,7 @@ export default function Sidebar() {
             href={LINKEDIN_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex space-x-2 text-blue-700  hover:underline text-sm block hover:text-accent transition"
+            className="flex space-x-2 text-red-300 hover:text-red-500 "
           >
             <FaLinkedin size={24} />
             <span className="text-sm font-medium">LinkedIn</span>
