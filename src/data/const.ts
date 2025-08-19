@@ -74,7 +74,7 @@ export const projects = [
     id: 4,
     title: "Algorithms Visualizer",
     description:
-      "My personal portfolio built with React and TailwindCSS. Hosted on Vercel.",
+      "A project I created using react to visualize sorting and pathfinding algorithms.",
     link: "https://github.com/GaelGil/algorithm-visualizer",
     content: "Portfolio",
     url: "https://gaelgil.github.io/algorithm-visualizer/",
@@ -82,16 +82,26 @@ export const projects = [
   },
   {
     id: 5,
+    title: "Full Stack Project",
+    description:
+      "This is a full stack template I created using react, typescript, bun, flask, postgres and  docker",
+    link: "https://github.com/GaelGil/algorithm-visualizer",
+    content: "Portfolio",
+    url: "https://gaelgil.github.io/algorithm-visualizer/",
+    tags: ["React", "Typescript", "Flask", "Postgres", "Docker"],
+  },
+  {
+    id: 6,
     title: "Order Mail Agent",
     description:
-      "My personal portfolio built with React and TailwindCSS. Hosted on Vercel.",
+      "A order mail agent that helps users manage and place incoming mail orders to a company.",
     link: "https://github.com/kevingil/ordermail-agent",
     content: "Portfolio",
     url: "https://github.com/kevingil/ordermail-agent",
     tags: ["AI", "Python", "MCP", "Fullstack"],
   },
   {
-    id: 6,
+    id: 7,
     title: "Rocket Agent",
     description:
       "A personal finance agent that helps users manage their finances.",
@@ -101,7 +111,7 @@ export const projects = [
     tags: ["Fullstack", "AI Agent", "Python"],
   },
   {
-    id: 7,
+    id: 8,
     title: "Essay Writing Agent",
     description:
       "A AI agent that writes essays based on user input. No frameworks.",
@@ -111,7 +121,7 @@ export const projects = [
     tags: ["AI", "Python", "MCP", "Fullstack"],
   },
   {
-    id: 8,
+    id: 9,
     title: "Retrival Augmented Generation (RAG) Chatbot",
     description: "A chatbot that uses RAG to answer questions. No frameworks.",
     link: "https://github.com/GaelGil/essay_writing_ai_agent",
@@ -120,7 +130,7 @@ export const projects = [
     tags: ["AI", "Python", "RAG", "Fullstack"],
   },
   {
-    id: 9,
+    id: 10,
     title: "Balanced Calendar Agent",
     description:
       "An AI agent that creates a balanced calendar based on your calendar. No frameworks.",
