@@ -1,15 +1,15 @@
 import { projects } from "../../data/const";
+import { useNavigate } from "react-router-dom";
 export default function Projects() {
+  const navigate = useNavigate();
   return (
     <section
       id="projects"
-      className="px-4 sm:px-6 md:px-8 py-12 md:py-20 bg-navyLight"
+      className="px-4 sm:px-6 md:px-8 py-8 md:py-12 bg-navyLight"
     >
-      <div className="max-w-5xl mx-auto md:mx-0 md:ml-8">
+      <div className="max-w-3xl mx-auto md:mx-0 md:ml-8">
         {/* Section Heading */}
-        <h4 className="text-accent font-mono mb-10 text-lg tracking-wide">
-          Projects
-        </h4>
+        <h4 className="text-xl block font-bold mb-10">Projects</h4>
 
         {/* Projects Grid */}
         <div className="flex flex-col gap-8">
@@ -19,11 +19,9 @@ export default function Projects() {
             .map((p) => (
               <div
                 key={p.id}
-                className="group rounded-xl border border-slate-700 bg-navy p-6 shadow-md transition hover:shadow-lg hover:border-accent cursor-pointer"
+                className="rounded-md p-6 shadow-md transition hover:shadow-lg hover:text-red-500 cursor-pointer hover:bg-red-500"
               >
-                <h5 className="text-lg font-semibold text-white group-hover:text-accent transition-colors">
-                  {p.title}
-                </h5>
+                <h5 className="text-lg font-semibold text-white ">{p.title}</h5>
                 <p className="text-slate mt-2 text-sm leading-relaxed">
                   {p.description}
                 </p>
@@ -45,18 +43,14 @@ export default function Projects() {
 
         {/* View All Button */}
         <div className="mt-12">
-          <div
-            px-2
-            py-1
-            text-xs
-            rounded-md
-            className="inline-block px-6 py-3 border border-accent             border
+          <button
+            className="inline-block px-6 py-3 border border-accent
             border-slate-600
-            text-slate-300 rounded-lg font-medium "
-            onClick={() => (window.location.href = "/#projects")}
+            text-slate-300 rounded-lg font-medium hover:text-red-500 cursor-pointer"
+            onClick={() => navigate("/projects")}
           >
             View All Projects
-          </div>
+          </button>
         </div>
       </div>
     </section>

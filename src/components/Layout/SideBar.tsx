@@ -14,13 +14,22 @@ export default function Sidebar() {
         </h1>
         <p className="mt-2 text-slate ">...</p>
         <nav className="mt-8 space-y-2">
-          <a href="#about" className="block font-bold uppercase">
+          <a
+            href="#about"
+            className="block font-bold uppercase hover:text-red-500 cursor-pointer"
+          >
             About
           </a>
-          <a href="#projects" className="block font-bold uppercase">
+          <a
+            href="#projects"
+            className="block font-bold uppercase hover:text-red-500 cursor-pointer"
+          >
             Projects
           </a>
-          <a href="#experience" className="block font-bold uppercase">
+          <a
+            href="#experience"
+            className="block font-bold uppercase hover:text-red-500 cursor-pointer"
+          >
             Experience
           </a>
         </nav>
