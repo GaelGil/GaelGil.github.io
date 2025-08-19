@@ -12,7 +12,7 @@ export default function Experience() {
           {EXPERIENCE.map((exp, idx) => (
             <div key={idx} className="rounded-lg">
               <h3 className="text-xl font-semibold">{exp.company}</h3>
-              <p className="text-gray-700">{exp.position}</p>
+              <p className="text-red-300">{exp.position}</p>
             </div>
           ))}
         </div>

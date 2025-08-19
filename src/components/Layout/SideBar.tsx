@@ -4,7 +4,7 @@ import { NAME } from "../../data/const";
 import Photo from "../Home/PhotoSection";
 export default function Sidebar() {
   return (
-    <aside className="w-full md:w-2/5 h-auto md:h-screen flex items-center justify-center p-8 text-white bg-navyLight">
+    <aside className=" lg:sticky lg:top-0 lg:flex lg:max-h-screen  md:w-2/5 h-auto md:h-screen flex items-center justify-center p-8 text-white bg-navyLight">
       {" "}
       <div className="max-w-sm">
         <Photo />
@@ -12,7 +12,7 @@ export default function Sidebar() {
         <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl ">
           {NAME}
         </h1>
-        <p className="mt-2 text-slate ">...</p>
+        <p className="mt-2 text-red-300">...</p>
         <nav className="mt-8 space-y-2">
           <a
             href="#about"

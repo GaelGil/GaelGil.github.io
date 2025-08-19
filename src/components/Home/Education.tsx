@@ -9,7 +9,7 @@ export default function Education() {
           {EDUCATION.map((edu, idx) => (
             <div key={idx} className="rounded-lg">
               <h3 className="text-xl font-semibold">{edu.degree}</h3>
-              <p className="text-gray-700">{edu.institution}</p>
+              <p className="text-red-300">{edu.institution}</p>
             </div>
           ))}
         </div>
