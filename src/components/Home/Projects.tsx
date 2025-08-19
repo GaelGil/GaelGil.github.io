@@ -33,7 +33,7 @@ export default function Projects() {
         </div>
         <div className="mt-8 flex gap-4">
           <a
-            href="/projects"
+            href="/#projects"
             className="px-5 py-3 border text-white rounded border-accent hover:bg-accent/10"
           >
             View All
