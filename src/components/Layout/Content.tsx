@@ -6,7 +6,8 @@ import Education from "../Home/Education";
 import Experince from "../Home/Experience";
 export default function Content() {
   return (
-    <main className="w-3/5 h-full overflow-y-auto px-8 py-12 ">
+    <main className="w-full md:w-3/5 md:ml-2/5 px-8 py-12 space-y-16">
+      {" "}
       <About />
       <Projects />
       <Education />

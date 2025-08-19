@@ -3,7 +3,8 @@ import Content from "../components/Layout/Content";
 
 export default function Home() {
   return (
-    <div className="flex h-screen">
+    <div className="flex flex-col md:flex-row min-h-screen">
+      {" "}
       <Sidebar />
       <Content />
     </div>

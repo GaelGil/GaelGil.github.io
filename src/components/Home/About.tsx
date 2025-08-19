@@ -1,8 +1,11 @@
 export default function About() {
   return (
-    <section id="about" className="px-8 py-20 bg-navyLight">
-      <div className="max-w-3xl ml-0 md:ml-8">
-        <p className="text-slate leading-relaxed">
+    <section
+      id="about"
+      className="px-4 sm:px-6 md:px-8 py-12 md:py-20 bg-navyLight"
+    >
+      <div className="max-w-3xl mx-auto md:mx-0 md:ml-8">
+        <p className="mb-4">
           I am Gael Gil, an aspiring data scientist. Thank you for coming to my
           website. Here you can learn about me, my projects, experience and what
           I do.
