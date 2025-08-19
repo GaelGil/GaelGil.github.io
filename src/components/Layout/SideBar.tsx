@@ -5,21 +5,21 @@ import Photo from "../Home/PhotoSection";
 
 export default function Sidebar() {
   return (
-    <aside className="fixed top-0 left-0 w-1/2 h-screen flex items-center justify-center p-8">
+    <aside className="w-2/5 h-full flex items-center justify-center p-8 ">
       <div className="max-w-sm">
         <Photo />
         <br />
-        <h1 className="text-3xl font-bold text-white">{NAME}</h1>
-        <p className="mt-2 text-slate text-white">...</p>
+        <h1 className="text-3xl font-bold ">{NAME}</h1>
+        <p className="mt-2 text-slate ">...</p>
 
         <nav className="mt-8 space-y-2">
-          <a href="#about" className="block text-white hover:text-accent">
+          <a href="#about" className="block hover:text-accent">
             About
           </a>
-          <a href="#projects" className="block text-white hover:text-accent">
+          <a href="#projects" className="block  hover:text-accent">
             Projects
           </a>
-          <a href="#experience" className="block text-white hover:text-accent">
+          <a href="#experience" className="block hover:text-accent">
             Experience
           </a>
         </nav>

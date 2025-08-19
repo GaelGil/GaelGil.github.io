@@ -2,8 +2,8 @@ import { EDUCATION } from "../../data/const";
 
 export default function Education() {
   return (
-    <section id="education" className="md:ml-64 px-8 py-20 bg-navyLight">
-      <div className="max-w-3xl mx-auto ">
+    <section id="education" className="px-8 py-20 bg-navyLight">
+      <div className="max-w-3xl ml-0 md:ml-8">
         <h4 className="text-accent font-mono mb-6">Education</h4>
         <div className="grid grid-cols-1 gap-6">
           {EDUCATION.map((edu, idx) => (

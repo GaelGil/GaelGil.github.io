@@ -2,8 +2,8 @@ import { SKILLS } from "../../data/const";
 
 export default function Skills() {
   return (
-    <section id="about" className="md:ml-64 px-8 py-20 bg-navyLight">
-      <div className="max-w-3xl mx-auto">
+    <section id="about" className="px-8 py-20 bg-navyLight">
+      <div className="max-w-3xl ml-0 md:ml-8">
         <h4 className="text-accent font-mono mb-2">Skills</h4>
         <div className="flex flex-wrap justify-center gap-3">
           {SKILLS.map((skill: string, idx: number) => (
