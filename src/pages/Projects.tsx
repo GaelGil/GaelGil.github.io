@@ -12,6 +12,7 @@ export default function Projects() {
     if (!searchQuery.trim()) return; // if not full empty space
     if (loading) return; // if we are loading return
     setLoading(true);
+    console.log(error);
     try {
       const filteredProjects = projects.filter((project) => {
         const projectName = project.title.toLowerCase();
