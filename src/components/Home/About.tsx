@@ -5,7 +5,7 @@ export default function About() {
       className="px-4 sm:px-6 md:px-8 py-8 md:py-12 bg-navyLight"
     >
       <div className="max-w-3xl mx-auto md:mx-0 md:ml-8">
-        <p className="mb-4">
+        <p className="text-lg">
           I am Gael Gil, an aspiring data scientist. Thank you for coming to my
           website. Here you can learn about me, my projects, experience and what
           I do.
