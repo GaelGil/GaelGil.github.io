@@ -5,7 +5,7 @@ export default function Photo() {
     <img
       src={ME_IMAGE}
       alt="Profile"
-      className="rounded-full shadow-lg md:w-80 md:h-80 w-40 h-40"
+      className="rounded-full md:w-50 md:h-50 w-25 h-25"
     />
   );
 }
