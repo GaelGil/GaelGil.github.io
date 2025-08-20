@@ -19,7 +19,7 @@ export default function Projects() {
             .map((p) => (
               <div
                 key={p.id}
-                className="rounded-md p-6 shadow-md transition hover:border border-red-600 cursor-pointer"
+                className="rounded-md p-6 shadow-md transition hover:border border-primary-600 cursor-pointer"
               >
                 <h5 className="text-lg font-semibold text-white ">{p.title}</h5>
                 <p className="text-slate mt-2 text-sm leading-relaxed">
@@ -31,7 +31,7 @@ export default function Projects() {
                   {p.tags?.map((t) => (
                     <span
                       key={t}
-                      className="px-2 py-1 text-xs rounded-md border border-red-600 text-red-300"
+                      className="px-2 py-1 text-xs rounded-md border border-primary text-primary-300"
                     >
                       {t}
                     </span>
@@ -45,8 +45,8 @@ export default function Projects() {
         <div className="mt-12">
           <button
             className="inline-block px-6 py-3 border border-accent
-            border-red-600
-            text-red-300 rounded-lg font-medium hover:text-red-500 cursor-pointer"
+            border-primary-600
+            text-secondary-300 rounded-lg font-medium hover:text-primary-600 cursor-pointer"
             onClick={() => navigate("/projects")}
           >
             View All Projects

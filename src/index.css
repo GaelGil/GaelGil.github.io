@@ -5,6 +5,12 @@
     @apply text-white;
   }
 }
+
+@theme {
+  --color-primary-600: oklch(49.6% 0.265 301.924);
+  --color-secondary-300: oklch(70.2% 0.183 293.541);
+}
+
 body {
   background-color: black;
 }

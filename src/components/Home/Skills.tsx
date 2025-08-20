@@ -13,8 +13,8 @@ export default function Skills() {
             <span
               key={idx}
               className="border border-accent
-            border-red-600
-            text-red-300 px-4 py-2 rounded-full text-sm font-medium"
+            border-primary-600
+            text-secondary-300 px-4 py-2 rounded-full text-sm font-medium"
             >
               <img
                 className="w-6 h-6 mr-2 inline"
