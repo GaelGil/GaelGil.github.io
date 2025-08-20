@@ -1,4 +1,4 @@
-import { projects } from "../../data/const";
+import { PROJECTS } from "../../data/const";
 import { useNavigate } from "react-router-dom";
 export default function Projects() {
   const navigate = useNavigate();
@@ -13,7 +13,7 @@ export default function Projects() {
 
         {/* Projects Grid */}
         <div className="flex flex-col gap-8">
-          {[...projects]
+          {[...PROJECTS]
             .reverse()
             .slice(0, 4)
             .map((p) => (

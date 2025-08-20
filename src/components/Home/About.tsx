@@ -1,9 +1,6 @@
 export default function About() {
   return (
-    <section
-      id="about"
-      className="px-4 sm:px-6 md:px-8 py-8 md:py-12 bg-navyLight"
-    >
+    <section id="about" className="px-4 sm:px-6 md:px-8 py-8 md:py-12">
       <div className="max-w-3xl mx-auto md:mx-0 md:ml-8">
         <p className="text-lg">
           I am Gael Gil, an aspiring data scientist. Thank you for coming to my

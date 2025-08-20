@@ -1,5 +1,6 @@
 import type { EducationItem } from "../types/EducationItem";
 import type { ExperinceItem } from "../types/ExperienceItem";
+import type { Project } from "../types/Project";
 import img from "../assets/me.jpg";
 
 export const LINKEDIN_URL = "https://www.linkedin.com/in/gael-gil-7a4baa172";
@@ -39,7 +40,7 @@ export const SKILLS: string[] = [
   "Javascript",
 ];
 
-export const projects = [
+export const PROJECTS: Project[] = [
   {
     id: 1,
     title: "Sentence Generator",
