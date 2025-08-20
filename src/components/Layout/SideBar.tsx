@@ -12,7 +12,7 @@ export default function Sidebar() {
         <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl ">
           {NAME}
         </h1>
-        <p className="mt-2 text-red-300">...</p>
+        <p className="mt-2 text-secondary-300">...</p>
         <nav className="mt-8 space-y-2 text-secondary-300">
           <a
             href="#about"

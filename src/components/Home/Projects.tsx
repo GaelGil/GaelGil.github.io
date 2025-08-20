@@ -21,8 +21,8 @@ export default function Projects() {
                 key={p.id}
                 className="rounded-md p-6 shadow-md transition hover:border border-primary-600 cursor-pointer"
               >
-                <h5 className="text-lg font-semibold text-white ">{p.title}</h5>
-                <p className="text-slate mt-2 text-sm leading-relaxed">
+                <h5 className="text-lg font-semibold">{p.title}</h5>
+                <p className=" mt-2 text-sm leading-relaxed text-secondary-300">
                   {p.description}
                 </p>
 
@@ -31,7 +31,7 @@ export default function Projects() {
                   {p.tags?.map((t) => (
                     <span
                       key={t}
-                      className="px-2 py-1 text-xs rounded-md border border-primary-600 text-secondary-300"
+                      className="px-2 py-1 text-xs rounded-md border border-primary-600 "
                     >
                       {t}
                     </span>
