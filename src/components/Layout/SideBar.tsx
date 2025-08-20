@@ -4,7 +4,7 @@ import { NAME } from "../../data/const";
 import Photo from "../Home/Photo";
 export default function Sidebar() {
   return (
-    <aside className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:mt-16 lg:mb-16 md:w-2/5 h-auto md:h-screen flex items-center justify-center p-8 text-white bg-navyLight">
+    <aside className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:mt-16 lg:mb-16 md:w-2/5 h-auto md:h-screen flex items-center justify-center px-8 py-12 space-y-12 text-white">
       <div className="max-w-sm">
         <Photo />
         <br />
