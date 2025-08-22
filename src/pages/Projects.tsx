@@ -8,12 +8,15 @@ import { FaArrowLeft } from "react-icons/fa";
 export default function Projects() {
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState("");
-  const [projects, setProjects] = useState<Project[]>(PROJECTS);
+  const [projects] = useState<Project[]>(PROJECTS);
+  const [searchedProjects, setSearchedProjects] = useState<Project[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const handleSearch = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault(); // prevent default beavhior of reloading
-    if (!searchQuery.trim()) return; // if not full empty space
+    if (!searchQuery.trim()) {
+      setSearchedProjects(projects); // if search query is empty return empty array
+    } // if not full empty space
     if (loading) return; // if we are loading return
     setLoading(true);
     console.log(error);
@@ -24,7 +27,7 @@ export default function Projects() {
         const searchQueryLower = searchQuery.toLowerCase();
         return projectName.includes(searchQueryLower);
       });
-      setProjects(filteredProjects); // update the projects state with filtered results
+      setSearchedProjects(filteredProjects); // update the projects state with filtered results
       setError(""); // update error state with empty string
     } catch {
       setError("failed to load error"); // update the error state with error
@@ -45,7 +48,7 @@ export default function Projects() {
         {NAME}
       </a>
       <h4 className="text-xl block font-bold mb-10"> All Projects</h4>
-      <form onSubmit={handleSearch} className=" p-8 grid grid-cols-1 gap-6">
+      <form onSubmit={handleSearch} className="py-4 grid grid-cols-1 gap-6">
         <input
           type="search"
           value={searchQuery}
@@ -55,7 +58,7 @@ export default function Projects() {
         />
       </form>
       <div className="grid grid-cols-1 gap-6">
-        {[...projects].reverse().map((p) => (
+        {[...searchedProjects].reverse().map((p) => (
           <div
             key={p.id}
             className="rounded-md p-6 shadow-md transition hover:border border-primary-600 cursor-pointer flex"
