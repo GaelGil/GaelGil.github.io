@@ -19,7 +19,7 @@ export default function Projects() {
             .map((p) => (
               <div
                 key={p.id}
-                className="rounded-md p-6 shadow-md transition hover:border border-primary-600 cursor-pointer flex"
+                className="rounded-md p-6 shadow-md transition border border-primary-600 hover:border-secondary-300 cursor-pointer flex"
               >
                 <div className="flex-1">
                   <h5 className="text-lg font-semibold">{p.title}</h5>
@@ -31,7 +31,7 @@ export default function Projects() {
                     {p.tags?.map((t) => (
                       <span
                         key={t}
-                        className="px-2 py-1 text-xs rounded-md border border-primary-600 "
+                        className="px-2 py-1 text-xs rounded-md border text-secondary-300 border-primary-600 "
                       >
                         {t}
                       </span>
@@ -41,7 +41,7 @@ export default function Projects() {
                 <img
                   src={p.img}
                   alt={p.title}
-                  className=" w-24 h-24 object-cover"
+                  className=" w-24 h-24 object-fit"
                 />
               </div>
             ))}

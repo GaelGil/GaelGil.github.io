@@ -1,4 +1,4 @@
-import { EDUCATION } from "../../data/const";
+import { EDUCATION } from "../../data/education";
 
 export default function Education() {
   return (

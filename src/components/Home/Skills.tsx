@@ -1,4 +1,4 @@
-import { SKILLS } from "../../data/const";
+import { SKILLS } from "../../data/skills";
 
 export default function Skills() {
   return (

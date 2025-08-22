@@ -1,4 +1,4 @@
-import { EXPERIENCE } from "../../data/const";
+import { EXPERIENCE } from "../../data/experience";
 
 export default function Experience() {
   return (
