@@ -30,7 +30,7 @@ export default function Sidebar() {
             Experience
           </a>
         </nav>
-        <div className="mt-8 space-y-2 text-secondary-300">
+        <div className="mt-8 flex space-x-4 text-secondary-300">
           <a
             href={GITHUB_URL}
             target="_blank"
@@ -38,17 +38,15 @@ export default function Sidebar() {
             className="flex space-x-2 hover:text-primary-600"
           >
             <FaGithub size={24} />
-            <span className="text-sm font-medium ">GitHub</span>
           </a>
           <a
             href={LINKEDIN_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex space-x-2 hover:text-primary-600"
+            className="flex space-x-4 hover:text-primary-600"
           >
             <FaLinkedin size={24} />
-            <span className="text-sm font-medium">LinkedIn</span>
-          </a>{" "}
+          </a>
         </div>
       </div>
     </aside>

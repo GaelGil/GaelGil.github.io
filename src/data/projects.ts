@@ -1,4 +1,3 @@
-import img from "../assets/me.jpg";
 import orderMail from "../assets/projects/order_mail.png";
 import rocketAgent from "../assets/projects/rocket_agent.png";
 import type { Project } from "../types/Project";
