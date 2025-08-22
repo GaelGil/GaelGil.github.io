@@ -1,4 +1,4 @@
-import { PROJECTS } from "../data/const";
+import { PROJECTS } from "../data/projects";
 import type { Project } from "../types/Project";
 import { useState } from "react";
 
@@ -45,24 +45,30 @@ export default function Projects() {
         {[...projects].map((p) => (
           <div
             key={p.id}
-            className="rounded-md p-6 shadow-md transition hover:border border-primary-600 cursor-pointer"
+            className="rounded-md p-6 shadow-md transition hover:border border-primary-600 cursor-pointer flex"
           >
-            <h5 className="text-lg font-semibold">{p.title}</h5>
-            <p className=" mt-2 text-sm leading-relaxed text-secondary-300">
-              {p.description}
-            </p>
-
-            {/* Tags */}
-            <div className="mt-4 flex flex-wrap gap-2 ">
-              {p.tags?.map((t) => (
-                <span
-                  key={t}
-                  className="px-2 py-1 text-xs rounded-md border border-primary-600 "
-                >
-                  {t}
-                </span>
-              ))}
+            <div className="flex-1">
+              <h5 className="text-lg font-semibold">{p.title}</h5>
+              <p className="mt-2 text-sm leading-relaxed text-secondary-300">
+                {p.description}
+              </p>
+              {/* Tags */}
+              <div className="mt-4 flex flex-wrap gap-2 ">
+                {p.tags?.map((t) => (
+                  <span
+                    key={t}
+                    className="px-2 py-1 text-xs rounded-md border border-primary-600 "
+                  >
+                    {t}
+                  </span>
+                ))}
+              </div>
             </div>
+            <img
+              src={p.img}
+              alt={p.title}
+              className=" w-24 h-24 object-cover"
+            />
           </div>
         ))}
       </div>
