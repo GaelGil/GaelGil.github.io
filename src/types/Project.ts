@@ -6,4 +6,5 @@ export interface Project {
   content: string;
   url: string;
   tags: string[];
+  img?: string;
 }
