@@ -1,8 +1,12 @@
 import { PROJECTS } from "../data/projects";
 import type { Project } from "../types/Project";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { NAME } from "../data/const";
+import { FaArrowLeft } from "react-icons/fa";
 
 export default function Projects() {
+  const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState("");
   const [projects, setProjects] = useState<Project[]>(PROJECTS);
   const [loading, setLoading] = useState(false);
@@ -31,7 +35,16 @@ export default function Projects() {
 
   return (
     <div className="max-w-4xl mx-auto p-8">
-      <h4 className="text-xl block font-bold mb-10">Projects</h4>
+      <a
+        className="inline-block 
+    border-primary-600
+    text-secondary-300 rounded-lg font-medium hover:text-primary-600 cursor-pointer"
+        onClick={() => navigate("/")}
+      >
+        <FaArrowLeft className="inline-block mr-2" />
+        {NAME}
+      </a>
+      <h4 className="text-xl block font-bold mb-10"> All Projects</h4>
       <form onSubmit={handleSearch} className=" p-8 grid grid-cols-1 gap-6">
         <input
           type="search"
@@ -42,7 +55,7 @@ export default function Projects() {
         />
       </form>
       <div className="grid grid-cols-1 gap-6">
-        {[...projects].map((p) => (
+        {[...projects].reverse().map((p) => (
           <div
             key={p.id}
             className="rounded-md p-6 shadow-md transition hover:border border-primary-600 cursor-pointer flex"
