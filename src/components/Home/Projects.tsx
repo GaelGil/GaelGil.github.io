@@ -3,10 +3,7 @@ import { useNavigate } from "react-router-dom";
 export default function Projects() {
   const navigate = useNavigate();
   return (
-    <section
-      id="projects"
-      className="px-4 sm:px-6 md:px-8 py-8 md:py-12 bg-navyLight"
-    >
+    <section id="" className="px-4 sm:px-6 md:px-8 py-8 md:py-12 bg-navyLight">
       <div className="max-w-3xl mx-auto md:mx-0 md:ml-8">
         {/* Section Heading */}
         <h4 className="text-xl block font-bold mb-10">Projects</h4>
@@ -19,7 +16,7 @@ export default function Projects() {
             .map((p) => (
               <div
                 key={p.id}
-                className="rounded-md p-6 shadow-md transition border border-primary-600 hover:border-secondary-300 cursor-pointer flex"
+                className="rounded-md p-6 shadow-md transition hover:border-2 border-secondary-300 cursor-pointer flex"
               >
                 <div className="flex-1">
                   <h5 className="text-lg font-semibold">{p.title}</h5>
@@ -41,7 +38,7 @@ export default function Projects() {
                 <img
                   src={p.img}
                   alt={p.title}
-                  className=" w-24 h-24 object-fit"
+                  className=" w-25 h-25 object-fit rounded-sm border-2 border-secondary-300"
                 />
               </div>
             ))}

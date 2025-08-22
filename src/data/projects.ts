@@ -1,4 +1,6 @@
 import img from "../assets/me.jpg";
+import orderMail from "../assets/projects/order_mail.png";
+import rocketAgent from "../assets/projects/rocket_agent.png";
 import type { Project } from "../types/Project";
 
 export const PROJECTS: Project[] = [
@@ -11,7 +13,6 @@ export const PROJECTS: Project[] = [
     content: "Portfolio",
     url: "https://github.com/GaelGil/sentence-generator",
     tags: ["Flask", "Python", "Markov Chain"],
-    img: img,
   },
   {
     id: 2,
@@ -21,8 +22,7 @@ export const PROJECTS: Project[] = [
     link: "https://github.com/GaelGil/gaelgil-github-io",
     content: "Portfolio",
     url: "https://gaelgil.vercel.app/",
-    tags: ["Python", "Numpy", "Deep Learning"],
-    img: img,
+    tags: ["Python", "Numpy", "Deep Learning", "Jupyter Notebook"],
   },
   {
     id: 3,
@@ -32,8 +32,14 @@ export const PROJECTS: Project[] = [
     link: "https://github.com/GaelGil/notebooks",
     content: "Portfolio",
     url: "https://github.com/GaelGil/notebooks/",
-    tags: ["ML", "Python", "Deep Learning", "Pytorch"],
-    img: img,
+    tags: [
+      "ML",
+      "Python",
+      "Deep Learning",
+      "Pytorch",
+      "Jupyter Notebook",
+      "Statistics",
+    ],
   },
   {
     id: 4,
@@ -43,19 +49,17 @@ export const PROJECTS: Project[] = [
     link: "https://github.com/GaelGil/algorithm-visualizer",
     content: "Portfolio",
     url: "https://gaelgil.github.io/algorithm-visualizer/",
-    tags: ["React", "Typescript", "Algorithms"],
-    img: img,
+    tags: ["React", "Typescript", "Algorithms", "Sorting", "Pathfinding"],
   },
   {
     id: 5,
-    title: "Full Stack Project",
+    title: "Full Stack Template",
     description:
       "This is a full stack template I created using react, typescript, bun, flask, postgres and  docker",
     link: "https://github.com/GaelGil/algorithm-visualizer",
     content: "Portfolio",
     url: "https://gaelgil.github.io/algorithm-visualizer/",
-    tags: ["React", "Typescript", "Flask", "Postgres", "Docker"],
-    img: img,
+    tags: ["React", "Typescript", "Flask", "Postgres", "Docker", "Template"],
   },
   {
     id: 6,
@@ -65,8 +69,8 @@ export const PROJECTS: Project[] = [
     link: "https://github.com/kevingil/ordermail-agent",
     content: "Portfolio",
     url: "https://github.com/kevingil/ordermail-agent",
-    tags: ["AI", "Python", "MCP", "Fullstack"],
-    img: img,
+    tags: ["AI", "Python", "MCP", "Fullstack", "Flask"],
+    img: orderMail,
   },
   {
     id: 7,
@@ -76,8 +80,8 @@ export const PROJECTS: Project[] = [
     link: "https://github.com/kevingil/rocket-agent",
     content: "Portfolio",
     url: "https://github.com/kevingil/rocket-agent",
-    tags: ["Fullstack", "AI Agent", "Python"],
-    img: img,
+    tags: ["Fullstack", "AI Agent", "Python", "Flask"],
+    img: rocketAgent,
   },
   {
     id: 8,
@@ -88,7 +92,6 @@ export const PROJECTS: Project[] = [
     content: "Portfolio",
     url: "https://github.com/GaelGil/essay_writing_ai_agent",
     tags: ["AI", "Python", "MCP", "Fullstack"],
-    img: img,
   },
   {
     id: 9,
@@ -98,7 +101,6 @@ export const PROJECTS: Project[] = [
     content: "Portfolio",
     url: "https://github.com/GaelGil/essay_writing_ai_agent",
     tags: ["AI", "Python", "RAG", "Fullstack"],
-    img: img,
   },
   {
     id: 10,
@@ -108,7 +110,6 @@ export const PROJECTS: Project[] = [
     link: "https://github.com/GaelGil/balanced_calender_agent",
     content: "Portfolio",
     url: "https://github.com/GaelGil/balanced_calender_agent",
-    tags: ["AI", "Python", "MCP", "Google API", "React", "Fullstack"],
-    img: img,
+    tags: ["AI", "Python", "Google API", "React", "Fullstack"],
   },
 ];

@@ -18,7 +18,7 @@ export default function Skills() {
             >
               <img
                 className="w-6 h-6 mr-2 inline"
-                src={`https://skillicons.dev/icons?i=${skill.toLowerCase()}&theme=light`}
+                src={`https://skillicons.dev/icons?i=${skill.toLowerCase()}&theme=dark`}
               />
               {skill}
             </span>

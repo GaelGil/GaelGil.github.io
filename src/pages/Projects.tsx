@@ -9,7 +9,7 @@ export default function Projects() {
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState("");
   const [projects] = useState<Project[]>(PROJECTS);
-  const [searchedProjects, setSearchedProjects] = useState<Project[]>([]);
+  const [searchedProjects, setSearchedProjects] = useState<Project[]>(PROJECTS);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const handleSearch = async (e: React.FormEvent<HTMLFormElement>) => {

@@ -17,4 +17,7 @@ export const SKILLS: string[] = [
   "Pandas",
   "Docker",
   "Javascript",
+  "Bun",
+  "Vite",
+  "LaTeX",
 ];
