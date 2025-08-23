@@ -1,5 +1,11 @@
 import orderMail from "../assets/projects/order_mail.png";
 import rocketAgent from "../assets/projects/rocket_agent.png";
+import jupyter from "../assets/projects/jupyter.png";
+import markov from "../assets/projects/markov.png";
+import fulltack from "../assets/projects/fullstack.svg";
+import neural_network from "../assets/projects/neural_network.svg";
+import algorithm_visualizer from "../assets/projects/algorithm_visualizer.png";
+
 import type { Project } from "../types/Project";
 
 export const PROJECTS: Project[] = [
@@ -12,6 +18,7 @@ export const PROJECTS: Project[] = [
     content: "Portfolio",
     url: "https://github.com/GaelGil/sentence-generator",
     tags: ["Flask", "Python", "Markov Chain"],
+    img: markov,
   },
   {
     id: 2,
@@ -22,6 +29,7 @@ export const PROJECTS: Project[] = [
     content: "Portfolio",
     url: "https://gaelgil.vercel.app/",
     tags: ["Python", "Numpy", "Deep Learning", "Jupyter Notebook"],
+    img: neural_network,
   },
   {
     id: 3,
@@ -39,6 +47,7 @@ export const PROJECTS: Project[] = [
       "Jupyter Notebook",
       "Statistics",
     ],
+    img: jupyter,
   },
   {
     id: 4,
@@ -49,6 +58,7 @@ export const PROJECTS: Project[] = [
     content: "Portfolio",
     url: "https://gaelgil.github.io/algorithm-visualizer/",
     tags: ["React", "Typescript", "Algorithms", "Sorting", "Pathfinding"],
+    img: algorithm_visualizer,
   },
   {
     id: 5,
@@ -59,6 +69,7 @@ export const PROJECTS: Project[] = [
     content: "Portfolio",
     url: "https://gaelgil.github.io/algorithm-visualizer/",
     tags: ["React", "Typescript", "Flask", "Postgres", "Docker", "Template"],
+    img: fulltack,
   },
   {
     id: 6,

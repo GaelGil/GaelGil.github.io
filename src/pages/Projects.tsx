@@ -83,7 +83,7 @@ export default function Projects() {
             <img
               src={p.img}
               alt={p.title}
-              className=" w-24 h-24 object-cover"
+              className=" w-25 h-25 object-fit rounded-sm border-2 border-secondary-300"
             />
           </div>
         ))}
