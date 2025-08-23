@@ -57,34 +57,32 @@ export default function Projects() {
           className="p-2 text-md text-secondary-300 border border-secondary-300 rounded-md focus:outline-none focus:border-primary-600"
         />
       </form>
-      <div className="grid grid-cols-1 gap-6">
-        {[...searchedProjects].reverse().map((p) => (
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {[...searchedProjects].reverse().map((project) => (
           <div
-            key={p.id}
-            className="rounded-md p-6 shadow-md transition hover:border border-primary-600 cursor-pointer flex"
+            key={project.id}
+            className="rounded-md shadow-md transition hover:border-2 border-secondary-300 cursor-pointer flex flex-col"
           >
-            <div className="flex-1">
-              <h5 className="text-lg font-semibold">{p.title}</h5>
-              <p className="mt-2 text-sm leading-relaxed text-secondary-300">
-                {p.description}
-              </p>
-              {/* Tags */}
-              <div className="mt-4 flex flex-wrap gap-2 ">
-                {p.tags?.map((t) => (
-                  <span
-                    key={t}
-                    className="px-2 py-1 text-xs rounded-md border border-primary-600 "
-                  >
-                    {t}
-                  </span>
-                ))}
-              </div>
-            </div>
             <img
-              src={p.img}
-              alt={p.title}
-              className=" w-25 h-25 object-fit rounded-sm border-2 border-secondary-300"
+              src={project.img}
+              alt={project.title}
+              className="object-fit rounded-sm"
             />
+            <h5 className="text-lg px-6 font-semibold">{project.title}</h5>
+            <p className="mt-2 px-6 text-sm leading-relaxed text-secondary-300">
+              {project.description}
+            </p>
+            {/* Tags */}
+            <div className="mt-4 flex flex-wrap gap-2 p-6 ">
+              {project.tags?.map((t) => (
+                <span
+                  key={t}
+                  className="px-6 text-xs rounded-md border text-secondary-300 border-primary-600 "
+                >
+                  {t}
+                </span>
+              ))}
+            </div>
           </div>
         ))}
       </div>
