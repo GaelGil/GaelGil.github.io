@@ -46,7 +46,7 @@ export default function Projects() {
         {[...searchedProjects].reverse().map((project) => (
           <div
             key={project.id}
-            className="rounded-md shadow-md transition border-2-transparent hover:border-2 border-secondary-300 cursor-pointer flex flex-col"
+            className="rounded-md ransition border-2 border-transparent hover:border-secondary-300 cursor-pointer flex flex-col"
           >
             <img
               src={project.img}

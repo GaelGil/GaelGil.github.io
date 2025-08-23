@@ -16,7 +16,7 @@ export default function Projects() {
             .map((p) => (
               <div
                 key={p.id}
-                className="rounded-md shadow-md transition border-2-transparent hover:border-2 border-secondary-300 cursor-pointer flex"
+                className="rounded-md transition border-2 border-transparent hover:border-secondary-300 cursor-pointer flex"
               >
                 <div className="flex-1">
                   <h5 className="px-3 py-3 text-lg font-semibold">{p.title}</h5>
@@ -47,9 +47,9 @@ export default function Projects() {
         {/* View All Button */}
         <div className="mt-12">
           <button
-            className="inline-block px-6 py-3 border border-accent
-            border-primary-600
-            text-secondary-300 rounded-lg font-medium hover:text-primary-600 cursor-pointer"
+            className="inline-block px-6 py-3 border
+            border-secondary-300
+            text-secondary-300 rounded-lg font-medium hover:text-primary-600 hover:border-primary-600 cursor-pointer"
             onClick={() => navigate("/projects")}
           >
             View All Projects
