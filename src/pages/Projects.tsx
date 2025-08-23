@@ -4,37 +4,22 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { NAME } from "../data/const";
 import { FaArrowLeft } from "react-icons/fa";
+import { useEffect } from "react";
 
 export default function Projects() {
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState("");
   const [projects] = useState<Project[]>(PROJECTS);
   const [searchedProjects, setSearchedProjects] = useState<Project[]>(PROJECTS);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
-  const handleSearch = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault(); // prevent default beavhior of reloading
-    if (!searchQuery.trim()) {
-      setSearchedProjects(projects); // if search query is empty return empty array
-    } // if not full empty space
-    if (loading) return; // if we are loading return
-    setLoading(true);
-    console.log(error);
-    try {
-      const filteredProjects = projects.filter((project) => {
-        const projectName = project.title.toLowerCase();
-        if (!searchQuery) return projects; // if search query is empty return all projects
-        const searchQueryLower = searchQuery.toLowerCase();
-        return projectName.includes(searchQueryLower);
-      });
-      setSearchedProjects(filteredProjects); // update the projects state with filtered results
-      setError(""); // update error state with empty string
-    } catch {
-      setError("failed to load error"); // update the error state with error
-    } finally {
-      setLoading(false); // update the loading state to false
-    }
-  };
+
+  useEffect(() => {
+    const filteredProjects = projects.filter((project) => {
+      const projectName = project.title.toLowerCase();
+      const searchQueryLower = searchQuery.toLowerCase();
+      return projectName.includes(searchQueryLower);
+    });
+    setSearchedProjects(filteredProjects);
+  }, [searchQuery, projects]);
 
   return (
     <div className="max-w-4xl mx-auto p-8">
@@ -48,7 +33,7 @@ export default function Projects() {
         {NAME}
       </a>
       <h4 className="text-xl block font-bold mb-10"> All Projects</h4>
-      <form onSubmit={handleSearch} className="py-4 grid grid-cols-1 gap-6">
+      <form className="py-4 grid grid-cols-1 gap-6">
         <input
           type="search"
           value={searchQuery}
@@ -61,19 +46,19 @@ export default function Projects() {
         {[...searchedProjects].reverse().map((project) => (
           <div
             key={project.id}
-            className="rounded-md shadow-md transition hover:border-2 border-secondary-300 cursor-pointer flex flex-col"
+            className="rounded-md shadow-md transition border-2-transparent hover:border-2 border-secondary-300 cursor-pointer flex flex-col"
           >
             <img
               src={project.img}
               alt={project.title}
               className="object-fit rounded-sm"
             />
-            <h5 className="text-lg px-6 font-semibold">{project.title}</h5>
-            <p className="mt-2 px-6 text-sm leading-relaxed text-secondary-300">
+            <h5 className="text-lg px-2 font-semibold">{project.title}</h5>
+            <p className="mt-2 px-2 text-sm leading-relaxed text-secondary-300">
               {project.description}
             </p>
             {/* Tags */}
-            <div className="mt-4 flex flex-wrap gap-2 p-6 ">
+            <div className="mt-4 flex flex-wrap gap-2 p-2 ">
               {project.tags?.map((t) => (
                 <span
                   key={t}

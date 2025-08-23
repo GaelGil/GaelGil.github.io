@@ -5,7 +5,7 @@ import markov from "../assets/projects/markov.png";
 import fulltack from "../assets/projects/fullstack.svg";
 import neural_network from "../assets/projects/neural_network.svg";
 import algorithm_visualizer from "../assets/projects/algorithm_visualizer.png";
-
+import default_img from "../assets/react.svg";
 import type { Project } from "../types/Project";
 
 export const PROJECTS: Project[] = [
@@ -102,6 +102,7 @@ export const PROJECTS: Project[] = [
     content: "Portfolio",
     url: "https://github.com/GaelGil/essay_writing_ai_agent",
     tags: ["AI", "Python", "MCP", "Fullstack"],
+    img: default_img,
   },
   {
     id: 9,
@@ -111,6 +112,7 @@ export const PROJECTS: Project[] = [
     content: "Portfolio",
     url: "https://github.com/GaelGil/essay_writing_ai_agent",
     tags: ["AI", "Python", "RAG", "Fullstack"],
+    img: default_img,
   },
   {
     id: 10,
@@ -121,5 +123,6 @@ export const PROJECTS: Project[] = [
     content: "Portfolio",
     url: "https://github.com/GaelGil/balanced_calender_agent",
     tags: ["AI", "Python", "Google API", "React", "Fullstack"],
+    img: default_img,
   },
 ];
