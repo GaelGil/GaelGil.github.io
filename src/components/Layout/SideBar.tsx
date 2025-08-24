@@ -4,13 +4,13 @@ import { NAME, POSITION } from "../../data/const";
 import Photo from "../Home/Photo";
 export default function Sidebar() {
   return (
-    <aside className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:mt-16 lg:mb-16 md:w-2/5 h-auto md:h-screen flex items-center justify-center py-8 ">
+    <aside className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:mt-16 lg:mb-16 md:w-2/5 h-auto md:h-screen flex justify-center">
       <div className="max-w-sm">
         <Photo />
         <br />
         <h1 className="text-4xl font-bold   sm:text-5xl ">{NAME}</h1>
         <p className="text-secondary-300">{POSITION}</p>
-        <nav className="mt-8 space-y-2 text-secondary-300">
+        <nav className="mt-8 space-y-2 text-secondary-300 lg:block md:bl sm:flex">
           <a
             href="#about"
             className="block font-bold uppercase hover:text-primary-600 cursor-pointer"
@@ -35,7 +35,7 @@ export default function Sidebar() {
             href={GITHUB_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex space-x-2 hover:text-primary-600"
+            className="flex hover:text-primary-600"
           >
             <FaGithub size={24} />
           </a>
@@ -43,7 +43,7 @@ export default function Sidebar() {
             href={LINKEDIN_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex space-x-4 hover:text-primary-600"
+            className="flex hover:text-primary-600"
           >
             <FaLinkedin size={24} />
           </a>
