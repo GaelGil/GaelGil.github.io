@@ -2,6 +2,12 @@ import type { ExperinceItem } from "../types/ExperienceItem";
 
 export const EXPERIENCE: ExperinceItem[] = [
   {
+    company: "Stealth Startup",
+    position: "Software Engineer",
+    startDate: "Jan 2025",
+    endDate: "Current",
+  },
+  {
     company: "San Jose State University",
     position: "Research Assistant",
     startDate: "Jan 2024",

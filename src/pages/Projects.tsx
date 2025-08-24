@@ -58,11 +58,11 @@ export default function Projects() {
               {project.description}
             </p>
             {/* Tags */}
-            <div className="mt-4 flex flex-wrap gap-2 p-2 ">
+            <div className="mt-4 flex flex-wrap gap-2 ">
               {project.tags?.map((t) => (
                 <span
                   key={t}
-                  className="px-6 text-xs rounded-md border text-secondary-300 border-primary-600 "
+                  className="px-6 text-xs rounded-md border text-secondary-300 border-secondary-300 "
                 >
                   {t}
                 </span>

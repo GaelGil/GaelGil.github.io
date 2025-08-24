@@ -1,6 +1,6 @@
 import { LINKEDIN_URL, GITHUB_URL } from "../../data/const";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
-import { NAME } from "../../data/const";
+import { NAME, POSITION } from "../../data/const";
 import Photo from "../Home/Photo";
 export default function Sidebar() {
   return (
@@ -9,7 +9,7 @@ export default function Sidebar() {
         <Photo />
         <br />
         <h1 className="text-4xl font-bold   sm:text-5xl ">{NAME}</h1>
-        <p className="mt-2 text-secondary-300">...</p>
+        <p className="text-secondary-300">{POSITION}</p>
         <nav className="mt-8 space-y-2 text-secondary-300">
           <a
             href="#about"
