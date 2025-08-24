@@ -10,6 +10,7 @@ export default function Projects() {
         .map((p) => (
           <div
             key={p.id}
+            onClick={() => navigate(`/projects/${p.id}`)}
             className="rounded-md transition border-2 border-transparent hover:border-secondary-300 cursor-pointer flex"
           >
             <div className="flex-1">

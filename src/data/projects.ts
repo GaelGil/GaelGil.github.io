@@ -6,6 +6,7 @@ import fulltack from "../assets/projects/fullstack.svg";
 import neural_network from "../assets/projects/neural_network.svg";
 import algorithm_visualizer from "../assets/projects/algorithm_visualizer.png";
 import default_img from "../assets/react.svg";
+import cnn from "../assets/projects/cnn.png";
 import type { Project } from "../types/Project";
 
 export const PROJECTS: Project[] = [
@@ -33,6 +34,22 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 3,
+    title: "Intro to Convolutional Neural Networks",
+    description: "A simple convolutional neural network I implented in pytorch",
+    link: "https://github.com/GaelGil/notebooks/tree/master/convolutional_nueral_networks",
+    content: "Portfolio",
+    url: "https://github.com/GaelGil/notebooks/tree/master/convolutional_nueral_networks",
+    tags: [
+      "Python",
+      "PyTorch",
+      "Deep Learning",
+      "Jupyter Notebook",
+      "Computer Vision",
+    ],
+    img: cnn,
+  },
+  {
+    id: 4,
     title: "Notebooks",
     description:
       "A place for all my notebook projects. In these notebooks you can find projects on machine learning, neural networks, computer vision and statistics",
@@ -50,7 +67,7 @@ export const PROJECTS: Project[] = [
     img: jupyter,
   },
   {
-    id: 4,
+    id: 5,
     title: "Algorithms Visualizer",
     description:
       "A project I created using react to visualize sorting and pathfinding algorithms.",
@@ -61,7 +78,7 @@ export const PROJECTS: Project[] = [
     img: algorithm_visualizer,
   },
   {
-    id: 5,
+    id: 6,
     title: "Full Stack Template",
     description:
       "This is a full stack template I created using react, typescript, bun, flask, postgres and  docker",
@@ -72,7 +89,7 @@ export const PROJECTS: Project[] = [
     img: fulltack,
   },
   {
-    id: 6,
+    id: 7,
     title: "Order Mail Agent",
     description:
       "A order mail agent that helps users manage and place incoming mail orders to a company.",
@@ -83,7 +100,7 @@ export const PROJECTS: Project[] = [
     img: orderMail,
   },
   {
-    id: 7,
+    id: 8,
     title: "Rocket Agent",
     description:
       "A personal finance agent that helps users manage their finances.",
@@ -94,7 +111,7 @@ export const PROJECTS: Project[] = [
     img: rocketAgent,
   },
   {
-    id: 8,
+    id: 9,
     title: "Essay Writing Agent",
     description:
       "A AI agent that writes essays based on user input. No frameworks.",
@@ -105,7 +122,7 @@ export const PROJECTS: Project[] = [
     img: default_img,
   },
   {
-    id: 9,
+    id: 10,
     title: "Retrival Augmented Generation (RAG) Chatbot",
     description: "A chatbot that uses RAG to answer questions. No frameworks.",
     link: "https://github.com/GaelGil/essay_writing_ai_agent",
@@ -115,7 +132,7 @@ export const PROJECTS: Project[] = [
     img: default_img,
   },
   {
-    id: 10,
+    id: 11,
     title: "Balanced Calendar Agent",
     description:
       "An AI agent that creates a balanced calendar based on your calendar. No frameworks.",

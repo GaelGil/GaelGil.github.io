@@ -47,6 +47,7 @@ export default function Projects() {
           <div
             key={project.id}
             className="rounded-md ransition border-2 border-transparent hover:border-secondary-300 cursor-pointer flex flex-col"
+            onClick={() => navigate(`/projects/${project.id}`)}
           >
             <img
               src={project.img}
