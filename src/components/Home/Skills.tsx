@@ -8,7 +8,7 @@ export default function Skills() {
           <span
             key={idx}
             className="border border-accent
-            border-primary-600
+            border-secondary-300
             text-secondary-300 px-4 py-2 rounded-full text-sm font-medium"
           >
             <img

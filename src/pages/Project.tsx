@@ -1,11 +1,23 @@
 import { useParams } from "react-router-dom";
 import { PROJECTS } from "../data/projects";
+import { FaArrowLeft } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 export default function Project() {
+  const navigate = useNavigate();
   const { id } = useParams();
   const project = PROJECTS.find((p) => p.id === Number(id));
 
   return (
-    <div className="max-w-4xl mx-auto p-8 px-2">
+    <div className="max-w-2xl mx-auto p-8 px-2">
+      <a
+        className="inline-block 
+          border-primary-600
+          text-secondary-300 rounded-lg font-medium hover:text-primary-600 cursor-pointer"
+        onClick={() => navigate("/projects")}
+      >
+        <FaArrowLeft className="inline-block mr-2" />
+        Projects
+      </a>
       {!project ? (
         <div>Project not found</div>
       ) : (
