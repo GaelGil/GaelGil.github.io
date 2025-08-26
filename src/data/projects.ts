@@ -8,7 +8,7 @@ import algorithm_visualizer from "../assets/projects/algorithm_visualizer.png";
 import default_img from "../assets/react.svg";
 import cnn from "../assets/projects/cnn.png";
 import type { Project } from "../types/Project";
-
+import rag from "../assets/projects/rag.svg";
 export const PROJECTS: Project[] = [
   {
     id: 1,
@@ -129,7 +129,7 @@ export const PROJECTS: Project[] = [
     content: "Portfolio",
     url: "https://github.com/GaelGil/essay_writing_ai_agent",
     tags: ["AI", "Python", "RAG", "Fullstack"],
-    img: default_img,
+    img: rag,
   },
   {
     id: 11,
