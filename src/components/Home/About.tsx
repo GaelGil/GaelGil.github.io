@@ -7,7 +7,7 @@ export default function About() {
       Here you can learn about me, my projects, experience and what I do.
       <br />
       <br />I have a BS in Applied Math and Computer Science Minor from San Jose
-      State University. My technical interests include
+      State University. My technical interests include <a></a>
       <a className="font-bold text-secondary-300">
         math, deep learning, computer vision and overall software engineering
       </a>

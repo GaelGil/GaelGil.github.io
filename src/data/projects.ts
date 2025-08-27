@@ -5,10 +5,14 @@ import markov from "../assets/projects/markov.png";
 import fulltack from "../assets/projects/fullstack.svg";
 import neural_network from "../assets/projects/neural_network.svg";
 import algorithm_visualizer from "../assets/projects/algorithm_visualizer.png";
-import default_img from "../assets/react.svg";
 import cnn from "../assets/projects/cnn.png";
-import type { Project } from "../types/Project";
 import rag from "../assets/projects/rag.svg";
+import calendar_agent from "../assets/projects/calendar.png";
+import writing_agent from "../assets/projects/writing_agent.png";
+import web_scraper from "../assets/projects/selenium.png";
+
+import type { Project } from "../types/Project";
+
 export const PROJECTS: Project[] = [
   {
     id: 1,
@@ -79,6 +83,17 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 6,
+    title: "Web Scraper",
+    description:
+      "A web scraper I created selenium to scrape data from a websites",
+    link: "https://github.com/GaelGil/algorithm-visualizer",
+    content: "Portfolio",
+    url: "https://gaelgil.github.io/algorithm-visualizer/",
+    tags: ["Python", "Selenium", "Web Scraper", "Postgres"],
+    img: web_scraper,
+  },
+  {
+    id: 7,
     title: "Full Stack Template",
     description:
       "This is a full stack template I created using react, typescript, bun, flask, postgres and  docker",
@@ -89,7 +104,7 @@ export const PROJECTS: Project[] = [
     img: fulltack,
   },
   {
-    id: 7,
+    id: 8,
     title: "Order Mail Agent",
     description:
       "A order mail agent that helps users manage and place incoming mail orders to a company.",
@@ -100,7 +115,7 @@ export const PROJECTS: Project[] = [
     img: orderMail,
   },
   {
-    id: 8,
+    id: 9,
     title: "Rocket Agent",
     description:
       "A personal finance agent that helps users manage their finances.",
@@ -111,7 +126,7 @@ export const PROJECTS: Project[] = [
     img: rocketAgent,
   },
   {
-    id: 9,
+    id: 10,
     title: "Essay Writing Agent",
     description:
       "A AI agent that writes essays based on user input. No frameworks.",
@@ -119,12 +134,13 @@ export const PROJECTS: Project[] = [
     content: "Portfolio",
     url: "https://github.com/GaelGil/essay_writing_ai_agent",
     tags: ["AI", "Python", "MCP", "Fullstack"],
-    img: default_img,
+    img: writing_agent,
   },
   {
-    id: 10,
+    id: 11,
     title: "Retrival Augmented Generation (RAG) Chatbot",
-    description: "A chatbot that uses RAG to answer questions. No frameworks.",
+    description:
+      "A chatbot that uses RAG to recommend movies and answer questions about new releases. No frameworks.",
     link: "https://github.com/GaelGil/essay_writing_ai_agent",
     content: "Portfolio",
     url: "https://github.com/GaelGil/essay_writing_ai_agent",
@@ -132,7 +148,7 @@ export const PROJECTS: Project[] = [
     img: rag,
   },
   {
-    id: 11,
+    id: 12,
     title: "Balanced Calendar Agent",
     description:
       "An AI agent that creates a balanced calendar based on your calendar. No frameworks.",
@@ -140,6 +156,6 @@ export const PROJECTS: Project[] = [
     content: "Portfolio",
     url: "https://github.com/GaelGil/balanced_calender_agent",
     tags: ["AI", "Python", "Google API", "React", "Fullstack"],
-    img: default_img,
+    img: calendar_agent,
   },
 ];
