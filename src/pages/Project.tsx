@@ -22,12 +22,13 @@ export default function Project() {
         <div>Project not found</div>
       ) : (
         <>
+          <h5 className="text-xl font-bold">{project.title}</h5>
+
           <img
             src={project.img}
             alt={project.title}
             className="w-full h-auto rounded-sm"
           />
-          <h5 className="text-xl font-bold">{project.title}</h5>
           <div className="mt-4 flex flex-wrap gap-2 ">
             {project.tags?.map((t) => (
               <span
@@ -38,13 +39,27 @@ export default function Project() {
               </span>
             ))}
           </div>
-          <p className="text-xl leading-relaxed text-secondary-300">
-            {project.description}
-          </p>
-          <p className="text-xl leading-relaxed text-secondary-300">
-            {project.content}
-          </p>
-          {/* Tags */}
+
+          {project.link ? (
+            <a
+              className="text-xl leading-relaxed text-secondary-300"
+              href={project.link}
+            >
+              Project
+            </a>
+          ) : (
+            <>
+              <h1></h1>
+            </>
+          )}
+          <br />
+          <a
+            className="text-xl leading-relaxed text-secondary-300"
+            href={project.repo}
+          >
+            Repo
+          </a>
+          <p className="text-xl leading-relaxed">{project.content}</p>
         </>
       )}
     </div>
