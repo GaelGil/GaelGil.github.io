@@ -8,7 +8,7 @@ export default function Sidebar() {
       <div className="max-w-sm">
         <Photo />
         <br />
-        <h1 className="text-4xl font-bold   sm:text-5xl ">{NAME}</h1>
+        <h1 className="text-4xl font-bold sm:text-5xl ">{NAME}</h1>
         <p className="text-secondary-300">{POSITION}</p>
         <nav className="mt-8 space-y-2 text-secondary-300 lg:block md:bl sm:flex">
           <a
