@@ -4,7 +4,13 @@ export default function Skills() {
   return (
     <Container p={"md"}>
       {SKILLS.map((skill: string, idx: number) => (
-        <Badge key={idx} bd={4} bg={"main.3"} c={"main.0"}>
+        <Badge
+          key={idx}
+          bd={"1px solid main.0"}
+          bg={"main.7"}
+          c={"main.0"}
+          variant="outline"
+        >
           <Image
             w={20}
             h={20}

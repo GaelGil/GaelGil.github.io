@@ -1,6 +1,6 @@
 import { PROJECTS } from "../../data/projects";
 import { useNavigate } from "react-router-dom";
-import { Title, Text, Image } from "@mantine/core";
+import { Title, Text, Image, Button, Badge } from "@mantine/core";
 export default function Projects() {
   const navigate = useNavigate();
   return (
@@ -24,12 +24,15 @@ export default function Projects() {
               {/* Tags */}
               <div className="px-3 mt-4 flex flex-wrap gap-2 ">
                 {p.tags?.map((t) => (
-                  <span
+                  <Badge
                     key={t}
-                    className="px-2 py-1 text-xs rounded-md border text-secondary-300 border-secondary-300 "
+                    bd={"1px solid main.0"}
+                    bg={"main.7"}
+                    c={"main.0"}
+                    variant="outline"
                   >
                     {t}
-                  </span>
+                  </Badge>
                 ))}
               </div>
             </div>
@@ -39,14 +42,17 @@ export default function Projects() {
 
       {/* View All Button */}
       <div className="mt-12">
-        <button
-          className="inline-block px-6 py-3 border
-            border-secondary-300
-            text-secondary-300 rounded-lg font-medium hover:text-primary-600 hover:border-primary-600 cursor-pointer"
+        <Button
+          variant="outline"
+          radius="xl"
+          size="lg"
+          bg={"main.7"}
+          bd="2px solid main.0"
+          c={"main.0"}
           onClick={() => navigate("/projects")}
         >
           View All Projects
-        </button>
+        </Button>
       </div>
     </>
   );
