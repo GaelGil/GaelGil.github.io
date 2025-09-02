@@ -3,7 +3,7 @@ import { createTheme } from "@mantine/core";
 export const theme = createTheme({
   /** Define your brand colors */
   colors: {
-    brand: [
+    main: [
       "#ffffff", // shade 0
       "#212121", // shade 1
       "#303030", // shade 2
@@ -22,7 +22,7 @@ export const theme = createTheme({
     xl: "5px 5px 3px rgba(0, 0, 0, .25)",
   },
   /** Set your primary color */
-  primaryColor: "brand",
+  primaryColor: "main",
   components: {
     AppShell: {
       defaultProps: {

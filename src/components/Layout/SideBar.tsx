@@ -9,10 +9,13 @@ export default function Sidebar() {
       <Box className="max-w-sm">
         <Photo />
         <br />
-        <Title order={1}>{NAME}</Title>
-        <Text>{POSITION}</Text>
-        <nav className="mt-8 space-y-2 text-secondary-300 lg:block md:bl sm:flex">
+        <Title c={"main.7"} order={1}>
+          {NAME}
+        </Title>
+        <Text c={"main.7"}>{POSITION}</Text>
+        <nav className="mt-8 space-y-2 lg:block md:bl sm:flex">
           <a
+            c={"main.7"}
             href="#about"
             className="block font-bold uppercase hover:text-primary-600 cursor-pointer"
           >
