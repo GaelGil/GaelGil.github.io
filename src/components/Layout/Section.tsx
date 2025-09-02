@@ -4,8 +4,8 @@ import { Box, Title, Container } from "@mantine/core";
 
 const Section: React.FC<SectionProps> = ({ id, title, children }) => {
   return (
-    <Box component="section" id={id} py="lg">
-      <Container size="lg" px="md">
+    <Box component="section" id={id} p="xl">
+      <Container>
         {title && (
           <Title c={"main.0"} order={2} fw={600} mb="xl">
             {title}

@@ -4,16 +4,16 @@ export const theme = createTheme({
   /** Define your brand colors */
   colors: {
     main: [
-      "#ffffff", // shade 0
-      "#212121", // shade 1
-      "#303030", // shade 2
-      "#414141", // shade 3
-      "#0d0d0d80", // shade 4
-      "#303030", // shade 5
-      "#181818", // shade 6
-      "#000000", // shade 7
-      "#afafaf", // shade 8
-      "#000d33", // shade 9
+      "#ff007f", // 0 - brightest / primary pink
+      "#ff3399", // 1
+      "#ff66b2", // 2
+      "#ff99cc", // 3
+      "#ffb3d9", // 4
+      "#ffccf0", // 5
+      "#ffd9f4", // 6
+      "#ffe6fa", // 7
+      "#fff0fc", // 8
+      "#fff7fe", // 9
     ],
   },
 

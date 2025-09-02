@@ -8,7 +8,7 @@ import Section from "./Section";
 import { Stack, SimpleGrid, Container } from "@mantine/core";
 export default function Content() {
   return (
-    <Container py={"xl"}>
+    <Container p={"xl"}>
       <Section id="about" title="">
         <About />
       </Section>

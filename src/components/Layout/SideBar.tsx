@@ -5,11 +5,7 @@ import { Text, Title, Anchor, Stack, Group } from "@mantine/core";
 
 export default function Sidebar() {
   return (
-    <Stack
-      align="center" // <-- aligns all children to the right
-      w="100%"
-      p={"xl"}
-    >
+    <Stack align="center" w="100%" p={"xl"}>
       <Stack align="left">
         {/* Profile photo */}
         <Photo />

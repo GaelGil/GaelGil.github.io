@@ -2,7 +2,7 @@ import { SKILLS } from "../../data/skills";
 import { Image, Container, Badge } from "@mantine/core";
 export default function Skills() {
   return (
-    <Container p={"md"}>
+    <>
       {SKILLS.map((skill: string, idx: number) => (
         <Badge
           key={idx}
@@ -21,6 +21,6 @@ export default function Skills() {
           {skill}
         </Badge>
       ))}
-    </Container>
+    </>
   );
 }
