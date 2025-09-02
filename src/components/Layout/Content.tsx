@@ -12,7 +12,7 @@ export default function Content() {
         <About />
       </Section>
 
-      <Section id="" title="Projects">
+      <Section id="projects" title="Projects">
         <div className="flex flex-col gap-6">
           <Projects />
         </div>

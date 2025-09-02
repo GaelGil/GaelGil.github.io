@@ -158,7 +158,7 @@ export const PROJECTS: Project[] = [
     description:
       "A full stack project that I built as a ChatGPT clone. Create chat sessions, send messages and chat with ChatGPT, etc.",
     content: "Portfolio",
-    repo: "https://github.com/GaelGil/balanced_calender_agent",
+    repo: "https://github.com/GaelGil/chat_gpt_clone",
     tags: ["ChatGPT", "Python", "Typescript", "React", "Fullstack", "Mantine"],
     img: chatgpt,
   },
