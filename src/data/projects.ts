@@ -10,6 +10,7 @@ import rag from "../assets/projects/rag.svg";
 import calendar_agent from "../assets/projects/calendar.png";
 import writing_agent from "../assets/projects/writing_agent.png";
 import web_scraper from "../assets/projects/selenium.png";
+import chatgpt from "../assets/projects/chatgpt.png";
 
 import type { Project } from "../types/Project";
 
@@ -152,13 +153,13 @@ export const PROJECTS: Project[] = [
     img: calendar_agent,
   },
   {
-    id: 12,
+    id: 13,
     title: "ChatGPT Clone",
     description:
       "A full stack project that I built as a ChatGPT clone. Create chat sessions, send messages and chat with ChatGPT, etc.",
     content: "Portfolio",
     repo: "https://github.com/GaelGil/balanced_calender_agent",
     tags: ["ChatGPT", "Python", "Typescript", "React", "Fullstack", "Mantine"],
-    img: calendar_agent,
+    img: chatgpt,
   },
 ];

@@ -10,6 +10,7 @@ export const SKILLS: string[] = [
   "Tensorflow",
   "CPP",
   "Git",
+  "Sklearn",
   "GCP",
   "TailwindCSS",
   "Flask",
@@ -17,7 +18,9 @@ export const SKILLS: string[] = [
   "Pandas",
   "Docker",
   "Javascript",
+  "R",
   "Bun",
   "Vite",
   "LaTeX",
+  "Markdown",
 ];
