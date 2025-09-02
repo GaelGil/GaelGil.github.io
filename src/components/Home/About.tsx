@@ -1,7 +1,8 @@
 import { NAME } from "../../data/const";
+import { Text } from "@mantine/core";
 export default function About() {
   return (
-    <p className="text-lg">
+    <Text fz={"lg"}>
       Hello, my name is <a className="font-bold text-secondary-300">{NAME}</a>
       . I am an aspiring data scientist. Thank you for coming to my website.
       Here you can learn about me, my projects, experience and what I do.
@@ -20,6 +21,6 @@ export default function About() {
       technical topics such as large language models, diffusion models, Python,
       and software engineering internships at large companies. Outside of
       technical things some of my interests are soccer, sneakers, horror movies!
-    </p>
+    </Text>
   );
 }

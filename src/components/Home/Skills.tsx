@@ -1,5 +1,5 @@
 import { SKILLS } from "../../data/skills";
-
+import { Image } from "@mantine/core";
 export default function Skills() {
   return (
     <>
@@ -11,8 +11,11 @@ export default function Skills() {
             border-secondary-300
             text-secondary-300 px-4 py-2 rounded-full text-sm font-medium"
           >
-            <img
-              className="w-6 h-6 mr-2 inline"
+            <Image
+              w={20}
+              h={20}
+              mr={2}
+              display={"inline"}
               src={`https://skillicons.dev/icons?i=${skill.toLowerCase()}&theme=dark`}
             />
             {skill}

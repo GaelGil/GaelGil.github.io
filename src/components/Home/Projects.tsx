@@ -1,5 +1,6 @@
 import { PROJECTS } from "../../data/projects";
 import { useNavigate } from "react-router-dom";
+import { Title, Text, Image } from "@mantine/core";
 export default function Projects() {
   const navigate = useNavigate();
   return (
@@ -14,10 +15,10 @@ export default function Projects() {
             className="rounded-md transition border-2 border-transparent hover:border-secondary-300 cursor-pointer flex"
           >
             <div className="flex-1">
-              <h5 className="px-3 py-3 text-lg font-semibold">{p.title}</h5>
-              <p className="px-3 mt-2 text-sm leading-relaxed text-secondary-300">
-                {p.description}
-              </p>
+              <Title order={3} fw={600} p={3}>
+                {p.title}
+              </Title>
+              <Text px={3}>{p.description}</Text>
               {/* Tags */}
               <div className="px-3 mt-4 flex flex-wrap gap-2 ">
                 {p.tags?.map((t) => (
@@ -30,11 +31,7 @@ export default function Projects() {
                 ))}
               </div>
             </div>
-            <img
-              src={p.img}
-              alt={p.title}
-              className="object-fit rounded-sm md:w-50 md:h-50 w-25 h-25 "
-            />
+            <Image w={200} h={200} src={p.img} alt={p.title} />
           </div>
         ))}
 

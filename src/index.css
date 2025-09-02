@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "tailwindcss/utilities";
 
 @layer base {
   html {
@@ -9,9 +10,4 @@
 @theme {
   --color-primary-600: oklch(79.2% 0.209 151.711);
   --color-secondary-300: oklch(76.5% 0.177 163.223);
-}
-/* bg-gradient-to-r from-[#e3f0ff] to-[#f8fafd] text-primary-600 */
-body {
-  background-color: oklch(12.9% 0.042 264.695);
-  font-family: "Roboto", sans-serif;
 }
