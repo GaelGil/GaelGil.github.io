@@ -5,39 +5,40 @@ import Education from "../Home/Education";
 import Experince from "../Home/Experience";
 import Footer from "./Footer";
 import Section from "./Section";
+import { Stack, SimpleGrid, Container } from "@mantine/core";
 export default function Content() {
   return (
-    <main className="w-full md:w-3/5 md:ml-2/5 px-8 py-12 ">
+    <>
       <Section id="about" title="">
         <About />
       </Section>
 
       <Section id="projects" title="Projects">
-        <div className="flex flex-col gap-6">
+        <Stack gap="md">
           <Projects />
-        </div>
+        </Stack>
       </Section>
 
       <Section id="education" title="Education">
-        <div className="grid grid-cols-1 gap-6">
+        <SimpleGrid cols={1} spacing="md">
           <Education />
-        </div>
+        </SimpleGrid>
       </Section>
 
       <Section id="experience" title="Experience">
-        <div className="grid grid-cols-1 gap-6">
+        <SimpleGrid cols={1} spacing="md">
           <Experince />
-        </div>
+        </SimpleGrid>
       </Section>
 
       <Section id="skills" title="Skills">
         <Skills />
       </Section>
-      <section id="footer">
-        <div className="max-w-3xl mx-auto md:mx-0 md:ml-8">
+      <Section id="footer" title="">
+        <Container size="lg" px="md">
           <Footer />
-        </div>
-      </section>
-    </main>
+        </Container>
+      </Section>
+    </>
   );
 }

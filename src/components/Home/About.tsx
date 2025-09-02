@@ -2,7 +2,7 @@ import { NAME } from "../../data/const";
 import { Text } from "@mantine/core";
 export default function About() {
   return (
-    <Text fz={"lg"}>
+    <Text c={"main.0"} fz={"lg"}>
       Hello, my name is <a className="font-bold text-secondary-300">{NAME}</a>
       . I am an aspiring data scientist. Thank you for coming to my website.
       Here you can learn about me, my projects, experience and what I do.

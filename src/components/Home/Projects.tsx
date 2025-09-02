@@ -15,10 +15,12 @@ export default function Projects() {
             className="rounded-md transition border-2 border-transparent hover:border-secondary-300 cursor-pointer flex"
           >
             <div className="flex-1">
-              <Title order={3} fw={600} p={3}>
+              <Title c={"main.0"} order={3} fw={600} p={3}>
                 {p.title}
               </Title>
-              <Text px={3}>{p.description}</Text>
+              <Text c={"main.0"} px={3}>
+                {p.description}
+              </Text>
               {/* Tags */}
               <div className="px-3 mt-4 flex flex-wrap gap-2 ">
                 {p.tags?.map((t) => (

@@ -29,7 +29,6 @@ export const theme = createTheme({
         padding: "md",
         styles: (theme) => ({
           main: {
-            // You can use a fixed background here or refer to CSS variables
             backgroundColor: "#212121", // your default background
           },
         }),

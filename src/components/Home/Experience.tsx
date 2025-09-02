@@ -6,10 +6,17 @@ export default function Experience() {
     <>
       {EXPERIENCE.map((exp, idx) => (
         <div key={idx} className="rounded-lg">
-          <Title order={3} fw={600} className="text-xl font-semibold">
+          <Title
+            c={"main.0"}
+            order={3}
+            fw={600}
+            className="text-xl font-semibold"
+          >
             {exp.company}
           </Title>
-          <Text fw={600}>{exp.position}</Text>
+          <Text c={"main.0"} fw={600}>
+            {exp.position}
+          </Text>
         </div>
       ))}
     </>
