@@ -7,7 +7,7 @@ const Section: React.FC<SectionProps> = ({ id, title, children }) => {
     <Box component="section" id={id} p="xl">
       <Container>
         {title && (
-          <Title c={"main.0"} order={2} fw={600} mb="xl">
+          <Title c={"main.8"} order={2} fw={600} mb="xl">
             {title}
           </Title>
         )}

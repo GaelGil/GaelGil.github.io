@@ -13,11 +13,11 @@ export default function Sidebar() {
         <Title c="main.0" order={1} mt="md">
           {NAME}
         </Title>
-        <Text c="main.0">{POSITION}</Text>
+        <Text c="main.9">{POSITION}</Text>
         {/* Links */}
         <Anchor
           underline="never"
-          c="main.0"
+          c="main.8"
           href="#about"
           fw={700}
           tt="uppercase"
@@ -26,7 +26,7 @@ export default function Sidebar() {
         </Anchor>
         <Anchor
           underline="never"
-          c="main.0"
+          c="main.8"
           href="#projects"
           fw={700}
           tt="uppercase"
@@ -35,7 +35,7 @@ export default function Sidebar() {
         </Anchor>
         <Anchor
           underline="never"
-          c="main.0"
+          c="main.8"
           href="#experience"
           fw={700}
           tt="uppercase"
@@ -45,10 +45,10 @@ export default function Sidebar() {
 
         {/* Socials */}
         <Group>
-          <Anchor c="main.0" href={GITHUB_URL} target="_blank">
+          <Anchor c="main.8" href={GITHUB_URL} target="_blank">
             <FaGithub size={24} />
           </Anchor>
-          <Anchor c="main.0" href={LINKEDIN_URL} target="_blank">
+          <Anchor c="main.8" href={LINKEDIN_URL} target="_blank">
             <FaLinkedin size={24} />
           </Anchor>
         </Group>

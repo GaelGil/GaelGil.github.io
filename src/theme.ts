@@ -12,8 +12,8 @@ export const theme = createTheme({
       "#ffccf0", // 5
       "#ffd9f4", // 6
       "#ffe6fa", // 7
-      "#fff0fc", // 8
-      "#fff7fe", // 9
+      "#ffffff", // 8
+      "#000000", // 9
     ],
   },
 

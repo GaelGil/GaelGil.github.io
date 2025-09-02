@@ -14,7 +14,7 @@ export default function Experience() {
           >
             {exp.company}
           </Title>
-          <Text c={"main.0"} fw={600}>
+          <Text c={"main.8"} fw={600}>
             {exp.position}
           </Text>
         </div>

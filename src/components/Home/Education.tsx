@@ -8,7 +8,7 @@ export default function Education() {
           <Title c={"main.0"} order={3} fw={600}>
             {edu.degree}
           </Title>
-          <Text c={"main.0"} fw={600}>
+          <Text c={"main.7"} fw={600}>
             {edu.institution}
           </Text>
         </div>

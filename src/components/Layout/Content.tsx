@@ -35,7 +35,7 @@ export default function Content() {
         <Skills />
       </Section>
       <Section id="footer" title="">
-        <Container size="lg" px="md">
+        <Container size="lg" px="md" ta={"center"}>
           <Footer />
         </Container>
       </Section>

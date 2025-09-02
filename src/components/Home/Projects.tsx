@@ -32,20 +32,14 @@ export default function Projects() {
               <Title c="main.0" order={3} fw={600} mb="xs">
                 {p.title}
               </Title>
-              <Text c="main.0" mb="sm">
+              <Text c="main.8" mb="sm">
                 {p.description}
               </Text>
 
               {/* Tags */}
               <Group mt="sm" wrap="wrap">
                 {p.tags?.map((t) => (
-                  <Badge
-                    key={t}
-                    variant="outline"
-                    bg="main.7"
-                    c="main.0"
-                    bd={"2px solid main.0"}
-                  >
+                  <Badge key={t} variant="light" color="main.5">
                     {t}
                   </Badge>
                 ))}
@@ -70,7 +64,7 @@ export default function Projects() {
           variant="outline"
           radius="xl"
           size="lg"
-          bg="main.7"
+          bg="main.9"
           c="main.0"
           bd={"2px solid main.0"}
           onClick={() => navigate("/projects")}

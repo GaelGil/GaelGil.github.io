@@ -1,15 +1,16 @@
 import { SKILLS } from "../../data/skills";
-import { Image, Container, Badge } from "@mantine/core";
+import { Image, Badge } from "@mantine/core";
 export default function Skills() {
   return (
     <>
       {SKILLS.map((skill: string, idx: number) => (
         <Badge
           key={idx}
-          bd={"1px solid main.0"}
-          bg={"main.7"}
-          c={"main.0"}
-          variant="outline"
+          p={"md"}
+          fw={500}
+          fz={"xs"}
+          variant="light"
+          color="main.5"
         >
           <Image
             w={20}
