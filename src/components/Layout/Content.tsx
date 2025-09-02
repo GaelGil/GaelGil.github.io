@@ -8,7 +8,7 @@ import Section from "./Section";
 import { Stack, SimpleGrid, Container } from "@mantine/core";
 export default function Content() {
   return (
-    <>
+    <Container py={"xl"}>
       <Section id="about" title="">
         <About />
       </Section>
@@ -39,6 +39,6 @@ export default function Content() {
           <Footer />
         </Container>
       </Section>
-    </>
+    </Container>
   );
 }

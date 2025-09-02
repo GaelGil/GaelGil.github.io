@@ -10,12 +10,12 @@ export default function Home() {
     >
       <Grid>
         {/* Sidebar: 40% */}
-        <Grid.Col span={{ base: 12, md: 5 }}>
+        <Grid.Col span={{ base: 12, md: 4 }}>
           <Sidebar />
         </Grid.Col>
 
         {/* Content: 60% */}
-        <Grid.Col span={{ base: 12, md: 7 }}>
+        <Grid.Col span={{ base: 12, md: 8 }}>
           <Content />
         </Grid.Col>
       </Grid>

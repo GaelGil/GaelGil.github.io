@@ -1,59 +1,83 @@
 import { PROJECTS } from "../../data/projects";
 import { useNavigate } from "react-router-dom";
-import { Title, Text, Image, Button, Badge } from "@mantine/core";
+import {
+  Title,
+  Text,
+  Image,
+  Button,
+  Badge,
+  Group,
+  Box,
+  Container,
+} from "@mantine/core";
+
 export default function Projects() {
   const navigate = useNavigate();
+
   return (
     <>
       {[...PROJECTS]
         .reverse()
         .slice(0, 4)
         .map((p) => (
-          <div
+          <Group
             key={p.id}
+            align="flex-start"
             onClick={() => navigate(`/projects/${p.id}`)}
-            className="rounded-md transition border-2 border-transparent hover:border-secondary-300 cursor-pointer flex"
+            wrap="nowrap"
+            style={{ cursor: "pointer" }}
           >
-            <div className="flex-1">
-              <Title c={"main.0"} order={3} fw={600} p={3}>
+            {/* Left side: text content */}
+            <Box style={{ flex: 1 }}>
+              <Title c="main.0" order={3} fw={600} mb="xs">
                 {p.title}
               </Title>
-              <Text c={"main.0"} px={3}>
+              <Text c="main.0" mb="sm">
                 {p.description}
               </Text>
+
               {/* Tags */}
-              <div className="px-3 mt-4 flex flex-wrap gap-2 ">
+              <Group mt="sm" wrap="wrap">
                 {p.tags?.map((t) => (
                   <Badge
                     key={t}
-                    bd={"1px solid main.0"}
-                    bg={"main.7"}
-                    c={"main.0"}
                     variant="outline"
+                    bg="main.7"
+                    c="main.0"
+                    bd={"2px solid main.0"}
                   >
                     {t}
                   </Badge>
                 ))}
-              </div>
-            </div>
-            <Image w={200} h={200} src={p.img} alt={p.title} />
-          </div>
+              </Group>
+            </Box>
+
+            {/* Right side: image */}
+            <Image
+              src={p.img}
+              alt={p.title}
+              w={200}
+              h={200}
+              radius="md"
+              fit="cover"
+            />
+          </Group>
         ))}
 
       {/* View All Button */}
-      <div className="mt-12">
+      <Container mt="xl">
         <Button
           variant="outline"
           radius="xl"
           size="lg"
-          bg={"main.7"}
-          bd="2px solid main.0"
-          c={"main.0"}
+          bg="main.7"
+          c="main.0"
+          bd={"2px solid main.0"}
           onClick={() => navigate("/projects")}
         >
           View All Projects
         </Button>
-      </div>
+      </Container>
     </>
   );
 }
