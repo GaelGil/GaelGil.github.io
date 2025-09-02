@@ -128,7 +128,7 @@ export const PROJECTS: Project[] = [
       "A AI agent that writes essays based on user input. No frameworks.",
     content: "Portfolio",
     repo: "https://github.com/GaelGil/essay_writing_ai_agent",
-    tags: ["AI", "Python", "MCP", "Fullstack"],
+    tags: ["AI", "Python", "MCP"],
     img: writing_agent,
   },
   {
@@ -138,7 +138,7 @@ export const PROJECTS: Project[] = [
       "A chatbot that uses RAG to recommend movies and answer questions about new releases. No frameworks.",
     content: "Portfolio",
     repo: "https://github.com/GaelGil/essay_writing_ai_agent",
-    tags: ["AI", "Python", "RAG", "Fullstack"],
+    tags: ["AI", "Python", "RAG", "Fullstack", "Typescript"],
     img: rag,
   },
   {
@@ -148,7 +148,17 @@ export const PROJECTS: Project[] = [
       "An AI agent that creates a balanced calendar based on your calendar. No frameworks.",
     content: "Portfolio",
     repo: "https://github.com/GaelGil/balanced_calender_agent",
-    tags: ["AI", "Python", "Google API", "React", "Fullstack"],
+    tags: ["AI", "Python", "Google API", "React", "Fullstack", "Typescript"],
+    img: calendar_agent,
+  },
+  {
+    id: 12,
+    title: "ChatGPT Clone",
+    description:
+      "A full stack project that I built as a ChatGPT clone. Create chat sessions, send messages and chat with ChatGPT, etc.",
+    content: "Portfolio",
+    repo: "https://github.com/GaelGil/balanced_calender_agent",
+    tags: ["ChatGPT", "Python", "Typescript", "React", "Fullstack", "Mantine"],
     img: calendar_agent,
   },
 ];
