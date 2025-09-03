@@ -10,14 +10,14 @@ export default function Sidebar() {
         {/* Profile photo */}
         <Photo />
         {/* Name & position */}
-        <Title c="main.0" order={1} mt="md">
+        <Title c={"var(--mantine-color-text-primary)"} order={1} mt="md">
           {NAME}
         </Title>
-        <Text c="main.9">{POSITION}</Text>
+        <Text>{POSITION}</Text>
         {/* Links */}
         <Anchor
+          c={"var(--mantine-color-text-primary)"}
           underline="never"
-          c="main.8"
           href="#about"
           fw={700}
           tt="uppercase"
@@ -25,8 +25,8 @@ export default function Sidebar() {
           About
         </Anchor>
         <Anchor
+          c={"var(--mantine-color-text-primary)"}
           underline="never"
-          c="main.8"
           href="#projects"
           fw={700}
           tt="uppercase"
@@ -34,8 +34,8 @@ export default function Sidebar() {
           Projects
         </Anchor>
         <Anchor
+          c={"var(--mantine-color-text-secondary)"}
           underline="never"
-          c="main.8"
           href="#experience"
           fw={700}
           tt="uppercase"
@@ -45,10 +45,18 @@ export default function Sidebar() {
 
         {/* Socials */}
         <Group>
-          <Anchor c="main.8" href={GITHUB_URL} target="_blank">
+          <Anchor
+            c={"var(--mantine-color-text-secondary)"}
+            href={GITHUB_URL}
+            target="_blank"
+          >
             <FaGithub size={24} />
           </Anchor>
-          <Anchor c="main.8" href={LINKEDIN_URL} target="_blank">
+          <Anchor
+            c={"var(--mantine-color-text-secondary)"}
+            href={LINKEDIN_URL}
+            target="_blank"
+          >
             <FaLinkedin size={24} />
           </Anchor>
         </Group>

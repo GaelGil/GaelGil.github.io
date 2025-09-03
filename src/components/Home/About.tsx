@@ -2,9 +2,9 @@ import { NAME } from "../../data/const";
 import { Text, Anchor } from "@mantine/core";
 export default function About() {
   return (
-    <Text c={"main.8"} fz={"lg"}>
+    <Text c={"var(--mantine-color-text-primary)"} fz={"lg"}>
       Hello, my name is{" "}
-      <Anchor c="main.0" fw={600} underline="never">
+      <Anchor fw={600} underline="never">
         {" "}
         {NAME}
       </Anchor>
@@ -13,7 +13,11 @@ export default function About() {
       <br />
       <br />I have a BS in Applied Math and Computer Science Minor from San Jose
       State University. My technical interests include {""}
-      <Anchor c="main.0" fw={600} underline="never">
+      <Anchor
+        c={"var(--mantine-color-text-primary)"}
+        fw={600}
+        underline="never"
+      >
         math, deep learning, computer vision and overall software engineering
       </Anchor>
       . Most of my projects are related to those topics.

@@ -5,10 +5,10 @@ export default function Education() {
     <>
       {EDUCATION.map((edu, idx) => (
         <div key={idx} className="rounded-lg">
-          <Title c={"main.0"} order={3} fw={600}>
+          <Title c={"var(--mantine-color-text-primary)"} order={3} fw={600}>
             {edu.degree}
           </Title>
-          <Text c={"main.8"} fw={600}>
+          <Text c={"var(--mantine-color-text-primary)"} fw={600}>
             {edu.institution}
           </Text>
         </div>

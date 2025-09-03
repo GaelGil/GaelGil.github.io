@@ -3,7 +3,7 @@ import { FaHeart } from "react-icons/fa";
 import { Text } from "@mantine/core";
 export default function Footer() {
   return (
-    <Text c={"main.0"}>
+    <Text c={"var(--mantine-color-text-primary)"}>
       Made with <FaHeart className=" inline-block mr-1" /> by
       {NAME}
     </Text>

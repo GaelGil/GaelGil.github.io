@@ -21,7 +21,7 @@ export default function Project() {
   if (!project) {
     return (
       <Container size="md" py="xl">
-        <Text c="red" fw={600}>
+        <Text c={"var(--mantine-color-text-secondary)"} fw={600}>
           Project not found
         </Text>
         <Anchor
@@ -43,13 +43,10 @@ export default function Project() {
         component="button"
         onClick={() => navigate("/projects")}
         mb="lg"
+        c={"var(--mantine-color-text-secondary)"}
         style={{
           display: "inline-flex",
           alignItems: "center",
-          color: "main.5",
-          "&:hover": {
-            color: "main.5",
-          },
         }}
       >
         <FaArrowLeft style={{ marginRight: 6 }} />
@@ -58,7 +55,9 @@ export default function Project() {
 
       <Stack>
         {/* Project Title */}
-        <Title order={3}>{project.title}</Title>
+        <Title c={"var(--mantine-color-text-secondary)"} order={3}>
+          {project.title}
+        </Title>
 
         {/* Project Image */}
         <Box
@@ -79,7 +78,12 @@ export default function Project() {
         {/* Tags */}
         <Group wrap="wrap">
           {project.tags?.map((tag) => (
-            <Badge key={tag} variant="light" color="main.5">
+            <Badge
+              c={"var(--mantine-color-text-secondary)"}
+              key={tag}
+              variant="light"
+              color={"var(--mantine-color-text-secondary)"}
+            >
               {tag}
             </Badge>
           ))}

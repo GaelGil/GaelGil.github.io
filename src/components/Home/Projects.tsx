@@ -29,17 +29,26 @@ export default function Projects() {
           >
             {/* Left side: text content */}
             <Box style={{ flex: 1 }}>
-              <Title c="main.0" order={3} fw={600} mb="xs">
+              <Title
+                c={"var(--mantine-color-text-primary)"}
+                order={3}
+                fw={600}
+                mb="xs"
+              >
                 {p.title}
               </Title>
-              <Text c="main.8" mb="sm">
+              <Text c={"var(--mantine-color-text-primary)"} mb="sm">
                 {p.description}
               </Text>
 
               {/* Tags */}
               <Group mt="sm" wrap="wrap">
                 {p.tags?.map((t) => (
-                  <Badge key={t} variant="light" color="main.5">
+                  <Badge
+                    key={t}
+                    variant="light"
+                    color={"var(--mantine-color-text-primary)"}
+                  >
                     {t}
                   </Badge>
                 ))}
@@ -61,13 +70,11 @@ export default function Projects() {
       {/* View All Button */}
       <Container mt="xl">
         <Button
-          variant="light"
           radius="xl"
           size="lg"
-          // bg="main.9"
-          c="main.5"
-          // bd={"2px solid main.0"}
           onClick={() => navigate("/projects")}
+          variant="light"
+          color={"var(--mantine-color-text-primary)"}
         >
           View All Projects
         </Button>
