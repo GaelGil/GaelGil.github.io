@@ -37,7 +37,7 @@ export default function Project() {
   }
 
   return (
-    <Container size="md" py="xl">
+    <Container size="sm" py="xl">
       {/* Back link */}
       <Anchor
         component="button"
@@ -70,7 +70,7 @@ export default function Project() {
             src={project.img}
             alt={project.title}
             radius="md"
-            maw={600}
+            maw={255}
             fit="contain"
           />
         </Box>
@@ -113,7 +113,7 @@ export default function Project() {
         </Group>
 
         {/* Project Description */}
-        <Text size="md" lh="1.6">
+        <Text c={"var(--mantine-color-text-primary)"} size="md" lh="1.6">
           {project.content}
         </Text>
       </Stack>

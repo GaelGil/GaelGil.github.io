@@ -64,7 +64,7 @@ export default function Projects() {
       />
 
       {/* Projects Grid */}
-      <SimpleGrid cols={3} spacing="lg">
+      <SimpleGrid cols={{ base: 1, sm: 2, md: 3 }} spacing="lg">
         {[...searchedProjects].reverse().map((project) => (
           <Card
             key={project.id}

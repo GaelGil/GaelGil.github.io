@@ -20,9 +20,10 @@ export const PROJECTS: Project[] = [
     title: "Sentence Generator",
     description:
       "A simple sentence generator built with flask and markov chains.",
-    content: "Portfolio",
+    content:
+      "In this project I implemented a markov chain to generate sentences. The idea is that given a piece of text you can count the frequency of each word and that way calculate which is more likely to come after one another. I used dictionaries to create the chain. The project was created using flask and python.",
     repo: "https://github.com/GaelGil/sentence-generator",
-    tags: ["Flask", "Python", "Markov Chain"],
+    tags: ["Flask", "Python", "Markov Chain", "Probability"],
     img: markov,
   },
   {
@@ -31,7 +32,8 @@ export const PROJECTS: Project[] = [
     description:
       "A simple feed forward neural network I implemented from scratch in python using numpy.",
     link: "https://github.com/GaelGil/notebooks/blob/master/back-propagation/back_propagation.ipynb",
-    content: "Portfolio",
+    content:
+      "I wanted to learn the basics of deep learning and so I implemented a feed forward neural network from scratch in python using numpy. The project was created using jupyter notebook. I only used numpy and not pytorch or tensorflow. In this notebook you can find the implementation of the backpropagation algorithm and a simple feed forward neural network. The notebook requires a good understanding of calculus and linear algebra.",
     repo: "https://github.com/GaelGil/notebooks/blob/master/back-propagation/",
     tags: ["Python", "Numpy", "Deep Learning", "Jupyter Notebook"],
     img: neural_network,
@@ -41,7 +43,8 @@ export const PROJECTS: Project[] = [
     title: "Intro to Convolutional Neural Networks",
     description: "A simple convolutional neural network I implented in pytorch",
     link: "https://github.com/GaelGil/notebooks/blob/master/convolutional_nueral_networks/cnns.ipynb",
-    content: "Portfolio",
+    content:
+      "In this notebook I implemented a convolutinal neural network in pytorch. The notebook goes over convolutions, min and max pooling, and the feed forward part of the network. This notebook assumes that you have a good understanding of neural networks.  The data I used for this was the cats and dogs dataset from kaggle. In the end I got some pretty good results with a basic architecture and light data augmentation.",
     repo: "https://github.com/GaelGil/notebooks/tree/master/convolutional_nueral_networks",
     tags: [
       "Python",
@@ -58,7 +61,8 @@ export const PROJECTS: Project[] = [
     description:
       " A place for all my notebook projects. In these notebooks you can find projects on machine learning, neural networks, computer vision and statistics :) ",
     link: "https://github.com/GaelGil/notebooks",
-    content: "Portfolio",
+    content:
+      "I created these notebooks to learn and practice machine learning. Here you can find projects on deep learning, computer vision and statistics. The datasets are included as well. For each project I go in depth into the data, the goal, the model and evaluating the results. ",
     repo: "https://github.com/GaelGil/notebooks/",
     tags: [
       "ML",
