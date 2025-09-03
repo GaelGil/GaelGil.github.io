@@ -4,17 +4,29 @@ import { AppShell, Grid } from "@mantine/core";
 
 export default function Home() {
   return (
-    <AppShell
-      style={{ overflowX: "hidden", overflowY: "auto", height: "100vh" }}
-    >
-      <Grid>
-        {/* Sidebar: 40% */}
-        <Grid.Col span={{ base: 12, md: 4 }}>
+    <AppShell padding={0} mih="100vh" style={{ overflow: "hidden" }}>
+      <Grid style={{ height: "100%" }}>
+        {/* Sidebar */}
+        <Grid.Col
+          span={{ base: 12, md: 4 }}
+          style={{
+            position: "sticky", // Mantine-friendly fixed behavior
+            top: 0,
+            height: "100vh",
+            overflowY: "auto",
+          }}
+        >
           <Sidebar />
         </Grid.Col>
 
-        {/* Content: 60% */}
-        <Grid.Col span={{ base: 12, md: 8 }}>
+        {/* Content */}
+        <Grid.Col
+          span={{ base: 12, md: 8 }}
+          style={{
+            height: "100vh",
+            overflowY: "auto",
+          }}
+        >
           <Content />
         </Grid.Col>
       </Grid>
