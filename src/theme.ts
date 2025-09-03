@@ -1,4 +1,5 @@
 import { createTheme } from "@mantine/core";
+import type { MantineTheme } from "@mantine/core";
 
 export const theme = createTheme({
   /** Define your brand colors */
@@ -27,9 +28,9 @@ export const theme = createTheme({
     AppShell: {
       defaultProps: {
         padding: "md",
-        styles: (theme) => ({
+        styles: (theme: MantineTheme) => ({
           main: {
-            backgroundColor: "#212121", // your default background
+            backgroundColor: theme.colors.main[9], // your default background
           },
         }),
       },

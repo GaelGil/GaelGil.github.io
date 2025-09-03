@@ -56,7 +56,7 @@ export default function Project() {
         Back to Projects
       </Anchor>
 
-      <Stack spacing="md">
+      <Stack>
         {/* Project Title */}
         <Title order={3}>{project.title}</Title>
 
