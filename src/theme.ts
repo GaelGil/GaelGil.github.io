@@ -1,5 +1,5 @@
 import { createTheme } from "@mantine/core";
-import type { MantineTheme, CSSVariablesResolver } from "@mantine/core";
+import type { CSSVariablesResolver } from "@mantine/core";
 
 export const theme = createTheme({
   /** Define your brand colors */

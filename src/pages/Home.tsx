@@ -10,7 +10,7 @@ export default function Home() {
         <Grid.Col
           span={{ base: 12, md: 4 }}
           style={{
-            position: "sticky", // Mantine-friendly fixed behavior
+            position: "sticky",
             top: 0,
             height: "100vh",
             overflowY: "auto",
@@ -30,6 +30,18 @@ export default function Home() {
           <Content />
         </Grid.Col>
       </Grid>
+
+      {/* Mobile responsiveness via CSS media query */}
+      <style>
+        {`
+          @media (max-width: 768px) {
+            .mantine-Grid-col:nth-child(1) {
+              position: relative !important;
+              height: auto !important;
+            }
+          }
+        `}
+      </style>
     </AppShell>
   );
 }
