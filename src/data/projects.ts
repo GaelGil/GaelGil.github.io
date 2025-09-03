@@ -56,7 +56,7 @@ export const PROJECTS: Project[] = [
     id: 4,
     title: "Notebooks",
     description:
-      "A place for all my notebook projects. In these notebooks you can find projects on machine learning, neural networks, computer vision and statistics",
+      " A place for all my notebook projects. In these notebooks you can find projects on machine learning, neural networks, computer vision and statistics :) ",
     link: "https://github.com/GaelGil/notebooks",
     content: "Portfolio",
     repo: "https://github.com/GaelGil/notebooks/",
@@ -86,7 +86,7 @@ export const PROJECTS: Project[] = [
     id: 6,
     title: "Web Scraper",
     description:
-      "A web scraper I created selenium to scrape data from a websites",
+      "A web scraper I created using selenium. Its intended to scrape items from several pages. I am using it to scrape books from goodreads.",
     content: "Portfolio",
     repo: "https://github.com/GaelGil/web-scraper",
     tags: ["Python", "Selenium", "Web Scraper", "Postgres"],
@@ -126,7 +126,7 @@ export const PROJECTS: Project[] = [
     id: 10,
     title: "Essay Writing Agent",
     description:
-      "A AI agent that writes essays based on user input. No frameworks.",
+      'This is an AI Agent that "reasons", plans, and executes the task of writing an essay. It was created using the OpenAI api, mcp, and python. No agent framework. ',
     content: "Portfolio",
     repo: "https://github.com/GaelGil/essay_writing_ai_agent",
     tags: ["AI", "Python", "MCP"],
@@ -136,7 +136,7 @@ export const PROJECTS: Project[] = [
     id: 11,
     title: "Retrival Augmented Generation (RAG) Chatbot",
     description:
-      "A chatbot that uses RAG to recommend movies and answer questions about new releases. No frameworks.",
+      "A chatbot that implements retrival augmented generation (RAG) to recommend movies and answer questions about new releases. Uses flask, react typescript, and postgres. No agent frameworks. ",
     content: "Portfolio",
     repo: "https://github.com/GaelGil/essay_writing_ai_agent",
     tags: ["AI", "Python", "RAG", "Fullstack", "Typescript"],
@@ -146,17 +146,25 @@ export const PROJECTS: Project[] = [
     id: 12,
     title: "Balanced Calendar Agent",
     description:
-      "An AI agent that creates a balanced calendar based on your calendar. No frameworks.",
+      "A calendar agent that helps you balance your work life. Created using flask, typescript, react, OpenAI api, and google calendar api. No agent frameworks",
     content: "Portfolio",
     repo: "https://github.com/GaelGil/balanced_calender_agent",
-    tags: ["AI", "Python", "Google API", "React", "Fullstack", "Typescript"],
+    tags: [
+      "AI",
+      "Python",
+      "Google API",
+      "React",
+      "Fullstack",
+      "Typescript",
+      "Composio",
+    ],
     img: calendar_agent,
   },
   {
     id: 13,
     title: "ChatGPT Clone",
     description:
-      "A full stack project that I built as a ChatGPT clone. Create chat sessions, send messages and chat with ChatGPT, etc.",
+      "A ChatGPT clone I created using flask, react, typescript OpenAI api and postgres. You can sign up, create chat sessions, etc.",
     content: "Portfolio",
     repo: "https://github.com/GaelGil/chat_gpt_clone",
     tags: ["ChatGPT", "Python", "Typescript", "React", "Fullstack", "Mantine"],
