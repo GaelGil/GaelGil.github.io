@@ -5,7 +5,6 @@ import { AppShell, Grid } from "@mantine/core";
 export default function Home() {
   return (
     <AppShell
-      bg="main.9"
       style={{ overflowX: "hidden", overflowY: "auto", height: "100vh" }}
     >
       <Grid>

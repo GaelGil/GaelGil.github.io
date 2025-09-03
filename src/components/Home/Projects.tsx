@@ -61,12 +61,12 @@ export default function Projects() {
       {/* View All Button */}
       <Container mt="xl">
         <Button
-          variant="outline"
+          variant="light"
           radius="xl"
           size="lg"
-          bg="main.9"
-          c="main.0"
-          bd={"2px solid main.0"}
+          // bg="main.9"
+          c="main.5"
+          // bd={"2px solid main.0"}
           onClick={() => navigate("/projects")}
         >
           View All Projects

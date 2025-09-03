@@ -1,10 +1,20 @@
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { PROJECTS } from "../data/projects";
 import type { Project } from "../types/Project";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { NAME } from "../data/const";
 import { FaArrowLeft } from "react-icons/fa";
-import { useEffect } from "react";
+import {
+  Box,
+  TextInput,
+  SimpleGrid,
+  Card,
+  Image,
+  Text,
+  Badge,
+  Stack,
+  Anchor,
+} from "@mantine/core";
 
 export default function Projects() {
   const navigate = useNavigate();
@@ -13,65 +23,85 @@ export default function Projects() {
   const [searchedProjects, setSearchedProjects] = useState<Project[]>(PROJECTS);
 
   useEffect(() => {
-    const filteredProjects = projects.filter((project) => {
-      const projectName = project.title.toLowerCase();
-      const searchQueryLower = searchQuery.toLowerCase();
-      return projectName.includes(searchQueryLower);
-    });
-    setSearchedProjects(filteredProjects);
+    const filtered = projects.filter((project) =>
+      project.title.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+    setSearchedProjects(filtered);
   }, [searchQuery, projects]);
 
   return (
-    <div className="max-w-4xl mx-auto p-8">
-      <a
-        className="inline-block 
-    border-primary-600
-    text-secondary-300 rounded-lg font-medium hover:text-primary-600 cursor-pointer"
+    <Box bg={"main.9"} maw={1200} mx="auto" p="xl" mih={"100vh"}>
+      {/* Back Link */}
+      <Anchor
+        component="button"
+        variant="text"
         onClick={() => navigate("/")}
+        mb="lg"
       >
         <FaArrowLeft className="inline-block mr-2" />
         {NAME}
-      </a>
-      <h4 className="text-xl block font-bold mb-10"> All Projects</h4>
-      <form className="py-4 grid grid-cols-1 gap-6">
-        <input
-          type="search"
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-          placeholder="Search Projects..."
-          className="p-2 text-md text-secondary-300 border border-secondary-300 rounded-md focus:outline-none focus:border-primary-600"
-        />
-      </form>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      </Anchor>
+
+      <Text fw={700} size="xl" mb="xl">
+        All Projects
+      </Text>
+
+      {/* Search */}
+      <TextInput
+        placeholder="Search Projects..."
+        variant="filled"
+        mb="xl"
+        value={searchQuery}
+        onChange={(e) => setSearchQuery(e.currentTarget.value)}
+        styles={{
+          input: {
+            backgroundColor: "var(--mantine-color-main-9)", // Replace with your desired background color
+            color: "var(--mantine-color-main-5)", // Replace with your desired text color
+            border: "1px solid var(--mantine-color-main-5)", // Replace with your desired border color
+          },
+        }}
+      />
+
+      {/* Projects Grid */}
+      <SimpleGrid cols={3} spacing="lg">
         {[...searchedProjects].reverse().map((project) => (
-          <div
+          <Card
             key={project.id}
-            className="rounded-md ransition border-2 border-transparent hover:border-secondary-300 cursor-pointer flex flex-col"
+            bg={"none"}
+            shadow="xl"
+            p="md"
+            bd={"1px solid main.5"}
+            radius="md"
+            withBorder
             onClick={() => navigate(`/projects/${project.id}`)}
           >
-            <img
-              src={project.img}
-              alt={project.title}
-              className="object-fit rounded-sm"
-            />
-            <h5 className="text-lg px-2 font-semibold">{project.title}</h5>
-            <p className="mt-2 px-2 text-sm leading-relaxed text-secondary-300">
-              {project.description}
-            </p>
-            {/* Tags */}
-            <div className="mt-4 flex flex-wrap gap-2 ">
-              {project.tags?.map((t) => (
-                <span
-                  key={t}
-                  className="px-6 text-xs rounded-md border text-secondary-300 border-secondary-300 "
-                >
-                  {t}
-                </span>
-              ))}
-            </div>
-          </div>
+            <Card.Section>
+              <Image
+                src={project.img}
+                bd={"1px solid main.5"}
+                bdrs={"md"}
+                alt={project.title}
+                height={50}
+              />
+            </Card.Section>
+            <Stack mt="sm">
+              <Text c={"main.8"} fw={600}>
+                {project.title}
+              </Text>
+              <Text size="sm" c="main.5">
+                {project.description}
+              </Text>
+              <Box mt="sm">
+                {project.tags?.map((tag) => (
+                  <Badge key={tag} variant="outline" color="main.5" size="sm">
+                    {tag}
+                  </Badge>
+                ))}
+              </Box>
+            </Stack>
+          </Card>
         ))}
-      </div>
-    </div>
+      </SimpleGrid>
+    </Box>
   );
 }
