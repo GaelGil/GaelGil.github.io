@@ -4,7 +4,11 @@ export default function About() {
   return (
     <Text c={"var(--mantine-color-text-primary)"} fz={"lg"}>
       Hello, my name is{" "}
-      <Anchor fw={600} underline="never">
+      <Anchor
+        c={"var(--mantine-color-text-secondary)"}
+        fw={600}
+        underline="never"
+      >
         {" "}
         {NAME}
       </Anchor>
@@ -14,7 +18,7 @@ export default function About() {
       <br />I have a BS in Applied Math and Computer Science Minor from San Jose
       State University. My technical interests include {""}
       <Anchor
-        c={"var(--mantine-color-text-primary)"}
+        c={"var(--mantine-color-text-secondary)"}
         fw={600}
         underline="never"
       >

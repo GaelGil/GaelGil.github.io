@@ -21,7 +21,7 @@ export default function Project() {
   if (!project) {
     return (
       <Container size="md" py="xl">
-        <Text c={"var(--mantine-color-text-secondary)"} fw={600}>
+        <Text c={"var(--mantine-color-text-primary)"} fw={600}>
           Project not found
         </Text>
         <Anchor
@@ -43,7 +43,7 @@ export default function Project() {
         component="button"
         onClick={() => navigate("/projects")}
         mb="lg"
-        c={"var(--mantine-color-text-secondary)"}
+        c={"var(--mantine-color-text-primary)"}
         style={{
           display: "inline-flex",
           alignItems: "center",
@@ -55,7 +55,7 @@ export default function Project() {
 
       <Stack>
         {/* Project Title */}
-        <Title c={"var(--mantine-color-text-secondary)"} order={3}>
+        <Title c={"var(--mantine-color-text-primary)"} order={3}>
           {project.title}
         </Title>
 
@@ -79,7 +79,6 @@ export default function Project() {
         <Group wrap="wrap">
           {project.tags?.map((tag) => (
             <Badge
-              c={"var(--mantine-color-text-secondary)"}
               key={tag}
               variant="light"
               color={"var(--mantine-color-text-secondary)"}
@@ -96,6 +95,7 @@ export default function Project() {
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
+              c={"var(--mantine-color-text-secondary)"}
             >
               Live Project
             </Anchor>
@@ -105,6 +105,7 @@ export default function Project() {
               href={project.repo}
               target="_blank"
               rel="noopener noreferrer"
+              c={"var(--mantine-color-text-secondary)"}
             >
               Repository
             </Anchor>

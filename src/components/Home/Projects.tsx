@@ -47,7 +47,7 @@ export default function Projects() {
                   <Badge
                     key={t}
                     variant="light"
-                    color={"var(--mantine-color-text-primary)"}
+                    color={"var(--mantine-color-text-secondary)"}
                   >
                     {t}
                   </Badge>
@@ -74,7 +74,7 @@ export default function Projects() {
           size="lg"
           onClick={() => navigate("/projects")}
           variant="light"
-          color={"var(--mantine-color-text-primary)"}
+          color={"var(--mantine-color-text-secondary)"}
         >
           View All Projects
         </Button>

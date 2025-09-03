@@ -34,7 +34,7 @@ export default function Sidebar() {
           Projects
         </Anchor>
         <Anchor
-          c={"var(--mantine-color-text-secondary)"}
+          c={"var(--mantine-color-text-primary)"}
           underline="never"
           href="#experience"
           fw={700}
@@ -46,14 +46,14 @@ export default function Sidebar() {
         {/* Socials */}
         <Group>
           <Anchor
-            c={"var(--mantine-color-text-secondary)"}
+            c={"var(--mantine-color-text-primary)"}
             href={GITHUB_URL}
             target="_blank"
           >
             <FaGithub size={24} />
           </Anchor>
           <Anchor
-            c={"var(--mantine-color-text-secondary)"}
+            c={"var(--mantine-color-text-primary)"}
             href={LINKEDIN_URL}
             target="_blank"
           >

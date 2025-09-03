@@ -29,8 +29,8 @@ export const theme = createTheme({
       "#000000", // 9
     ],
     green: [
-      "#00ff00", // 0 - brightest / primary green
-      "#00ff00", // 1
+      "#98FBCB", // 0 - brightest / primary green
+      "#BFFFED", // 1
       "#00ff00", // 2
       "#00ff00", // 3
       "#00ff00", // 4
@@ -64,6 +64,18 @@ export const theme = createTheme({
       "#000000", // 8
       "#ffffff", // 9
     ],
+    navy: [
+      "#000433", // 0 - brightest / primary black
+      "#000000", // 1
+      "#000000", // 2
+      "#000000", // 3
+      "#000000", // 4
+      "#000000", // 5
+      "#000000", // 6
+      "#000000", // 7
+      "#000000", // 8
+      "#ffffff", // 9
+    ],
   },
 
   shadows: {
@@ -79,8 +91,8 @@ export const theme = createTheme({
 export const cssResolver: CSSVariablesResolver = (theme) => ({
   variables: {
     "--mantine-color-text-primary": theme.colors.black[9],
-    "--mantine-color-text-secondary": theme.colors.pink[0],
-    "--mantine-color-text-tertiary": theme.colors.red[0],
+    "--mantine-color-text-secondary": theme.colors.green[0],
+    "--mantine-color-text-tertiary": theme.colors.green[1],
     "--mantine-color-accent": theme.colors.red[1],
     "--mantine-color-background": theme.colors.black[0],
     "--mantine-color-background-secondary": theme.colors.red[2],

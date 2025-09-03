@@ -10,7 +10,7 @@ export default function Skills() {
           fw={500}
           fz={"xs"}
           variant="light"
-          color={"var(--mantine-color-text-primary)"}
+          color={"var(--mantine-color-text-secondary)"}
         >
           <Image
             w={20}

@@ -37,17 +37,13 @@ export default function Projects() {
         variant="text"
         onClick={() => navigate("/")}
         mb="lg"
+        c={"var(--mantine-color-text-primary)"}
       >
         <FaArrowLeft className="inline-block mr-2" />
         {NAME}
       </Anchor>
 
-      <Text
-        c={"var(--mantine-color-text-secondary)"}
-        fw={700}
-        size="xl"
-        mb="xl"
-      >
+      <Text c={"var(--mantine-color-text-primary)"} fw={700} size="xl" mb="xl">
         All Projects
       </Text>
 
@@ -60,9 +56,9 @@ export default function Projects() {
         onChange={(e) => setSearchQuery(e.currentTarget.value)}
         styles={{
           input: {
-            backgroundColor: "var(--mantine-color-main-9)", // Replace with your desired background color
+            backgroundColor: "transparent", // Replace with your desired background color
             color: "var(--mantine-color-text-secondary)", // Replace with your desired text color
-            border: "1px solid var(--mantine-color-text-secondary)", // Replace with your desired border color
+            border: "1px solid var(--mantine-color-text-primary)", // Replace with your desired border color
           },
         }}
       />
@@ -90,16 +86,15 @@ export default function Projects() {
               />
             </Card.Section>
             <Stack mt="sm">
-              <Text c={"var(--mantine-color-text-secondary)"} fw={600}>
+              <Text c={"var(--mantine-color-text-primary)"} fw={600}>
                 {project.title}
               </Text>
-              <Text c={"var(--mantine-color-text-secondary)"} size="sm">
+              <Text c={"var(--mantine-color-text-primary)"} size="sm">
                 {project.description}
               </Text>
               <Box mt="sm">
                 {project.tags?.map((tag) => (
                   <Badge
-                    c={"var(--mantine-color-text-secondary)"}
                     key={tag}
                     variant="light"
                     color={"var(--mantine-color-text-secondary)"}
