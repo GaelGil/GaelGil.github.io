@@ -111,7 +111,8 @@ export const PROJECTS: Project[] = [
     title: "Order Mail Agent",
     description:
       "A order mail agent that helps users manage and place incoming mail orders to a company.",
-    content: "Portfolio",
+    content:
+      "Several businesses take in orders through email still. People need to go one by one to place the order manually. We can automate this with AI. In this project we created a AI agent that takes in emails, analyzes what the customer wants, checks availability and places the order. It was created using the OpenAI api, mcp, and python. No agent framework. ",
     repo: "https://github.com/kevingil/ordermail-agent",
     tags: ["AI", "Python", "MCP", "Fullstack", "Flask"],
     img: orderMail,
@@ -121,7 +122,8 @@ export const PROJECTS: Project[] = [
     title: "Rocket Agent",
     description:
       "A personal finance agent that helps users manage their finances.",
-    content: "Portfolio",
+    content:
+      "In this project we created a AI agent that helps users manage their finances. It was created using the OpenAI No agent framework. This is a full stack project so a user can create an account, sign in and connect their bank account to the agent. No agent framework. ",
     repo: "https://github.com/kevingil/rocket-agent",
     tags: ["Fullstack", "AI Agent", "Python", "Flask"],
     img: rocketAgent,
@@ -131,7 +133,8 @@ export const PROJECTS: Project[] = [
     title: "Essay Writing Agent",
     description:
       'This is an AI Agent that "reasons", plans, and executes the task of writing an essay. It was created using the OpenAI api, mcp, and python. No agent framework. ',
-    content: "Portfolio",
+    content:
+      'In this project I created an AI agent that writes essays. It only writes essays or any sort of content but it started out as essays so I just kept the name. This uses Model Context Protocol (MCP) for the tools. The agent plans, "reasons" and excutues. This could be used in a a2a project where you have another agent call this agent for this task of writing.',
     repo: "https://github.com/GaelGil/essay_writing_ai_agent",
     tags: ["AI", "Python", "MCP"],
     img: writing_agent,
@@ -141,8 +144,9 @@ export const PROJECTS: Project[] = [
     title: "Retrival Augmented Generation (RAG) Chatbot",
     description:
       "A chatbot that implements retrival augmented generation (RAG) to recommend movies and answer questions about new releases. Uses flask, react typescript, and postgres. No agent frameworks. ",
-    content: "Portfolio",
-    repo: "https://github.com/GaelGil/essay_writing_ai_agent",
+    content:
+      "A simple chatbot that uses retrieval augmented generation (RAG) to recommend movies to a user. This project uses flask, react typescript, Postgres, pgvector and docker. It is a simple chat interface where a user can ask to get movies recommended. The agent will then use a tool to search in a vector database similar movies to those of the interest of the user. It will then return those movies to the user. I used the OpenAI embeddings model to generate the embeddings for movies descriptions. The descriptions were from letterboxd. I saved the embeddings to a pkl file to then seed into the database instead of calling the model on start up if I had to take down the container. You can see how I did that in ./backend/app/chat/utils/debugging and ./backend/seed.py Additionally the chatbot is equipped with tools to search news or search google for current movies and tell the user about them.",
+    repo: "https://github.com/GaelGil/rag_movie_recommender",
     tags: ["AI", "Python", "RAG", "Fullstack", "Typescript"],
     img: rag,
   },
@@ -151,7 +155,8 @@ export const PROJECTS: Project[] = [
     title: "Balanced Calendar Agent",
     description:
       "A calendar agent that helps you balance your work life. Created using flask, typescript, react, OpenAI api, and google calendar api. No agent frameworks",
-    content: "Portfolio",
+    content:
+      "Through my journey in learning AI agents I've read articles about project ideas, gone to hackathons, etc. I've come to learn that calendar agents are very popular so I decided to create one myself. It is a simple chat interface where can login, connect their google calendar. After logging in and authenticating google calendar, you can ask the agent to help you. It can list, create , delete, updated events, analyze calendar, suggest new recreational events.",
     repo: "https://github.com/GaelGil/balanced_calender_agent",
     tags: [
       "AI",
@@ -169,7 +174,7 @@ export const PROJECTS: Project[] = [
     title: "ChatGPT Clone",
     description:
       "A ChatGPT clone I created using flask, react, typescript OpenAI api and postgres. You can sign up, create chat sessions, etc.",
-    content: "Portfolio",
+    content: "In this project I created a ChatGPT clone. ",
     repo: "https://github.com/GaelGil/chat_gpt_clone",
     tags: ["ChatGPT", "Python", "Typescript", "React", "Fullstack", "Mantine"],
     img: chatgpt,

@@ -8,7 +8,7 @@ export default function Education() {
           <Title c={"var(--mantine-color-text-primary)"} order={3} fw={600}>
             {edu.degree}
           </Title>
-          <Text c={"var(--mantine-color-text-primary)"} fw={600}>
+          <Text c={"var(--mantine-color-text-secondary)"} fw={600}>
             {edu.institution}
           </Text>
         </div>

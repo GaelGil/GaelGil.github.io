@@ -19,15 +19,15 @@ export default function Content() {
         </Stack>
       </Section>
 
-      <Section id="education" title="Education">
-        <SimpleGrid cols={1} spacing="md">
-          <Education />
-        </SimpleGrid>
-      </Section>
-
       <Section id="experience" title="Experience">
         <SimpleGrid cols={1} spacing="md">
           <Experince />
+        </SimpleGrid>
+      </Section>
+
+      <Section id="education" title="Education">
+        <SimpleGrid cols={1} spacing="md">
+          <Education />
         </SimpleGrid>
       </Section>
 
