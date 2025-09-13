@@ -21,8 +21,9 @@ export const PROJECTS: Project[] = [
     description:
       "A simple sentence generator built with flask and markov chains.",
     content:
-      "In this project I implemented a markov chain to generate sentences. The idea is that given a piece of text you can count the frequency of each word and that way calculate which is more likely to come after one another. I used dictionaries to create the chain. The project was created using flask and python.",
+      " To generate sentences we use Markov chains. A Markov chain is a sequence of events where the probability of future events depend only on the current event. In our case the Markov chain is a sequence of words. Where the next word can be predicted based on the current word. I did this by creating a dictionary of all the words in a given text. Then for each word we get the following words and count them. We can see that some words are more common than others. For example car is more likely to be followed by drove rather than person or exploded. I applied softmax to this dictionary to accurately represent a Markov chain. This means all probabilities of each of the next words sum to 1. To learn more about the implementation check out the repo!",
     repo: "https://github.com/GaelGil/sentence-generator",
+    link: "https://gaelgil.github.io/sentence-generator/",
     tags: ["Flask", "Python", "Markov Chain", "Probability"],
     img: markov,
   },
