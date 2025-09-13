@@ -1,11 +1,11 @@
 import { NAME } from "../../data/const";
 import { FaHeart } from "react-icons/fa";
-import { Text } from "@mantine/core";
+
 export default function Footer() {
   return (
-    <Text c={"var(--mantine-color-text-secondary)"}>
-      Made with <FaHeart className=" inline-block mr-1" /> by
+    <footer className="py-6 text-center text-secondary-300">
+      Made with <FaHeart className="text-secondary-300 inline-block mr-1" /> by{" "}
       {NAME}
-    </Text>
+    </footer>
   );
 }

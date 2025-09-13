@@ -1,24 +1,14 @@
 import React from "react";
 import type { SectionProps } from "../../types/Section";
-import { Box, Title, Container } from "@mantine/core";
 
 const Section: React.FC<SectionProps> = ({ id, title, children }) => {
   return (
-    <Box component="section" id={id} p="xl">
-      <Container>
-        {title && (
-          <Title
-            c={"var(--mantine-color-text-primary)"}
-            order={2}
-            fw={600}
-            mb="xl"
-          >
-            {title}
-          </Title>
-        )}
+    <section id={id} className="sm:px-6 md:px-8 py-8 md:py-12">
+      <div className="max-w-3xl mx-auto md:mx-0 md:ml-8">
+        <h4 className="text-xl block font-bold mb-10">{title}</h4>
         {children}
-      </Container>
-    </Box>
+      </div>
+    </section>
   );
 };
 

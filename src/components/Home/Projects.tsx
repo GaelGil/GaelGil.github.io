@@ -1,84 +1,54 @@
 import { PROJECTS } from "../../data/projects";
 import { useNavigate } from "react-router-dom";
-import {
-  Title,
-  Text,
-  Image,
-  Button,
-  Badge,
-  Group,
-  Box,
-  Container,
-} from "@mantine/core";
-
 export default function Projects() {
   const navigate = useNavigate();
-
   return (
     <>
       {[...PROJECTS]
         .reverse()
         .slice(0, 4)
         .map((p) => (
-          <Group
+          <div
             key={p.id}
-            align="flex-start"
             onClick={() => navigate(`/projects/${p.id}`)}
-            wrap="nowrap"
-            style={{ cursor: "pointer" }}
+            className="rounded-md transition border-2 border-transparent hover:border-secondary-300 cursor-pointer flex"
           >
-            {/* Left side: text content */}
-            <Box style={{ flex: 1 }}>
-              <Title
-                c={"var(--mantine-color-text-primary)"}
-                order={3}
-                fw={600}
-                mb="xs"
-              >
-                {p.title}
-              </Title>
-              <Text c={"var(--mantine-color-text-primary)"} mb="sm">
+            <div className="flex-1">
+              <h5 className="px-3 py-3 text-lg font-semibold">{p.title}</h5>
+              <p className="px-3 mt-2 text-sm leading-relaxed text-secondary-300">
                 {p.description}
-              </Text>
-
+              </p>
               {/* Tags */}
-              <Group mt="sm" wrap="wrap">
+              <div className="px-3 mt-4 flex flex-wrap gap-2 ">
                 {p.tags?.map((t) => (
-                  <Badge
+                  <span
                     key={t}
-                    variant="light"
-                    color={"var(--mantine-color-text-secondary)"}
+                    className="px-2 py-1 text-xs rounded-md border text-secondary-300 border-secondary-300 "
                   >
                     {t}
-                  </Badge>
+                  </span>
                 ))}
-              </Group>
-            </Box>
-
-            {/* Right side: image */}
-            <Image
+              </div>
+            </div>
+            <img
               src={p.img}
               alt={p.title}
-              w={200}
-              h={200}
-              radius="md"
-              fit="cover"
+              className="object-fit rounded-sm md:w-50 md:h-50 w-25 h-25 "
             />
-          </Group>
+          </div>
         ))}
 
       {/* View All Button */}
-      <Container mt="xl">
-        <Button
-          radius="xl"
-          size="lg"
+      <div className="mt-12">
+        <button
+          className="inline-block px-6 py-3 border
+            border-secondary-300
+            text-secondary-300 rounded-lg font-medium hover:text-primary-600 hover:border-primary-600 cursor-pointer"
           onClick={() => navigate("/projects")}
-          variant="light"
-          color={"var(--mantine-color-text-secondary)"}
         >
           View All Projects
-        </Button>
-      </Container>
+        </button>
+      </div>
     </>
   );
 }

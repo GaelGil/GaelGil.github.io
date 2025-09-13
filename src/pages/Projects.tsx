@@ -1,20 +1,10 @@
-import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import { PROJECTS } from "../data/projects";
 import type { Project } from "../types/Project";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { NAME } from "../data/const";
 import { FaArrowLeft } from "react-icons/fa";
-import {
-  Box,
-  TextInput,
-  SimpleGrid,
-  Card,
-  Image,
-  Text,
-  Badge,
-  Stack,
-  Anchor,
-} from "@mantine/core";
+import { useEffect } from "react";
 
 export default function Projects() {
   const navigate = useNavigate();
@@ -23,91 +13,65 @@ export default function Projects() {
   const [searchedProjects, setSearchedProjects] = useState<Project[]>(PROJECTS);
 
   useEffect(() => {
-    const filtered = projects.filter((project) =>
-      project.title.toLowerCase().includes(searchQuery.toLowerCase())
-    );
-    setSearchedProjects(filtered);
+    const filteredProjects = projects.filter((project) => {
+      const projectName = project.title.toLowerCase();
+      const searchQueryLower = searchQuery.toLowerCase();
+      return projectName.includes(searchQueryLower);
+    });
+    setSearchedProjects(filteredProjects);
   }, [searchQuery, projects]);
 
   return (
-    <Box bg={"main.9"} maw={1200} mx="auto" p="xl" mih={"100vh"}>
-      {/* Back Link */}
-      <Anchor
-        component="button"
-        variant="text"
+    <div className="max-w-4xl mx-auto p-8">
+      <a
+        className="inline-block 
+    border-primary-600
+    text-secondary-300 rounded-lg font-medium hover:text-primary-600 cursor-pointer"
         onClick={() => navigate("/")}
-        mb="lg"
-        c={"var(--mantine-color-text-primary)"}
       >
         <FaArrowLeft className="inline-block mr-2" />
         {NAME}
-      </Anchor>
-
-      <Text c={"var(--mantine-color-text-primary)"} fw={700} size="xl" mb="xl">
-        All Projects
-      </Text>
-
-      {/* Search */}
-      <TextInput
-        placeholder="Search Projects..."
-        variant="filled"
-        mb="xl"
-        value={searchQuery}
-        onChange={(e) => setSearchQuery(e.currentTarget.value)}
-        styles={{
-          input: {
-            backgroundColor: "transparent", // Replace with your desired background color
-            color: "var(--mantine-color-text-secondary)", // Replace with your desired text color
-            border: "1px solid var(--mantine-color-text-primary)", // Replace with your desired border color
-          },
-        }}
-      />
-
-      {/* Projects Grid */}
-      <SimpleGrid cols={{ base: 1, sm: 2, md: 3 }} spacing="lg">
+      </a>
+      <h4 className="text-xl block font-bold mb-10"> All Projects</h4>
+      <form className="py-4 grid grid-cols-1 gap-6">
+        <input
+          type="search"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          placeholder="Search Projects..."
+          className="p-2 text-md text-secondary-300 border border-secondary-300 rounded-md focus:outline-none focus:border-primary-600"
+        />
+      </form>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {[...searchedProjects].reverse().map((project) => (
-          <Card
+          <div
             key={project.id}
-            bg={"none"}
-            shadow="xl"
-            p="md"
-            bd={"1px solid main.5"}
-            radius="md"
-            withBorder
+            className="rounded-md ransition border-2 border-transparent hover:border-secondary-300 cursor-pointer flex flex-col"
             onClick={() => navigate(`/projects/${project.id}`)}
           >
-            <Card.Section>
-              <Image
-                src={project.img}
-                bd={"1px solid main.5"}
-                bdrs={"md"}
-                alt={project.title}
-                height={50}
-              />
-            </Card.Section>
-            <Stack mt="sm">
-              <Text c={"var(--mantine-color-text-primary)"} fw={600}>
-                {project.title}
-              </Text>
-              <Text c={"var(--mantine-color-text-primary)"} size="sm">
-                {project.description}
-              </Text>
-              <Box mt="sm">
-                {project.tags?.map((tag) => (
-                  <Badge
-                    key={tag}
-                    variant="light"
-                    color={"var(--mantine-color-text-secondary)"}
-                    size="sm"
-                  >
-                    {tag}
-                  </Badge>
-                ))}
-              </Box>
-            </Stack>
-          </Card>
+            <img
+              src={project.img}
+              alt={project.title}
+              className="object-fit rounded-sm"
+            />
+            <h5 className="text-lg px-2 font-semibold">{project.title}</h5>
+            <p className="mt-2 px-2 text-sm leading-relaxed text-secondary-300">
+              {project.description}
+            </p>
+            {/* Tags */}
+            <div className="mt-4 flex flex-wrap gap-2 ">
+              {project.tags?.map((t) => (
+                <span
+                  key={t}
+                  className="px-6 text-xs rounded-md border text-secondary-300 border-secondary-300 "
+                >
+                  {t}
+                </span>
+              ))}
+            </div>
+          </div>
         ))}
-      </SimpleGrid>
-    </Box>
+      </div>
+    </div>
   );
 }
