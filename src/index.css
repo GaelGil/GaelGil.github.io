@@ -8,8 +8,8 @@
 }
 
 @theme {
-  --color-primary-600: oklch(79.2% 0.209 151.711);
-  --color-secondary-300: oklch(76.5% 0.177 163.223);
+  --color-primary-600: oklch(81% 0.117 11.638);
+  --color-secondary-300: oklch(64.5% 0.246 16.439);
 }
 /* bg-gradient-to-r from-[#e3f0ff] to-[#f8fafd] text-primary-600 */
 body {
