@@ -18,7 +18,7 @@ export default function Sidebar() {
             About
           </a>
           <a
-            href="#projects"
+            href="#other"
             className="block font-bold uppercase hover:text-primary-600 cursor-pointer"
           >
             Projects
