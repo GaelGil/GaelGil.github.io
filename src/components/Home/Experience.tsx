@@ -7,6 +7,9 @@ export default function Experience() {
         <div key={idx} className="rounded-lg">
           <h3 className="text-xl font-semibold">{exp.company}</h3>
           <p className="text-secondary-300">{exp.position}</p>
+          <div className="flex">
+            <p>{exp.startDate}</p> - <p>{exp.endDate}</p>
+          </div>
         </div>
       ))}
     </>
