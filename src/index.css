@@ -13,6 +13,6 @@
 }
 /* bg-gradient-to-r from-[#e3f0ff] to-[#f8fafd] text-primary-600 */
 body {
-  background-color: oklch(12.9% 0.042 264.695);
+  background-color: oklch(0% 0 0);
   font-family: "Roboto", sans-serif;
 }

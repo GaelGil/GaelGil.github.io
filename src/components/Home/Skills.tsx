@@ -7,9 +7,7 @@ export default function Skills() {
         {SKILLS.map((skill: string, idx: number) => (
           <span
             key={idx}
-            className="border border-accent
-            border-secondary-300
-            text-secondary-300 px-4 py-2 rounded-full text-sm font-medium"
+            className="border-1 border-secondary-300 text-secondary-300 px-4 py-2 rounded-full"
           >
             <img
               className="w-6 h-6 mr-2 inline"
