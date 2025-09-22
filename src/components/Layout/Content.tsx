@@ -18,16 +18,17 @@ export default function Content() {
           <Projects />
         </div>
       </Section>
-      <Section id="education" title="Education">
-        <div className="grid grid-cols-1 gap-6">
-          <Education />
-        </div>
-      </Section>
       <Section id="experience" title="Experience">
         <div className="grid grid-cols-1 gap-6">
           <Experince />
         </div>
       </Section>
+      <Section id="education" title="Education">
+        <div className="grid grid-cols-1 gap-6">
+          <Education />
+        </div>
+      </Section>
+
       <Section id="skills" title="Skills">
         <div className="grid grid-cols-1 gap-6">
           <Skills />
