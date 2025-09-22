@@ -1,13 +1,12 @@
 import { PROJECTS } from "../data/projects";
 import type { Project } from "../types/Project";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { NAME } from "../data/const";
 import { FaArrowLeft } from "react-icons/fa";
 import { useEffect } from "react";
 
 export default function Projects() {
-  const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState("");
   const [projects] = useState<Project[]>(PROJECTS);
   const [searchedProjects, setSearchedProjects] = useState<Project[]>(PROJECTS);
@@ -24,15 +23,13 @@ export default function Projects() {
   return (
     <div className="flex flex-col md:flex-row min-h-screen">
       <div className="max-w-4xl mx-auto p-8">
-        <a
-          className="inline-block 
-    border-primary-600
-    text-secondary-300 rounded-lg font-medium hover:text-primary-600 cursor-pointer"
-          onClick={() => navigate("/")}
+        <Link
+          to={"/"}
+          className="inline-block  border-primary-600 text-secondary-300 rounded-lg font-medium hover:text-primary-600 cursor-pointer"
         >
           <FaArrowLeft className="inline-block mr-2" />
           {NAME}
-        </a>
+        </Link>
         <h4 className="text-xl block font-bold mb-10"> All Projects</h4>
         <form className="py-4 grid grid-cols-1 gap-6">
           <input
@@ -45,10 +42,10 @@ export default function Projects() {
         </form>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {[...searchedProjects].reverse().map((project) => (
-            <div
+            <Link
+              to={`/projects/${project.id}`}
               key={project.id}
               className="rounded-md ransition border-2 border-transparent hover:border-secondary-300 cursor-pointer flex flex-col"
-              onClick={() => navigate(`/projects/${project.id}`)}
             >
               <img
                 src={project.img}
@@ -70,7 +67,7 @@ export default function Projects() {
                   </span>
                 ))}
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
