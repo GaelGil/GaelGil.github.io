@@ -1,7 +1,7 @@
 import { PROJECTS } from "../data/projects";
 import type { Project } from "../types/Project";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "@tanstack/react-router";
 import { NAME } from "../data/const";
 import { FaArrowLeft } from "react-icons/fa";
 import { useEffect } from "react";
@@ -43,7 +43,8 @@ export default function Projects() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {[...searchedProjects].reverse().map((project) => (
             <Link
-              to={`/projects/${project.id}`}
+              to="/projects/$id"
+              params={{ id: project.id.toString() }}
               key={project.id}
               className="rounded-md ransition border-2 border-transparent hover:border-secondary-300 cursor-pointer flex flex-col"
             >

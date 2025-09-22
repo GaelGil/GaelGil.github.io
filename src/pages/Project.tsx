@@ -1,9 +1,9 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "@tanstack/react-router";
 import { PROJECTS } from "../data/projects";
 import { FaArrowLeft } from "react-icons/fa";
-import { Link } from "react-router-dom";
 export default function Project() {
-  const { id } = useParams();
+  const { id } = useParams({ strict: false });
+  // const { id } = useParams();
   const project = PROJECTS.find((p) => p.id === Number(id));
 
   return (

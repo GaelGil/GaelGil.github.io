@@ -1,5 +1,5 @@
 import { PROJECTS } from "../../data/projects";
-import { Link } from "react-router-dom";
+import { Link } from "@tanstack/react-router";
 export default function Projects() {
   return (
     <>
