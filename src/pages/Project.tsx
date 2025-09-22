@@ -22,13 +22,15 @@ export default function Project() {
         <div>Project not found</div>
       ) : (
         <>
-          <div className="mt-4 flex flex-wrap gap-2">
-            <h5 className="text-xl font-bold">{project.title}</h5>
-            <img
-              src={project.img}
-              alt={project.title}
-              className="mt-4 h-100 w-100 rounded-sm align-middle"
-            />
+          <h5 className="text-xl font-bold">{project.title}</h5>
+          <div className="mt-4 flex flex-wrap gap-2 justify-center">
+            <div className="flex items-center">
+              <img
+                src={project.img}
+                alt={project.title}
+                className="mt-4 h-100 w-100 rounded-sm align-middle"
+              />
+            </div>
           </div>
           <div className="mt-4 flex flex-wrap gap-2 ">
             {project.tags?.map((t) => (
