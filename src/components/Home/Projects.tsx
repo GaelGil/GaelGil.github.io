@@ -1,16 +1,15 @@
 import { PROJECTS } from "../../data/projects";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 export default function Projects() {
-  const navigate = useNavigate();
   return (
     <>
       {[...PROJECTS]
         .reverse()
         .slice(0, 4)
         .map((p) => (
-          <div
+          <Link
             key={p.id}
-            onClick={() => navigate(`/projects/${p.id}`)}
+            to={`/projects/${p.id}`}
             className="rounded-md transition border-2 border-transparent hover:border-secondary-300 cursor-pointer flex"
           >
             <div className="flex-1">
@@ -35,19 +34,19 @@ export default function Projects() {
               alt={p.title}
               className="object-fit rounded-sm md:w-50 md:h-50 w-25 h-25 "
             />
-          </div>
+          </Link>
         ))}
 
       {/* View All Button */}
       <div className="mt-12">
-        <button
+        <Link
+          to="/projects"
           className="inline-block px-6 py-3 border
             border-secondary-300
             text-secondary-300 rounded-lg font-medium hover:text-primary-600 hover:border-primary-600 cursor-pointer"
-          onClick={() => navigate("/projects")}
         >
           View All Projects
-        </button>
+        </Link>
       </div>
     </>
   );

@@ -4,7 +4,7 @@ import { NAME, POSITION } from "../../data/const";
 import Photo from "../Home/Photo";
 export default function Sidebar() {
   return (
-    <aside className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:mt-16 lg:mb-16 md:w-2/5 h-auto md:h-screen flex justify-center">
+    <div className="lg:top-0 lg:h-screen lg:mt-16 lg:mb-16 flex justify-center items-start">
       <div className="max-w-sm">
         <Photo />
         <br />
@@ -49,6 +49,6 @@ export default function Sidebar() {
           </a>
         </div>
       </div>
-    </aside>
+    </div>
   );
 }
