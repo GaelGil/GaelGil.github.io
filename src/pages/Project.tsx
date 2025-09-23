@@ -41,26 +41,26 @@ export default function Project() {
           </div>
 
           {project.link ? (
-            <Link
-              to={project.link}
+            <a
+              href={project.link}
               target="_blank"
               className="text-xl leading-relaxed text-secondary-300"
             >
               Project
-            </Link>
+            </a>
           ) : (
             <>
               <h1></h1>
             </>
           )}
           <br />
-          <Link
-            to={project.repo}
+          <a
+            href={project.repo}
             target="_blank"
             className="text-xl leading-relaxed text-secondary-300"
           >
             Repo
-          </Link>
+          </a>
           <p className="text-xl leading-relaxed">{project.content}</p>
         </>
       )}
