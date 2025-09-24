@@ -5,6 +5,7 @@ import { Link } from "@tanstack/react-router";
 import { NAME } from "../data/const";
 import { FaArrowLeft } from "react-icons/fa";
 import { useEffect } from "react";
+import Footer from "../components/Layout/Footer";
 
 export default function Projects() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -71,6 +72,7 @@ export default function Projects() {
             </Link>
           ))}
         </div>
+        <Footer />
       </div>
     </div>
   );

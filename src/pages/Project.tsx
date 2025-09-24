@@ -4,7 +4,6 @@ import { FaArrowLeft } from "react-icons/fa";
 import Footer from "../components/Layout/Footer";
 export default function Project() {
   const { id } = useParams({ strict: false });
-  // const { id } = useParams();
   const project = PROJECTS.find((p) => p.id === Number(id));
 
   return (
@@ -34,7 +33,7 @@ export default function Project() {
             {project.tags?.map((t) => (
               <span
                 key={t}
-                className="px-6 text-xs rounded-md border text-secondary-300 border-secondary-300 "
+                className="px-6 text-xs rounded-md text-secondary-300 bg-tertiary-300"
               >
                 {t}
               </span>
