@@ -45,9 +45,7 @@ export default function Projects() {
       <div className="mt-12">
         <Link
           to="/projects"
-          className="inline-block px-6 py-3 border
-            border-secondary-300
-            text-secondary-300 rounded-lg font-medium hover:text-primary-600 hover:border-primary-600 cursor-pointer"
+          className="inline-block px-6 py-3 rounded-lg font-medium hover:text-secondary-300 cursor-pointer"
         >
           View All Projects <FiArrowUpRight className="inline-block ml-2" />
         </Link>
