@@ -25,7 +25,7 @@ export default function Projects() {
                 {project.tags?.map((t) => (
                   <span
                     key={t}
-                    className="px-2 py-1 text-xs rounded-md border text-secondary-300 border-secondary-300 "
+                    className="px-2 py-1 text-xs rounded-md text-secondary-300 bg-tertiary-300"
                   >
                     {t}
                   </span>
