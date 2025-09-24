@@ -1,5 +1,6 @@
 import { PROJECTS } from "../../data/projects";
 import { Link } from "@tanstack/react-router";
+import { FiArrowUpRight } from "react-icons/fi";
 export default function Projects() {
   return (
     <>
@@ -11,7 +12,7 @@ export default function Projects() {
             key={project.id}
             to="/projects/$id"
             params={{ id: project.id.toString() }}
-            className="rounded-md transition border-2 border-transparent hover:border-secondary-300 cursor-pointer flex"
+            className="rounded-md hover:bg-tertiary-300 cursor-pointer flex"
           >
             <div className="flex-1">
               <h5 className="px-3 py-3 text-lg font-semibold">
@@ -48,7 +49,7 @@ export default function Projects() {
             border-secondary-300
             text-secondary-300 rounded-lg font-medium hover:text-primary-600 hover:border-primary-600 cursor-pointer"
         >
-          View All Projects
+          View All Projects <FiArrowUpRight className="inline-block ml-2" />
         </Link>
       </div>
     </>
