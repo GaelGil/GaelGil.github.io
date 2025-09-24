@@ -1,6 +1,7 @@
 import { useParams, Link } from "@tanstack/react-router";
 import { PROJECTS } from "../data/projects";
 import { FaArrowLeft } from "react-icons/fa";
+import Footer from "../components/Layout/Footer";
 export default function Project() {
   const { id } = useParams({ strict: false });
   // const { id } = useParams();
@@ -64,6 +65,7 @@ export default function Project() {
           <p className="text-xl leading-relaxed">{project.content}</p>
         </>
       )}
+      <Footer />
     </div>
   );
 }
