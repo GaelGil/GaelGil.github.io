@@ -4,9 +4,11 @@ export const SKILLS: string[] = [
   "React",
   "PostgreSQL",
   "PyTorch",
+  "Jax",
   "AI Agents",
   "MCP",
   "Java",
+  "FastAPI",
   "Tensorflow",
   "CPP",
   "Git",
@@ -23,4 +25,6 @@ export const SKILLS: string[] = [
   "Vite",
   "LaTeX",
   "Markdown",
+  "NPM",
+  "VSCode",
 ];
