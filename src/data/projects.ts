@@ -180,4 +180,26 @@ export const PROJECTS: Project[] = [
     tags: ["ChatGPT", "Python", "Typescript", "React", "Fullstack", "Mantine"],
     img: chatgpt,
   },
+  {
+    id: 14,
+    title: "Vision Transformer from Scratch in JAX",
+    description:
+      "In this project I implemented a Vision transformer model from the paper A Image is Worth 16x16 Words. I implemented it from scratch in jax.",
+    content:
+      "In this project I implemented a Vision transformer model from the paper A Image is Worth 16x16 Words. I implemented it from scratch in jax.",
+    repo: "https://github.com/GaelGil/notebooks/tree/master/transformer",
+    tags: ["ChatGPT", "Python", "Typescript", "React", "Fullstack", "Mantine"],
+    img: chatgpt,
+  },
+  {
+    id: 15,
+    title: "Transformer from Scratch in JAX",
+    description:
+      "In this project I implemented a transformer model from the paper Attention is All You Need. I implemented it from scratch in jax.",
+    content:
+      "In this project I implemented a transformer model from the paper Attention is All You Need. I implemented it from scratch in jax.",
+    repo: "https://github.com/GaelGil/notebooks/tree/master/transformer",
+    tags: ["ChatGPT", "Python", "Typescript", "React", "Fullstack", "Mantine"],
+    img: chatgpt,
+  },
 ];
