@@ -11,7 +11,8 @@ import calendar_agent from "../assets/projects/calendar.png";
 import writing_agent from "../assets/projects/writing_agent.png";
 import web_scraper from "../assets/projects/selenium.png";
 import chatgpt from "../assets/projects/chatgpt.png";
-
+import transformer from "../assets/projects/transformer.png";
+import vision_transformer from "../assets/projects/vision_transformer.png";
 import type { Project } from "../types/Project";
 
 export const PROJECTS: Project[] = [
@@ -188,8 +189,14 @@ export const PROJECTS: Project[] = [
     content:
       "In this project I implemented a Vision transformer model from the paper A Image is Worth 16x16 Words. I implemented it from scratch in jax.",
     repo: "https://github.com/GaelGil/notebooks/tree/master/transformer",
-    tags: ["ChatGPT", "Python", "Typescript", "React", "Fullstack", "Mantine"],
-    img: chatgpt,
+    tags: [
+      "Transformer",
+      "Python",
+      "Jax",
+      "Vision Transformer",
+      "Computer Vision",
+    ],
+    img: vision_transformer,
   },
   {
     id: 15,
@@ -199,7 +206,7 @@ export const PROJECTS: Project[] = [
     content:
       "In this project I implemented a transformer model from the paper Attention is All You Need. I implemented it from scratch in jax.",
     repo: "https://github.com/GaelGil/notebooks/tree/master/transformer",
-    tags: ["ChatGPT", "Python", "Typescript", "React", "Fullstack", "Mantine"],
-    img: chatgpt,
+    tags: ["Transformer", "Python", "Jax", "NLP"],
+    img: transformer,
   },
 ];
