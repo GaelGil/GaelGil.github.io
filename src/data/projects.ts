@@ -175,15 +175,16 @@ export const PROJECTS: Project[] = [
     id: 13,
     title: "ChatGPT Clone",
     description:
-      "A ChatGPT clone I created using flask, react, typescript OpenAI api and postgres. You can sign up, create chat sessions, etc.",
+      "A ChatGPT clone I created using fastapi, react, typescript OpenAI api and postgres. You can sign up, create chat sessions, etc.",
     content: "In this project I created a ChatGPT clone. ",
+    link: "https://chatgptclone.gaelgilbello27.workers.dev/",
     repo: "https://github.com/GaelGil/chat_gpt_clone",
     tags: ["ChatGPT", "Python", "Typescript", "React", "Fullstack", "Mantine"],
     img: chatgpt,
   },
   {
     id: 14,
-    title: "Vision Transformer from Scratch in JAX",
+    title: "Vision Transformer from Scratch Using JAX",
     description:
       "In this project I implemented a Vision transformer model from the paper A Image is Worth 16x16 Words. I implemented it from scratch in jax.",
     content:
@@ -200,7 +201,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 15,
-    title: "Transformer from Scratch in JAX",
+    title: "Transformer from Scratch Using JAX",
     description:
       "In this project I implemented a transformer model from the paper Attention is All You Need. I implemented it from scratch in jax.",
     content:
