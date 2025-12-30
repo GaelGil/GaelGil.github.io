@@ -7,6 +7,7 @@ export default function Education() {
         <div key={idx} className="rounded-lg">
           <h3 className="text-xl font-semibold">{edu.degree}</h3>
           <p className="text-secondary-300">{edu.institution}</p>
+          {edu.startDate && <p>{edu.startDate}</p>}
         </div>
       ))}
     </>

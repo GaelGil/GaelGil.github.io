@@ -2,6 +2,11 @@ import type { EducationItem } from "../types/EducationItem";
 
 export const EDUCATION: EducationItem[] = [
   {
+    degree: "Masters of Science in Computational Linguistics",
+    institution: "San Jose State University",
+    startDate: "In Progress",
+  },
+  {
     degree: "Bachelors of Science in Applied Math & CS Minor",
     institution: "San Jose State University",
   },
