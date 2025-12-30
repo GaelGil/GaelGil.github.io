@@ -20,12 +20,12 @@ export const PROJECTS: Project[] = [
     id: 1,
     title: "Sentence Generator",
     description:
-      "A simple sentence generator built with flask and markov chains.",
+      "A simple sentence generator that uses Markov chains to generate sentences.",
     content:
       " To generate sentences we use Markov chains. A Markov chain is a sequence of events where the probability of future events depend only on the current event. In our case the Markov chain is a sequence of words. Where the next word can be predicted based on the current word. I did this by creating a dictionary of all the words in a given text. Then for each word we get the following words and count them. We can see that some words are more common than others. For example car is more likely to be followed by drove rather than person or exploded. I applied softmax to this dictionary to accurately represent a Markov chain. This means all probabilities of each of the next words sum to 1. To learn more about the implementation check out the repo!",
     repo: "https://github.com/GaelGil/sentence-generator",
     link: "https://sentence-generator.pages.dev/",
-    tags: ["Flask", "Python", "Markov Chain", "Probability"],
+    tags: ["React", "Typescript", "Markov Chain", "Probability", "Bun"],
     img: markov,
   },
   {
@@ -204,11 +204,11 @@ export const PROJECTS: Project[] = [
     id: 15,
     title: "Transformer from Scratch Using JAX",
     description:
-      "In this project I implemented a transformer model from the paper Attention is All You Need. I implemented it from scratch in jax.",
+      "A transformer model from the paper Attention is All You Need (with minor modifications).",
     content:
       "In this project I implemented a transformer model from the paper Attention is All You Need. I implemented it from scratch in jax.",
     repo: "https://github.com/GaelGil/notebooks/tree/master/transformer",
-    tags: ["Transformer", "Python", "Jax", "NLP"],
+    tags: ["Transformer", "Python", "Jax", "NLP", "Orbax", "Grain"],
     img: transformer,
   },
 ];
