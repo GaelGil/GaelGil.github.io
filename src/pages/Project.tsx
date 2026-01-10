@@ -1,14 +1,14 @@
 import { useParams, Link } from "@tanstack/react-router";
 import { PROJECTS } from "../data/projects";
 import { FaArrowLeft } from "react-icons/fa";
-import { Badge, Image, Flex, Text } from "@mantine/core";
+import { Badge, Image, Flex, Text, Title, Container } from "@mantine/core";
 import Footer from "../components/Layout/Footer";
 export default function Project() {
   const { id } = useParams({ strict: false });
   const project = PROJECTS.find((p) => p.id === Number(id));
 
   return (
-    <div className="max-w-2xl mx-auto p-8 px-2">
+    <Container m="md" p="lg">
       <Link
         to="/projects"
         className="inline-block border-primary-600 text-secondary-300 rounded-lg font-medium hover:text-primary-600 cursor-pointer"
@@ -17,10 +17,10 @@ export default function Project() {
         Projects
       </Link>
       {!project ? (
-        <div>Project not found</div>
+        <Text>Project not found</Text>
       ) : (
         <>
-          <h5 className="text-xl font-bold">{project.title}</h5>
+          <Title order={5}>{project.title}</Title>
           <div className="mt-4 flex flex-wrap gap-2 justify-center">
             <div className="flex items-center">
               <Image
@@ -32,11 +32,7 @@ export default function Project() {
           </div>
           <Flex>
             {project.tags?.map((tag) => (
-              <Badge
-                color="red"
-                key={tag}
-                // className="px-6 text-xs rounded-md text-secondary-300 bg-tertiary-300"
-              >
+              <Badge color="red" key={tag}>
                 {tag}
               </Badge>
             ))}
@@ -67,6 +63,6 @@ export default function Project() {
         </>
       )}
       <Footer />
-    </div>
+    </Container>
   );
 }
