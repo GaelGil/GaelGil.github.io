@@ -1,6 +1,7 @@
 import { useParams, Link } from "@tanstack/react-router";
 import { PROJECTS } from "../data/projects";
 import { FaArrowLeft } from "react-icons/fa";
+import { Badge, Image, Flex, Text } from "@mantine/core";
 import Footer from "../components/Layout/Footer";
 export default function Project() {
   const { id } = useParams({ strict: false });
@@ -22,23 +23,24 @@ export default function Project() {
           <h5 className="text-xl font-bold">{project.title}</h5>
           <div className="mt-4 flex flex-wrap gap-2 justify-center">
             <div className="flex items-center">
-              <img
+              <Image
                 src={project.img}
                 alt={project.title}
                 className="mt-4 h-100 w-100 rounded-sm align-middle"
               />
             </div>
           </div>
-          <div className="mt-4 flex flex-wrap gap-2 ">
-            {project.tags?.map((t) => (
-              <span
-                key={t}
-                className="px-6 text-xs rounded-md text-secondary-300 bg-tertiary-300"
+          <Flex>
+            {project.tags?.map((tag) => (
+              <Badge
+                color="red"
+                key={tag}
+                // className="px-6 text-xs rounded-md text-secondary-300 bg-tertiary-300"
               >
-                {t}
-              </span>
+                {tag}
+              </Badge>
             ))}
-          </div>
+          </Flex>
 
           {project.link ? (
             <a
@@ -61,7 +63,7 @@ export default function Project() {
           >
             Repo
           </a>
-          <p className="text-xl leading-relaxed">{project.content}</p>
+          <Text>{project.content}</Text>
         </>
       )}
       <Footer />
