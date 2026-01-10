@@ -3,10 +3,10 @@ import ReactDOM from "react-dom/client";
 import { RouterProvider, createRouter } from "@tanstack/react-router";
 import "./index.css";
 // Import the generated route tree
-import { MantineProvider } from "@mantine/core";
-import { theme } from "./theme";
 import { routeTree } from "./routeTree.gen";
-
+import "@mantine/core/styles.css";
+import { theme } from "./theme";
+import { MantineProvider } from "@mantine/core";
 // Create a new router instance
 const router = createRouter({ routeTree });
 
