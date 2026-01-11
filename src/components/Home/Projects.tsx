@@ -1,4 +1,4 @@
-import { Title, Text, Badge } from "@mantine/core";
+import { Title, Text, Badge, Button, Anchor, Box, Image } from "@mantine/core";
 import { PROJECTS } from "../../data/projects";
 import { Link } from "@tanstack/react-router";
 import { FiArrowUpRight } from "react-icons/fi";
@@ -15,7 +15,7 @@ export default function Projects() {
             params={{ id: project.id.toString() }}
             className="rounded-md hover:bg-tertiary-300 cursor-pointer flex"
           >
-            <div className="flex-1">
+            <Box>
               <Title order={5} className="px-3 py-3 text-lg font-semibold">
                 {project.title}
               </Title>
@@ -26,24 +26,18 @@ export default function Projects() {
                   <Badge key={tag}>{tag}</Badge>
                 ))}
               </div>
-            </div>
-            <img
-              src={project.img}
-              alt={project.title}
-              className="object-fit rounded-sm md:w-50 md:h-50 w-25 h-25 "
-            />
+            </Box>
+            <Image src={project.img} alt={project.title} h={250} w={250} />
           </Link>
         ))}
 
       {/* View All Button */}
-      <div className="mt-12">
-        <Link
-          to="/projects"
-          className="inline-block px-6 py-3 rounded-lg font-medium hover:text-secondary-300 cursor-pointer"
-        >
+
+      <Anchor component={Link} to="/projects">
+        <Button>
           View All Projects <FiArrowUpRight className="inline-block ml-2" />
-        </Link>
-      </div>
+        </Button>
+      </Anchor>
     </>
   );
 }
