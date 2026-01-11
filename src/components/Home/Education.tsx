@@ -1,3 +1,4 @@
+import { Text, Title } from "@mantine/core";
 import { EDUCATION } from "../../data/education";
 
 export default function Education() {
@@ -5,9 +6,11 @@ export default function Education() {
     <>
       {EDUCATION.map((edu, idx) => (
         <div key={idx} className="rounded-lg">
-          <h3 className="text-xl font-semibold">{edu.degree}</h3>
-          <p className="text-secondary-300">{edu.institution}</p>
-          {edu.startDate && <p>{edu.startDate}</p>}
+          <Title order={3} c="red.9">
+            {edu.degree}
+          </Title>
+          <Text>{edu.institution}</Text>
+          {edu.startDate && <Text c="dimmed">{edu.startDate}</Text>}
         </div>
       ))}
     </>

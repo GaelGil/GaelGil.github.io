@@ -1,3 +1,4 @@
+import { Title, Text, Badge } from "@mantine/core";
 import { PROJECTS } from "../../data/projects";
 import { Link } from "@tanstack/react-router";
 import { FiArrowUpRight } from "react-icons/fi";
@@ -15,21 +16,14 @@ export default function Projects() {
             className="rounded-md hover:bg-tertiary-300 cursor-pointer flex"
           >
             <div className="flex-1">
-              <h5 className="px-3 py-3 text-lg font-semibold">
+              <Title order={5} className="px-3 py-3 text-lg font-semibold">
                 {project.title}
-              </h5>
-              <p className="px-3 mt-2 text-sm leading-relaxed text-secondary-300">
-                {project.description}
-              </p>
+              </Title>
+              <Text>{project.description}</Text>
               {/* Tags */}
               <div className="px-3 mt-4 flex flex-wrap gap-2 ">
-                {project.tags?.map((t) => (
-                  <span
-                    key={t}
-                    className="px-2 py-1 text-xs rounded-md text-secondary-300 bg-tertiary-300"
-                  >
-                    {t}
-                  </span>
+                {project.tags?.map((tag) => (
+                  <Badge key={tag}>{tag}</Badge>
                 ))}
               </div>
             </div>
