@@ -5,40 +5,30 @@ import Education from "../Home/Education";
 import Experince from "../Home/Experience";
 import Footer from "./Footer";
 import Section from "./Section";
+import { Stack } from "@mantine/core";
 export default function Content() {
   return (
-    <div className="space-y-12">
+    <Stack mt="xl">
       <Section id="about" title="">
-        <div className="grid grid-cols-1 gap-6">
-          <About />
-        </div>
+        <About />
       </Section>
       <Section id="other" title="Projects">
-        <div className="flex flex-col gap-6">
-          <Projects />
-        </div>
+        <Projects />
       </Section>
       <Section id="experience" title="Experience">
-        <div className="grid grid-cols-1 gap-6">
-          <Experince />
-        </div>
+        <Experince />
       </Section>
       <Section id="education" title="Education">
-        <div className="grid grid-cols-1 gap-6">
-          <Education />
-        </div>
+        <Education />
       </Section>
-
       <Section id="skills" title="Skills">
-        <div className="grid grid-cols-1 gap-6">
-          <Skills />
-        </div>
+        <Skills />
       </Section>
       <section id="footer">
         <div className="max-w-3xl mx-auto md:mx-0 md:ml-8">
           <Footer />
         </div>
       </section>
-    </div>
+    </Stack>
   );
 }

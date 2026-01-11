@@ -16,7 +16,7 @@ export default function Skills() {
           }
           variant="light"
           color="rgba(255, 0, 0, 1)"
-          size="xl"
+          size="lg"
         >
           {skill}
         </Badge>

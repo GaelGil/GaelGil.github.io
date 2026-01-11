@@ -5,45 +5,43 @@ import Photo from "../Home/Photo";
 import { Title, Text, Anchor, Stack, Flex } from "@mantine/core";
 export default function Sidebar() {
   return (
-    <div className="lg:top-0 lg:h-screen lg:mt-16 lg:mb-16 flex justify-center items-start">
+    <Stack mt="xl">
       <Stack>
-        <Stack>
-          <Photo />
-          <Title order={1} c="red.9">
-            {NAME}
-          </Title>
-          <Text>{POSITION}</Text>
-        </Stack>
-        <Stack>
-          <Anchor href="#about" fw={700} fz="xl" c="red.9 ">
-            About
-          </Anchor>
-          <Anchor href="#projects" fw={700} fz="xl" c="red.9 ">
-            Projects
-          </Anchor>
-          <Anchor href="#experience" fw={700} fz="xl" c="red.9 ">
-            Experience
-          </Anchor>
-        </Stack>
-        <Flex gap={16}>
-          <Anchor
-            href={GITHUB_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex hover:text-primary-600"
-          >
-            <FaGithub size={24} />
-          </Anchor>
-          <Anchor
-            href={LINKEDIN_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex hover:text-primary-600"
-          >
-            <FaLinkedin size={24} />
-          </Anchor>
-        </Flex>
+        <Photo />
+        <Title order={1} c="red.9">
+          {NAME}
+        </Title>
+        <Text>{POSITION}</Text>
       </Stack>
-    </div>
+      <Stack>
+        <Anchor href="#about" fw={700} fz="xl" c="red.9 ">
+          About
+        </Anchor>
+        <Anchor href="#projects" fw={700} fz="xl" c="red.9 ">
+          Projects
+        </Anchor>
+        <Anchor href="#experience" fw={700} fz="xl" c="red.9 ">
+          Experience
+        </Anchor>
+      </Stack>
+      <Flex gap={16}>
+        <Anchor
+          href={GITHUB_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex hover:text-primary-600"
+        >
+          <FaGithub size={24} />
+        </Anchor>
+        <Anchor
+          href={LINKEDIN_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex hover:text-primary-600"
+        >
+          <FaLinkedin size={24} />
+        </Anchor>
+      </Flex>
+    </Stack>
   );
 }
