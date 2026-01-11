@@ -24,11 +24,8 @@ export default function Content() {
       <Section id="skills" title="Skills">
         <Skills />
       </Section>
-      <section id="footer">
-        <div className="max-w-3xl mx-auto md:mx-0 md:ml-8">
-          <Footer />
-        </div>
-      </section>
+
+      <Footer />
     </Stack>
   );
 }

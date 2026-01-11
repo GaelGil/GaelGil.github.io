@@ -17,22 +17,20 @@ export const theme = createTheme({
     ],
   },
 
-  primaryColor: "gray",
+  primaryColor: "red",
 
   components: {}, // default theme (can be 'dark')
 });
 
 export const cssResolver: CSSVariablesResolver = () => ({
   variables: {
-    // "--mantine-color-text-primary": theme.colors.brand[0],
-    // "--mantine-color-text-secondary": theme.colors.black[1],
-    // "--mantine-color-text-tertiary": theme.colors.black[8],
-    // "--mantine-color-text-quaternary": theme.colors.black[2],
-    // "--mantine-color-accent": theme.colors.red[1],
-    // "--mantine-color-background": theme.colors.brand[7],
-    // "--mantine-color-background-secondary": theme.colors.brand[1],
-    // "--mantine-color-background-tertiary": theme.colors.brand[6],
+    // Define --mantine-color-body as black
+    "--mantine-color-body": "black",
   },
-  light: {},
-  dark: {},
+  light: {
+    "--mantine-color-body": "black", // Override light mode body
+  },
+  dark: {
+    "--mantine-color-body": "black", // Override dark mode body
+  },
 });
