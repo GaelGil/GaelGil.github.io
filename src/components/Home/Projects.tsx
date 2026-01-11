@@ -38,7 +38,13 @@ export default function Projects() {
                   ))}
                 </Box>
               </Box>
-              <Image src={project.img} alt={project.title} h={250} w={250} />
+              <Image
+                src={project.img}
+                alt={project.title}
+                h={250}
+                w={250}
+                fit="fill"
+              />
             </Flex>
           </Link>
         ))}
