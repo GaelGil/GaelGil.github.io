@@ -3,17 +3,20 @@ import { SKILLS } from "../../data/skills";
 
 export default function Skills() {
   return (
-    <Flex>
+    <Flex gap={4} wrap="wrap" justify="center">
       {SKILLS.map((skill: string, idx: number) => (
         <Badge
           key={idx}
           leftSection={
             <Image
-              w={10}
-              h={10}
+              w={25}
+              h={25}
               src={`https://skillicons.dev/icons?i=${skill.toLowerCase()}&theme=dark`}
             />
           }
+          variant="light"
+          color="rgba(255, 0, 0, 1)"
+          size="xl"
         >
           {skill}
         </Badge>

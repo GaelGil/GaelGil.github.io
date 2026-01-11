@@ -32,7 +32,7 @@ export default function Projects() {
                 {/* Tags */}
                 <Box>
                   {project.tags?.map((tag) => (
-                    <Badge key={tag} variant="filled" color="red.9">
+                    <Badge key={tag} variant="light" color="rgba(255, 0, 0, 1)">
                       {tag}
                     </Badge>
                   ))}
@@ -52,7 +52,9 @@ export default function Projects() {
       {/* View All Button */}
 
       <Anchor component={Link} to="/projects">
-        <Button rightSection={<FiArrowUpRight />}>View All Projects</Button>
+        <Button rightSection={<FiArrowUpRight />} variant="light" color="red.9">
+          View All Projects
+        </Button>
       </Anchor>
     </>
   );

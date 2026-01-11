@@ -62,9 +62,11 @@ export default function Projects() {
               <Title order={5}>{project.title}</Title>
               <Text>{project.description}</Text>
               {/* Tags */}
-              <Flex gap={2}>
+              <Flex gap={4} wrap="wrap">
                 {project.tags?.map((tag) => (
-                  <Badge key={tag}>{tag}</Badge>
+                  <Badge key={tag} variant="light" color="rgba(255, 0, 0, 1)">
+                    {tag}
+                  </Badge>
                 ))}
               </Flex>
             </Link>
