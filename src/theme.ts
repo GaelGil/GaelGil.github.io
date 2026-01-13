@@ -15,6 +15,30 @@ export const theme = createTheme({
       "#afafaf", // shade 8
       "#000d33", // shade 9
     ],
+    red: [
+      "#ff0033ff", // shade 0
+      "#ff0033ff", // shade 1
+      "#ff0033ff", // shade 2
+      "#ff2f59ff", // shade 3
+      "#ff0033ff", // shade 4
+      "#ff0033ff", // shade 5
+      "#ff0033ff", // shade 6
+      "#ff0033ff", // shade 7
+      "#ff0033ff", // shade 8
+      "#ff0033ff", // shade 9
+    ],
+    dark: [
+      "#ffffffff", // shade 0
+      "#000000ff", // shade 1
+      "#000000ff", // shade 2
+      "#000000ff", // shade 3
+      "#000000ff", // shade 4
+      "#000000ff", // shade 5
+      "#000000ff", // shade 6
+      "#000000ff", // shade 7
+      "#000000ff", // shade 8
+      "#000000ff", // shade 9
+    ],
   },
 
   primaryColor: "red",

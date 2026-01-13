@@ -8,19 +8,19 @@ export default function Sidebar() {
     <Stack mt="xl">
       <Stack>
         <Photo />
-        <Title order={1} c="red.9">
+        <Title order={1} c="red">
           {NAME}
         </Title>
         <Text>{POSITION}</Text>
       </Stack>
       <Stack>
-        <Anchor href="#about" fw={700} fz="xl" c="red.9 ">
+        <Anchor href="#about" fw={700} fz="xl" c="red ">
           About
         </Anchor>
-        <Anchor href="#projects" fw={700} fz="xl" c="red.9 ">
+        <Anchor href="#projects" fw={700} fz="xl" c="red ">
           Projects
         </Anchor>
-        <Anchor href="#experience" fw={700} fz="xl" c="red.9 ">
+        <Anchor href="#experience" fw={700} fz="xl" c="red">
           Experience
         </Anchor>
       </Stack>

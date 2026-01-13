@@ -43,7 +43,7 @@ export default function Projects() {
         <Title order={4}>All Projects</Title>
 
         <TextInput
-          variant="filled"
+          variant="light"
           size="lg"
           radius="lg"
           value={searchQuery}
@@ -64,7 +64,7 @@ export default function Projects() {
               {/* Tags */}
               <Flex gap={4} wrap="wrap">
                 {project.tags?.map((tag) => (
-                  <Badge key={tag} variant="light" color="rgba(255, 0, 0, 1)">
+                  <Badge key={tag} variant="light" color="red">
                     {tag}
                   </Badge>
                 ))}

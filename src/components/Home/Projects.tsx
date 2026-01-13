@@ -25,14 +25,14 @@ export default function Projects() {
           >
             <Flex>
               <Box>
-                <Title c="red.9" order={5}>
+                <Title c="red" order={5}>
                   {project.title}
                 </Title>
                 <Text>{project.description}</Text>
                 {/* Tags */}
                 <Box>
                   {project.tags?.map((tag) => (
-                    <Badge key={tag} variant="light" color="rgba(255, 0, 0, 1)">
+                    <Badge key={tag} variant="light" color="red">
                       {tag}
                     </Badge>
                   ))}
@@ -52,7 +52,7 @@ export default function Projects() {
       {/* View All Button */}
 
       <Anchor component={Link} to="/projects">
-        <Button rightSection={<FiArrowUpRight />} variant="light" color="red.9">
+        <Button rightSection={<FiArrowUpRight />} variant="light" color="red">
           View All Projects
         </Button>
       </Anchor>

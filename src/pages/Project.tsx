@@ -26,11 +26,7 @@ export default function Project() {
     <Container mt={"xl"}>
       <Stack w={"100%"} align="center">
         <Anchor component={Link} to="/projects">
-          <Button
-            variant="light"
-            color="rgba(255, 0, 0, 1)"
-            leftSection={<FaArrowLeft />}
-          >
+          <Button variant="light" color="red" leftSection={<FaArrowLeft />}>
             View All Projects
           </Button>
         </Anchor>
@@ -41,7 +37,7 @@ export default function Project() {
         </Box>
         <Flex gap={4}>
           {project.tags?.map((tag) => (
-            <Badge key={tag} variant="light" color="rgba(255, 0, 0, 1)">
+            <Badge key={tag} variant="light" color="red">
               {tag}
             </Badge>
           ))}
