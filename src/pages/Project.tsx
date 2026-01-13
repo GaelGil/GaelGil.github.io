@@ -9,11 +9,13 @@ import {
   Title,
   Anchor,
   Button,
-  Box,
   Stack,
   Container,
+  Box,
 } from "@mantine/core";
 import Footer from "../components/Layout/Footer";
+import { FaGithub } from "react-icons/fa";
+import { TbWorld } from "react-icons/tb";
 export default function Project() {
   const { id } = useParams({ strict: false });
   const project = PROJECTS.find((p) => p.id === Number(id));
@@ -23,36 +25,53 @@ export default function Project() {
   }
 
   return (
-    <Container mt={"xl"}>
+    <Container mt="xl">
       <Stack w={"100%"} align="center">
-        <Anchor component={Link} to="/projects">
-          <Button variant="light" color="red" leftSection={<FaArrowLeft />}>
-            View All Projects
-          </Button>
-        </Anchor>
+        <Flex>
+          <Stack>
+            <Anchor component={Link} to="/projects">
+              <Button variant="light" color="red" leftSection={<FaArrowLeft />}>
+                View All Projects
+              </Button>
+            </Anchor>
 
-        <Title order={5}>{project.title}</Title>
-        <Box>
-          <Image src={project.img} alt={project.title} h={250} w={250} />
-        </Box>
-        <Flex gap={4}>
-          {project.tags?.map((tag) => (
-            <Badge key={tag} variant="light" color="red">
-              {tag}
-            </Badge>
-          ))}
+            <Box>
+              <Title order={5}>{project.title}</Title>
+            </Box>
+            <Flex gap={4}>
+              {project.tags?.map((tag) => (
+                <Badge key={tag} variant="light" color="red">
+                  {tag}
+                </Badge>
+              ))}
+            </Flex>
+
+            <Flex gap={4}>
+              {project.link && (
+                <Anchor href={project.link} target="_blank">
+                  <Button variant="transparent" leftSection={<TbWorld />}>
+                    Live Demo
+                  </Button>
+                </Anchor>
+              )}
+              <Anchor href={project.repo} target="_blank">
+                <Button variant="transparent" leftSection={<FaGithub />}>
+                  Git Repo
+                </Button>
+              </Anchor>
+            </Flex>
+          </Stack>
+          <Image
+            src={project.img}
+            alt={project.title}
+            h={350}
+            w={350}
+            fit="fill"
+          />
         </Flex>
-
-        {project.link && (
-          <Anchor href={project.link} target="_blank">
-            Project
-          </Anchor>
-        )}
-        <br />
-        <Anchor href={project.repo} target="_blank">
-          Repo
-        </Anchor>
-        <Text>{project.content}</Text>
+        <Flex>
+          <Text>{project.content}</Text>
+        </Flex>
         <Footer />
       </Stack>
     </Container>
