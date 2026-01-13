@@ -31,7 +31,7 @@ export const theme = createTheme({
       "#ffffffff", // shade 0
       "#000000ff", // shade 1
       "#000000ff", // shade 2
-      "#000000ff", // shade 3
+      "#f6f6f6ff", // shade 3
       "#000000ff", // shade 4
       "#000000ff", // shade 5
       "#000000ff", // shade 6

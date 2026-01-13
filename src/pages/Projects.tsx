@@ -49,9 +49,15 @@ export default function Projects() {
             variant="filled"
             size="lg"
             radius="lg"
+            c="red"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Search Projects..."
+            styles={{
+              input: {
+                border: "1px solid red",
+              },
+            }}
           />
         </Box>
         <SimpleGrid cols={3} spacing={"1px"}>
@@ -81,7 +87,7 @@ export default function Projects() {
                 <Title order={5} c="red">
                   {project.title}
                 </Title>
-                <Text c="dimmed"> {project.description}</Text>
+                <Text> {project.description}</Text>
                 {/* Tags */}
                 <Flex gap={4} wrap="wrap">
                   {project.tags?.map((tag) => (
