@@ -17,6 +17,8 @@ import {
   Image,
   Stack,
   Container,
+  Box,
+  SimpleGrid,
 } from "@mantine/core";
 export default function Projects() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -35,43 +37,63 @@ export default function Projects() {
   return (
     <Container mt={"xl"}>
       <Stack w={"100%"} align="center">
-        <Anchor component={Link} to={"/"}>
-          <Button variant="transparent" leftSection={<FaArrowLeft />}>
-            {NAME}
-          </Button>
-        </Anchor>
-        <Title order={4}>All Projects</Title>
+        <Box w="100%">
+          <Anchor component={Link} to={"/"}>
+            <Button variant="transparent" leftSection={<FaArrowLeft />}>
+              {NAME}
+            </Button>
+          </Anchor>
+          <Title order={4}>All Projects</Title>
 
-        <TextInput
-          variant="light"
-          size="lg"
-          radius="lg"
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-          placeholder="Search Projects..."
-        />
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <TextInput
+            variant="filled"
+            size="lg"
+            radius="lg"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            placeholder="Search Projects..."
+          />
+        </Box>
+        <SimpleGrid cols={3} spacing={"1px"}>
           {[...searchedProjects].reverse().map((project) => (
             <Link
               to="/projects/$id"
               params={{ id: project.id.toString() }}
               key={project.id}
-              className="rounded-xl hover:bg-tertiary-300 cursor-pointer flex flex-col"
             >
-              <Image src={project.img} alt={project.title} fit="fill" />
-              <Title order={5}>{project.title}</Title>
-              <Text>{project.description}</Text>
-              {/* Tags */}
-              <Flex gap={4} wrap="wrap">
-                {project.tags?.map((tag) => (
-                  <Badge key={tag} variant="light" color="red">
-                    {tag}
-                  </Badge>
-                ))}
-              </Flex>
+              <Box
+                mb="md"
+                bdrs={12}
+                style={{
+                  transition: "transform 0.2s ease, box-shadow 0.2s ease",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = "translateY(-4px)";
+                  e.currentTarget.style.boxShadow =
+                    "0 12px 40px rgba(0, 0, 0, 0.4)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = "translateY(0)";
+                  e.currentTarget.style.boxShadow = "none";
+                }}
+              >
+                <Image src={project.img} alt={project.title} fit="cover" />
+                <Title order={5} c="red">
+                  {project.title}
+                </Title>
+                <Text c="dimmed"> {project.description}</Text>
+                {/* Tags */}
+                <Flex gap={4} wrap="wrap">
+                  {project.tags?.map((tag) => (
+                    <Badge key={tag} variant="light" color="red">
+                      {tag}
+                    </Badge>
+                  ))}
+                </Flex>
+              </Box>
             </Link>
           ))}
-        </div>
+        </SimpleGrid>
         <Footer />
       </Stack>
     </Container>
