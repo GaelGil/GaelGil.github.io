@@ -102,10 +102,11 @@ export const PROJECTS: Project[] = [
     id: 7,
     title: "Full Stack Template",
     description:
-      "This is a full stack template I created using react, typescript, bun, flask, postgres and  docker",
-    content: "Portfolio",
+      "This is a full stack template I repurposed to use for hackathons/projects etc.",
+    content:
+      "In this project I used the template from ... and added AI features such as chat,sessions. This was its ready to use for future projects or hackathons. A lot of projects use AI agents so essentially the template is a good starting point. This way we only focus on the agent development. The initial template is from ...",
     repo: "https://github.com/GaelGil/full_stack_template",
-    tags: ["React", "Typescript", "Flask", "Postgres", "Docker", "Template"],
+    tags: ["React", "Typescript", "FastAPI", "Postgres", "Docker", "Template"],
     img: fulltack,
   },
   {
