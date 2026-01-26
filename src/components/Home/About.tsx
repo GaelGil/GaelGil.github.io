@@ -5,7 +5,7 @@ export default function About() {
     <Stack>
       <Text className="text-lg">
         Hello, my name is{" "}
-        <Anchor href="" underline="never" c="red.9">
+        <Anchor href="" underline="never" c="red">
           {NAME}
         </Anchor>
         . I am an aspiring data scientist. Thank you for coming to my website.
@@ -14,7 +14,7 @@ export default function About() {
       <Text>
         I have a BS in Applied Math and Computer Science Minor from San Jose
         State University. My technical interests include{" "}
-        <Anchor href="" underline="never" c="red.9">
+        <Anchor href="" underline="never" c="red">
           math, deep learning, computer vision and overall software engineering
         </Anchor>
         . Most of my projects are related to those topics.
