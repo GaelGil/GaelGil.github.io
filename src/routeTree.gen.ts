@@ -32,7 +32,7 @@ const ProjectsIdRoute = ProjectsIdRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/projects/$id': typeof ProjectsIdRoute
-  '/projects': typeof ProjectsIndexRoute
+  '/projects/': typeof ProjectsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -47,7 +47,7 @@ export interface FileRoutesById {
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/projects/$id' | '/projects'
+  fullPaths: '/' | '/projects/$id' | '/projects/'
   fileRoutesByTo: FileRoutesByTo
   to: '/' | '/projects/$id' | '/projects'
   id: '__root__' | '/' | '/projects/$id' | '/projects/'
@@ -71,7 +71,7 @@ declare module '@tanstack/react-router' {
     '/projects/': {
       id: '/projects/'
       path: '/projects'
-      fullPath: '/projects'
+      fullPath: '/projects/'
       preLoaderRoute: typeof ProjectsIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
