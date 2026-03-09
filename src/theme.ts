@@ -16,16 +16,16 @@ export const theme = createTheme({
       "#000d33", // shade 9
     ],
     red: [
-      "#ff0033ff", // shade 0
-      "#ff0033ff", // shade 1
-      "#ff0033ff", // shade 2
-      "#ff2f59ff", // shade 3
-      "#ff0033ff", // shade 4
-      "#ff0033ff", // shade 5
-      "#ff0033ff", // shade 6
-      "#ff0033ff", // shade 7
-      "#ff0033ff", // shade 8
-      "#ff0033ff", // shade 9
+      "#ff0033ff",
+      "#ff0033ff",
+      "#ff0033ff",
+      "#ff2f59ff",
+      "#ff0033ff",
+      "#ff0033ff",
+      "#ff0033ff",
+      "#ff0033ff",
+      "#ff0033ff",
+      "#ff0033ff",
     ],
     dark: [
       "#ffffffff", // shade 0
@@ -48,13 +48,12 @@ export const theme = createTheme({
 
 export const cssResolver: CSSVariablesResolver = () => ({
   variables: {
-    // Define --mantine-color-body as black
-    "--mantine-color-body": "black",
+    "--mantine-color-body": "#0a0a0a",
   },
   light: {
-    "--mantine-color-body": "black", // Override light mode body
+    "--mantine-color-body": "#0a0a0a",
   },
   dark: {
-    "--mantine-color-body": "black", // Override dark mode body
+    "--mantine-color-body": "#0a0a0a",
   },
 });

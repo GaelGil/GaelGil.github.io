@@ -19,13 +19,14 @@ declare module "@tanstack/react-router" {
 
 // Render the app
 const rootElement = document.getElementById("root")!;
+import { cssResolver } from "./theme";
 if (!rootElement.innerHTML) {
   const root = ReactDOM.createRoot(rootElement);
   root.render(
     <StrictMode>
-      <MantineProvider theme={theme} defaultColorScheme="dark">
+      <MantineProvider theme={theme} cssVariablesResolver={cssResolver}>
         <RouterProvider router={router} />
       </MantineProvider>
-    </StrictMode>
+    </StrictMode>,
   );
 }
