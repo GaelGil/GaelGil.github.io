@@ -39,6 +39,18 @@ export const theme = createTheme({
       "#000000ff", // shade 8
       "#000000ff", // shade 9
     ],
+    black: [
+      "#ffffffff", // shade 0
+      "#000000ff", // shade 1
+      "#000000ff", // shade 2
+      "#f6f6f6ff", // shade 3
+      "#000000ff", // shade 4
+      "#000000ff", // shade 5
+      "#000000ff", // shade 6
+      "#000000ff", // shade 7
+      "#000000ff", // shade 8
+      "#000000ff", // shade 9
+    ],
   },
 
   primaryColor: "red",
@@ -48,12 +60,12 @@ export const theme = createTheme({
 
 export const cssResolver: CSSVariablesResolver = () => ({
   variables: {
-    "--mantine-color-body": "#0a0a0a",
+    "--mantine-color-body": "black",
   },
   light: {
-    "--mantine-color-body": "#0a0a0a",
+    "--mantine-color-body": "black",
   },
   dark: {
-    "--mantine-color-body": "#0a0a0a",
+    "--mantine-color-body": "black",
   },
 });
