@@ -61,11 +61,14 @@ export const theme = createTheme({
 export const cssResolver: CSSVariablesResolver = () => ({
   variables: {
     "--mantine-color-body": "black",
+    "--mantine-color-text": "white",
   },
   light: {
     "--mantine-color-body": "black",
+    "--mantine-color-text": "white",
   },
   dark: {
     "--mantine-color-body": "black",
+    "--mantine-color-text": "white",
   },
 });

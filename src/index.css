@@ -1,18 +1,6 @@
 @import "tailwindcss";
 @import "tailwindcss/utilities";
 
-@layer base {
-  html {
-    @apply text-white;
-  }
-}
-
-@theme {
-  --color-primary-600: oklch(81% 0.117 11.638);
-  --color-secondary-300: oklch(64.5% 0.246 16.439);
-  --color-tertiary-300: oklch(64.5% 0.246 16.439 / 0.2);
-}
-/* bg-gradient-to-r from-[#e3f0ff] to-[#f8fafd] text-primary-600 */
 body {
   background-color: oklch(0% 0 0);
   font-family: "Roboto", sans-serif;
