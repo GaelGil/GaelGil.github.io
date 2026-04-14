@@ -30,7 +30,11 @@ export default function Project() {
         <Flex>
           <Stack>
             <Anchor component={Link} to="/projects">
-              <Button variant="light" color="red" leftSection={<FaArrowLeft />}>
+              <Button
+                variant="light"
+                color="brand.7"
+                leftSection={<FaArrowLeft />}
+              >
                 View All Projects
               </Button>
             </Anchor>
@@ -40,7 +44,7 @@ export default function Project() {
             </Box>
             <Flex gap={4}>
               {project.tags?.map((tag) => (
-                <Badge key={tag} variant="light" color="red">
+                <Badge key={tag} variant="light" color="brand.7">
                   {tag}
                 </Badge>
               ))}

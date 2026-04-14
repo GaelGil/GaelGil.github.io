@@ -5,7 +5,7 @@ export default function Experience() {
     <>
       {EXPERIENCE.map((exp, idx) => (
         <Box key={idx}>
-          <Title order={3} c="red">
+          <Title order={3} c="brand.7">
             {exp.company}
           </Title>
           <Text>{exp.position}</Text>

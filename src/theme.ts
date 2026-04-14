@@ -4,56 +4,20 @@ import type { CSSVariablesResolver } from "@mantine/core";
 export const theme = createTheme({
   colors: {
     brand: [
-      "#ffffff", // shade 0
-      "#212121", // shade 1
-      "#303030", // shade 2
-      "#414141", // shade 3
-      "#0d0d0d80", // shade 4
-      "#303030", // shade 5
-      "#181818", // shade 6
-      "#000000", // shade 7
-      "#afafaf", // shade 8
-      "#000d33", // shade 9
-    ],
-    red: [
-      "#ff0033ff",
-      "#ff0033ff",
-      "#ff0033ff",
-      "#ff2f59ff",
-      "#ff0033ff",
-      "#ff0033ff",
-      "#ff0033ff",
-      "#ff0033ff",
-      "#ff0033ff",
-      "#ff0033ff",
-    ],
-    dark: [
-      "#ffffffff", // shade 0
-      "#000000ff", // shade 1
-      "#000000ff", // shade 2
-      "#f6f6f6ff", // shade 3
-      "#000000ff", // shade 4
-      "#000000ff", // shade 5
-      "#000000ff", // shade 6
-      "#000000ff", // shade 7
-      "#000000ff", // shade 8
-      "#000000ff", // shade 9
-    ],
-    black: [
-      "#ffffffff", // shade 0
-      "#000000ff", // shade 1
-      "#000000ff", // shade 2
-      "#f6f6f6ff", // shade 3
-      "#000000ff", // shade 4
-      "#000000ff", // shade 5
-      "#000000ff", // shade 6
-      "#000000ff", // shade 7
-      "#000000ff", // shade 8
-      "#000000ff", // shade 9
+      "#e6f5e6", // shade 0
+      "#d1ebd1", // shade 1
+      "#a8d9a8", // shade 2
+      "#7ec77e", // shade 3
+      "#5eb65e", // shade 4
+      "#3da23d", // shade 5
+      "#2d8a2d", // shade 6
+      "#1f6b1f", // shade 7
+      "#144d14", // shade 8
+      "#0a320a", // shade 9
     ],
   },
 
-  primaryColor: "red",
+  primaryColor: "brand",
 
   components: {}, // default theme (can be 'dark')
 });

@@ -49,13 +49,13 @@ export default function Projects() {
             variant="filled"
             size="lg"
             radius="lg"
-            c="red"
+            c="brand.7"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Search Projects..."
             styles={{
               input: {
-                border: "1px solid red",
+                border: "1px solid primary",
               },
             }}
           />
@@ -84,14 +84,14 @@ export default function Projects() {
                 }}
               >
                 <Image src={project.img} alt={project.title} fit="cover" />
-                <Title order={5} c="red">
+                <Title order={5} c="brand.7">
                   {project.title}
                 </Title>
                 <Text> {project.description}</Text>
                 {/* Tags */}
                 <Flex gap={4} wrap="wrap">
                   {project.tags?.map((tag) => (
-                    <Badge key={tag} variant="light" color="red">
+                    <Badge key={tag} variant="light" color="brand.7">
                       {tag}
                     </Badge>
                   ))}
