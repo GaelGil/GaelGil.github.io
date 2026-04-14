@@ -7,13 +7,14 @@ import {
   Box,
   Image,
   Flex,
+  Card,
 } from "@mantine/core";
 import { PROJECTS } from "../../data/projects";
 import { Link } from "@tanstack/react-router";
 import { FiArrowUpRight } from "react-icons/fi";
 export default function Projects() {
   return (
-    <>
+    <Card>
       {[...PROJECTS]
         .reverse()
         .slice(0, 4)
@@ -23,20 +24,23 @@ export default function Projects() {
             to="/projects/$id"
             params={{ id: project.id.toString() }}
           >
-            <Flex>
-              <Box>
-                <Title c="red" order={5}>
-                  {project.title}
-                </Title>
-                <Text>{project.description}</Text>
-                {/* Tags */}
-                <Box>
-                  {project.tags?.map((tag) => (
-                    <Badge key={tag} variant="light" color="red">
-                      {tag}
-                    </Badge>
-                  ))}
-                </Box>
+            <Flex h={250}>
+              <Box style={{ flex: 1 }}>
+                <Flex h="100%" direction="column" justify="space-between">
+                  <Box>
+                    <Title mt="md" c="red" order={5}>
+                      {project.title}
+                    </Title>
+                    <Text>{project.description}</Text>
+                    <Box>
+                      {project.tags?.map((tag) => (
+                        <Badge key={tag} variant="light" color="red">
+                          {tag}
+                        </Badge>
+                      ))}
+                    </Box>
+                  </Box>
+                </Flex>
               </Box>
               <Image
                 src={project.img}
@@ -49,13 +53,11 @@ export default function Projects() {
           </Link>
         ))}
 
-      {/* View All Button */}
-
       <Anchor component={Link} to="/projects">
         <Button rightSection={<FiArrowUpRight />} variant="light" color="red">
           View All Projects
         </Button>
       </Anchor>
-    </>
+    </Card>
   );
 }
