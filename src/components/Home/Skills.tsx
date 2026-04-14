@@ -15,7 +15,7 @@ export default function Skills() {
             />
           }
           variant="light"
-          color="brand.7"
+          color="brand.2"
           size="lg"
         >
           {skill}

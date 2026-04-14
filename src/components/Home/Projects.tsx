@@ -14,7 +14,7 @@ import { Link } from "@tanstack/react-router";
 import { FiArrowUpRight } from "react-icons/fi";
 export default function Projects() {
   return (
-    <Card>
+    <Card bg="transparent">
       {[...PROJECTS]
         .reverse()
         .slice(0, 4)
