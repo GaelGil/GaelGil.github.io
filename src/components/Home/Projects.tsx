@@ -1,7 +1,6 @@
 import {
   Title,
   Text,
-  Badge,
   Button,
   Anchor,
   Box,
@@ -12,6 +11,7 @@ import {
 import { PROJECTS } from "../../data/projects";
 import { Link } from "@tanstack/react-router";
 import { FiArrowUpRight } from "react-icons/fi";
+import Badges from "./Badges";
 export default function Projects() {
   return (
     <Card bg="transparent">
@@ -33,11 +33,12 @@ export default function Projects() {
                     </Title>
                     <Text>{project.description}</Text>
                     <Box>
-                      {project.tags?.map((tag) => (
-                        <Badge key={tag} variant="light" color="brand.7">
-                          {tag}
-                        </Badge>
-                      ))}
+                      <Badges
+                        data={project.tags}
+                        h={10}
+                        w={10}
+                        badgeSize="sm"
+                      />
                     </Box>
                   </Box>
                 </Flex>

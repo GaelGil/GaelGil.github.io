@@ -1,26 +1,10 @@
-import { Badge, Flex, Image } from "@mantine/core";
+import { Flex } from "@mantine/core";
 import { SKILLS } from "../../data/skills";
-
+import Badges from "./Badges";
 export default function Skills() {
   return (
     <Flex gap={4} wrap="wrap" justify="center">
-      {SKILLS.map((skill: string, idx: number) => (
-        <Badge
-          key={idx}
-          leftSection={
-            <Image
-              w={25}
-              h={25}
-              src={`https://skillicons.dev/icons?i=${skill.toLowerCase()}&theme=dark`}
-            />
-          }
-          variant="light"
-          color="brand.2"
-          size="lg"
-        >
-          {skill}
-        </Badge>
-      ))}
+      <Badges data={SKILLS} w={25} h={25} badgeSize="lg" />
     </Flex>
   );
 }
