@@ -12,7 +12,6 @@ import {
   Anchor,
   Button,
   Text,
-  Badge,
   Flex,
   Image,
   Stack,
@@ -20,6 +19,7 @@ import {
   Box,
   SimpleGrid,
 } from "@mantine/core";
+import Badges from "../components/Home/Badges";
 export default function Projects() {
   const [searchQuery, setSearchQuery] = useState("");
   const [projects] = useState<Project[]>(PROJECTS);
@@ -90,11 +90,7 @@ export default function Projects() {
                 <Text> {project.description}</Text>
                 {/* Tags */}
                 <Flex gap={4} wrap="wrap">
-                  {project.tags?.map((tag) => (
-                    <Badge key={tag} variant="light" color="brand.7">
-                      {tag}
-                    </Badge>
-                  ))}
+                  <Badges data={project.tags} h={10} w={10} badgeSize="sm" />
                 </Flex>
               </Box>
             </Link>
