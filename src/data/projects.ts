@@ -213,7 +213,7 @@ export const PROJECTS: Project[] = [
     img: transformer,
   },
   {
-    id: 15,
+    id: 16,
     title: "NemoGuardian",
     description: "AI powered real-time highway incident detection.",
     content:
@@ -221,5 +221,16 @@ export const PROJECTS: Project[] = [
     repo: "https://github.com/GaelGil/nvidia_hackathon_2026",
     tags: ["Computer Vision", "Python", "Hackathon", "Nvidia", "Nemotron"],
     img: "https://www.nvidia.com/favicon.ico",
+  },
+  {
+    id: 17,
+    title: "Deploying a Large Language Model",
+    description:
+      "Deploying a the model I previously trained so anyone can use it!",
+    content:
+      "In this project I implemented a transformer model from the paper Attention is All You Need. I implemented it from scratch in jax.",
+    repo: "https://github.com/GaelGil/notebooks/tree/master/transformer",
+    tags: ["Transformer", "seq2seq", "Python", "Jax", "Orbax", "Grain"],
+    img: transformer,
   },
 ];
