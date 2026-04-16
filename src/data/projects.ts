@@ -212,4 +212,14 @@ export const PROJECTS: Project[] = [
     tags: ["Transformer", "Python", "Jax", "NLP", "Orbax", "Grain"],
     img: transformer,
   },
+  {
+    id: 15,
+    title: "NemoGuardian",
+    description: "AI powered real-time highway incident detection.",
+    content:
+      "AI powered real-time highway incident detection using California DOT live CCTV feeds and NVIDIA Nemotron models. NemoGuardian analyzes live camera frames from 1,500+ Caltrans CCTV cameras using a two-step agentic pipeline: Nemotron VL describes the scene, then Nemotron Super 49B reasons about severity and recommends emergency response — all in seconds.",
+    repo: "https://github.com/GaelGil/nvidia_hackathon_2026",
+    tags: ["Computer Vision", "Python", "Hackathon", "Nvidia", "Nemotron"],
+    img: transformer,
+  },
 ];
