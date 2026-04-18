@@ -2,6 +2,6 @@
 @import "tailwindcss/utilities";
 
 body {
-  background-color: oklch(0% 0 0);
+  background-color: #3b2418;
   font-family: "Roboto", sans-serif;
 }
