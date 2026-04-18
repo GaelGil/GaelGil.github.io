@@ -2,7 +2,6 @@ import { useParams, Link } from "@tanstack/react-router";
 import { PROJECTS } from "../data/projects";
 import { FaArrowLeft } from "react-icons/fa";
 import {
-  Badge,
   Image,
   Flex,
   Text,
@@ -43,40 +42,48 @@ export default function Project() {
             <Flex h={250}>
               <Box style={{ flex: 1 }}>
                 <Flex h="100%" direction="column" justify="space-between">
-                  <Box>
-                    <Title mt="md" c="brand.7" order={5}>
-                      {project.title}
-                    </Title>
-                    <Text>{project.description}</Text>
+                  <Stack>
                     <Box>
-                      <Badges
-                        data={project.tags}
-                        h={10}
-                        w={10}
-                        badgeSize="sm"
-                      />
+                      <Title mt="md" c="brand.7" order={5}>
+                        {project.title}
+                      </Title>
                     </Box>
-                    <Flex gap={4}>
-                      {project.link && (
-                        <Anchor href={project.link} target="_blank">
+                    <Box>
+                      <Text>{project.description}</Text>
+                    </Box>
+                    <Box>
+                      <Box>
+                        <Badges
+                          data={project.tags}
+                          h={10}
+                          w={10}
+                          badgeSize="sm"
+                        />
+                      </Box>
+                      <Box>
+                        {/*<Flex gap={4}>*/}
+                        {project.link && (
+                          <Anchor href={project.link} target="_blank">
+                            <Button
+                              variant="transparent"
+                              leftSection={<TbWorld />}
+                            >
+                              Live Demo
+                            </Button>
+                          </Anchor>
+                        )}
+                        <Anchor href={project.repo} target="_blank">
                           <Button
                             variant="transparent"
-                            leftSection={<TbWorld />}
+                            leftSection={<FaGithub />}
                           >
-                            Live Demo
+                            Git Repo
                           </Button>
                         </Anchor>
-                      )}
-                      <Anchor href={project.repo} target="_blank">
-                        <Button
-                          variant="transparent"
-                          leftSection={<FaGithub />}
-                        >
-                          Git Repo
-                        </Button>
-                      </Anchor>
-                    </Flex>
-                  </Box>
+                        {/*</Flex>*/}
+                      </Box>
+                    </Box>
+                  </Stack>
                 </Flex>
               </Box>
               <Image
@@ -90,43 +97,13 @@ export default function Project() {
             <Box>
               <Title order={5}>{project.title}</Title>
             </Box>
-            {/*<Flex gap={4}>
-              {project.tags?.map((tag) => (
-                <Badge key={tag} variant="light" color="brand.7">
-                  {tag}
-                </Badge>
-              ))}
-            </Flex>*/}
 
-            {/*<Flex gap={4}>
-              {project.link && (
-                <Anchor href={project.link} target="_blank">
-                  <Button variant="transparent" leftSection={<TbWorld />}>
-                    Live Demo
-                  </Button>
-                </Anchor>
-              )}
-              <Anchor href={project.repo} target="_blank">
-                <Button variant="transparent" leftSection={<FaGithub />}>
-                  Git Repo
-                </Button>
-              </Anchor>
-            </Flex>*/}
             <Flex>
               <Text>{project.content}</Text>
             </Flex>
           </Stack>
-          {/*<Image
-            src={project.img}
-            alt={project.title}
-            h={350}
-            w={350}
-            fit="fill"
-          />*/}
         </Flex>
-        {/*<Flex>
-          <Text>{project.content}</Text>
-        </Flex>*/}
+
         <Footer />
       </Stack>
     </Container>
