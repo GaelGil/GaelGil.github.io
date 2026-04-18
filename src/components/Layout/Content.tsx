@@ -9,7 +9,7 @@ import { Stack } from "@mantine/core";
 export default function Content() {
   return (
     <Stack mt="xl" gap={100}>
-      <Section id="about" title="">
+      <Section id="about" title="About">
         <About />
       </Section>
 

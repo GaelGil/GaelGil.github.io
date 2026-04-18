@@ -12,8 +12,9 @@ export default function About() {
         Here you can learn about me, my projects, experience and what I do.
       </Text>
       <Text>
-        I have a BS in Applied Math and Computer Science Minor from San Jose
-        State University. My technical interests include{" "}
+        I am a graduate student in Computational Linguistics at San Jose
+        University. I did my undergrad in Applied Math and Computer Science also
+        from San Jose State. My technical interests include{" "}
         <Anchor href="" underline="never" c="brand.7">
           math, deep learning, computer vision and overall software engineering
         </Anchor>

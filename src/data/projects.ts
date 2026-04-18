@@ -128,7 +128,7 @@ export const PROJECTS: Project[] = [
     content:
       "In this project we created a AI agent that helps users manage their finances. It was created using the OpenAI No agent framework. This is a full stack project so a user can create an account, sign in and connect their bank account to the agent. No agent framework. ",
     repo: "https://github.com/kevingil/rocket-agent",
-    tags: ["Fullstack", "AI Agent", "Python", "Flask"],
+    tags: ["Hackathon", "Fullstack", "AI Agent", "Python", "Flask"],
     img: rocketAgent,
   },
   {
@@ -185,7 +185,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 14,
-    title: "Vision Transformer from Scratch Using JAX",
+    title: "Vision Transformer implemented using Jax",
     description:
       "A vision transformer model for image classification from the paper A Image is Worth 16x16 Words. Implemented it in Jax.",
     content:
@@ -203,7 +203,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 15,
-    title: "Transformer from Scratch Using JAX",
+    title: "Transformer implemented using Jax",
     description:
       "A transformer model from the paper Attention is All You Need (with minor modifications).",
     content:
@@ -226,11 +226,11 @@ export const PROJECTS: Project[] = [
     id: 17,
     title: "Deploying a Large Language Model",
     description:
-      "Deploying a the model I previously trained so anyone can use it!",
+      "Deploying a seq2seq transfromer model I previously trained so anyone can use it!",
     content:
       "In this project I implemented a transformer model from the paper Attention is All You Need. I implemented it from scratch in jax.",
     repo: "https://github.com/GaelGil/notebooks/tree/master/transformer",
-    tags: ["Transformer", "seq2seq", "Python", "Jax", "Orbax", "Grain"],
+    tags: ["Transformer", "seq2seq", "Python", "Modal", "Jax"],
     img: transformer,
   },
 ];
