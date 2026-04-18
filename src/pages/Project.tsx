@@ -14,6 +14,7 @@ import {
   Box,
 } from "@mantine/core";
 import Footer from "../components/Layout/Footer";
+import Badges from "../components/Home/Badges";
 import { FaGithub } from "react-icons/fa";
 import { TbWorld } from "react-icons/tb";
 export default function Project() {
@@ -39,18 +40,65 @@ export default function Project() {
               </Button>
             </Anchor>
 
+            <Flex h={250}>
+              <Box style={{ flex: 1 }}>
+                <Flex h="100%" direction="column" justify="space-between">
+                  <Box>
+                    <Title mt="md" c="brand.7" order={5}>
+                      {project.title}
+                    </Title>
+                    <Text>{project.description}</Text>
+                    <Box>
+                      <Badges
+                        data={project.tags}
+                        h={10}
+                        w={10}
+                        badgeSize="sm"
+                      />
+                    </Box>
+                    <Flex gap={4}>
+                      {project.link && (
+                        <Anchor href={project.link} target="_blank">
+                          <Button
+                            variant="transparent"
+                            leftSection={<TbWorld />}
+                          >
+                            Live Demo
+                          </Button>
+                        </Anchor>
+                      )}
+                      <Anchor href={project.repo} target="_blank">
+                        <Button
+                          variant="transparent"
+                          leftSection={<FaGithub />}
+                        >
+                          Git Repo
+                        </Button>
+                      </Anchor>
+                    </Flex>
+                  </Box>
+                </Flex>
+              </Box>
+              <Image
+                src={project.img}
+                alt={project.title}
+                h={250}
+                w={250}
+                fit="fill"
+              />
+            </Flex>
             <Box>
               <Title order={5}>{project.title}</Title>
             </Box>
-            <Flex gap={4}>
+            {/*<Flex gap={4}>
               {project.tags?.map((tag) => (
                 <Badge key={tag} variant="light" color="brand.7">
                   {tag}
                 </Badge>
               ))}
-            </Flex>
+            </Flex>*/}
 
-            <Flex gap={4}>
+            {/*<Flex gap={4}>
               {project.link && (
                 <Anchor href={project.link} target="_blank">
                   <Button variant="transparent" leftSection={<TbWorld />}>
@@ -63,19 +111,22 @@ export default function Project() {
                   Git Repo
                 </Button>
               </Anchor>
+            </Flex>*/}
+            <Flex>
+              <Text>{project.content}</Text>
             </Flex>
           </Stack>
-          <Image
+          {/*<Image
             src={project.img}
             alt={project.title}
             h={350}
             w={350}
             fit="fill"
-          />
+          />*/}
         </Flex>
-        <Flex>
+        {/*<Flex>
           <Text>{project.content}</Text>
-        </Flex>
+        </Flex>*/}
         <Footer />
       </Stack>
     </Container>
