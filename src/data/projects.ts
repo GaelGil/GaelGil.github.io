@@ -209,7 +209,7 @@ export const PROJECTS: Project[] = [
       "A transformer model from the paper Attention is All You Need (with minor modifications).",
     content:
       "In this project I implemented a transformer model from the paper Attention is All You Need. I implemented it from scratch in jax.",
-    repo: "https://github.com/GaelGil/notebooks/tree/master/transformer",
+    repo: "https://github.com/GaelGil/notebooks/blob/master/transformer/transformers.ipynb",
     tags: ["Transformer", "Python", "Jax", "NLP", "Orbax", "Grain"],
     img: transformer,
   },
@@ -226,10 +226,8 @@ export const PROJECTS: Project[] = [
   {
     id: 17,
     title: "Deploying a Large Language Model",
-    description:
-      "Deploying a seq2seq transfromer model I previously trained so anyone can use it!",
-    content:
-      "In this project I implemented a transformer model from the paper Attention is All You Need. I implemented it from scratch in jax.",
+    description: "In this project I deployed a seq2seq transfromer model",
+    content: "",
     link: "https://low-resource-ranslation.gaelgilbello27.workers.dev/",
     repo: "https://github.com/GaelGil/large_language_model_deployment",
     tags: ["Transformer", "seq2seq", "Python", "Modal", "Jax"],
