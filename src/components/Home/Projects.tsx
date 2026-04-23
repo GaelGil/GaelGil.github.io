@@ -28,7 +28,7 @@ export default function Projects() {
               <Box style={{ flex: 1 }}>
                 <Flex h="100%" direction="column" justify="space-between">
                   <Box>
-                    <Title mt="md" c="brand.7" order={5}>
+                    <Title mt="md" c="brand" order={5}>
                       {project.title}
                     </Title>
                     <Text>{project.description}</Text>
@@ -55,11 +55,7 @@ export default function Projects() {
         ))}
 
       <Anchor component={Link} to="/projects">
-        <Button
-          rightSection={<FiArrowUpRight />}
-          variant="light"
-          color="brand.7"
-        >
+        <Button rightSection={<FiArrowUpRight />} variant="light" color="brand">
           View All Projects
         </Button>
       </Anchor>

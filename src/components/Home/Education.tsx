@@ -6,7 +6,7 @@ export default function Education() {
     <>
       {EDUCATION.map((edu, idx) => (
         <Box key={idx}>
-          <Title order={3} c="brand.7">
+          <Title order={3} c="brand">
             {edu.degree}
           </Title>
           <Text>{edu.institution}</Text>

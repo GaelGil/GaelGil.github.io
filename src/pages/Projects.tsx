@@ -49,7 +49,7 @@ export default function Projects() {
             variant="filled"
             size="lg"
             radius="lg"
-            c="brand.7"
+            c="brand"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Search Projects..."
@@ -84,7 +84,7 @@ export default function Projects() {
                 }}
               >
                 <Image src={project.img} alt={project.title} fit="cover" />
-                <Title order={5} c="brand.7">
+                <Title order={5} c="brand">
                   {project.title}
                 </Title>
                 <Text> {project.description}</Text>

@@ -32,7 +32,7 @@ export default function Project() {
             <Anchor component={Link} to="/projects">
               <Button
                 variant="light"
-                color="brand.7"
+                color="brand"
                 leftSection={<FaArrowLeft />}
               >
                 View All Projects
@@ -44,7 +44,7 @@ export default function Project() {
                 <Flex h="100%" direction="column" justify="space-between">
                   <Stack>
                     <Box>
-                      <Title mt="md" c="brand.7" order={5}>
+                      <Title mt="md" c="brand" order={5}>
                         {project.title}
                       </Title>
                     </Box>

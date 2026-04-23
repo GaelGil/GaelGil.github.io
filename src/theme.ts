@@ -4,16 +4,16 @@ import type { CSSVariablesResolver } from "@mantine/core";
 export const theme = createTheme({
   colors: {
     brand: [
-      "#e6f5e6", // shade 0
-      "#d1ebd1", // shade 1
-      "#a8d9a8", // shade 2
-      "#7ec77e", // shade 3
-      "#5eb65e", // shade 4
-      "#3da23d", // shade 5
-      "#2d8a2d", // shade 6
-      "#1f6b1f", // shade 7
-      "#144d14", // shade 8
-      "#0a320a", // shade 9
+      "oklch(79.2% 0.209 151.711)", // shade 0
+      "oklch(79.2% 0.209 151.711)", // shade 1
+      "oklch(79.2% 0.209 151.711)", // shade 2
+      "oklch(79.2% 0.209 151.711)", // shade 3
+      "oklch(79.2% 0.209 151.711)", // shade 4
+      "oklch(72.3% 0.219 149.579)", // shade 5
+      "oklch(62.7% 0.194 149.214)", // shade 6
+      "oklch(53.2% 0.157 131.589)", // shade 7
+      "oklch(79.2% 0.209 151.711)", // shade 8
+      "oklch(79.2% 0.209 151.711)", // shade 9
     ],
   },
 
@@ -24,15 +24,15 @@ export const theme = createTheme({
 
 export const cssResolver: CSSVariablesResolver = () => ({
   variables: {
-    "--mantine-color-body": "black",
+    "--mantine-color-body": "red",
     "--mantine-color-text": "white",
   },
   light: {
-    "--mantine-color-body": "black",
+    "--mantine-color-body": "red",
     "--mantine-color-text": "white",
   },
   dark: {
-    "--mantine-color-body": "black",
+    "--mantine-color-body": "oklch(12.9% 0.042 264.695)",
     "--mantine-color-text": "white",
   },
 });
