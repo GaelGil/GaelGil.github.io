@@ -231,7 +231,7 @@ export const PROJECTS: Project[] = [
     content:
       "In this project I implemented a transformer model from the paper Attention is All You Need. I implemented it from scratch in jax.",
     link: "https://low-resource-ranslation.gaelgilbello27.workers.dev/",
-    repo: "https://github.com/GaelGil/notebooks/tree/master/transformer",
+    repo: "https://github.com/GaelGil/large_language_model_deployment",
     tags: ["Transformer", "seq2seq", "Python", "Modal", "Jax"],
     img: modal,
   },
