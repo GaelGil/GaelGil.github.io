@@ -188,9 +188,9 @@ export const PROJECTS: Project[] = [
     id: 14,
     title: "Vision Transformer implemented using Jax",
     description:
-      "A vision transformer model for image classification from the paper A Image is Worth 16x16 Words. Implemented it in Jax.",
+      "A vision transformer model for image classification from the paper A Image is Worth 16x16 Words. Implemented using python library Jax.",
     content:
-      "In this project I implemented a Vision transformer model from the paper A Image is Worth 16x16 Words. I implemented it from scratch in jax.",
+      "In this project I implemented a Vision transformer model from the paper A Image is Worth 16x16 Words. I implemented it from scratch in jax. You can check out the notebook where you can read more about the fundamentals of vision transformers. In the git repo the code and models are also included.",
     repo: "https://github.com/GaelGil/notebooks/blob/master/vision_transformer/vision_transformer.ipynb",
     tags: [
       "Transformer",

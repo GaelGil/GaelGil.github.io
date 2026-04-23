@@ -5,7 +5,12 @@ export default function About() {
     <Stack>
       <Text className="text-lg">
         Hello, my name is{" "}
-        <Anchor href="" underline="never" c="brand">
+        <Anchor
+          href="https://www.linkedin.com/in/gael-gil-7a4baa172"
+          target="_blank"
+          underline="never"
+          c="brand"
+        >
           {NAME}
         </Anchor>
         . I am an aspiring data scientist. Thank you for coming to my website.
