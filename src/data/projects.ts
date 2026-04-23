@@ -14,6 +14,7 @@ import chatgpt from "../assets/projects/chatgpt.png";
 import transformer from "../assets/projects/transformer.png";
 import vision_transformer from "../assets/projects/vision_transformer.png";
 import type { Project } from "../types/Project";
+import modal from "../assets/projects/modal-logo.svg";
 
 export const PROJECTS: Project[] = [
   {
@@ -229,8 +230,9 @@ export const PROJECTS: Project[] = [
       "Deploying a seq2seq transfromer model I previously trained so anyone can use it!",
     content:
       "In this project I implemented a transformer model from the paper Attention is All You Need. I implemented it from scratch in jax.",
+    link: "https://low-resource-ranslation.gaelgilbello27.workers.dev/",
     repo: "https://github.com/GaelGil/notebooks/tree/master/transformer",
     tags: ["Transformer", "seq2seq", "Python", "Modal", "Jax"],
-    img: transformer,
+    img: modal,
   },
 ];
