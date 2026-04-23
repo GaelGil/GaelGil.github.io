@@ -24,11 +24,11 @@ export const theme = createTheme({
 
 export const cssResolver: CSSVariablesResolver = () => ({
   variables: {
-    "--mantine-color-body": "red",
+    "--mantine-color-body": "oklch(12.9% 0.042 264.695)",
     "--mantine-color-text": "white",
   },
   light: {
-    "--mantine-color-body": "red",
+    "--mantine-color-body": "oklch(12.9% 0.042 264.695)",
     "--mantine-color-text": "white",
   },
   dark: {
