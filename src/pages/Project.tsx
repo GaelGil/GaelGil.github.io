@@ -59,7 +59,12 @@ export default function Project() {
           All projects
         </Button>
 
-        <Card withBorder radius="sm" p={{ base: "lg", md: "xl" }} bg="dark.8">
+        <Card
+          // withBorder
+          radius="sm"
+          p={{ base: "lg", md: "xl" }}
+          bg="transparent"
+        >
           <Grid gutter="xl" align="center">
             <Grid.Col span={{ base: 12, md: 7 }}>
               <Stack gap="md">
@@ -114,10 +119,10 @@ export default function Project() {
 
         <Paper
           component="article"
-          withBorder
+          // withBorder
           radius="sm"
           p={{ base: "lg", md: "xl" }}
-          bg="dark.8"
+          bg="transparent"
         >
           <Stack gap="lg">
             <Stack gap={4}>

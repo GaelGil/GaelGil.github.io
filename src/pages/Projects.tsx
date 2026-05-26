@@ -95,7 +95,7 @@ export default function Projects() {
                 style={{ color: "inherit", textDecoration: "none" }}
                 aria-label={`View ${project.title} project`}
               >
-                <Card withBorder radius="sm" p="md" bg="dark.8" h="100%">
+                <Card radius="sm" p="md" bg="transparent" h="100%">
                   <Card.Section>
                     <Image
                       src={project.img}
