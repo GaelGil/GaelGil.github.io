@@ -6,14 +6,15 @@ import Experince from "../Home/Experience";
 import Footer from "./Footer";
 import Section from "./Section";
 import { Stack } from "@mantine/core";
+
 export default function Content() {
   return (
-    <Stack mt="xl" gap={100}>
+    <Stack gap={88}>
       <Section id="about" title="About">
         <About />
       </Section>
 
-      <Section id="other" title="Projects">
+      <Section id="projects" title="Projects">
         <Projects />
       </Section>
 

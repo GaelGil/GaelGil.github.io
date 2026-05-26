@@ -1,10 +1,11 @@
 import { Badge, Image } from "@mantine/core";
+import type { BadgeProps } from "@mantine/core";
 
 interface BadgesProps {
   data: string[];
   w: number;
   h: number;
-  badgeSize: string;
+  badgeSize: BadgeProps["size"];
 }
 
 const Badges: React.FC<BadgesProps> = ({ data, w, h, badgeSize }) => {
@@ -17,12 +18,16 @@ const Badges: React.FC<BadgesProps> = ({ data, w, h, badgeSize }) => {
             <Image
               w={w}
               h={h}
+              alt=""
+              aria-hidden="true"
               src={`https://skillicons.dev/icons?i=${item.toLowerCase()}&theme=dark`}
             />
           }
           variant="light"
-          color="brand.2"
+          color="brand"
           size={badgeSize}
+          radius="sm"
+          tt="none"
         >
           {item}
         </Badge>

@@ -1,19 +1,27 @@
 import { EXPERIENCE } from "../../data/experience";
-import { Title, Text, Flex, Box } from "@mantine/core";
+import { Paper, Stack, Text, Title } from "@mantine/core";
+
 export default function Experience() {
   return (
-    <>
+    <Stack gap="md" maw={720}>
       {EXPERIENCE.map((exp, idx) => (
-        <Box key={idx}>
-          <Title order={3} c="brand">
+        <Paper
+          component="article"
+          key={idx}
+          withBorder
+          radius="sm"
+          p="md"
+          bg="transparent"
+        >
+          <Title order={3} c="brand" size="h4" lh={1.25}>
             {exp.company}
           </Title>
-          <Text>{exp.position}</Text>
-          <Flex c="dimmed">
-            <Text>{exp.startDate}</Text> - <Text>{exp.endDate}</Text>
-          </Flex>
-        </Box>
+          <Text c="dimmed">{exp.position}</Text>
+          <Text size="sm" c="dimmed">
+            {exp.startDate} - {exp.endDate}
+          </Text>
+        </Paper>
       ))}
-    </>
+    </Stack>
   );
 }

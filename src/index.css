@@ -1,7 +1,11 @@
 @import "tailwindcss";
 @import "tailwindcss/utilities";
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background-color: #3b2418;
-  font-family: "Roboto", sans-serif;
+  margin: 0;
+  min-width: 320px;
 }
