@@ -1,11 +1,10 @@
-import { Group } from "@mantine/core";
+import { Flex } from "@mantine/core";
 import { SKILLS } from "../../data/skills";
 import Badges from "./Badges";
-
 export default function Skills() {
   return (
-    <Group gap={8} justify="flex-start">
+    <Flex gap={4} wrap="wrap" justify="center">
       <Badges data={SKILLS} w={25} h={25} badgeSize="lg" />
-    </Group>
+    </Flex>
   );
 }

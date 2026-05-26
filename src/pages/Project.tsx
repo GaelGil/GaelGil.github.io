@@ -1,108 +1,137 @@
-import { useParams, Link } from "@tanstack/react-router";
-import { PROJECTS } from "../data/projects";
-import { FaArrowLeft } from "react-icons/fa";
+import { Link, useParams } from "@tanstack/react-router";
+import { FaArrowLeft, FaGithub } from "react-icons/fa";
+import { TbWorld } from "react-icons/tb";
 import {
+  Button,
+  Card,
+  Container,
+  Grid,
+  Group,
   Image,
-  Flex,
+  Paper,
+  Stack,
   Text,
   Title,
-  Anchor,
-  Button,
-  Stack,
-  Container,
-  Box,
 } from "@mantine/core";
-import Footer from "../components/Layout/Footer";
+import { PROJECTS } from "../data/projects";
 import Badges from "../components/Home/Badges";
-import { FaGithub } from "react-icons/fa";
-import { TbWorld } from "react-icons/tb";
+import Footer from "../components/Layout/Footer";
+
 export default function Project() {
   const { id } = useParams({ strict: false });
   const project = PROJECTS.find((p) => p.id === Number(id));
 
   if (!project) {
-    return <Text>Project not found</Text>;
+    return (
+      <Container size="sm" py={80}>
+        <Stack align="center" gap="md">
+          <Title order={1} ta="center">
+            Project Not Found
+          </Title>
+          <Text c="dimmed" ta="center">
+            The project you are looking for does not exist or has moved.
+          </Text>
+          <Button
+            component={Link}
+            to="/projects"
+            variant="light"
+            color="brand"
+            leftSection={<FaArrowLeft aria-hidden="true" />}
+          >
+            Back to projects
+          </Button>
+        </Stack>
+      </Container>
+    );
   }
 
   return (
-    <Container mt="xl">
-      <Stack w={"100%"} align="center">
-        <Flex>
-          <Stack>
-            <Anchor component={Link} to="/projects">
-              <Button
-                variant="light"
-                color="brand"
-                leftSection={<FaArrowLeft />}
-              >
-                View All Projects
-              </Button>
-            </Anchor>
+    <Container size="md" py={{ base: "xl", md: 56 }}>
+      <Stack gap="xl">
+        <Button
+          component={Link}
+          to="/projects"
+          variant="subtle"
+          color="brand"
+          leftSection={<FaArrowLeft aria-hidden="true" />}
+          w="fit-content"
+        >
+          All projects
+        </Button>
 
-            <Flex h={250}>
-              <Box style={{ flex: 1 }}>
-                <Flex h="100%" direction="column" justify="space-between">
-                  <Stack>
-                    <Box>
-                      <Title mt="md" c="brand" order={5}>
-                        {project.title}
-                      </Title>
-                    </Box>
-                    <Box>
-                      <Text>{project.description}</Text>
-                    </Box>
-                    <Box>
-                      <Box>
-                        <Badges
-                          data={project.tags}
-                          h={10}
-                          w={10}
-                          badgeSize="sm"
-                        />
-                      </Box>
-                      <Box>
-                        {/*<Flex gap={4}>*/}
-                        {project.link && (
-                          <Anchor href={project.link} target="_blank">
-                            <Button
-                              variant="transparent"
-                              leftSection={<TbWorld />}
-                            >
-                              Live Demo
-                            </Button>
-                          </Anchor>
-                        )}
-                        <Anchor href={project.repo} target="_blank">
-                          <Button
-                            variant="transparent"
-                            leftSection={<FaGithub />}
-                          >
-                            Git Repo
-                          </Button>
-                        </Anchor>
-                        {/*</Flex>*/}
-                      </Box>
-                    </Box>
-                  </Stack>
-                </Flex>
-              </Box>
+        <Card withBorder radius="sm" p={{ base: "lg", md: "xl" }} bg="dark.8">
+          <Grid gutter="xl" align="center">
+            <Grid.Col span={{ base: 12, md: 7 }}>
+              <Stack gap="md">
+                <Title order={1} c="brand" lh={1.1}>
+                  {project.title}
+                </Title>
+                <Text size="lg" c="dimmed" lh={1.7}>
+                  {project.description}
+                </Text>
+                <Group gap={6}>
+                  <Badges data={project.tags} h={10} w={10} badgeSize="sm" />
+                </Group>
+                <Group gap="sm">
+                  {project.link && (
+                    <Button
+                      component="a"
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      variant="light"
+                      color="brand"
+                      leftSection={<TbWorld aria-hidden="true" />}
+                    >
+                      Live Demo
+                    </Button>
+                  )}
+                  <Button
+                    component="a"
+                    href={project.repo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    variant="default"
+                    leftSection={<FaGithub aria-hidden="true" />}
+                  >
+                    GitHub Repo
+                  </Button>
+                </Group>
+              </Stack>
+            </Grid.Col>
+
+            <Grid.Col span={{ base: 12, md: 5 }}>
               <Image
                 src={project.img}
-                alt={project.title}
-                h={250}
-                w={250}
-                fit="fill"
+                alt={`${project.title} preview`}
+                h={280}
+                fit="cover"
+                radius="sm"
               />
-            </Flex>
-            <Box>
-              <Title order={5}>{project.title}</Title>
-            </Box>
+            </Grid.Col>
+          </Grid>
+        </Card>
 
-            <Flex>
-              <Text>{project.content}</Text>
-            </Flex>
+        <Paper
+          component="article"
+          withBorder
+          radius="sm"
+          p={{ base: "lg", md: "xl" }}
+          bg="dark.8"
+        >
+          <Stack gap="lg">
+            <Stack gap={4}>
+              <Title order={2}>Project Overview</Title>
+              <Text c="dimmed">
+                Notes on the idea, implementation, and what the project
+                demonstrates.
+              </Text>
+            </Stack>
+            <Text size="lg" lh={1.85}>
+              {project.content}
+            </Text>
           </Stack>
-        </Flex>
+        </Paper>
 
         <Footer />
       </Stack>
