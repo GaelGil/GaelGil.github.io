@@ -8,7 +8,6 @@ export default function Education() {
         <Paper
           component="article"
           key={idx}
-          withBorder
           radius="sm"
           p="md"
           bg="transparent"

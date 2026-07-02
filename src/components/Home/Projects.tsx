@@ -27,13 +27,7 @@ export default function Projects() {
             aria-label={`View ${project.title} project`}
             style={{ color: "inherit", textDecoration: "none" }}
           >
-            <Card
-              component="article"
-              withBorder
-              radius="sm"
-              p="md"
-              bg="transparent"
-            >
+            <Card component="article" radius="sm" p="md" bg="transparent">
               <Grid gutter="md" align="stretch">
                 <Grid.Col span={{ base: 12, sm: 8 }}>
                   <Stack h="100%" justify="space-between" gap="sm">
