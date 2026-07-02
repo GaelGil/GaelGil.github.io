@@ -5,13 +5,15 @@ import Photo from "../Home/Photo";
 import { Title, Text, Anchor, Stack, Flex } from "@mantine/core";
 export default function Sidebar() {
   return (
-    <Stack mt="xl">
-      <Stack>
+    <Stack mt="xl" align="flex-start">
+      <Stack w="100%" align="flex-start">
         <Photo />
         <Title order={1} c="brand">
           {NAME}
         </Title>
-        <Text>{POSITION}</Text>
+        <Text w="100%" maw={200}>
+          {POSITION}
+        </Text>
       </Stack>
       <Stack>
         <Anchor href="#about" fw={700} fz="xl" c="brand">

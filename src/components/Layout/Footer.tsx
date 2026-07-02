@@ -4,7 +4,7 @@ import { Group, Text } from "@mantine/core";
 
 export default function Footer() {
   return (
-    <Group component="footer" gap={6} py="md" c="dimmed">
+    <Group justify="center" component="footer" gap={6} py="md" c="dimmed">
       <Text span size="sm">
         Made with
       </Text>
