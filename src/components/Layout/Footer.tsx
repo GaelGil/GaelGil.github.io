@@ -8,7 +8,7 @@ export default function Footer() {
       <Text span size="sm">
         Made with
       </Text>
-      <FaHeart size={13} aria-hidden="true" />
+      <FaHeart size={13} aria-hidden="true" color="oklch(58.6% 0.253 17.585)" />
       <Text span size="sm">
         by {NAME}
       </Text>
