@@ -201,6 +201,7 @@ export const PROJECTS: Project[] = [
       "Orbax",
     ],
     img: vision_transformer,
+    status: "in-progress",
   },
   {
     id: 15,
@@ -212,6 +213,7 @@ export const PROJECTS: Project[] = [
     repo: "https://github.com/GaelGil/notebooks/blob/master/transformer/transformers.ipynb",
     tags: ["Transformer", "Python", "Jax", "NLP", "Orbax", "Grain"],
     img: transformer,
+    status: "in-progress",
   },
   {
     id: 16,
@@ -222,6 +224,7 @@ export const PROJECTS: Project[] = [
     repo: "https://github.com/GaelGil/nvidia_hackathon_2026",
     tags: ["Computer Vision", "Python", "Hackathon", "Nvidia", "Nemotron"],
     img: "https://www.nvidia.com/favicon.ico",
+    status: "in-progress",
   },
   {
     id: 17,
@@ -232,5 +235,6 @@ export const PROJECTS: Project[] = [
     repo: "https://github.com/GaelGil/large_language_model_deployment",
     tags: ["Transformer", "seq2seq", "Python", "Modal", "Jax"],
     img: modal,
+    status: "in-progress",
   },
 ];

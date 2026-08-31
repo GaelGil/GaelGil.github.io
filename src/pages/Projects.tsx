@@ -2,6 +2,7 @@ import { useMemo, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { FaArrowLeft, FaSearch } from "react-icons/fa";
 import {
+  Badge,
   Button,
   Card,
   Container,
@@ -109,6 +110,25 @@ export default function Projects() {
                   <Stack gap="sm" mt="md" h="100%">
                     <Title order={2} size="h4" c="brand" lh={1.25}>
                       {project.title}
+                      {project.status === "in-progress" && (
+                        <Badge
+                          component="span"
+                          leftSection={<span aria-hidden="true">•</span>}
+                          ml="xs"
+                          px={8}
+                          py={4}
+                          h="auto"
+                          radius={9999}
+                          bg="rgba(245, 158, 11, 0.12)"
+                          c="#fbbf24"
+                          fz="0.75rem"
+                          fw={500}
+                          tt="none"
+                          style={{ verticalAlign: "baseline" }}
+                        >
+                          In progress
+                        </Badge>
+                      )}
                     </Title>
                     <Text c="dimmed" lh={1.6}>
                       {project.description}

@@ -1,3 +1,5 @@
+export type ProjectStatus = "in-progress";
+
 export interface Project {
   id: number;
   title: string;
@@ -7,4 +9,5 @@ export interface Project {
   repo: string;
   tags: string[];
   img: string;
+  status?: ProjectStatus;
 }

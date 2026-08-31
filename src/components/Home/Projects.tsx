@@ -1,4 +1,5 @@
 import {
+  Badge,
   Button,
   Card,
   Grid,
@@ -39,6 +40,25 @@ export default function Projects() {
                       >
                         <Title order={3} c="brand" size="h4" lh={1.25}>
                           {project.title}
+                          {project.status === "in-progress" && (
+                            <Badge
+                              component="span"
+                              leftSection={<span aria-hidden="true">•</span>}
+                              ml="xs"
+                              px={8}
+                              py={4}
+                              h="auto"
+                              radius={9999}
+                              bg="rgba(245, 158, 11, 0.12)"
+                              c="#fbbf24"
+                              fz="0.75rem"
+                              fw={500}
+                              tt="none"
+                              style={{ verticalAlign: "baseline" }}
+                            >
+                              In progress
+                            </Badge>
+                          )}
                         </Title>
                       </Group>
 
